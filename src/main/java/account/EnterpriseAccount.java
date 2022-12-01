@@ -13,7 +13,6 @@ public class EnterpriseAccount extends Account implements Serializable {
     private String category;
     private String companyPhoneNumber;
     private String companyLocation;
-    static ArrayList<Announcement> announcementList=new ArrayList<>();
 
     public EnterpriseAccount(String id,String password,String name,Boolean valid,Boolean isActive,String type)
     {
@@ -40,11 +39,6 @@ public class EnterpriseAccount extends Account implements Serializable {
         this.type = type;
     }
 
-    public static void saveResume(Announcement announcement)
-    {
-        announcementList.add(announcement);
-        System.out.println("Announcement Succefully saved!");
-    }
 
 
 

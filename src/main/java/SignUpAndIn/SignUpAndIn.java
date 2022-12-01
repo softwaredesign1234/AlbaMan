@@ -1,13 +1,14 @@
-package SignUpAndSignIn;
+package SignUpAndIn;
 
 import account.EnterpriseAccount;
 import account.IndividualAccount;
+
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
-public class Signup {
+public class SignUpAndIn {
 
     public static ArrayList<IndividualAccount> individualAccounts=new ArrayList<>();
     public static ArrayList<EnterpriseAccount> enterpriseAccounts=new ArrayList<>();
@@ -15,8 +16,8 @@ public class Signup {
 
     //valid로 이메일 형식 맞는지 확인하기
     //회원가입 더 NullpointException 같이 잘 짜보기..
-    public static void signupIndi(String id, String password, String name,
-                                  String email, String phoneNumber, int age, String gender)
+    public static void signupIndividual(String id, String password, String name,
+                                        String email, String phoneNumber, int age, String gender)
     {
         Boolean valid=false;
         Boolean isActivate=true;
@@ -42,7 +43,7 @@ public class Signup {
     }
 
     //000-00-00000
-    public void signupEnter(String companyNum, String category, String companyPhoneNumber, String companyLocation,
+    public static void signupEnterprise(String companyNum, String category, String companyPhoneNumber, String companyLocation,
                                    String id, String password, String name)
     {
         Boolean valid=false;
@@ -69,14 +70,68 @@ public class Signup {
         }
     }
 
+
+    public static Boolean signIn(String type,String id,String password)
+    {
+
+        Boolean isSigninSuccess=false;
+        if(type.equals("Individual")){
+           if(signinIndividual(id,password)!=null)
+               isSigninSuccess=true;
+        }
+        else
+        {
+            if(signinEnterprise(id,password)!=null)
+                isSigninSuccess=true;
+        }
+        return isSigninSuccess;
+
+    }
+
+    //개인 로그인
+    public static IndividualAccount signinIndividual(String id,String password )
+    {
+        ArrayList<IndividualAccount> arr=getIndividualAccounts();
+        IndividualAccount resultIndividual=arr.stream()
+                .filter(account -> id.equals(account.getId())&&password.equals(account.getPassword()))
+                .findAny()
+                .orElse(null);
+
+
+        return resultIndividual;
+
+    }
+
+    //기업 로그인
+    public static EnterpriseAccount signinEnterprise(String id,String password )
+    {
+        ArrayList<EnterpriseAccount> arr=getEnterpriseAccounts();
+        EnterpriseAccount resultEnterprise=arr.stream()
+                .filter(account -> id.equals(account.getId())&&password.equals(account.getPassword()))
+                .findAny()
+                .orElse(null);
+
+
+        return resultEnterprise;
+
+    }
+
     public static ArrayList<IndividualAccount> getIndividualAccounts()
     {
         return individualAccounts;
     }
+    public static ArrayList<EnterpriseAccount> getEnterpriseAccounts()
+    {
+        return enterpriseAccounts;
+    }
+
     public static void main(String[] args) throws Exception{
 
-        String id="aa1234";
-        String password="1234";
+        String idIndi="aa1234";
+        String idEnter="bb5678";
+
+        String passwordIndi="1234";
+        String passwordEnter="5678";
         String name="park";
         String email="pyunj787@naver.com";
         String phoneNumber="010-5555-5555";
@@ -88,8 +143,11 @@ public class Signup {
         String companyLocation="대구광역시 북구 산격동";
 
 
-        signupIndi(id,password,name,email,phoneNumber, age,gender);
-//        signupEnter(companyNum,category,companyPhoneNumber,companyLocation,id,password,name);
+        signupIndividual(idIndi,passwordIndi,name,email,phoneNumber, age,gender);
+        signupEnterprise(companyNum,category,companyPhoneNumber,companyLocation,idEnter,passwordEnter,name);
+
+        System.out.println(signIn("Individual","aa1234","5678"));
+
 
     }
 }
