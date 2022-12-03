@@ -1,8 +1,4 @@
-package workhistory;
-
-import account.EnterpriseAccount;
-import account.IndividualAccount;
-import com.sun.corba.se.spi.orbutil.threadpool.Work;
+package model;
 
 import java.util.ArrayList;
 

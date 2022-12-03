@@ -1,14 +1,11 @@
-package resume;
+package controller;
 
-import java.io.*;
-import java.sql.*;
 import java.util.*;
 
-import account.IndividualAccount;
-import announcement.Announcement;
-import resume.Resume;
+import model.IndividualAccount;
+import model.Resume;
 
-public class ResumeList {
+public class ResumeController {
 
     static ArrayList<Resume> resumeList=new ArrayList<>();
     static ArrayList<IndividualAccount> individualAccounts=new ArrayList<>(); //개인회원 db

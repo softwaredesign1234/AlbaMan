@@ -1,11 +1,7 @@
-package resume;
+package model;
 
 
-import account.IndividualAccount;
-
-import java.io.*;
-import java.sql.*;
-import java.util.*;
+import model.IndividualAccount;
 
 public class Resume {
     private int id;

@@ -1,11 +1,12 @@
-package announcement;
+package controller;
 
-import account.IndividualAccount;
+import model.Announcement;
+import model.IndividualAccount;
 
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
-public class AnnouncementList {
+public class AnnouncementController {
 
     static ArrayList<Announcement> announcementList=new ArrayList<>();
     static ArrayList<IndividualAccount> individualAccounts=new ArrayList<>();

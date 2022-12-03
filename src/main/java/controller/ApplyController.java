@@ -1,12 +1,12 @@
-package apply;
+package controller;
 
-import resume.Resume;
+import model.Apply;
 
 import java.util.ArrayList;
 
 import static java.lang.System.exit;
 
-public class ApplyList {
+public class ApplyController {
     static ArrayList<Apply> applyList=new ArrayList<>();
 
 

@@ -1,14 +1,14 @@
-package SignUpAndIn;
+package controller;
 
-import account.EnterpriseAccount;
-import account.IndividualAccount;
+import model.EnterpriseAccount;
+import model.IndividualAccount;
 
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
-public class accountManager {
+public class AccountController {
 
     public static ArrayList<IndividualAccount> individualAccounts=new ArrayList<>();
     public static ArrayList<EnterpriseAccount> enterpriseAccounts=new ArrayList<>();
@@ -115,10 +115,10 @@ public class accountManager {
 
     }
 
-    static ArrayList<IndividualAccount> getIndividualAccounts()
+    public static ArrayList<IndividualAccount> getIndividualAccounts()
     {
         return individualAccounts;
-    }
+    }//DB에서 회원들 조회
     public static ArrayList<EnterpriseAccount> getEnterpriseAccounts()
     {
         return enterpriseAccounts;

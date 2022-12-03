@@ -1,8 +1,4 @@
-package apply;
-
-import java.util.ArrayList;
-import resume.Resume;
-import resume.ResumeList;
+package model;
 
 
 //기업->개인 Offer에 관한 클래스

@@ -1,9 +1,8 @@
-package account;
+package model;
 
-import account.Account;
-import java.util.*;
+import model.Account;
+
 import java.io.*;
-import announcement.Announcement;
 
 public class EnterpriseAccount extends Account implements Serializable {
 

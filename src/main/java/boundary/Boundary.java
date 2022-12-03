@@ -1,7 +1,7 @@
 package boundary;
-import SignUpAndIn.accountManager;
-import account.EnterpriseAccount;
-import account.IndividualAccount;
+import controller.AccountController;
+import model.EnterpriseAccount;
+import model.IndividualAccount;
 
 import java.util.*;
 
@@ -19,9 +19,9 @@ public class Boundary {
         String type=scanner.next();
 
         if(type.equals("Enterprise"))
-            accountManager.signinEnterprise(id,password);
+            AccountController.signinEnterprise(id,password);
         else if(type.equals("Individual"))
-            accountManager.signinIndividual(id,password);
+            AccountController.signinIndividual(id,password);
         else
             System.out.println("타입을 잘못 입력하셨습니다.");
     }
@@ -38,7 +38,7 @@ public class Boundary {
             String id=scanner.next();
             String password=scanner.next();
             String name=scanner.next();
-            accountManager.signupEnterprise(companyNum,category,companyPhoneNumber,companyLocation,id,password,name);
+            AccountController.signupEnterprise(companyNum,category,companyPhoneNumber,companyLocation,id,password,name);
         }
         else if(type.equals("Individual"))
         {
@@ -49,7 +49,7 @@ public class Boundary {
             String phoneNumber=scanner.next();
             int age=scanner.nextInt();
             String gender=scanner.next();
-            accountManager.signupIndividual(id,password,name,email,phoneNumber,age,gender);
+            AccountController.signupIndividual(id,password,name,email,phoneNumber,age,gender);
         }
         else
             System.out.println("타입을 잘못 입력하셨습니다.");

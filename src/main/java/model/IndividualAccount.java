@@ -1,9 +1,4 @@
-package account;
-
-import account.Account;
-import announcement.Announcement;
-import resume.Resume;
-import workhistory.Workhistory;
+package model;
 
 import java.util.*;
 import java.io.*;

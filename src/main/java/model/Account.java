@@ -1,4 +1,4 @@
-package account;
+package model;
 
 public class Account {
 
