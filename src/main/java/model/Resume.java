@@ -5,15 +5,6 @@ import model.IndividualAccount;
 
 public class Resume {
     private int id;
-
-    public IndividualAccount getIndividualAccount() {
-        return individualAccount;
-    }
-
-    public void setIndividualAccount(IndividualAccount individualAccount) {
-        this.individualAccount = individualAccount;
-    }
-
     private IndividualAccount individualAccount;
     private String selfIntroduction;
     private String workExperience;
@@ -88,4 +79,12 @@ public class Resume {
     public void setOpened(Boolean opened) {
         isOpened = opened;
     }
+    public IndividualAccount getIndividualAccount() {
+        return individualAccount;
+    }
+
+    public void setIndividualAccount(IndividualAccount individualAccount) {
+        this.individualAccount = individualAccount;
+    }
+
 }

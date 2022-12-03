@@ -10,7 +10,8 @@ import java.util.List;
 public class QuestionController {
 
     static DBBoundary dbManager;
-
+    private final String email = "11@naver.com";
+    private final String phoneNumber = "01051111111";
 
     public String showMail(){
         return null;

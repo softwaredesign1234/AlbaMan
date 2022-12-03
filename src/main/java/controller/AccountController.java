@@ -15,6 +15,11 @@ public class AccountController {
     public static ArrayList<EnterpriseAccount> enterpriseAccounts=new ArrayList<>();
 
     static DBBoundary dbManager;
+
+    public static String showTermsOfService()
+    {
+        return null;
+    }
     public static void signupIndividual(String id, String password, String name,
                                         String email, String phoneNumber, int age, String gender)
     {
@@ -47,6 +52,10 @@ public class AccountController {
         return null;
     }
 
+    public Boolean isSigninSuccess()
+    {
+        return null;
+    }
 
     public Boolean verifyPassword(String type, String id, String passowrd) {
         return null;

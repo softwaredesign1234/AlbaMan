@@ -29,7 +29,13 @@ public class Workhistory {
     public void setEnterpriseId(String enterpriseId) {
         this.enterpriseId = enterpriseId;
     }
+    public String getIndividualId() {
+        return individualId;
+    }
 
+    public void setIndividualId(String individualId) {
+        this.individualId = individualId;
+    }
 
 
 }

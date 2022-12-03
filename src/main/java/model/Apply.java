@@ -9,6 +9,7 @@ public class Apply {
     private int id;
     private Boolean passOrFail=false; //기업->개인, 개인-> 기업 다르므로
 
+    private int announcementId;
     public Apply(String individualId,String enterpriseId)
     {
         this.individualId=individualId;
@@ -16,13 +17,12 @@ public class Apply {
     }
 
     //기업->개인
-    public Apply(String individualId, String enterpriseId,Boolean isAccept)
+    public Apply(String individualId, String enterpriseId,Boolean isAccept,int announcementId)
     {
         this.enterpriseId=enterpriseId;
         this.individualId=individualId;
         this.passOrFail=isAccept;
-
-        System.out.println("Succefully added!");
+        this.announcementId=announcementId;
     }
 
     public void passOrFail(Boolean accept)

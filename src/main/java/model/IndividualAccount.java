@@ -10,7 +10,7 @@ public class IndividualAccount extends Account implements Serializable {
     private int age;
     private String gender;
 
-    private ArrayList<Workhistory> workhistoryList=new ArrayList<>();
+    private ArrayList<Workhistory> workHistoryList=new ArrayList<>();
     private ArrayList<Announcement> scrapList=new ArrayList<>();
     private ArrayList<Resume> resuemList=new ArrayList<>();
 
@@ -56,7 +56,7 @@ public class IndividualAccount extends Account implements Serializable {
 
     public void addWorkHistory(Workhistory workhistory)
     {
-        this.workhistoryList.add(workhistory);
+        this.workHistoryList.add(workhistory);
     }
 
     public void scrapAnnouncement(Announcement announcement)
@@ -64,10 +64,6 @@ public class IndividualAccount extends Account implements Serializable {
         this.scrapList.add(announcement);
     }
 
-    public void addWorkhistory(Workhistory workhistory)
-    {
-        this.workhistoryList.add(workhistory);
-    }
 
 
 

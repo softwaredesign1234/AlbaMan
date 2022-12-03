@@ -2,8 +2,8 @@ package model;
 
 public class FAQ {
 
-    String question;
-    String answer;
+    private String question;
+    private String answer;
 
     public FAQ(String Question, String Answer) {
         this.question = Question;

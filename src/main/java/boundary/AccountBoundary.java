@@ -21,6 +21,11 @@ public class AccountBoundary {
     {
 
     }
+
+    public String permission() //give permission,show failMessage
+    {
+        return null;
+    }
     public void modifyIndividualInfo() {
     }
 
