@@ -14,29 +14,33 @@ Web Service for hiring & recruitment
 
 ```
 git clone ...
+```
 
-#project directory added ~/AlbaMan
+project directory added ~/AlbaMan
 
+```
+cd AlbaMan
 ~/AlbaMan$
 
 ```
 
 
 ### Build
-
+Builds are run in "~/AlbaMan/" directory
 
 make Gradle Wrapper
 
 ```
-~/Albaman$ ./gradlew
+./gradlew
 
 BUILD SUCCESSFUL in 2s
 
 ```
 
 Build
+
 ```
-~/Albaman$ ./gradlew build
+./gradlew build
 
 BUILD SUCCESSFUL in 3s
 
