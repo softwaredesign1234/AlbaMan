@@ -4,24 +4,16 @@ package model;
 public class Apply {
     private String individualId;
     private String enterpriseId;
-
     private int id;
     private Boolean passOrFail=false; //기업->개인, 개인-> 기업 다르므로
-
     private int announcementId;
-    public Apply(String individualId,String enterpriseId)
-    {
-        this.individualId=individualId;
-        this.enterpriseId=enterpriseId;
-    }
+    private int resumeId;
 
-    //기업->개인
-    public Apply(String individualId, String enterpriseId,Boolean isAccept,int announcementId)
+    public Apply(String individualId, String enterpriseId,Boolean isAccept)
     {
         this.enterpriseId=enterpriseId;
         this.individualId=individualId;
         this.passOrFail=isAccept;
-        this.announcementId=announcementId;
     }
 
     public void passOrFail(Boolean accept)
@@ -47,11 +39,35 @@ public class Apply {
     public void setEnterpriseId(String enterpriseId) {
         this.enterpriseId = enterpriseId;
     }
-    public Boolean getAccept() {
+
+    public int getAnnouncementId() {
+        return announcementId;
+    }
+
+    public void setAnnouncementId(int announcementId) {
+        this.announcementId = announcementId;
+    }
+
+    public int getResumeId() {
+        return resumeId;
+    }
+
+    public void setResumeId(int resumeId) {
+        this.resumeId = resumeId;
+    }
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Boolean getPassOrFail() {
         return passOrFail;
     }
 
-    public void setAccept(Boolean accept) {
-        passOrFail = accept;
+    public void setPassOrFail(Boolean passOrFail) {
+        this.passOrFail = passOrFail;
     }
 }

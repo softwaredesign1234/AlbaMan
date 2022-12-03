@@ -10,6 +10,9 @@ public class Announcement {
     private int wagePerHour;
     private int workingHourPerWeek;
     private int workingDaysPerWeek;
+
+
+
     private Date deadline;
 
     public Announcement(int id,String enterpriseId,
@@ -71,5 +74,12 @@ public class Announcement {
 
     public void setWorkingDaysPerWeek(int workingDaysPerWeek) {
         this.workingDaysPerWeek = workingDaysPerWeek;
+    }
+    public Date getDeadline() {
+        return deadline;
+    }
+
+    public void setDeadline(Date deadline) {
+        this.deadline = deadline;
     }
 }
