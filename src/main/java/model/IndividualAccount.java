@@ -30,23 +30,6 @@ public class IndividualAccount extends Account implements Serializable {
 
     }
 
-    public IndividualAccount(String id,String password,String name,Boolean valid,Boolean isActive,String type)
-    {
-        this.id=id;
-        this.password=password;
-        this.name=name;
-        this.valid=valid;
-        this.isActivated=isActive;
-        this.type=type;
-    }
-
-    public void onlyIndividualAccount(String email, String phoneNumber, int age, String gender)
-    {
-        this.email = email;
-        this.phoneNumber = phoneNumber;
-        this.age = age;
-        this.gender = gender;
-    }
 
 
     public void addResume(Resume resume)
