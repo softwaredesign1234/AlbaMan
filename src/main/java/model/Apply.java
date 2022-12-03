@@ -8,8 +8,6 @@ public class Apply {
 
     private int id;
     private Boolean passOrFail=false; //기업->개인, 개인-> 기업 다르므로
-    //기업->개인용 apply랑
-    //개인->기업용 apply랑 생성자 따로 두기
 
     public Apply(String individualId,String enterpriseId)
     {

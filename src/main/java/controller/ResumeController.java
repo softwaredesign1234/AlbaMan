@@ -15,7 +15,7 @@ public class ResumeController {
     //개인계정의 ID를 받아서 해당하는 계정의 이력서 리스트에 저장 + 전체 이력서 리스트에 저장
     public static void saveResume(String individualId, String selfIntroduction, String workExperience, Boolean isopen) throws Exception {
 
-
+        return;
     }
 
     public static IndividualAccount getIndividual(String individualId)
@@ -43,6 +43,7 @@ public class ResumeController {
     public void saveDB(Object o)
     {
         //받은 obeject를 string으로 변환해서 text파일에 저장하기
+        return;
     }
     public Object readDb(String dbname)
     {

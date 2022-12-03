@@ -1,11 +1,10 @@
 package controller;
 
-import boundary.DBManager;
+import boundary.DBBoundary;
 import model.Announcement;
 import model.IndividualAccount;
 
 import java.util.ArrayList;
-import java.util.stream.Collectors;
 
 public class AnnouncementController {
 
@@ -13,17 +12,23 @@ public class AnnouncementController {
     static ArrayList<IndividualAccount> individualAccounts=new ArrayList<>();
 
 
-    static DBManager dbManager;
-    public static void saveAnnouncement(String enterpriseId,int wagePerHour,int workingHourPerWeek,int workingDaysPerWeek) throws Exception
+    static DBBoundary dbManager;
+    public static void makeAnnouncement(String enterpriseId,int wagePerHour,int workingHourPerWeek,int workingDaysPerWeek) throws Exception
     {
-
+        return;
     }
 
     public static void scrapAnnouncement(String individualId,int id)
     {
-
+        return;
     }
 
+    public void deleteAnnouncement(int AnnouncementId){
+        return;
+    }
+    public int CalculatedWage(int wagePerHour, int workingHour){
+        return wagePerHour*workingHour;
+    }
     public static IndividualAccount getIndividual(String individualId)
     {
         return null;

@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class Workhistory {
 
-    public ArrayList<Workhistory> workhistoryList=new ArrayList<>();
     private String enterpriseId;
     private String individualId;
 

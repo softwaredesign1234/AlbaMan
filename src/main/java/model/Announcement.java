@@ -2,6 +2,7 @@ package model;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.Date;
 
 public class Announcement {
     private int id; //공고번호
@@ -9,15 +10,17 @@ public class Announcement {
     private int wagePerHour;
     private int workingHourPerWeek;
     private int workingDaysPerWeek;
+    private Date deadline;
 
     public Announcement(int id,String enterpriseId,
-                        int wagePerHour,int workingHourPerWeek, int workingDaysPerWeek) {
+                        int wagePerHour,int workingHourPerWeek, int workingDaysPerWeek,Date deadline) {
 
         this.id=id;
         this.enterpriseId=enterpriseId;
         this.wagePerHour=wagePerHour;
         this.workingDaysPerWeek=workingDaysPerWeek;
         this.workingHourPerWeek=workingHourPerWeek;
+        this.deadline=deadline;
     }
 
     public Announcement(int id)

@@ -2,7 +2,7 @@ package boundary;
 
 import java.util.ArrayList;
 
-public class DBManager {
+public class DBBoundary {
 
     public void saveDB(Object o)
     {

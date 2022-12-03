@@ -4,7 +4,7 @@ import model.EnterpriseAccount;
 import model.IndividualAccount;
 
 import java.util.ArrayList;
-import boundary.DBManager;
+import boundary.DBBoundary;
 
 
 
@@ -14,16 +14,18 @@ public class AccountController {
     public static ArrayList<IndividualAccount> individualAccounts=new ArrayList<>();
     public static ArrayList<EnterpriseAccount> enterpriseAccounts=new ArrayList<>();
 
-
+    static DBBoundary dbManager;
     public static void signupIndividual(String id, String password, String name,
                                         String email, String phoneNumber, int age, String gender)
     {
+        return;
     }
 
     //000-00-00000
     public static void signupEnterprise(String companyNum, String category, String companyPhoneNumber, String companyLocation,
                                    String id, String password, String name)
     {
+        return;
     }
 
 
@@ -45,6 +47,26 @@ public class AccountController {
         return null;
     }
 
+
+    public Boolean verifyPassword(String type, String id, String passowrd) {
+        return null;
+    }
+
+    public void modifyIndividualAccountInfo(String individualId, int infoType, String modifiedInfo) {
+        return;
+    }
+
+    public void modifyEnterpriseAccountInfo(String enterpriseId, int infoType, String modifiedInfo) {
+        return;
+    }
+
+    public void deleteAccount(String type, String id) {
+        return;
+    }
+
+    public String showWithdrawalTerms() {
+        return null;
+    }
     public static ArrayList<IndividualAccount> getIndividualAccounts()
     {
         return individualAccounts;
@@ -56,6 +78,7 @@ public class AccountController {
 
     public void saveDB(Object o)
     {
+        return;
         //받은 obeject를 string으로 변환해서 text파일에 저장하기
     }
     public Object readDb(String dbname)
