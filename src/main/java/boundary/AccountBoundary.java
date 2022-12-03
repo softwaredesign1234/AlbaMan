@@ -6,7 +6,7 @@ import model.IndividualAccount;
 import java.util.*;
 
 
-public class Boundary {
+public class AccountBoundary {
     Scanner scanner=new Scanner(System.in);
     ArrayList<IndividualAccount> individualAccounts=new ArrayList<>();
     ArrayList<EnterpriseAccount> enterpriseAccounts=new ArrayList<>();
@@ -14,16 +14,7 @@ public class Boundary {
     //나중에 NullPointerException으로 수정하기
     public void Signin()
     {
-        String id=scanner.next();
-        String password=scanner.next();
-        String type=scanner.next();
 
-        if(type.equals("Enterprise"))
-            AccountController.signinEnterprise(id,password);
-        else if(type.equals("Individual"))
-            AccountController.signinIndividual(id,password);
-        else
-            System.out.println("타입을 잘못 입력하셨습니다.");
     }
 
     public void Signup()
@@ -56,15 +47,6 @@ public class Boundary {
 
     }
 
-    public void resume()
-    {
-        //적절한 paremeter 입력받고
-        //resume 작성 합수 호출
-    }
 
-    public void apply()
-    {
-        //적절한 parameter 입력받고
-        //apply 함수 호출
-    }
+
 }

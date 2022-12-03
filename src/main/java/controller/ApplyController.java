@@ -12,7 +12,6 @@ public class ApplyController {
 
     //기업->개인 지원 (giveOffer)
     public static void saveApply(String individualId,String enterpriseId) throws Exception {
-        Apply apply=new Apply(individualId,enterpriseId,false);//지원 생성
     }
 
     public static ArrayList<Apply> getApplyList() {
@@ -23,25 +22,23 @@ public class ApplyController {
     //개인에게 기업오퍼 전달, 수락여부 return
     public Boolean acceptIndividual(String individualId, String EnterpriseId, Boolean wantToAccept)
     {
-        Boolean result=wantToAccept;
-        return result;
+        return null;
     }
     //오퍼 수락여부 전달
     public void acceptOrNot(String individualId,Boolean accept,String enterpriseId)
     {
-        ArrayList<Apply> arr=getApplyList();
-        Apply apply=arr.stream()
-                .filter(apply1 -> individualId.equals(apply1.getIndividualId()))
-                .findAny()
-                .orElse(null);
+    }
+    public void saveDB(Object o)
+    {
+        //받은 obeject를 string으로 변환해서 text파일에 저장하기
+    }
+    public Object readDb(String dbname)
+    {
+        return null;
+    }
 
-        apply.passOrFail(accept);
 
-        if(accept=true)
-        {
-            //workHistory에 추가 (기업id, 개인id)
-        }
-        else
-            exit(0);
+    public ArrayList<Object> readDB(String tablename) {
+        return null;
     }
 }
