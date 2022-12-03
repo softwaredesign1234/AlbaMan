@@ -5,8 +5,8 @@ Web Service for hiring & recruitment
 
 ## Prerequisites
 
-- gradle 4.7
-- jdk 18
+- Gradle 7.4
+- JDK 18
 
 
 ### Build
