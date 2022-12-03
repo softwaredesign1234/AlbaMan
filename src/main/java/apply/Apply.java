@@ -10,12 +10,10 @@ public class Apply {
     private String individualId;
     private String enterpriseId;
 
-
-
-    private Boolean isAccept=false;
-
-
-    public static ArrayList<Apply> applyList=new ArrayList<>();
+    private int id;
+    private Boolean passOrFail=false; //기업->개인, 개인-> 기업 다르므로
+    //기업->개인용 apply랑
+    //개인->기업용 apply랑 생성자 따로 두기
 
     public Apply(String individualId,String enterpriseId)
     {
@@ -24,19 +22,19 @@ public class Apply {
     }
 
     //기업->개인
-    public void addApply(String individualId, String enterpriseId,Boolean isAccept)
+    public Apply(String individualId, String enterpriseId,Boolean isAccept)
     {
         this.enterpriseId=enterpriseId;
         this.individualId=individualId;
-        this.isAccept=isAccept;
+        this.passOrFail=isAccept;
 
         System.out.println("Succefully added!");
     }
 
-    public void acceptOrnot(Boolean accept)
+    public void passOrFail(Boolean accept)
     {
 
-        this.isAccept=accept;
+        this.passOrFail=accept;
     }
 
 
@@ -57,10 +55,10 @@ public class Apply {
         this.enterpriseId = enterpriseId;
     }
     public Boolean getAccept() {
-        return isAccept;
+        return passOrFail;
     }
 
     public void setAccept(Boolean accept) {
-        isAccept = accept;
+        passOrFail = accept;
     }
 }

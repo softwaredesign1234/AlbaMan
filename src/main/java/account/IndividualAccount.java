@@ -1,7 +1,10 @@
 package account;
 
 import account.Account;
+import announcement.Announcement;
 import resume.Resume;
+import workhistory.Workhistory;
+
 import java.util.*;
 import java.io.*;
 
@@ -12,6 +15,9 @@ public class IndividualAccount extends Account implements Serializable {
     private int age;
     private String gender;
 
+    private ArrayList<Workhistory> workhistoryList=new ArrayList<>();
+    private ArrayList<Announcement> scrapList=new ArrayList<>();
+    private ArrayList<Resume> resuemList=new ArrayList<>();
 
 
     public IndividualAccount(String email, String phoneNumber, int age, String gender, String id, String password,
@@ -24,11 +30,10 @@ public class IndividualAccount extends Account implements Serializable {
         this.password = password;
         this.name = name;
         this.valid = valid;
-        this.isActive = isActive;
+        this.isActivated = isActive;
         this.type = type;
 
     }
-
 
     public IndividualAccount(String id,String password,String name,Boolean valid,Boolean isActive,String type)
     {
@@ -36,7 +41,7 @@ public class IndividualAccount extends Account implements Serializable {
         this.password=password;
         this.name=name;
         this.valid=valid;
-        this.isActive=isActive;
+        this.isActivated=isActive;
         this.type=type;
     }
 
@@ -49,7 +54,25 @@ public class IndividualAccount extends Account implements Serializable {
     }
 
 
+    public void addResume(Resume resume)
+    {
+        this.resuemList.add(resume);
+    }
 
+    public void addWorkHistory(Workhistory workhistory)
+    {
+        this.workhistoryList.add(workhistory);
+    }
+
+    public void scrapAnnouncement(Announcement announcement)
+    {
+        this.scrapList.add(announcement);
+    }
+
+    public void addWorkhistory(Workhistory workhistory)
+    {
+        this.workhistoryList.add(workhistory);
+    }
 
 
 

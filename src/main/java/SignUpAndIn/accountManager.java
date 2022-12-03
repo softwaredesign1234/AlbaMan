@@ -8,7 +8,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
-public class SignUpAndIn {
+public class accountManager {
 
     public static ArrayList<IndividualAccount> individualAccounts=new ArrayList<>();
     public static ArrayList<EnterpriseAccount> enterpriseAccounts=new ArrayList<>();
@@ -28,8 +28,7 @@ public class SignUpAndIn {
         if(m.matches())
         {
             valid=true;
-            //String email, String phoneNumber, int age, String gender, String id, String password,
-            //                             String name, Boolean valid, Boolean isActive, String type
+
             IndividualAccount individualAccount=new IndividualAccount(email, phoneNumber, age, gender, id, password,name,valid,isActivate, "Individual");
 
             individualAccounts.add(individualAccount);
@@ -116,7 +115,7 @@ public class SignUpAndIn {
 
     }
 
-    public static ArrayList<IndividualAccount> getIndividualAccounts()
+    static ArrayList<IndividualAccount> getIndividualAccounts()
     {
         return individualAccounts;
     }

@@ -27,14 +27,14 @@ public class Announcement {
 
 
     //공고 생성
-    public void addAnnouncement(String enterpriseId,int wagePerHour,int workingHourPerWeek,int workingDaysPerWeek) throws Exception {
-
-      this.enterpriseId=enterpriseId;
-      this.wagePerHour=wagePerHour;
-      this.workingHourPerWeek=workingHourPerWeek;
-      this.workingDaysPerWeek=workingDaysPerWeek;
-        System.out.println("Announcement Succefully added!");
-    }
+//    public void addAnnouncement(String enterpriseId,int wagePerHour,int workingHourPerWeek,int workingDaysPerWeek) throws Exception {
+//
+//      this.enterpriseId=enterpriseId;
+//      this.wagePerHour=wagePerHour;
+//      this.workingHourPerWeek=workingHourPerWeek;
+//      this.workingDaysPerWeek=workingDaysPerWeek;
+//        System.out.println("Announcement Succefully added!");
+//    }
 
 
 

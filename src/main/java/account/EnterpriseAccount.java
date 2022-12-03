@@ -7,12 +7,10 @@ import announcement.Announcement;
 
 public class EnterpriseAccount extends Account implements Serializable {
 
-    private String companyNum;
-
-
+    private String enterpriseNum;
     private String category;
-    private String companyPhoneNumber;
-    private String companyLocation;
+    private String enterprisePhoneNumber;
+    private String enterpriseLocation;
 
     public EnterpriseAccount(String id,String password,String name,Boolean valid,Boolean isActive,String type)
     {
@@ -20,44 +18,35 @@ public class EnterpriseAccount extends Account implements Serializable {
         this.password=password;
         this.name=name;
         this.valid=valid;
-        this.isActive=isActive;
+        this.isActivated=isActive;
         this.type=type;
     }
 
     public EnterpriseAccount(String companyNum, String category, String companyPhoneNumber, String companyLocation,
                              String id, String password, String name,
                              Boolean valid, Boolean isActive, String type) {
-        this.companyNum = companyNum;
+        this.enterpriseNum = companyNum;
         this.category = category;
-        this.companyLocation = companyLocation;
-        this.companyPhoneNumber = companyPhoneNumber;
+        this.enterprisePhoneNumber = companyLocation;
+        this.enterpriseLocation = companyPhoneNumber;
         this.id = id;
         this.password = password;
         this.name = name;
         this.valid = valid;
-        this.isActive = isActive;
+        this.isActivated = isActive;
         this.type = type;
     }
 
 
 
 
-
-
-
-
-
-
-
-
-
     //getter,setter
     public String getCompanyNum() {
-        return companyNum;
+        return enterpriseNum;
     }
 
     public void setCompanyNum(String companyNum) {
-        this.companyNum = companyNum;
+        this.enterpriseNum = companyNum;
     }
 
     public String getCategory() {
@@ -69,19 +58,19 @@ public class EnterpriseAccount extends Account implements Serializable {
     }
 
     public String getCompanyPhoneNumber() {
-        return companyPhoneNumber;
+        return enterprisePhoneNumber;
     }
 
     public void setCompanyPhoneNumber(String companyPhoneNumber) {
-        this.companyPhoneNumber = companyPhoneNumber;
+        this.enterprisePhoneNumber = companyPhoneNumber;
     }
 
     public String getCompanyLocation() {
-        return companyLocation;
+        return enterpriseLocation;
     }
 
     public void setCompanyLocation(String companyLocation) {
-        this.companyLocation = companyLocation;
+        this.enterpriseLocation = companyLocation;
     }
 
 

@@ -6,7 +6,7 @@ public class Account {
     protected String password;
     protected String name;
     protected Boolean valid;
-    protected Boolean isActive;
+    protected Boolean isActivated;
     protected String type;
     public String getId() {
         return id;
@@ -33,10 +33,10 @@ public class Account {
         this.valid = valid;
     }
     public Boolean getIsActive() {
-        return isActive;
+        return isActivated;
     }
     public void setIsActive(Boolean isActive) {
-        this.isActive = isActive;
+        this.isActivated = isActive;
     }
     public String getType() {
         return type;

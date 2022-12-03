@@ -1,22 +1,33 @@
 package resume;
 
 
+import account.IndividualAccount;
+
 import java.io.*;
 import java.sql.*;
 import java.util.*;
 
 public class Resume {
     private int id;
-    private String individualName;
+
+    public IndividualAccount getIndividualAccount() {
+        return individualAccount;
+    }
+
+    public void setIndividualAccount(IndividualAccount individualAccount) {
+        this.individualAccount = individualAccount;
+    }
+
+    private IndividualAccount individualAccount;
     private String selfIntroduction;
     private String workExperience;
     private Boolean isOpened;
 
-    public Resume(int id,String individualName,String selfIntroduction,
+    //개인 저장용
+    public Resume(int id,String selfIntroduction,
                   String workExperience,Boolean isOpened)
     {
         this.id=id;
-        this.individualName=individualName;
         this.selfIntroduction=selfIntroduction;
         this.workExperience=workExperience;
         this.isOpened=isOpened;
@@ -28,6 +39,15 @@ public class Resume {
     }
 
 
+    //공개용
+    public Resume(int id,String selfIntroduction,String workExperience,Boolean isOpened,IndividualAccount individualAccount)
+    {
+        this.id=id;
+        this.selfIntroduction=selfIntroduction;
+        this.workExperience=workExperience;
+        this.isOpened=isOpened;
+        this.individualAccount=individualAccount;
+    }
 
 
 
@@ -40,18 +60,6 @@ public class Resume {
     //참고로 resumeList를 user가 가지고 있음? ㅇㅇ
 
 
-    // 이력서 작성
-    public void addResume(String individualName,String selfIntroduction,String workExperience,Boolean isopen) throws Exception {
-
-        //유효성 검사 : 필요없음. 로그인을 전제로 할거임
-
-        this.selfIntroduction=selfIntroduction;
-        this.workExperience=workExperience;
-        this.isOpened=isopen;
-        this.individualName=individualName;
-
-        System.out.println("Succefully added!");
-    }
 
 
     public int getId() {
@@ -61,13 +69,7 @@ public class Resume {
     public void setId(int id) {
         this.id = id;
     }
-    public String getIndividualName() {
-        return individualName;
-    }
 
-    public void setIndividualName(String individualName) {
-        this.individualName = individualName;
-    }
     public String getSelfIntroduction() {
         return selfIntroduction;
     }

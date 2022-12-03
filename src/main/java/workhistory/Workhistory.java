@@ -1,23 +1,23 @@
 package workhistory;
 
-import java.util.Date;
+import account.EnterpriseAccount;
+import account.IndividualAccount;
+import com.sun.corba.se.spi.orbutil.threadpool.Work;
+
+import java.util.ArrayList;
 
 public class Workhistory {
 
-    private int id;
+    public ArrayList<Workhistory> workhistoryList=new ArrayList<>();
     private String enterpriseId;
-    private Date startingDate;
-    private Date endDate;
+    private String individualId;
 
-
-
-
-
-
-
-
-
-
+    //account가 이미 history를 들고 있는데 individual 객체를 굳이 가지고 있어야하나? ->ㅇㅇ imgurl이랑 post 생각해보면됨
+    public Workhistory(String enterpriseId,String individualId)
+    {
+        this.enterpriseId=enterpriseId;
+        this.individualId=individualId;
+    }
 
 
 
@@ -26,13 +26,6 @@ public class Workhistory {
 
 
     //getter,setter
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getEnterpriseId() {
         return enterpriseId;
@@ -42,21 +35,6 @@ public class Workhistory {
         this.enterpriseId = enterpriseId;
     }
 
-    public Date getStartingDate() {
-        return startingDate;
-    }
-
-    public void setStartingDate(Date startingDate) {
-        this.startingDate = startingDate;
-    }
-
-    public Date getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(Date endDate) {
-        this.endDate = endDate;
-    }
 
 
 }

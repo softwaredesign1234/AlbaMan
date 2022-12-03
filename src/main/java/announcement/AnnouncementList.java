@@ -1,6 +1,6 @@
 package announcement;
 
-import resume.Resume;
+import account.IndividualAccount;
 
 import java.util.ArrayList;
 import java.util.stream.Collectors;
@@ -8,17 +8,41 @@ import java.util.stream.Collectors;
 public class AnnouncementList {
 
     static ArrayList<Announcement> announcementList=new ArrayList<>();
+    static ArrayList<IndividualAccount> individualAccounts=new ArrayList<>();
 
 
     public static void saveAnnouncement(String enterpriseId,int wagePerHour,int workingHourPerWeek,int workingDaysPerWeek) throws Exception {
         int id=getAnnouncementList().size()+1;
-        Announcement announcement=new Announcement(id);
-        announcement.addAnnouncement(enterpriseId,wagePerHour,workingHourPerWeek,workingDaysPerWeek);
+        //굳이 id따로 나머지 따로 받아서 생성할 필요 없음. 하나로 생성하기
+        Announcement announcement=new Announcement(id,enterpriseId,wagePerHour,workingHourPerWeek,workingDaysPerWeek);
         announcementList.add(announcement);
         System.out.println("Succefully saved!");
 
     }
 
+    public static void scrapAnnouncement(String individualId,int id)
+    {
+        IndividualAccount individualAccount=getIndividual(individualId);
+        Announcement announcement=readAnnouncementbyId(id);
+        individualAccount.scrapAnnouncement(announcement);
+    }
+
+    public static IndividualAccount getIndividual(String individualId)
+    {
+        ArrayList<IndividualAccount> arr=getIndividualAccounts();
+
+        IndividualAccount result=arr.stream()
+                .filter(individualAccount -> individualId.equals(individualAccount.getId()))
+                .findAny()
+                .orElse(null);
+
+        return result;
+    }
+
+    public static ArrayList<IndividualAccount> getIndividualAccounts()
+    {
+        return individualAccounts;
+    }
     //공고 id로 조회하기 (원하는 하나의 공고 조회)
     public static Announcement readAnnouncementbyId(int announcementid)
     {
@@ -88,24 +112,24 @@ public class AnnouncementList {
     }
 
 
-    public static void main(String[] args) throws Exception{
-        saveAnnouncement("삼성전자",5000,52,5);
-        saveAnnouncement("카카오",5000,52,5);
-        saveAnnouncement("카카오",3000,40,5);
-        saveAnnouncement("카카오",4000,45,4);
-
-        saveAnnouncement("쿠팡",5000,52,5);
-
-        saveAnnouncement("네이버",5000,52,5);
-
-        ArrayList<Announcement> result=readAnnouncementByCategory("카카오");
-        for(int i=0;i<result.size();i++)
-        {
-            System.out.println(result.get(i).getId()+" "+result.get(i).getEnterpriseId()+" "+result.get(i).getWagePerHour()+" "+result.get(i).getWorkingHourPerWeek()+" "+result.get(i).getWorkingDaysPerWeek());
-        }
-
-
-
-    }
+//    public static void main(String[] args) throws Exception{
+//        saveAnnouncement("삼성전자",5000,52,5);
+//        saveAnnouncement("카카오",5000,52,5);
+//        saveAnnouncement("카카오",3000,40,5);
+//        saveAnnouncement("카카오",4000,45,4);
+//
+//        saveAnnouncement("쿠팡",5000,52,5);
+//
+//        saveAnnouncement("네이버",5000,52,5);
+//
+//        ArrayList<Announcement> result=readAnnouncementByCategory("카카오");
+//        for(int i=0;i<result.size();i++)
+//        {
+//            System.out.println(result.get(i).getId()+" "+result.get(i).getEnterpriseId()+" "+result.get(i).getWagePerHour()+" "+result.get(i).getWorkingHourPerWeek()+" "+result.get(i).getWorkingDaysPerWeek());
+//        }
+//
+//       ArrayList<EnterpriseAccount> arr=new SignUpAndIn().getEnterpriseAccounts();
+//        System.out.println(arr.get(0).getCategory());
+//    }
 
 }
