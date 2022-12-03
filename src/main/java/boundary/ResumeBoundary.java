@@ -7,4 +7,9 @@ public class ResumeBoundary {
         //resume 작성 합수 호출
     }
 
+    public String message()
+    {
+        return null;
+    }
+
 }
