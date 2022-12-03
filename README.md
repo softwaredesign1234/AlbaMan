@@ -12,13 +12,12 @@ Web Service for hiring & recruitment
 ### Build
 
 
-make Gradle Wraaper
+make Gradle Wrapper
 
 ```
 ./gradlew
 
 BUILD SUCCESSFUL in 2s
-1 actionable task: 1 executed
 
 ```
 
@@ -27,7 +26,6 @@ Build
 ./gradlew build
 
 BUILD SUCCESSFUL in 3s
-2 actionable tasks: 2 executed
 
 ```
 
