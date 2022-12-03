@@ -39,12 +39,12 @@ public class EnterpriseAccount extends Account implements Serializable {
 
 
     //getter,setter
-    public String getCompanyNum() {
+    public String getEnterpriseNum() {
         return enterpriseNum;
     }
 
-    public void setCompanyNum(String companyNum) {
-        this.enterpriseNum = companyNum;
+    public void setEnterpriseNum(String enterpriseNum) {
+        this.enterpriseNum = enterpriseNum;
     }
 
     public String getCategory() {
@@ -55,21 +55,22 @@ public class EnterpriseAccount extends Account implements Serializable {
         this.category = category;
     }
 
-    public String getCompanyPhoneNumber() {
+    public String getEnterprisePhoneNumber() {
         return enterprisePhoneNumber;
     }
 
-    public void setCompanyPhoneNumber(String companyPhoneNumber) {
-        this.enterprisePhoneNumber = companyPhoneNumber;
+    public void setEnterprisePhoneNumber(String enterprisePhoneNumber) {
+        this.enterprisePhoneNumber = enterprisePhoneNumber;
     }
 
-    public String getCompanyLocation() {
+    public String getEnterpriseLocation() {
         return enterpriseLocation;
     }
 
-    public void setCompanyLocation(String companyLocation) {
-        this.enterpriseLocation = companyLocation;
+    public void setEnterpriseLocation(String enterpriseLocation) {
+        this.enterpriseLocation = enterpriseLocation;
     }
+
 
 
 }
