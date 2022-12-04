@@ -5,12 +5,28 @@ Web Service for hiring & recruitment
 
 ## Prerequisites
 
+- Ubuntu 20.04.4 LTS
 - Gradle 7.4
 - JDK 18
 
 
-### Build
+### Project Settings
 
+```
+git clone ...
+```
+
+project directory added ~/AlbaMan
+
+```
+cd AlbaMan
+~/AlbaMan$
+
+```
+
+
+### Build
+Builds are run in "~/AlbaMan/" directory
 
 make Gradle Wrapper
 
@@ -22,6 +38,7 @@ BUILD SUCCESSFUL in 2s
 ```
 
 Build
+
 ```
 ./gradlew build
 
