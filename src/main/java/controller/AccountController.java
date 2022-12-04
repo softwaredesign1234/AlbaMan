@@ -14,7 +14,7 @@ public class AccountController {
     public static ArrayList<IndividualAccount> individualAccounts=new ArrayList<>();
     public static ArrayList<EnterpriseAccount> enterpriseAccounts=new ArrayList<>();
 
-    static DBBoundary dbManager;
+    public static DBBoundary dbManager;
 
     public static String showTermsOfService()
     {
@@ -55,6 +55,13 @@ public class AccountController {
     public Boolean isSigninSuccess()
     {
         return null;
+    }
+
+    //회원가입시 email, 사업자번호 인증
+    public static Boolean isValidate(Boolean type,String info)
+    {
+        return null;
+
     }
 
     public Boolean verifyPassword(String type, String id, String passowrd) {

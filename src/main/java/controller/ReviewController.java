@@ -2,6 +2,7 @@ package controller;
 
 import java.util.ArrayList;
 
+import boundary.DBBoundary;
 import model.IndividualAccount;
 import model.Review;
 import model.Workhistory;
@@ -9,6 +10,7 @@ import model.Workhistory;
 public class ReviewController {
 
     public ArrayList<Review> reviewList = new ArrayList<Review>();
+    public static DBBoundary dbManager;
 
     public ArrayList<Review> readReviewById(String enterpriseId) {
         return null;

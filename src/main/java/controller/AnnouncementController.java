@@ -8,11 +8,11 @@ import java.util.ArrayList;
 
 public class AnnouncementController {
 
-    static ArrayList<Announcement> announcementList=new ArrayList<>();
-    static ArrayList<IndividualAccount> individualAccounts=new ArrayList<>();
+    public static ArrayList<Announcement> announcementList=new ArrayList<>();
+    public static ArrayList<IndividualAccount> individualAccounts=new ArrayList<>();
 
 
-    static DBBoundary dbManager;
+    public static DBBoundary dbManager;
     public static void makeAnnouncement(String enterpriseId,int wagePerHour,int workingHourPerWeek,int workingDaysPerWeek) throws Exception
     {
         return;
@@ -39,7 +39,7 @@ public class AnnouncementController {
         return individualAccounts;
     }
     //공고 id로 조회하기 (원하는 하나의 공고 조회)
-    public static Announcement readAnnouncementbyId(int announcementid)
+    public static Announcement readAnnouncementById(int announcementId)
     {
         return null;
     }
@@ -52,7 +52,7 @@ public class AnnouncementController {
     }
 
     //시급으로 조회하기
-    public static ArrayList<Announcement> readAnnouncementBywage(int wage)
+    public static ArrayList<Announcement> readAnnouncementByWage(int wage)
     {
         return null;
     }

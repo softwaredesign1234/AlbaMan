@@ -16,11 +16,7 @@ public class Apply {
         this.passOrFail=isAccept;
     }
 
-    public void passOrFail(Boolean accept)
-    {
 
-        this.passOrFail=accept;
-    }
 
 
     //getter, setter

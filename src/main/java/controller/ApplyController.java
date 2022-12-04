@@ -1,5 +1,6 @@
 package controller;
 
+import boundary.DBBoundary;
 import model.Apply;
 
 import java.util.ArrayList;
@@ -7,7 +8,8 @@ import java.util.ArrayList;
 import static java.lang.System.exit;
 
 public class ApplyController {
-    static ArrayList<Apply> applyList=new ArrayList<>();
+    public static ArrayList<Apply> applyList=new ArrayList<>();
+    public static DBBoundary dbManager;
 
 
     //기업->개인

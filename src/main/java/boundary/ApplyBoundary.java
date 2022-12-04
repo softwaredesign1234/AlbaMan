@@ -1,5 +1,7 @@
 package boundary;
 
+import model.Apply;
+
 public class ApplyBoundary {
     public void inputapply()
     {
@@ -11,4 +13,19 @@ public class ApplyBoundary {
     {
 
     }
+
+    public void inputResult()
+    {
+
+    }
+    public Apply showApply()
+    {
+        return null;
+    }
+
+    public Apply sendApply()
+    {
+        return null;
+    }
+
 }

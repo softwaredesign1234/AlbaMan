@@ -12,4 +12,15 @@ public class AnnouncementBoundary {
         return;
     }
 
+    public void showAnnouncement(){
+
+    }
+    public void scrapAnnouncementId()
+    {
+
+    }
+
+
+
+
 }

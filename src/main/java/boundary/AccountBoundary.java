@@ -12,15 +12,38 @@ public class AccountBoundary {
     ArrayList<EnterpriseAccount> enterpriseAccounts=new ArrayList<>();
 
     //나중에 NullPointerException으로 수정하기
-    public void Signin()
+
+    public void startSignup()
+    {
+        //SEQ1: showTerms호출
+    }
+    public String showTerms()
+    {
+        return null;
+    }
+    public void inputValidationInput()
+    {
+        //SEQ1: 회원가입 전 액터가 인증정보 입력 (Loop 첫단계)
+    }
+
+    public void vadlidation()
+    {
+        //SEQ1: 인증정보 확인
+
+    }
+
+
+    public void signIn()
     {
 
     }
 
-    public void Signup()
+    public void signUp()
     {
 
     }
+
+
 
     public String permission() //give permission,show failMessage
     {

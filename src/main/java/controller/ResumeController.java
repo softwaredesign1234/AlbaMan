@@ -2,13 +2,15 @@ package controller;
 
 import java.util.*;
 
+import boundary.DBBoundary;
 import model.IndividualAccount;
 import model.Resume;
 
 public class ResumeController {
 
-    static ArrayList<Resume> resumeList=new ArrayList<>();
-    static ArrayList<IndividualAccount> individualAccounts=new ArrayList<>(); //개인회원 db
+    public static ArrayList<Resume> resumeList=new ArrayList<>();
+    public static ArrayList<IndividualAccount> individualAccounts=new ArrayList<>(); //개인회원 db
+    public static DBBoundary dbManager;
 
 
     //이력서 생성 및 저장
