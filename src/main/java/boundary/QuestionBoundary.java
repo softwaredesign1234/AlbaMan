@@ -9,6 +9,10 @@ public class QuestionBoundary {
         //input question fields
         return;
     }
+    public void showAdminInform(){
+
+        return;
+    }
 
     public void showQuestionList(){
         return;

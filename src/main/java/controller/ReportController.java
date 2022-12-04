@@ -11,6 +11,11 @@ public class ReportController {
     static DBBoundary dbManager;
     ArrayList<Report> reportList = new ArrayList<>();
 
+
+    public void findReport(String reportedMemberId){
+
+        return;
+    }
     public void deactivateMember(String reportedMemberId){
 
         return;
