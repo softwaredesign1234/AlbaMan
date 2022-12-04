@@ -9,6 +9,8 @@ import java.util.List;
 
 public class QuestionController {
 
+    ArrayList<Question> questionList = new ArrayList<>();
+
     static DBBoundary dbManager;
     private final String email = "11@naver.com";
     private final String phoneNumber = "01051111111";
@@ -20,7 +22,7 @@ public class QuestionController {
         return null;
     }
 
-    public void addQuestion(String email, String phoneNumber, String question){
+    public void addQuestion(String question){
         return;
     }
     public void addAnswer(int questionId, String questionAnswer){
