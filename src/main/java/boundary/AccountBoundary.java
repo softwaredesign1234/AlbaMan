@@ -52,7 +52,15 @@ public class AccountBoundary {
     public void modifyIndividualInfo() {
     }
 
+    public void modifyEnterpriseInfo() {
+
+    }
+
     public void withdrawAccount() {
+    }
+
+    public String showResultMessage() {
+        return null;
     }
 
 

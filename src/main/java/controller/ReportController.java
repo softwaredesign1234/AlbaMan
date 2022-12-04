@@ -2,12 +2,14 @@ package controller;
 
 import boundary.DBBoundary;
 import model.IndividualAccount;
+import model.Report;
 
 import java.util.ArrayList;
 
 public class ReportController {
 
     static DBBoundary dbManager;
+    ArrayList<Report> reportList = new ArrayList<>();
 
     public void deactivateMember(String reportedMemberId){
 
@@ -22,6 +24,10 @@ public class ReportController {
         return;
     }
     public void addReport(String memberId, String reportedMemberId){
+
+        return;
+    }
+    public void removeReport(int reportId){
 
         return;
     }

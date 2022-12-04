@@ -8,7 +8,6 @@ import model.Review;
 import model.Workhistory;
 
 public class ReviewController {
-
     public ArrayList<Review> reviewList = new ArrayList<Review>();
     public static DBBoundary dbManager;
 
@@ -27,7 +26,9 @@ public class ReviewController {
     public void addToReviewList( String enterpriseId, String individualId, String review) {
         return;
     }
-
+    public Review writeReview(String enterpriseId, String individualId, String review) {
+        return null;
+    }
     public void saveDB(Object o) {
         return;
     }
