@@ -10,20 +10,49 @@ public class ReviewController {
 
     public ArrayList<Review> reviewList = new ArrayList<Review>();
 
-    public ArrayList<Review> readReviewById(String enterpriseId) {
-        return null;
+    public static ArrayList<Review> readReviewById(String enterpriseId) {
+    	
+    	ArrayList<Review> reviews = reviewList.stream()
+    			.filter(r -> r.getEnterpriseId().equals(enterpriseId))
+    			.collect(Collectors.toList());
+    	
+        return reviews;
     }
 
-    public ArrayList<Review> getReviewList() {
-        return null;
+    public static ArrayList<Review> getReviewList() {
+    	
+        // return reviewList;
+    	return readDB("reviewList");
     }
 
-    public Boolean verifyWorkHistory(String individualId, String enterpriseId) {
-        return null;
+    public static Boolean verifyWorkHistory(String individualId, String enterpriseId) {
+    	
+    	ArrayList<IndividualAccount> individualAccounts = readDB("individualAccounts");
+    	ArrayList<WorkHistory> workHistory;
+    	
+    	IndividualAccount iAccount = individualAccounts.stream()
+    			.filter(i -> i.getId().equals(individualId));
+    	
+    	if (iAccount == null)
+    		return false;
+    	else {
+    		workHistory = iAccount.getWorkHistory();
+    		if (workHistory.stream()
+    				.filter(w -> w.getEnterpriseId().equals(enterpriseId)))
+    			return true;
+    	}
+    	
+    	return false;
     }
 
-    public void addToReviewList( String enterpriseId, String individualId, String review) {
-        return;
+    public static void addToReviewList( String enterpriseId, String individualId, String review) {
+        
+    	Review newReview = new Review(enterpriseId, individualId, review);
+    	
+    	// reviewList.add(newReview);
+    	saveDB(newReview);
+    	
+    	return;
     }
 
     public void saveDB(Object o) {

@@ -82,6 +82,10 @@ public class IndividualAccount extends Account implements Serializable {
     public void setGender(String gender) {
         this.gender = gender;
     }
+    
+    public ArrayList<Workhistory> getWorkHistory() {
+    	return workHistoryList;
+    }
 
 
 }

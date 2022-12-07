@@ -8,12 +8,19 @@ public class FAQController {
 
     ArrayList<FAQ> faq = new ArrayList<FAQ>();
 
-    public void addToFAQ(String Question, String Answer) {
+    public static void addToFAQ(String Question, String Answer) {
+    	FAQ newFAQ = new FAQ(Question, Answer); // 생성
+    	
+    	faq.add(newFAQ);
+    	saveDB(newFAQ);
         return;
     }
 
-    public ArrayList<FAQ> getFAQList() {
-        return null;
+    public static ArrayList<FAQ> getFAQList() {
+    	ArrayList<FAQ> FAQList = readDB("FAQList");
+    	
+        // return faq;
+        return FAQList;
     }
 
     public void saveDB(Object o) {
