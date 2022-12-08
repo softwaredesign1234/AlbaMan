@@ -26,14 +26,11 @@ public class QuestionController {
         return managerPhoneNumber;
     }
 
-<<<<<<< HEAD
     public void addQuestion(String questionContext){
         Question q = new Question();
         q.setQuestion(questionContext);
         saveDB(q);
-=======
-    public void addQuestion(String question){
->>>>>>> e4f0aee2d15a4aacbed1c097c382bb3b08a771cd
+
         return;
     }
     public void addAnswer(int questionId, String questionAnswer){
