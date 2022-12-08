@@ -16,6 +16,7 @@ public class ReportController {
     ArrayList<Report> reportList = new ArrayList<>();
 
 
+<<<<<<< HEAD
     //List<Report>
     public Report findReport(String reportedMemberId){
         Report report = new Report();
@@ -25,6 +26,11 @@ public class ReportController {
                 report = r;
         }
         return report;
+=======
+    public void findReport(String reportedMemberId){
+
+        return;
+>>>>>>> e4f0aee2d15a4aacbed1c097c382bb3b08a771cd
     }
     public void deactivateMember(String reportedMemberId){
 
@@ -45,6 +51,14 @@ public class ReportController {
     }
     public void removeReport(int reportId){
 
+<<<<<<< HEAD
+=======
+        return;
+    }
+    public void saveDB(Object o)
+    {
+        //받은 obeject를 string으로 변환해서 text파일에 저장하기
+>>>>>>> e4f0aee2d15a4aacbed1c097c382bb3b08a771cd
         return;
     }
     public void saveDB(Report report)

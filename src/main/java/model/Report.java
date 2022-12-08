@@ -10,7 +10,10 @@ public class Report {
     private String reportedMemberId;
 
     public String getReportContext() {
+<<<<<<< HEAD
 
+=======
+>>>>>>> e4f0aee2d15a4aacbed1c097c382bb3b08a771cd
         return reportContext;
     }
 
