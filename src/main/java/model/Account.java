@@ -1,5 +1,9 @@
 package model;
 
+
+import jdk.nashorn.internal.objects.annotations.Getter;
+import jdk.nashorn.internal.objects.annotations.Setter;
+
 public class Account {
 
     protected String id;
@@ -44,6 +48,7 @@ public class Account {
     public void setType(String type) {
         this.type = type;
     }
+
 
 
 }

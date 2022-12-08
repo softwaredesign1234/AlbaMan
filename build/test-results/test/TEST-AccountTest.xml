@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="AccountTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-12-08T08:50:10" hostname="DESKTOP-29CPMJ4" time="0.024">
+  <properties/>
+  <testcase name="Individualtest()" classname="AccountTest" time="0.024"/>
+  <system-out><![CDATA[Signup Success!
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

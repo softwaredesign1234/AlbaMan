@@ -2,6 +2,7 @@ package model;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Announcement {
@@ -10,13 +11,10 @@ public class Announcement {
     private int wagePerHour;
     private int workingHourPerWeek;
     private int workingDaysPerWeek;
-
-
-
-    private Date deadline;
+    private LocalDate deadline;
 
     public Announcement(int id,String enterpriseId,
-                        int wagePerHour,int workingHourPerWeek, int workingDaysPerWeek,Date deadline) {
+                        int wagePerHour,int workingHourPerWeek, int workingDaysPerWeek,LocalDate deadline) {
 
         this.id=id;
         this.enterpriseId=enterpriseId;
@@ -75,11 +73,11 @@ public class Announcement {
     public void setWorkingDaysPerWeek(int workingDaysPerWeek) {
         this.workingDaysPerWeek = workingDaysPerWeek;
     }
-    public Date getDeadline() {
+    public LocalDate getDeadline() {
         return deadline;
     }
 
-    public void setDeadline(Date deadline) {
+    public void setDeadline(LocalDate deadline) {
         this.deadline = deadline;
     }
 }
