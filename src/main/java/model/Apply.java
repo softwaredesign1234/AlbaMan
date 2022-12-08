@@ -16,6 +16,10 @@ public class Apply {
         this.passOrFail=isAccept;
     }
 
+    public Apply(){
+
+    }
+
 
 
 

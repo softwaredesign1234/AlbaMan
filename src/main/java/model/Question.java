@@ -14,6 +14,7 @@ public class Question {
         this.id = id;
         this.question = question;
     }
+    public Question() {    }
 
     public int getId() {
         return id;

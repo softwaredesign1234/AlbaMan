@@ -10,6 +10,7 @@ public class Report {
     private String reportedMemberId;
 
     public String getReportContext() {
+
         return reportContext;
     }
 
@@ -23,6 +24,9 @@ public class Report {
     public Report(String memberId, String reportedMemberId) {
         this.memberId = memberId;
         this.reportedMemberId = reportedMemberId;
+    }
+    public Report(){
+
     }
 
     public String getMemberId() {
