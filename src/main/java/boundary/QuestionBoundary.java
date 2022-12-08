@@ -14,10 +14,6 @@ public class QuestionBoundary {
         return;
     }
 
-    public void showAdminInform(){
-
-        return;
-    }
     public void showQuestionList(){
         return;
     }

@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
-public class ReportController {
+public class ReportController extends DBBoundary{
 
     static DBBoundary dbManager;
     ArrayList<Report> reportList = new ArrayList<>();
@@ -19,7 +19,7 @@ public class ReportController {
     //List<Report>
     public Report findReport(String reportedMemberId){
         Report report = new Report();
-        for (Report r : readDB(reportedMemberId))
+        for (Report r : readReportDB())
         {
             if (r.getReportedMemberId() == reportedMemberId)
                 report = r;
@@ -40,59 +40,13 @@ public class ReportController {
     }
     public void addReport(String memberId, String reportedMemberId){
         Report report = new Report(memberId,reportedMemberId);
-        saveDB(report);
+        saveReportDB(report);
         return;
     }
     public void removeReport(int reportId){
         return;
     }
-    public void saveDB(Report report)
-    {
-        List<String> reportInfo = new ArrayList<>();
-        try {
-            File f = new File("C:\\momo\\java_workspace\\AlbaMan\\AlbaMan\\src\\main\\java\\ReportDB.txt");
-            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f));
-            reportInfo.add(report.getId()+" ");
-            reportInfo.add(report.getMemberId()+" ");
-            reportInfo.add(report.getReportedMemberId()+" ");
-            reportInfo.add(report.getReportContext()+" ");
 
-            for (String info : reportInfo){
-                bufferedWriter.write(info,0,info.length());
-            }
-            bufferedWriter.flush();
-            bufferedWriter.close();
-
-        }catch (Exception e){
-
-        }
-
-        return;
-    }
-
-    public ArrayList<Report> readDB(String tablename) {
-
-        try {
-            File f = new File("C:\\momo\\java_workspace\\AlbaMan\\AlbaMan\\src\\main\\java\\ReportDB.txt");
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
-            String line = null;
-            while((line = bufferedReader.readLine())!=null)
-            {
-                Report report = new Report();
-                String[] info = line.split(" ");
-                report.setId(Integer.parseInt(info[0]));
-                report.setReportedMemberId(info[1]);
-                report.setReportedMemberId(info[2]);
-                report.setReportContext(info[3]);
-                reportList.add(report);
-            }
-            bufferedReader.close();
-
-        }catch (Exception e){
-
-        }
-        return reportList;
-    }
 
     public static void main(String args[]){
         ReportController reportController = new ReportController();
