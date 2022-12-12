@@ -7,8 +7,6 @@ import java.util.ArrayList;
 import boundary.DBBoundary;
 
 
-
-
 public class AccountController {
 
     public static ArrayList<IndividualAccount> individualAccounts=new ArrayList<>();
