@@ -9,6 +9,8 @@ public class Report {
     private String memberId;
     private String reportedMemberId;
 
+    private String reportContext;
+
     public String getReportContext() {
 
         return reportContext;
@@ -18,8 +20,13 @@ public class Report {
         this.reportContext = reportContext;
     }
 
-    private String reportContext;
 
+
+    public Report(String memberId, String reportedMemberId,String reportContext) {
+        this.memberId = memberId;
+        this.reportedMemberId = reportedMemberId;
+        this.reportContext = reportContext;
+    }
 
     public Report(String memberId, String reportedMemberId) {
         this.memberId = memberId;

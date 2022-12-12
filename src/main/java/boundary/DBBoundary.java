@@ -48,8 +48,12 @@ public class DBBoundary {
         List<String> reportInfo = new ArrayList<>();
         try {
             File f = new File("C:\\momo\\java_workspace\\AlbaMan\\AlbaMan\\src\\main\\java\\ReportDB.txt");
-            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f));
-            reportInfo.add(report.getId()+" ");
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f,true));
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
+
+            int id = countLine(bufferedReader);
+
+            reportInfo.add(id+" ");
             reportInfo.add(report.getMemberId()+" ");
             reportInfo.add(report.getReportedMemberId()+" ");
             reportInfo.add(report.getReportContext()+" ");
@@ -57,8 +61,10 @@ public class DBBoundary {
             for (String info : reportInfo){
                 bufferedWriter.write(info,0,info.length());
             }
+            bufferedWriter.write("\n");
             bufferedWriter.flush();
             bufferedWriter.close();
+            bufferedReader.close();
 
         }catch (Exception e){
 
@@ -74,20 +80,15 @@ public class DBBoundary {
             File f = new File("C:\\momo\\java_workspace\\AlbaMan\\AlbaMan\\src\\main\\java\\QuestionDB.txt");
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f,true));
             BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
-            String line = null;
-            int num = 0;
-//            num = bufferedReader.readLine().length()
-            while((line = bufferedReader.readLine())!=null)
-                num++;
-            num++;
 
-            questionInfo.add(num+" ");
+            int id = countLine(bufferedReader);
+
+            questionInfo.add(id+" ");
             questionInfo.add(question.getIndividualId()+" ");
             questionInfo.add(question.getQuestion()+" ");
             questionInfo.add(question.getAnswer()+" ");
 
             for (String info : questionInfo){
-//                bufferedWriter.write(info,0,info.length());
                 bufferedWriter.write(info,0,info.length());
             }
             bufferedWriter.write("\n");
@@ -160,9 +161,10 @@ public class DBBoundary {
                 Report report = new Report();
                 String[] info = line.split(" ");
                 report.setId(Integer.parseInt(info[0]));
-                report.setReportedMemberId(info[1]);
+                report.setMemberId(info[1]);
                 report.setReportedMemberId(info[2]);
                 report.setReportContext(info[3]);
+
                 reportList.add(report);
             }
             bufferedReader.close();
@@ -185,6 +187,20 @@ public class DBBoundary {
 
         }
         return;
+    }
+
+    private int countLine(BufferedReader bufferedReader){
+        String line = null;
+        int num = 0;
+//            num = bufferedReader.readLine().length()
+        try {
+            while ((line = bufferedReader.readLine()) != null)
+                num++;
+            num++;
+        }catch (IOException e){
+
+        }
+        return num;
     }
 
 
