@@ -72,21 +72,31 @@ public class DBBoundary {
         List<String> questionInfo = new ArrayList<>();
         try {
             File f = new File("C:\\momo\\java_workspace\\AlbaMan\\AlbaMan\\src\\main\\java\\QuestionDB.txt");
-            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f));
-            questionInfo.add(question.getId()+" ");
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f,true));
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
+            String line = null;
+            int num = 0;
+//            num = bufferedReader.readLine().length()
+            while((line = bufferedReader.readLine())!=null)
+                num++;
+            num++;
+
+            questionInfo.add(num+" ");
+            questionInfo.add(question.getIndividualId()+" ");
             questionInfo.add(question.getQuestion()+" ");
             questionInfo.add(question.getAnswer()+" ");
 
             for (String info : questionInfo){
+//                bufferedWriter.write(info,0,info.length());
                 bufferedWriter.write(info,0,info.length());
             }
+            bufferedWriter.write("\n");
             bufferedWriter.flush();
             bufferedWriter.close();
-
+            bufferedReader.close();
         }catch (Exception e){
 
         }
-
         return;
     }
 
@@ -101,8 +111,9 @@ public class DBBoundary {
                 Question question = new Question();
                 String[] info = line.split(" ");
                 question.setId(Integer.parseInt(info[0]));
-                question.setQuestion(info[1]);
-                question.setAnswer(info[2]);
+                question.setIndividualId(info[1]);
+                question.setQuestion(info[2]);
+                question.setAnswer(info[3]);
 
                 questionList.add(question);
             }
@@ -161,5 +172,20 @@ public class DBBoundary {
         }
         return reportList;
     }
+
+    public void clearDB(String dbname){
+        String db = "C:\\momo\\java_workspace\\AlbaMan\\AlbaMan\\src\\main\\java\\"+dbname+"DB.txt";
+        try {
+            File f = new File(db);
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f));
+            bufferedWriter.write("");
+            bufferedWriter.flush();
+            bufferedWriter.close();
+        }catch (Exception e){
+
+        }
+        return;
+    }
+
 
 }
