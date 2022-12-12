@@ -7,6 +7,7 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
@@ -15,9 +16,15 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     testImplementation 'org.mockito:mockito-core:2.7.22'
     testImplementation group: 'org.mockito', name: 'mockito-all', version: '1.9.5'
-    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.31'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
+    testImplementation group: 'org.mockito', name: 'mockito-all', version: '1.9.5'
 }
 
 test {
+    useJUnitPlatform()
+}
+
+tasks.named('test') {
     useJUnitPlatform()
 }

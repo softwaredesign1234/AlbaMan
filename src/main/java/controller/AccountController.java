@@ -61,6 +61,7 @@ public class AccountController {
     		IndividualAccount iAccount = individualAccounts.stream()
     			.filter(i -> ((i.getId().equals(id)) && (i.getPassword().equals(password))));
     		
+    	
     		if (iAccount == null)	return false;
     		else 					return true;
     	}
