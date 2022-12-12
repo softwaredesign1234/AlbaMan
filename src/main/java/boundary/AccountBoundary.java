@@ -1,169 +1,104 @@
 package boundary;
+
 import controller.AccountController;
 import model.EnterpriseAccount;
 import model.IndividualAccount;
 import controller.AccountController;
+
 import java.util.*;
 
 
 public class AccountBoundary {
-    Scanner scanner=new Scanner(System.in);
-    ArrayList<IndividualAccount> individualAccounts=new ArrayList<>();
-    ArrayList<EnterpriseAccount> enterpriseAccounts=new ArrayList<>();
 
-    Object account;
-    AccountController a;
+    public static AccountController a;
     //나중에 NullPointerException으로 수정하기
 
-    public void startSignup()
-    {
+    public static void startSignup() {
         //SEQ1: showTerms호출
-        String terms=a.showWithdrawalTerms();
+        String terms = a.showTermsOfService();
         System.out.println(terms);
     }
 
 
-    public void inputValidationInput()
-    {
+    public static String inputValidationInput(String type, String info) {
         //SEQ1: 회원가입 전 액터가 인증정보 입력 (Loop 첫단계)
-        System.out.print("타입:");
-        String type=scanner.next();
-        System.out.println();
-        Boolean isvalid=false;
+
+        Boolean isvalid = false;
 
         //AccountController에 isValidate 함수 호출
-        if(type.equals(("Individual"))) {
-            System.out.print("이메일:");
-            String email = scanner.next();
-            System.out.println();
+        if (type.equals(("Individual"))) {
+            isvalid = a.isValidate(type, info);
+        } else if (type.equals("Enterprise")) {
+            isvalid = a.isValidate(type, info);
+        }else
+            return "타입은 Individual과 Enterprise 중 하나로 입력해주세요";
 
-            isvalid = a.isValidate(type, email);
-        }
-        else if(type.equals("Enterprise"))
-        {
-            System.out.print("사업자번호:");
-            String enterpriseNumber = scanner.next();
-            System.out.println();
-
-           isvalid = a.isValidate(type, enterpriseNumber);
-        }
+        if(isvalid == true)
+            return permission(true);
         else
-            System.out.println("타입은 Individual과 Enterprise 중 하나로 입력해주세요");
-
-        if(isvalid==true)
-            permission(true);
-        else
-            permission(false);
-    }
-
-
-
-
-    public void signUp()
-    {
-        System.out.print("타입:");
-        String type=scanner.next();
-        System.out.println();
-
-        if(type.equals("Individual"))
         {
-            System.out.print("아이디:");
-            String id=scanner.next();
-            System.out.println();
-
-            System.out.print("비밀번호:");
-            String password=scanner.next();
-            System.out.println();
-
-            System.out.print("이름:");
-            String name=scanner.next();
-            System.out.println();
-
-            System.out.print("이메일:");
-            String email=scanner.next();
-            System.out.println();
-
-            System.out.print("휴대폰번호:");
-            String phoneNumber=scanner.next();
-            System.out.println();
-
-            System.out.print("나이:");
-            int age=scanner.nextInt();
-            System.out.println();
-
-            System.out.print("성별:");
-            String gender=scanner.next();
-            System.out.println();
-
-            a.signupIndividual(id,password,name,email,phoneNumber,age,gender);
+            System.out.println("인증정보를 정확히 입력해주세요.");
+            return permission(false);
         }
-        else if(type.equals("Enterprise"))
-        {
-            System.out.print("사업자번호:");
-            String companyNum=scanner.next();
-            System.out.println();
-
-            System.out.print("업종:");
-            String category=scanner.next();
-            System.out.println();
-
-            System.out.print("회사 전화번호:");
-            String companyPhoneNumber=scanner.next();
-            System.out.println();
-
-            System.out.print("회사 위치:");
-            String companyLocation=scanner.next();
-            System.out.println();
-
-            System.out.print("아이디:");
-            String id=scanner.next();
-            System.out.println();
-
-            System.out.print("비밀번호:");
-            String password=scanner.next();
-            System.out.println();
-
-            System.out.print("회사이름:");
-            String name=scanner.next();
-            System.out.println();
-
-            a.signupEnterprise(companyNum,category,companyPhoneNumber,companyLocation,id,password,name);
-        }
-        else
-            System.out.println("타입은 Individual과 Enterprise 중 하나로 입력해주세요");
 
     }
 
 
+    public static IndividualAccount indiSignup(String id, String password, String name, String email, String phoneNumber, int age, String gender) {
+        IndividualAccount individualAccount = a.signupIndividual(id, password, name, email, phoneNumber, age, gender);
 
-    public String permission(Boolean isSuccess) //give permission,show failMessage
+        System.out.println("개인회원 가입성공!");
+        return individualAccount;
+    }
+
+    public static EnterpriseAccount enterSignup(String companyNum, String category, String companyPhoneNumber, String companyLocation,
+                                                String id, String password, String name) {
+        EnterpriseAccount enterpriseAccount = a.signupEnterprise(companyNum, category, companyPhoneNumber, companyLocation,
+                id,password, name);
+        System.out.println("기업회원 가입성공! id는: " + enterpriseAccount.getId());
+        return enterpriseAccount;
+    }
+
+
+    public static String permission(Boolean isSuccess) //give permission,show failMessage
     {
         String permissionMessage;
         //singup 결과를 불러와서 true면 성공메시지, false면 실패메시지 출력하기
-        if(isSuccess==true)
-            permissionMessage="성공";
+        if (isSuccess == true)
+            permissionMessage = "권한 성공";
         else
-            permissionMessage="실패";
+            permissionMessage = "권한 실패";
         return permissionMessage;
     }
 
-    public void signIn()
-    {
-        System.out.println("타입을 입력하세요");
-        String type=scanner.next();
-        System.out.println("아이디를 입력하세요");
-        String id=scanner.next();
-        System.out.println("비밀번호를 입력하세요");
-        String password=scanner.next();
+    public static Object signIn(String type,String id,String password) {
 
-        Object signinResult=a.signIn(type,id,password);
-        if(signinResult!=null)
-            permission(true);
+        if(type.equals("Individual"))
+        {
+            IndividualAccount individualAccount= a.signinIndividual(id,password);
+            if(individualAccount!=null)
+            {
+                System.out.println(permission(true));
+                return individualAccount;
+            }
+            else
+                System.out.println(permission(false));
+
+
+        }
         else
-            permission(false);
+        {
+            EnterpriseAccount enterpriseAccount=a.signinEnterprise(id,password);
+            if(enterpriseAccount!=null)
+            {
+                System.out.println(permission(true));
+                return enterpriseAccount;
+            }
+            else
+                System.out.println(permission(false));
+        }
 
-        account=signinResult;
-
+        return null;
     }
 
 
@@ -184,12 +119,10 @@ public class AccountBoundary {
     public static void main(String[] args) throws Exception {
 
 
-
-
+        startSignup();
 
 
     }
-
 
 
 }

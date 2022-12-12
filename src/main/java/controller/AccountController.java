@@ -10,12 +10,11 @@ import java.util.regex.Pattern;
 import boundary.DBBoundary;
 
 
-public class AccountController {
+public class AccountController extends DBBoundary{
 
     public static ArrayList<IndividualAccount> individualAccounts = new ArrayList<>();
     public static ArrayList<EnterpriseAccount> enterpriseAccounts = new ArrayList<>();
 
-    public static DBBoundary dbManager;
 
     public static String showTermsOfService() {
 
@@ -26,18 +25,17 @@ public class AccountController {
     public static IndividualAccount signupIndividual(String id, String password, String name,
                                         String email, String phoneNumber, int age, String gender) {
 
-        Boolean validation = isValidate("Individual", email);
         Boolean isActivate = true;
-
-        IndividualAccount individualAccount = new IndividualAccount(email, phoneNumber, age, gender, id, password, name, validation, isActivate, "Individual");
+        IndividualAccount individualAccount = new IndividualAccount(email, phoneNumber, age, gender, id, password, name, true, isActivate, "Individual");
         individualAccounts.add(individualAccount); //개인계정 db에 추가
+        saveIndiAccountDB(individualAccount);
         System.out.println("Signup Success!");
 
         return individualAccount;
 }
 
     //000-00-00000
-    public static void signupEnterprise(String companyNum, String category, String companyPhoneNumber, String companyLocation,
+    public static EnterpriseAccount signupEnterprise(String companyNum, String category, String companyPhoneNumber, String companyLocation,
                                         String id, String password, String name) {
         Boolean validation = isValidate("Enterprise", companyNum);
         Boolean isActivate = true;
@@ -46,7 +44,11 @@ public class AccountController {
                 id, password, name,
                validation, isActivate,"Enterprise");
         enterpriseAccounts.add(enterpriseAccount); //개인계정 db에 추가
+
+        System.out.println("회사폰넘버: "+enterpriseAccount.getEnterprisePhoneNumber());
+        saveEnterDB(enterpriseAccount);
         System.out.println("Signup Success!");;
+        return enterpriseAccount;
     }
 
 
@@ -76,7 +78,7 @@ public class AccountController {
 
     //개인 로그인
     public static IndividualAccount signinIndividual(String id, String password) {
-        ArrayList<IndividualAccount> arr=getIndividualAccounts();
+        ArrayList<IndividualAccount> arr=readIndiDB();
         IndividualAccount resultIndividual=arr.stream()
                 .filter(account -> id.equals(account.getId())&&password.equals(account.getPassword()))
                 .findAny()
@@ -89,7 +91,7 @@ public class AccountController {
 
     //기업 로그인
     public static EnterpriseAccount signinEnterprise(String id, String password) {
-        ArrayList<EnterpriseAccount> arr=getEnterpriseAccounts();
+        ArrayList<EnterpriseAccount> arr=readEnterDB();
         EnterpriseAccount resultEnterprise=arr.stream()
                 .filter(account -> id.equals(account.getId())&&password.equals(account.getPassword()))
                 .findAny()
@@ -173,5 +175,22 @@ public class AccountController {
 
     public ArrayList<Object> readDB(String tablename) {
         return null;
+    }
+
+    public static void main(String[] args) throws Exception{
+        signupIndividual("aa1234","aaaa","name","aa1234@naver.com","010-1111-1111",25,"F");
+        signupEnterprise("000-00-00000","IT","053-777-7777","대구","bb4567","4567","kakao");
+        Object object=signIn("Enterprise","bb4657","4567");
+        System.out.println(object);
+        IndividualAccount individual1=new IndividualAccount("aa0000@naver.com","010-0000-0000",25,"F","aa0000","0000","janny",true,true,"Individual");
+        IndividualAccount individual2=new IndividualAccount("aa1111@naver.com","010-1111-1111",21,"M","aa1111","1111","Tom",true,true,"Individual");
+        EnterpriseAccount enterprise1=new EnterpriseAccount("000-00-00000","Restaurant","053-222-2222","Daegu","bb0000","0000","steakhouse",true,true,"Enterprise");
+        EnterpriseAccount enterprise2=new EnterpriseAccount("111-11-11111","SwimmingPool","053-333-3333","Daegu","bb1111","1111","blueswimming",true,true,"Enterprise");
+
+//        saveEnterDB(enterprise1);
+//        saveEnterDB(enterprise2);
+        saveIndiAccountDB(individual1);
+        saveIndiAccountDB(individual2);
+
     }
 }

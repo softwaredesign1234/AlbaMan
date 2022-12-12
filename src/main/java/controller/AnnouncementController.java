@@ -22,14 +22,16 @@ public class AnnouncementController {
 
         Announcement announcement=new Announcement(id,enterpriseId,wagePerHour,workingHourPerWeek,workingDaysPerWeek,now);
         announcementList.add(announcement);
+        dbManager.saveAnnouncementDB(announcement);
         System.out.println("Succefully saved!");
     }
 
     public static void scrapAnnouncement(String individualId,int id)
     {
-        IndividualAccount individualAccount=getIndividual(individualId);
-        Announcement announcement=readAnnouncementById(id);
-        individualAccount.scrapAnnouncement(announcement);
+        IndividualAccount individualAccount=getIndividual(individualId);//individualId로 개인찾기
+        Announcement announcement=readAnnouncementById(id);//Id로 공고찾기
+        individualAccount.scrapAnnouncement(announcement);//개인 class에 공고 추가하기
+        dbManager.saveScrapAnnouncementDB(announcement,individualId);
     }
 
     public void deleteAnnouncement(int AnnouncementId){

@@ -30,6 +30,9 @@ public class IndividualAccount extends Account implements Serializable {
 
     }
 
+    public IndividualAccount() {
+
+    }
 
 
     public void addResume(Resume resume)

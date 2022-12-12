@@ -10,23 +10,15 @@ public class EnterpriseAccount extends Account implements Serializable {
     private String enterprisePhoneNumber;
     private String enterpriseLocation;
 
-    public EnterpriseAccount(String id,String password,String name,Boolean valid,Boolean isActive,String type)
-    {
-        this.id=id;
-        this.password=password;
-        this.name=name;
-        this.valid=valid;
-        this.isActivated=isActive;
-        this.type=type;
-    }
+
 
     public EnterpriseAccount(String companyNum, String category, String companyPhoneNumber, String companyLocation,
                              String id, String password, String name,
                              Boolean valid, Boolean isActive, String type) {
         this.enterpriseNum = companyNum;
         this.category = category;
-        this.enterprisePhoneNumber = companyLocation;
-        this.enterpriseLocation = companyPhoneNumber;
+        this.enterprisePhoneNumber = companyPhoneNumber;
+        this.enterpriseLocation = companyLocation;
         this.id = id;
         this.password = password;
         this.name = name;
@@ -35,7 +27,13 @@ public class EnterpriseAccount extends Account implements Serializable {
         this.type = type;
     }
 
+    public EnterpriseAccount() {
 
+    }
+//
+//    public EnterpriseAccount() {
+//
+//    }
 
 
     //getter,setter
