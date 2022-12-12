@@ -75,14 +75,12 @@ public class ReportController extends DBBoundary{
 
     public static void main(String args[]){
         ReportController reportController = new ReportController();
-
+        DBBoundary dbBoundary = new DBBoundary();
+        dbBoundary.clearDB("Report");
         reportController.addReport("1","2","illegal");
         reportController.addReport("2","1","illegaltoo");
 
         System.out.println(reportController.findReport("2").getReportContext());
-
-//        reportController.removeReport(2);
-
     }
 
 }

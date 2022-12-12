@@ -13,12 +13,11 @@ public class Announcement {
 
 
 
-    private Date deadline;
+    private String deadline;
 
     public Announcement(int id,String enterpriseId,
-                        int wagePerHour,int workingHourPerWeek, int workingDaysPerWeek,Date deadline) {
+                        int wagePerHour,int workingHourPerWeek, int workingDaysPerWeek,String deadline) {
 
-        this.id=id;
         this.enterpriseId=enterpriseId;
         this.wagePerHour=wagePerHour;
         this.workingDaysPerWeek=workingDaysPerWeek;
@@ -29,6 +28,10 @@ public class Announcement {
     public Announcement(int id)
     {
         this.id=id;
+    }
+    public Announcement()
+    {
+
     }
 
 
@@ -75,11 +78,11 @@ public class Announcement {
     public void setWorkingDaysPerWeek(int workingDaysPerWeek) {
         this.workingDaysPerWeek = workingDaysPerWeek;
     }
-    public Date getDeadline() {
+    public String getDeadline() {
         return deadline;
     }
 
-    public void setDeadline(Date deadline) {
+    public void setDeadline(String deadline) {
         this.deadline = deadline;
     }
 }

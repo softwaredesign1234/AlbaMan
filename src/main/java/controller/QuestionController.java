@@ -14,7 +14,6 @@ public class QuestionController extends DBBoundary{
 
     ArrayList<Question> questionList = new ArrayList<>();
 
-    static DBBoundary dbManager;
     private final String managerEmail = "11@naver.com";
     private final String managerPhoneNumber = "01051111111";
 
@@ -57,6 +56,8 @@ public class QuestionController extends DBBoundary{
 
     public static void main(String args[]){
         QuestionController questionController = new QuestionController();
+        DBBoundary dbBoundary = new DBBoundary();
+        dbBoundary.clearDB("Question");
         questionController.addQuestion("1","question1");
         questionController.addQuestion("2","question2");
         questionController.addAnswer(1,"answer1");
