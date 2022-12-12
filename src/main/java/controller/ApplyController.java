@@ -14,7 +14,6 @@ import static java.lang.System.exit;
 
 public class ApplyController extends DBBoundary{
     public static ArrayList<Apply> applyList=new ArrayList<>();
-    public static DBBoundary dbManager;
 
 
     //기업->개인
@@ -33,9 +32,21 @@ public class ApplyController extends DBBoundary{
 
 
     //개인->기업 수락여부, 기업->개인 채용여부 return
-    public Apply passOrNot(int applyId)
+    public void passOrNot(int applyId, boolean result)
     {
-        return null;
+        applyList.clear();
+        applyList = readApplyDB();
+        clearDB("Question");
+        for (Apply a : applyList){
+            if (a.getId() == applyId) {
+                a.setPassOrFail(result);
+                saveApplyDB(a);
+            }
+            else{
+                saveApplyDB(a);
+            }
+        }
+        return;
     }
 
     //오퍼 수락여부 전달
@@ -50,12 +61,23 @@ public class ApplyController extends DBBoundary{
         return;
     }
 
-    public static ArrayList<Apply> getApplyList() {
+    public ArrayList<Apply> getApplyList() {
+        applyList = readApplyDB();
         return applyList;
     }
 
 
     public static void main(String args[]){
+        try {
+            ApplyController applyController = new ApplyController();
+            DBBoundary dbBoundary = new DBBoundary();
+            dbBoundary.clearDB("Apply");
+            applyController.makeApplytoIndividual("mo", "kakao", 1);
+            applyController.passOrNot(1,true);
 
+
+        }catch(Exception e){
+
+        }
     }
 }
