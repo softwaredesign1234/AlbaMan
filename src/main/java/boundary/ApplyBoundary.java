@@ -13,19 +13,19 @@ public class ApplyBoundary {
 
     }
 
-    public void inputResult(int applyId,Boolean acceptOrNot)
+    public static void inputResult(int applyId, Boolean acceptOrNot)
     {
         applyController.sendResult(applyId,acceptOrNot);
 
     }
-    public Apply showApply()
-    {
-        return null;
-    }
+    public static void main(String[] args) throws Exception{
 
-    public Apply sendApply()
-    {
-        return null;
+
+//        makeApplytoIndividual("aa1111","bb1111");
+//        makeApplytoIndividual("aa0000","bb0000");
+//        makeApplytoIndividual("aa1234","bb1234");
+////        deleteApplyDB(2);
+        inputResult(1,true);
     }
 
 }

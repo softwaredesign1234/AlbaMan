@@ -10,12 +10,12 @@ import java.util.*;
 
 public class AccountBoundary {
 
-    public static AccountController a;
+    public static AccountController accountController;
     //나중에 NullPointerException으로 수정하기
 
     public static void startSignup() {
         //SEQ1: showTerms호출
-        String terms = a.showTermsOfService();
+        String terms = accountController.showTermsOfService();
         System.out.println(terms);
     }
 
@@ -27,9 +27,9 @@ public class AccountBoundary {
 
         //AccountController에 isValidate 함수 호출
         if (type.equals(("Individual"))) {
-            isvalid = a.isValidate(type, info);
+            isvalid = accountController.isValidate(type, info);
         } else if (type.equals("Enterprise")) {
-            isvalid = a.isValidate(type, info);
+            isvalid = accountController.isValidate(type, info);
         }else
             return "타입은 Individual과 Enterprise 중 하나로 입력해주세요";
 
@@ -45,7 +45,7 @@ public class AccountBoundary {
 
 
     public static IndividualAccount indiSignup(String id, String password, String name, String email, String phoneNumber, int age, String gender) {
-        IndividualAccount individualAccount = a.signupIndividual(id, password, name, email, phoneNumber, age, gender);
+        IndividualAccount individualAccount = accountController.signupIndividual(id, password, name, email, phoneNumber, age, gender);
 
         System.out.println("개인회원 가입성공!");
         return individualAccount;
@@ -53,7 +53,7 @@ public class AccountBoundary {
 
     public static EnterpriseAccount enterSignup(String companyNum, String category, String companyPhoneNumber, String companyLocation,
                                                 String id, String password, String name) {
-        EnterpriseAccount enterpriseAccount = a.signupEnterprise(companyNum, category, companyPhoneNumber, companyLocation,
+        EnterpriseAccount enterpriseAccount = accountController.signupEnterprise(companyNum, category, companyPhoneNumber, companyLocation,
                 id,password, name);
         System.out.println("기업회원 가입성공! id는: " + enterpriseAccount.getId());
         return enterpriseAccount;
@@ -75,7 +75,7 @@ public class AccountBoundary {
 
         if(type.equals("Individual"))
         {
-            IndividualAccount individualAccount= a.signinIndividual(id,password);
+            IndividualAccount individualAccount= accountController.signinIndividual(id,password);
             if(individualAccount!=null)
             {
                 System.out.println(permission(true));
@@ -88,7 +88,7 @@ public class AccountBoundary {
         }
         else
         {
-            EnterpriseAccount enterpriseAccount=a.signinEnterprise(id,password);
+            EnterpriseAccount enterpriseAccount=accountController.signinEnterprise(id,password);
             if(enterpriseAccount!=null)
             {
                 System.out.println(permission(true));

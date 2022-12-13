@@ -1,5 +1,6 @@
 package boundary;
 
+import com.sun.corba.se.spi.orbutil.threadpool.Work;
 import model.*;
 
 import java.io.*;
@@ -9,11 +10,11 @@ import java.util.List;
 public class DBBoundary {
 
     static ArrayList<Apply> applyList = new ArrayList<>();
-    ArrayList<Report> reportList = new ArrayList<>();
-    ArrayList<Question> questionList = new ArrayList<>();
+
     public static ArrayList<EnterpriseAccount> enterpriseAccountsList = new ArrayList<>();
     public static ArrayList<Resume> resumeArrayList = new ArrayList<>();
     public static ArrayList<IndividualAccount> individualAccountsList=new ArrayList<>();
+    public static ArrayList<Workhistory> workhistoryList=new ArrayList<>();
     //----------------------Account--------------------------//
     public static void saveIndiAccountDB(IndividualAccount individualAccount)
     {
@@ -196,66 +197,6 @@ public class DBBoundary {
 
     //---------------------Announcement------------------------//
 
-    public void saveAnnouncementDB(Announcement announcement)
-    {
-        ArrayList<String> announcementInfo=new ArrayList<>();
-        try{
-            File f=new File("C:\\Users\\홍길동\\IdeaProjects\\Alba_Man\\src\\main\\java\\Database\\Announcement.txt");
-            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f));
-            announcementInfo.add(announcement.getId()+" ");
-            announcementInfo.add(announcement.getEnterpriseId()+" ");//db에는 객체를 통쨰로 저장하는게 아니라 id만 저장하자
-            announcementInfo.add(announcement.getWagePerHour()+" ");
-            announcementInfo.add(announcement.getWorkingDaysPerWeek()+" ");
-            announcementInfo.add(announcement.getWorkingHourPerWeek()+" ");
-            announcementInfo.add(announcement.getDeadline()+" ");
-
-            //나중에 resume 관련 조회할 때는 id로 객체 찾아서 return
-
-
-            for (String info : announcementInfo){
-                bufferedWriter.write(info,0,info.length());
-            }
-            bufferedWriter.flush();
-            bufferedWriter.close();
-
-            System.out.println("공고 저장 성공");
-
-        }catch (Exception e){
-
-        }
-
-    }
-
-    public void saveScrapAnnouncementDB(Announcement announcement,String individualId)
-    {
-        ArrayList<String> announcementInfo=new ArrayList<>();
-        try{
-            File f=new File("C:\\Users\\홍길동\\IdeaProjects\\Alba_Man\\src\\main\\java\\Database\\Announcement.txt");
-            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f));
-            announcementInfo.add(announcement.getId()+" ");
-            announcementInfo.add(announcement.getEnterpriseId()+" ");//db에는 객체를 통쨰로 저장하는게 아니라 id만 저장하자
-            announcementInfo.add(announcement.getWagePerHour()+" ");
-            announcementInfo.add(announcement.getWorkingDaysPerWeek()+" ");
-            announcementInfo.add(announcement.getWorkingHourPerWeek()+" ");
-            announcementInfo.add(announcement.getDeadline()+" ");
-            announcementInfo.add(individualId+" "); //어떤 사람이 스크랩한 공고인지
-
-            //나중에 resume 관련 조회할 때는 id로 객체 찾아서 return
-
-
-            for (String info : announcementInfo){
-                bufferedWriter.write(info,0,info.length());
-            }
-            bufferedWriter.flush();
-            bufferedWriter.close();
-
-            System.out.println("공고 스크랩 성공");
-
-        }catch (Exception e){
-
-        }
-
-    }
 
 
 
@@ -270,6 +211,7 @@ public class DBBoundary {
             applyInfo.add(apply.getId()+" ");
             applyInfo.add(apply.getIndividualId()+" ");
             applyInfo.add(apply.getEnterpriseId()+" ");
+            applyInfo.add(apply.getAnnouncementId()+" ");
             applyInfo.add(apply.getPassOrFail()+"\n");
 
             for (String info : applyInfo){
@@ -300,7 +242,8 @@ public class DBBoundary {
                 apply.setId(Integer.parseInt(info[0]));
                 apply.setIndividualId(info[1]);
                 apply.setEnterpriseId(info[2]);
-                apply.setPassOrFail(Boolean.parseBoolean(info[3]));
+                apply.setAnnouncementId(Integer.parseInt(info[3]));
+                apply.setPassOrFail(Boolean.parseBoolean(info[4]));
                 applyList.add(apply);
             }
             bufferedReader.close();
@@ -356,5 +299,33 @@ public class DBBoundary {
         }
 
         return;
+    }
+    public static ArrayList<Workhistory> readworkHistoryDB() {
+
+        try {
+            File f = new File("C:\\Users\\홍길동\\IdeaProjects\\Alba_Man\\src\\main\\java\\Database\\WorkHistory.txt");
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
+            String line = null;
+            while((line = bufferedReader.readLine())!=null)
+            {
+                Workhistory workhistory = new Workhistory();
+                String[] info = line.split(" ");
+                workhistory.setIndividualId(info[0]);
+                workhistory.setEnterpriseId(info[1]);
+
+                workhistoryList.add(workhistory);
+            }
+            bufferedReader.close();
+
+        }catch (Exception e){
+
+        }
+        return workhistoryList;
+    }
+
+    public void saveAnnouncementDB(Announcement announcement) {
+    }
+
+    public void saveScrapAnnouncementDB(Announcement announcement, String individualId) {
     }
 }

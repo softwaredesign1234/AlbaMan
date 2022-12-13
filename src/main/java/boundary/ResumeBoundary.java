@@ -4,14 +4,12 @@ import controller.ResumeController;
 import model.IndividualAccount;
 import model.Resume;
 
-import java.util.Scanner;
 
 public class ResumeBoundary {
-    Scanner sc=new Scanner(System.in);
-    public static ResumeController r;
+    public static ResumeController resumeController;
     public static Resume inputResume(String individualId, String selfIntroduction, String workExperience, Boolean isopen) throws Exception {
 
-        Resume resume=r.saveResume(individualId,selfIntroduction,workExperience,isopen);
+        Resume resume=resumeController.saveResume(individualId,selfIntroduction,workExperience,isopen);
 
         return resume;
 
@@ -21,7 +19,7 @@ public class ResumeBoundary {
     public static Resume showResume(int resumeId)
     {
 
-        Resume resume=r.showResume(resumeId);
+        Resume resume=resumeController.showResume(resumeId);
         if(resume!=null)
         {
             System.out.println("resumeId: "+resume.getId());

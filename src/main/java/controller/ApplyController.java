@@ -21,7 +21,7 @@ public class ApplyController extends DBBoundary {
     {
         int id=getApplyList().size()+1;
 
-        Apply apply=new Apply(id,individualId,enterpriseId,false);
+        Apply apply=new Apply(id,individualId,enterpriseId,0,null);
         applyList.add(apply);
         saveApplyDB(apply);
 
@@ -70,7 +70,7 @@ public class ApplyController extends DBBoundary {
         makeApplytoIndividual("aa1111","bb1111");
         makeApplytoIndividual("aa0000","bb0000");
         makeApplytoIndividual("aa1234","bb1234");
-        deleteApplyDB(2);
+//        deleteApplyDB(2);
         sendResult(1,true);
     }
 }

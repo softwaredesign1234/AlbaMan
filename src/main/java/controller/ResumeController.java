@@ -71,10 +71,6 @@ public class ResumeController extends DBBoundary{
     {
         return resumeList;
     }
-    public static ArrayList<IndividualAccount> getIndividualAccounts()
-    {
-        return individualAccounts;
-    }
 
 
     public static void main(String[] args) throws Exception{
