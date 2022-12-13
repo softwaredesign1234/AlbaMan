@@ -10,6 +10,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.*;
 
+import java.util.*;
+
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
@@ -48,6 +50,7 @@ public class AccountTest extends DBBoundary{
     void basicMember()
     {
         clearDB("IndividualAccount");
+        clearDB("EnterpriseAccount");
 
         individual1=new IndividualAccount("aa0000@naver.com","010-0000-0000",25,"F","aa0000","0000","janny",true,true,"Individual");
         individual2=new IndividualAccount("aa1111@naver.com","010-1111-1111",21,"M","aa1111","1111","Tom",true,true,"Individual");
@@ -186,14 +189,28 @@ public class AccountTest extends DBBoundary{
     @DisplayName("개인회원 정보 수정")
     void IndividualModifyInfoSuccess() {
 
-        String changedName = "different-name";
-        String changedAge = "15";
+        String changedName = "different_Name";
+        String changedAge = "88";
+
+        ArrayList<IndividualAccount> iAccounts = readIndiDB();
+        for (IndividualAccount i : iAccounts) {
+            System.out.println("id : " + i.getId());
+            System.out.println("name : " + i.getName());
+            System.out.println("Age : " + i.getAge());
+        }
+        System.out.println("--------------modify---------------");
 
         AccountBoundary.modifyIndividualInfo("aa0000", "0000", 1, changedName);
-        AccountBoundary.modifyIndividualInfo("aa0000", "0000", 3, changedAge);
+        System.out.println("-------------------------------------------");
+        AccountBoundary.modifyIndividualInfo("aa1111", "1111", 3, changedAge);
 
-        assertEquals(changedName, individual1.getName());
-        assertEquals(changedAge, individual1.getAge());
+        System.out.println("--------------result----------------");
+        iAccounts = readIndiDB();
+        for (IndividualAccount i : iAccounts) {
+            System.out.println("id : " + i.getId());
+            System.out.println("name : " + i.getName());
+            System.out.println("Age : " + i.getAge());
+        }
 
     }
 
@@ -201,14 +218,28 @@ public class AccountTest extends DBBoundary{
     @DisplayName("기업회원 정보 수정")
     void EnterpriseModifyInfoSuccess() {
 
-        String changedName = "different company Name";
-        String changedCategory = "Office";
+        String changedName = "different_company_Name";
+        String changedLocation = "Seoul";
+
+        ArrayList<EnterpriseAccount> eAccounts = readEnterDB();
+        for (EnterpriseAccount e : eAccounts) {
+            System.out.println("id : " + e.getId());
+            System.out.println("name : " + e.getName());
+            System.out.println("Location : " + e.getEnterpriseLocation());
+        }
+        System.out.println("--------------modify---------------");
 
         AccountBoundary.modifyEnterpriseInfo("bb0000", "0000", 1, changedName);
-        AccountBoundary.modifyEnterpriseInfo("bb0000", "0000", 3, changedCategory);
+        System.out.println("-------------------------------------------");
+        AccountBoundary.modifyEnterpriseInfo("bb0000", "0000", 5, changedLocation);
 
-        assertEquals(changedName, enterprise1.getName());
-        assertEquals(changedCategory, enterprise2.getCategory());
+        System.out.println("--------------result----------------");
+        eAccounts = readEnterDB();
+        for (EnterpriseAccount e : eAccounts) {
+            System.out.println("id : " + e.getId());
+            System.out.println("name : " + e.getName());
+            System.out.println("Location : " + e.getEnterpriseLocation());
+        }
     }
 
     @Test
