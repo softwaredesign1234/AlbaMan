@@ -82,7 +82,7 @@ public class AccountBoundary {
                 return individualAccount;
             }
             else
-                System.out.println(permission(false));
+                return permission(false);
 
 
         }
@@ -95,25 +95,9 @@ public class AccountBoundary {
                 return enterpriseAccount;
             }
             else
-                System.out.println(permission(false));
+                return permission(false);
         }
 
-        return null;
-    }
-
-
-    public void modifyIndividualInfo() {
-    }
-
-    public void modifyEnterpriseInfo() {
-
-    }
-
-    public void withdrawAccount() {
-    }
-
-    public String showResultMessage() {
-        return null;
     }
 
     public static void main(String[] args) throws Exception {
@@ -130,6 +114,9 @@ public class AccountBoundary {
         System.out.println("회원가입 ID는: "+individualAccount.getId());
         IndividualAccount ind= (IndividualAccount) signIn("Individual","individual","1234");
         System.out.println("id는: "+ind.getId());
+
+        Object result=signIn("Individual","individual","5645");
+        System.out.println(result);
 
     }
 

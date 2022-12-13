@@ -78,7 +78,6 @@ public class AccountController extends DBBoundary{
 
     //개인 로그인
     public static IndividualAccount signinIndividual(String id, String password) {
-        System.out.println("컨트롤러 id: "+id);
         ArrayList<IndividualAccount> arr=readIndiDB();
         IndividualAccount resultIndividual=arr.stream()
                 .filter(account -> id.equals(account.getId())&&password.equals(account.getPassword()))
@@ -86,7 +85,6 @@ public class AccountController extends DBBoundary{
                 .orElse(null);
 
 
-        System.out.println("찾은id :"+resultIndividual.getId());
         return resultIndividual;
 
     }
@@ -130,54 +128,6 @@ public class AccountController extends DBBoundary{
 
 
 
-    //----------------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-    public Boolean verifyPassword(String type, String id, String passowrd) {
-        return null;
-    }
-
-    public void modifyIndividualAccountInfo(String individualId, int infoType, String modifiedInfo) {
-        return;
-    }
-
-    public void modifyEnterpriseAccountInfo(String enterpriseId, int infoType, String modifiedInfo) {
-        return;
-    }
-
-    public void deleteAccount(String type, String id) {
-        return;
-    }
-
-    public String showWithdrawalTerms() {
-        return null;
-    }
-
-    public static ArrayList<IndividualAccount> getIndividualAccounts() {
-        return individualAccounts;
-    }//DB에서 회원들 조회
-
-    public static ArrayList<EnterpriseAccount> getEnterpriseAccounts() {
-        return enterpriseAccounts;
-    }
-
-    public void saveDB(Object o) {
-        return;
-        //받은 obeject를 string으로 변환해서 text파일에 저장하기
-    }
-
-    public Object readDb(String dbname) {
-        return null;
-    }
-
-
-    public ArrayList<Object> readDB(String tablename) {
-        return null;
-    }
 
     public static void main(String[] args) throws Exception{
         signupIndividual("aa1234","aaaa","name","aa1234@naver.com","010-1111-1111",25,"F");

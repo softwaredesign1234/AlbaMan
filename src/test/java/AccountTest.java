@@ -179,6 +179,20 @@ public class AccountTest extends DBBoundary{
 
     }
 
+    @Test
+    @DisplayName("개인로그인-비밀번호 잘못 입력")
+    void IndividualSigninWrongpassword() {
+
+        String wrongpassword="5654";
+        Object message=accountBoundary.signIn("Individual","aa1111",wrongpassword);
+
+        assertEquals(message,"권한 실패");
+        System.out.println("비밀번호가 틀렸습니다");
+
+    }
+
+
+
 
 
 
