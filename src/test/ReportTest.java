@@ -15,7 +15,7 @@ public class ReportTest {
         String memberId = "mo";
         String reportedMemberId = "ji";
         String wow;
-        reportController.addReport(memberId,reportedMemberId);
+        reportController.addReport(memberId,reportedMemberId,"illegal");
         System.out.println(reportController.findReport(reportedMemberId));
 
 

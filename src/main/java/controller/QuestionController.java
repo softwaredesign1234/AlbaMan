@@ -2,7 +2,6 @@ package controller;
 
 
 import boundary.DBBoundary;
-import jdk.nashorn.internal.runtime.QuotedStringTokenizer;
 import model.Question;
 import model.Report;
 
@@ -27,6 +26,7 @@ public class QuestionController extends DBBoundary{
     public void addQuestion(String individualId, String questionContext){
         Question q = new Question(individualId,questionContext);
         saveQuestionDB(q);
+        System.out.println("Member id : "+ individualId + "\nAdd question : "+questionContext);
         return;
     }
     public void addAnswer(int questionId, String questionAnswer){
@@ -52,6 +52,11 @@ public class QuestionController extends DBBoundary{
                 question = q;
         }
         return question;
+    }
+
+    public ArrayList<Question> findQuestion(){
+        questionList = readQuestionDB();
+        return questionList;
     }
 
     public static void main(String args[]){
