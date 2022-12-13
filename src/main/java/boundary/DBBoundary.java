@@ -1,6 +1,5 @@
 package boundary;
 
-import com.sun.corba.se.spi.orbutil.threadpool.Work;
 import model.*;
 
 import java.io.*;
@@ -16,7 +15,7 @@ public class DBBoundary {
     public static ArrayList<IndividualAccount> individualAccountsList=new ArrayList<>();
     public static ArrayList<Workhistory> workhistoryList=new ArrayList<>();
     //----------------------Account--------------------------//
-    public static void saveIndiAccountDB(IndividualAccount individualAccount)
+    public static void saveIndiDB(IndividualAccount individualAccount)
     {
         ArrayList<String> accountInfo=new ArrayList<>();
         try{

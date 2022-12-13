@@ -4,7 +4,6 @@ import model.EnterpriseAccount;
 import model.IndividualAccount;
 
 import java.util.ArrayList;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import boundary.DBBoundary;
@@ -28,7 +27,7 @@ public class AccountController extends DBBoundary{
         Boolean isActivate = true;
         IndividualAccount individualAccount = new IndividualAccount(email, phoneNumber, age, gender, id, password, name, true, isActivate, "Individual");
         individualAccounts.add(individualAccount); //개인계정 db에 추가
-        saveIndiAccountDB(individualAccount);
+        saveIndiDB(individualAccount);
         System.out.println("Signup Success!");
 
         return individualAccount;
@@ -141,8 +140,8 @@ public class AccountController extends DBBoundary{
 
 //        saveEnterDB(enterprise1);
 //        saveEnterDB(enterprise2);
-        saveIndiAccountDB(individual1);
-        saveIndiAccountDB(individual2);
+        saveIndiDB(individual1);
+        saveIndiDB(individual2);
 
     }
 }

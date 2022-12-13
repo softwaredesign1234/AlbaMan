@@ -1,21 +1,12 @@
-import boundary.ApplyBoundary;
 import boundary.DBBoundary;
 import boundary.ResumeBoundary;
-import controller.AccountController;
-import controller.ResumeController;
 import model.*;
-import org.junit.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.*;
 
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.*;
-
-import boundary.AccountBoundary;
 
 import java.util.ArrayList;
 
@@ -28,7 +19,7 @@ public class ApplyTest extends DBBoundary {
 
     Apply apply1;
     Apply apply2;
-    ApplyBoundary applyBoundary;
+    ResumeBoundary resumeBoundary;
     @BeforeEach
     void basicMember()
     {
@@ -41,8 +32,8 @@ public class ApplyTest extends DBBoundary {
         apply2=new Apply(2,individual2.getId(),enterprise2.getId(),0,null);
         saveEnterDB(enterprise1);
         saveEnterDB(enterprise2);
-        saveIndiAccountDB(individual1);
-        saveIndiAccountDB(individual2);
+        saveIndiDB(individual1);
+        saveIndiDB(individual2);
         saveApplyDB(apply2);
         saveApplyDB(apply1);
 
@@ -53,8 +44,8 @@ public class ApplyTest extends DBBoundary {
     @DisplayName("기업이 개인에게 지원")
     void saveApplyToIndividual() throws Exception {
 
-        Apply apply=applyBoundary.inputapply("aa1234","bb1234");
-        Apply apply1=applyBoundary.inputapply("aa5678","bb5678");
+        Apply apply=resumeBoundary.inputapply("aa1234","bb1234");
+        Apply apply1=resumeBoundary.inputapply("aa5678","bb5678");
         assertEquals("aa1111",apply.getIndividualId());
         assertEquals("bb1111",apply.getEnterpriseId());
         assertEquals("aa0000",apply1.getIndividualId());
@@ -65,7 +56,7 @@ public class ApplyTest extends DBBoundary {
     @Test
     @DisplayName("개인이 수락")
     void individualAccept() throws Exception {
-        applyBoundary.inputResult(1,true);
+        resumeBoundary.inputResult(1,true);
         ArrayList<Workhistory> arr=readworkHistoryDB();
         Workhistory workhistory=arr.stream()
                 .filter(workhistory1 -> workhistory1.getIndividualId().equals(apply1.getIndividualId())&&workhistory1.getEnterpriseId().equals(apply1.getEnterpriseId()))
@@ -81,7 +72,7 @@ public class ApplyTest extends DBBoundary {
     @Test
     @DisplayName("개인이 거절")
     void individualNotAccept() throws Exception {
-        applyBoundary.inputResult(1,false);
+        resumeBoundary.inputResult(1,false);
 
 
     }

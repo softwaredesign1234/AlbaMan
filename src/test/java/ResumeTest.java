@@ -1,22 +1,16 @@
 import boundary.DBBoundary;
 import boundary.ResumeBoundary;
-import controller.AccountController;
 import controller.ResumeController;
 import model.EnterpriseAccount;
 import model.IndividualAccount;
 import model.Resume;
-import org.junit.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.*;
 
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.*;
 
-import boundary.AccountBoundary;
 public class ResumeTest extends DBBoundary {
     @Mock
     IndividualAccount individual1;
@@ -36,8 +30,8 @@ public class ResumeTest extends DBBoundary {
 
         saveEnterDB(enterprise1);
         saveEnterDB(enterprise2);
-        saveIndiAccountDB(individual1);
-        saveIndiAccountDB(individual2);
+        saveIndiDB(individual1);
+        saveIndiDB(individual2);
     }
 
     @Test

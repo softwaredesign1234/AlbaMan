@@ -1,11 +1,15 @@
 package boundary;
 
+import controller.ApplyController;
 import controller.ResumeController;
+import model.Apply;
 import model.IndividualAccount;
 import model.Resume;
 
 
 public class ResumeBoundary {
+    public static ApplyController applyController;
+
     public static ResumeController resumeController;
     public static Resume inputResume(String individualId, String selfIntroduction, String workExperience, Boolean isopen) throws Exception {
 
@@ -29,6 +33,18 @@ public class ResumeBoundary {
             System.out.println("resumeIndividualId: "+resume.getIndividualAccount());
         }
         return resume;
+    }
+    public static Apply inputapply(String individualId, String enterpriseId) throws Exception {
+        Apply apply=applyController.makeApplytoIndividual(individualId,enterpriseId);
+
+        return apply;
+
+    }
+
+    public static void inputResult(int applyId, Boolean acceptOrNot)
+    {
+        applyController.sendResult(applyId,acceptOrNot);
+
     }
 
 }
