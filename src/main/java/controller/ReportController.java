@@ -27,29 +27,11 @@ public class ReportController extends DBBoundary{
         }
         return report;
     }
-    public void deactivateMember(String reportedMemberId){
-        ArrayList<IndividualAccount> individualAccountArrayList = new ArrayList<>();
-//        individualAccountArrayList = readIndividualAccountDB();
-//        for (IndividualAccount i : individualAccountArrayList){
-//            if(i.getId().equals(reportedMemberId)){
-//                i.setIsActive(false);
-//                saveIndividualAccountDB(i);
-//            }
-//            else{
-//                saveIndividualAccountDB(i);
-//            }
-//        }
-        return;
+    public boolean deactivateMember(String reportedMemberId){
+        return false;
     }
-    public IndividualAccount findMemberInfo(String reportedMemberId){
-//        IndividualAccount individualAccount = new IndividualAccount();
-//        for (IndividualAccount i : readIndividualAccountDB()){
-//            if(i.getId().equals(reportedMemberId)) {
-//                individualAccount = i;
-//            }
-//        }
-//        return individualAccount;
-        return null;
+    public IndividualAccount findMemberInfo(IndividualAccount individual){
+        return individual;
     }
 
     public void addReport(String memberId, String reportedMemberId,String reportContext){

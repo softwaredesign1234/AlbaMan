@@ -14,18 +14,6 @@ import java.util.ArrayList;
 
 public class QuestionTest {
     QuestionController questionController = new QuestionController();
-
-    @Mock
-    AccountController accountController;
-    private String id = "individual";
-    private String password = "1234";
-    private String name = "individual Name";
-    private String email = "aa1234@naver.com";
-    private String phoneNumber = "010-7777-7777";
-    private int age = 55;
-    private String gender = "F";
-
-
     IndividualAccount a1 = new IndividualAccount("aa0000@naver.com","010-0000-0000",25,"F","aa0000","0000","janny",true,true,"Individual");
     QuestionBoundary questionBoundary = new QuestionBoundary();
 
