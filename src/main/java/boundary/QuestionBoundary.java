@@ -1,6 +1,7 @@
 package boundary;
 
 import model.FAQ;
+import controller.FAQController;
 
 import java.util.ArrayList;
 
@@ -22,11 +23,20 @@ public class QuestionBoundary {
         //input answer fields
         return;
     }
-    public void makeAFAQ() {
-        return;
+    public static void makeAFAQ(String question, String answer) {
+        FAQController.addToFAQ(question, answer);
     }
 
-    public ArrayList<FAQ> searchFAQ() {
-        return null;
+    public static ArrayList<FAQ> searchFAQ() {
+
+        ArrayList<FAQ> faq = FAQController.getFAQList();
+
+        if (faq.isEmpty()) {
+            System.out.println("FAQ search 실패: FAQ가 없음");
+        }
+        else {
+            System.out.println("FAQ search 성공");
+        }
+        return faq;
     }
 }

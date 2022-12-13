@@ -14,10 +14,9 @@ public class Workhistory {
         this.individualId=individualId;
     }
 
+    public Workhistory() {
 
-
-
-
+    }
 
 
     //getter,setter

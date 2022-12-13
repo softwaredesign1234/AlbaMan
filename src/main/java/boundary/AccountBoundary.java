@@ -5,6 +5,7 @@ import model.EnterpriseAccount;
 import model.IndividualAccount;
 import controller.AccountController;
 
+import java.awt.*;
 import java.util.*;
 
 
@@ -102,27 +103,103 @@ public class AccountBoundary {
     }
 
 
-    public void modifyIndividualInfo() {
+    public static void modifyIndividualInfo(String id, String password, int infoType, String modifiedInfo) {
+
+        ArrayList<IndividualAccount> iAccounts = a.getIndividualAccounts();
+
+        Boolean result = AccountController.verifyPassword("Individual", id, password);
+        String message = permission(result);
+
+        if (result == true) {
+            System.out.println(message);
+            AccountController.modifyIndividualAccountInfo(id, infoType, modifiedInfo);
+            System.out.println(showResultMessage());
+        }
+        else {
+            System.out.println(message);
+            System.out.println(showResultMessage());
+        }
     }
 
-    public void modifyEnterpriseInfo() {
+    public static void modifyEnterpriseInfo(String id, String password, int infoType, String modifiedInfo) {
+
+        ArrayList<EnterpriseAccount> eAccounts = a.getEnterpriseAccounts();
+
+        Boolean result = a.verifyPassword("Enterprise", id, password);
+        String message = permission(result);
+
+        if (result == true) {
+            System.out.println(message);
+            a.modifyEnterpriseAccountInfo(id, infoType, modifiedInfo);
+            System.out.println(showResultMessage());
+        }
+        else {
+            System.out.println(message);
+            System.out.println(showResultMessage());
+        }
+    }
+
+    public static void withdrawAccount(String type, String id, String password) {
+
+        if (type.equals("Individual")) {
+            ArrayList<IndividualAccount> iAccounts = AccountController.getIndividualAccounts();
+
+            Boolean result = AccountController.verifyPassword("Individual", id, password);
+            String message = permission(result);
+
+            if (result == true) {
+                System.out.println(AccountController.showWithdrawalTerms());
+                AccountController.deleteAccount("Individual", id);
+                System.out.println(message);
+                System.out.println(showResultMessage());
+            }
+            else {
+                System.out.println(message);
+                System.out.println(showResultMessage());
+            }
+        }
+        else {
+            ArrayList<EnterpriseAccount> eAccounts = AccountController.getEnterpriseAccounts();
+
+            Boolean result = AccountController.verifyPassword("Enterprise", id, password);
+            String message = permission(result);
+
+            if (result == true) {
+                System.out.println(AccountController.showWithdrawalTerms());
+                AccountController.deleteAccount("Enterprise", id);
+                System.out.println(message);
+                System.out.println(showResultMessage());
+            }
+            else {
+                System.out.println(message);
+                System.out.println(showResultMessage());
+            }
+        }
 
     }
 
-    public void withdrawAccount() {
-    }
-
-    public String showResultMessage() {
-        return null;
+    public static String showResultMessage() {
+        return "종료";
     }
 
     public static void main(String[] args) throws Exception {
 
+        String id = "hello";
+        String password = "1234";
+        String name = "first name";
+        String email = "ww@naver.com";
+        String phoneNumber = "010-1111-2222";
+        int age = 11;
+        String gender = "M";
 
-        startSignup();
+        AccountBoundary a = new AccountBoundary();
 
+        a.startSignup(); //이용약관: boundary->controller에 약관 요청-> 약관 return
+        String message = a.inputValidationInput("Individual", email); //valid 확인: boundary ->개인=이메일, 기업=사업자번호->controller 형식 확인 -> boundary에 권한 return
+        IndividualAccount individualAccount = a.indiSignup(id, password, name, email, phoneNumber, age, gender);
+
+        a.modifyIndividualInfo(id, password, 1, "different Name");
 
     }
-
 
 }

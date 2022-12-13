@@ -47,6 +47,8 @@ public class AccountTest extends DBBoundary{
     @BeforeEach
     void basicMember()
     {
+        clearDB("IndividualAccount");
+
         individual1=new IndividualAccount("aa0000@naver.com","010-0000-0000",25,"F","aa0000","0000","janny",true,true,"Individual");
         individual2=new IndividualAccount("aa1111@naver.com","010-1111-1111",21,"M","aa1111","1111","Tom",true,true,"Individual");
         enterprise1=new EnterpriseAccount("000-00-00000","Restaurant","053-222-2222","Daegu","bb0000","0000","steakhouse",true,true,"Enterprise");
@@ -54,8 +56,8 @@ public class AccountTest extends DBBoundary{
 
         saveEnterDB(enterprise1);
         saveEnterDB(enterprise2);
-        saveIndiAccountDB(individual1);
-        saveIndiAccountDB(individual2);
+        saveIndiDB(individual1);
+        saveIndiDB(individual2);
 
     }
 
@@ -177,6 +179,63 @@ public class AccountTest extends DBBoundary{
         IndividualAccount individualAccount= (IndividualAccount) accountBoundary.signIn("Individual","aa0000","0000");
 
         assertEquals(individual1.getName(),individualAccount.getName());
+
+    }
+
+    @Test
+    @DisplayName("개인회원 정보 수정")
+    void IndividualModifyInfoSuccess() {
+
+        String changedName = "different-name";
+        String changedAge = "15";
+
+        AccountBoundary.modifyIndividualInfo("aa0000", "0000", 1, changedName);
+        AccountBoundary.modifyIndividualInfo("aa0000", "0000", 3, changedAge);
+
+        assertEquals(changedName, individual1.getName());
+        assertEquals(changedAge, individual1.getAge());
+
+    }
+
+    @Test
+    @DisplayName("기업회원 정보 수정")
+    void EnterpriseModifyInfoSuccess() {
+
+        String changedName = "different company Name";
+        String changedCategory = "Office";
+
+        AccountBoundary.modifyEnterpriseInfo("bb0000", "0000", 1, changedName);
+        AccountBoundary.modifyEnterpriseInfo("bb0000", "0000", 3, changedCategory);
+
+        assertEquals(changedName, enterprise1.getName());
+        assertEquals(changedCategory, enterprise2.getCategory());
+    }
+
+    @Test
+    @DisplayName("개인 회원 정보 수정 - 비밀번호 불일치 실패")
+    void IndividualModifyInfoFail() {
+        String changedName = "different name";
+
+        AccountBoundary.modifyIndividualInfo("aa0000", "0001", 1, changedName);
+    }
+
+    @Test
+    @DisplayName("기업 회원 정보 수정 - 비밀번호 불일치 실패")
+    void EnterpriseModifyInfoFail() {
+        String changedName = "different company Name";
+
+        AccountBoundary.modifyEnterpriseInfo("bb0000", "0001", 1, changedName);
+    }
+
+    @Test
+    @DisplayName("개인 회원 탈퇴")
+    void IndividualWithdraw() {
+        AccountBoundary.withdrawAccount("Individual", "aa0000", "0000");
+    }
+
+    @Test
+    @DisplayName("기업 회원 탈퇴")
+    void EnterpriseWithdraw() {
 
     }
 

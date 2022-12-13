@@ -5,28 +5,18 @@ import java.util.ArrayList;
 import boundary.DBBoundary;
 import model.FAQ;
 
-public class FAQController {
+public class FAQController extends DBBoundary {
 
     ArrayList<FAQ> faq = new ArrayList<FAQ>();
-    public static DBBoundary dbManager;
 
-    public void addToFAQ(String Question, String Answer) {
-        return;
+    public static void addToFAQ(String question, String answer) {
+        FAQ newFAQ = new FAQ(question, answer);
+        saveFAQDB(newFAQ);
+        System.out.println("FAQ 등록 성공");
     }
 
-    public ArrayList<FAQ> getFAQList() {
-        return null;
-    }
-
-    public void saveDB(Object o) {
-        return;
-    }
-
-    public ArrayList<Object> readDB(String tablename) {
-        return null;
-    }
-
-    public Object readDb(String dbname) {
-        return null;
+    public static ArrayList<FAQ> getFAQList() {
+        ArrayList<FAQ> faq = readFAQDB();
+        return faq;
     }
 }

@@ -5,6 +5,8 @@ public class FAQ {
     private String question;
     private String answer;
 
+    public FAQ() { }
+
     public FAQ(String Question, String Answer) {
         this.question = Question;
         this.answer = Answer;

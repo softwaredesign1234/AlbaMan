@@ -3,6 +3,7 @@ package boundary;
 import model.*;
 
 import java.io.*;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,15 +12,19 @@ public class DBBoundary {
     ArrayList<Apply> applyList = new ArrayList<>();
     ArrayList<Report> reportList = new ArrayList<>();
     ArrayList<Question> questionList = new ArrayList<>();
+    public static ArrayList<FAQ> faqList = new ArrayList<>();
+    public static ArrayList<Review> reviewList = new ArrayList<>();
     public static ArrayList<EnterpriseAccount> enterpriseAccountsList = new ArrayList<>();
 
     public static ArrayList<IndividualAccount> individualAccountsList=new ArrayList<>();
+    public static ArrayList<Workhistory> workhistoryList=new ArrayList<>();
+
     //----------------------Account--------------------------//
-    public static void saveIndiAccountDB(IndividualAccount individualAccount)
+    public static void saveIndiDB(IndividualAccount individualAccount)
     {
         ArrayList<String> accountInfo=new ArrayList<>();
         try{
-        File f=new File("C:\\Users\\홍길동\\IdeaProjects\\Alba_Man\\src\\main\\java\\Database\\IndividualAccount.txt");
+        File f=new File("/Users/kimseojin/IdeaProjects/AlbaMan/src/main/java/Database/IndividualAccountDB.txt");
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f,true));
         accountInfo.add(individualAccount.getId()+" ");
         accountInfo.add(individualAccount.getPassword()+" ");
@@ -38,7 +43,7 @@ public class DBBoundary {
         bufferedWriter.flush();
         bufferedWriter.close();
 
-        System.out.println("개인계정 저장 성공");
+        // System.out.println("개인계정 저장 성공");
 
     }catch (Exception e){
 
@@ -46,11 +51,21 @@ public class DBBoundary {
 
     }
 
+    public static void saveIndiDB(ArrayList<IndividualAccount> individualAccounts){
+
+        clearDB("IndividualAccount");
+
+
+        for (IndividualAccount iAccount : individualAccounts) {
+            saveIndiDB(iAccount);
+        }
+    }
+
     public static void saveEnterDB(EnterpriseAccount enterpriseAccount)
     {
         ArrayList<String> accountInfo=new ArrayList<>();
         try{
-            File f=new File("C:\\Users\\홍길동\\IdeaProjects\\Alba_Man\\src\\main\\java\\Database\\EnterpriseAccount.txt");
+            File f=new File("/Users/kimseojin/IdeaProjects/AlbaMan/src/main/java/Database/EnterpriseAccountDB.txt");
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f,true));
             accountInfo.add(enterpriseAccount.getId()+" ");
             accountInfo.add(enterpriseAccount.getPassword()+" ");
@@ -77,10 +92,21 @@ public class DBBoundary {
 
     }
 
+    public static void saveEnterDB(ArrayList<EnterpriseAccount> enterpriseAccounts){
+
+        clearDB("EnterpriseAccount");
+
+        for (EnterpriseAccount eAccount : enterpriseAccounts) {
+            saveEnterDB(eAccount);
+        }
+    }
+
     public static ArrayList<EnterpriseAccount> readEnterDB() {
 
+        enterpriseAccountsList.clear();
+
         try {
-            File f = new File("C:\\Users\\홍길동\\IdeaProjects\\Alba_Man\\src\\main\\java\\Database\\EnterpriseAccount.txt");
+            File f = new File("/Users/kimseojin/IdeaProjects/AlbaMan/src/main/java/Database/EnterpriseAccountDB.txt");
             BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
             String line = null;
             while((line = bufferedReader.readLine())!=null)
@@ -109,8 +135,10 @@ public class DBBoundary {
 
     public static ArrayList<IndividualAccount> readIndiDB() {
 
+        individualAccountsList.clear();
+
         try {
-            File f = new File("C:\\Users\\홍길동\\IdeaProjects\\Alba_Man\\src\\main\\java\\Database\\Individual.txt");
+            File f = new File("/Users/kimseojin/IdeaProjects/AlbaMan/src/main/java/Database/IndividualAccountDB.txt");
             BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
             String line = null;
             while((line = bufferedReader.readLine())!=null)
@@ -122,14 +150,11 @@ public class DBBoundary {
                 individualAccount.setEmail(info[2]);
                 individualAccount.setPhoneNumber(info[3]);
                 individualAccount.setAge(Integer.parseInt(info[4]));
-                individualAccount.setName(info[5]);
-                individualAccount.setGender(info[6]);
-                individualAccount.setName(info[7]);
-                individualAccount.setIsActive(Boolean.parseBoolean(info[8]));
-                individualAccount.setValid(Boolean.parseBoolean(info[9]));
-                individualAccount.setType(info[10]);
-
-
+                individualAccount.setGender(info[5]);
+                individualAccount.setName(info[6]);
+                individualAccount.setIsActive(Boolean.parseBoolean(info[7]));
+                individualAccount.setValid(Boolean.parseBoolean(info[8]));
+                individualAccount.setType(info[9]);
                 individualAccountsList.add(individualAccount);
             }
             bufferedReader.close();
@@ -286,6 +311,95 @@ public class DBBoundary {
         return;
     }
 
+    //----------------------------------------------------------------
+
+    public static void saveReviewDB(Review review)
+    {
+        List<String> reviewInfo = new ArrayList<>();
+
+        try {
+            File f = new File("/Users/kimseojin/IdeaProjects/AlbaMan/src/main/java/Database/ReviewDB.txt");
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f, true)); // true 추가해야 이어쓰기 가능
+            reviewInfo.add(review.getEnterpriseId()+" ");
+            reviewInfo.add(review.getIndividualId()+" ");
+            reviewInfo.add(review.getReview()+"\n");
+
+            for (String info : reviewInfo){
+                bufferedWriter.write(info, 0, info.length());
+            }
+            bufferedWriter.flush();
+            bufferedWriter.close();
+
+        } catch (Exception e){
+        }
+    }
+
+    public static ArrayList<Review> readReviewDB() {
+
+        try {
+            File f = new File("/Users/kimseojin/IdeaProjects/AlbaMan/src/main/java/Database/ReviewDB.txt");
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
+            String line = null;
+            while((line = bufferedReader.readLine())!=null)
+            {
+                Review review = new Review();
+                String[] info = line.split(" ");
+                review.setEnterpriseId(info[0]);
+                review.setIndividualId(info[1]);
+                review.setReview(info[2]);
+
+                reviewList.add(review);
+            }
+            bufferedReader.close();
+
+        } catch (Exception e){
+
+        }
+
+        return reviewList;
+    }
+
+    public static void saveFAQDB(FAQ faq) {
+        List<String> FAQInfo = new ArrayList<>();
+        try {
+            File f = new File("/Users/kimseojin/IdeaProjects/AlbaMan/src/main/java/Database/FAQDB.txt");
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f, true));
+            FAQInfo.add(faq.getQuestion()+" ");
+            FAQInfo.add(faq.getAnswer()+"\n");
+
+            for (String info : FAQInfo){
+                bufferedWriter.write(info,0,info.length());
+            }
+            bufferedWriter.flush();
+            bufferedWriter.close();
+
+        }catch (Exception e){
+
+        }
+    }
+
+    public static ArrayList<FAQ> readFAQDB() {
+        try {
+            File f = new File("/Users/kimseojin/IdeaProjects/AlbaMan/src/main/java/Database/FAQDB.txt");
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
+            String line = null;
+            while((line = bufferedReader.readLine())!=null)
+            {
+                FAQ faq = new FAQ();
+                String[] info = line.split(" ");
+                faq.setQuestion(info[0]);
+                faq.setAnswer(info[1]);
+
+                faqList.add(faq);
+            }
+            bufferedReader.close();
+
+        }catch (Exception e){
+
+        }
+        return faqList;
+    }
+
     public void saveQuestionDB(Question question)
     {
         List<String> questionInfo = new ArrayList<>();
@@ -380,4 +494,63 @@ public class DBBoundary {
 //        }
 //        return reportList;
 //    }
+
+    public static void saveWorkHistoryDB(Workhistory workhistory)
+    {
+        ArrayList<String> workhistoryinfo = new ArrayList<>();
+        try {
+            File f = new File("/Users/kimseojin/IdeaProjects/AlbaMan/src/main/java/Database/WorkhistoryDB.txt");
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f,true));
+            workhistoryinfo.add(workhistory.getIndividualId()+" ");
+            workhistoryinfo.add(workhistory.getEnterpriseId()+"\n");
+
+
+            for (String info : workhistoryinfo){
+                bufferedWriter.write(info,0,info.length());
+            }
+            bufferedWriter.flush();
+            bufferedWriter.close();
+
+        }catch (Exception e){
+
+        }
+
+        return;
+    }
+    public static ArrayList<Workhistory> readWorkHistoryDB() {
+
+        try {
+            File f = new File("/Users/kimseojin/IdeaProjects/AlbaMan/src/main/java/Database/WorkhistoryDB.txt");
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
+            String line = null;
+            while((line = bufferedReader.readLine())!=null)
+            {
+                Workhistory workhistory = new Workhistory();
+                String[] info = line.split(" ");
+                workhistory.setIndividualId(info[0]);
+                workhistory.setEnterpriseId(info[1]);
+
+                workhistoryList.add(workhistory);
+            }
+            bufferedReader.close();
+
+        }catch (Exception e){
+
+        }
+        return workhistoryList;
+    }
+
+    public static void clearDB(String dbname){
+        String db = "/Users/kimseojin/IdeaProjects/AlbaMan/src/main/java/Database/"+dbname+"DB.txt";
+        try {
+            File f = new File(db);
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f));
+            bufferedWriter.write("");
+            bufferedWriter.flush();
+            bufferedWriter.close();
+        }catch (Exception e){
+
+        }
+        return;
+    }
 }
