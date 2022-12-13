@@ -9,14 +9,17 @@ public class Apply {
     private int announcementId;
     private int resumeId;
 
-    public Apply(String individualId, String enterpriseId,Boolean isAccept)
+    public Apply(int id,String individualId, String enterpriseId,Boolean isAccept)
     {
+        this.id=id;
         this.enterpriseId=enterpriseId;
         this.individualId=individualId;
         this.passOrFail=isAccept;
     }
 
+    public Apply() {
 
+    }
 
 
     //getter, setter

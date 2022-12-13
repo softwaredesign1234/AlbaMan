@@ -118,9 +118,18 @@ public class AccountBoundary {
 
     public static void main(String[] args) throws Exception {
 
+        String id = "individual";
+        String password = "1234";
+        String name = "individualName";
+        String email = "aa1234@naver.com";
+        String phoneNumber = "010-7777-7777";
+        int age = 55;
+        String gender = "F";
+        IndividualAccount individualAccount=indiSignup(id, password, name, email, phoneNumber, age, gender);
 
-        startSignup();
-
+        System.out.println("회원가입 ID는: "+individualAccount.getId());
+        IndividualAccount ind= (IndividualAccount) signIn("Individual","individual","1234");
+        System.out.println("id는: "+ind.getId());
 
     }
 

@@ -5,7 +5,7 @@ import model.IndividualAccount;
 
 public class Resume {
     private int id;
-    private IndividualAccount individualAccount;
+    private String individualId;
     private String selfIntroduction;
     private String workExperience;
     private Boolean isOpened;
@@ -27,15 +27,18 @@ public class Resume {
 
 
     //공개용
-    public Resume(int id,String selfIntroduction,String workExperience,Boolean isOpened,IndividualAccount individualAccount)
+    public Resume(int id,String selfIntroduction,String workExperience,Boolean isOpened,String individualAccount)
     {
         this.id=id;
         this.selfIntroduction=selfIntroduction;
         this.workExperience=workExperience;
         this.isOpened=isOpened;
-        this.individualAccount=individualAccount;
+        this.individualId=individualAccount;
     }
 
+    public Resume() {
+
+    }
 
 
     //resume 클래스: resume 입력하고 하나의 resume 생성 (addResume)
@@ -79,12 +82,12 @@ public class Resume {
     public void setOpened(Boolean opened) {
         isOpened = opened;
     }
-    public IndividualAccount getIndividualAccount() {
-        return individualAccount;
+    public String getIndividualAccount() {
+        return individualId;
     }
 
-    public void setIndividualAccount(IndividualAccount individualAccount) {
-        this.individualAccount = individualAccount;
+    public void setIndividualAccount(String individualAccount) {
+        this.individualId = individualAccount;
     }
 
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AccountTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-12-12T06:48:04" hostname="DESKTOP-29CPMJ4" time="0.022">
+<testsuite name="AccountTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-12-13T08:44:08" hostname="DESKTOP-29CPMJ4" time="0.032">
   <properties/>
-  <testcase name="개인로그인" classname="AccountTest" time="0.022">
+  <testcase name="개인로그인" classname="AccountTest" time="0.032">
     <failure message="java.lang.NullPointerException" type="java.lang.NullPointerException">java.lang.NullPointerException
 	at AccountTest.IndividualSignin(AccountTest.java:178)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)

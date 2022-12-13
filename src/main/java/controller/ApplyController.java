@@ -2,57 +2,75 @@ package controller;
 
 import boundary.DBBoundary;
 import model.Apply;
+import model.EnterpriseAccount;
+import model.IndividualAccount;
+import model.Workhistory;
 
 import java.util.ArrayList;
 
 import static java.lang.System.exit;
 
-public class ApplyController {
-    public static ArrayList<Apply> applyList=new ArrayList<>();
-    public static DBBoundary dbManager;
-
-
-    //기업->개인
-    public static void makeApplytoIndividual(String individualId,String enterpriseId,int resumeId) throws Exception {
-        return;
-    }
-    //개인->기업
-    public static void makeApplytoEnterprise(String individualId, String enterpriseId,int announcementId){
-        return;
-    }
-
-
-    //개인->기업 수락여부, 기업->개인 채용여부 return
-    public Apply passOrNot(int applyId)
-    {
-        return null;
-    }
-
-    //오퍼 수락여부 전달
-    public void sendResult(Apply applyResult)
-    {
-        //apply 안의 기업,개인에게 저장된 결과를 전달해줌
-        //합격한다면 workhistory에 추가
-        return;
-
-    }
-    public void addWorkHistory(String individualId, int announcementId){
-        return;
-    }
+public class ApplyController extends DBBoundary {
+    static ArrayList<Apply> applyList=new ArrayList<>();
 
     public static ArrayList<Apply> getApplyList() {
         return applyList;
     }
 
-    public void saveDB(Object o)
+    public static Apply makeApplytoIndividual(String individualId,String enterpriseId) throws Exception
     {
-        return;
+        int id=getApplyList().size()+1;
+
+        Apply apply=new Apply(id,individualId,enterpriseId,false);
+        applyList.add(apply);
+        saveApplyDB(apply);
+
+        System.out.println("Apply id :"+apply.getId());
+        System.out.println("Apply individualId :"+apply.getIndividualId());
+        System.out.println("Apply enterpriseId :"+apply.getEnterpriseId());
+
+
+        return apply;
+
+
     }
-    public Object readDb(String dbname)
+
+
+    //개인에게 기업오퍼 전달, 수락여부 return
+    //db에서 한줄만 수정하는 동작
+    //오퍼 수락여부 전달
+    public static void sendResult(int applyId,Boolean accept)
     {
-        return null;
+        ArrayList<Apply> arr=readApplyDB();
+        Apply apply=arr.stream()
+                .filter(apply1 -> applyId==apply1.getId())
+                .findAny()
+                .orElse(null);
+
+        apply.setPassOrFail(accept);
+
+        if(accept==true)
+        {
+            //workHistory에 추가 (기업id, 개인id)
+            Workhistory workhistory=new Workhistory(apply.getEnterpriseId(),apply.getIndividualId());
+            saveWorkHistoryDB(workhistory);
+
+            //apply 내역 업데이트
+//            deleteApplyDB(applyId);
+//            saveApplyDB(apply);
+            System.out.println("Apply is accepted!");
+        }
+        else
+            System.out.println("Apply is not accepted!");
     }
-    public ArrayList<Object> readDB(String tablename) {
-        return null;
+
+    public static void main(String[] args) throws Exception{
+
+
+        makeApplytoIndividual("aa1111","bb1111");
+        makeApplytoIndividual("aa0000","bb0000");
+        makeApplytoIndividual("aa1234","bb1234");
+        deleteApplyDB(2);
+        sendResult(1,true);
     }
 }

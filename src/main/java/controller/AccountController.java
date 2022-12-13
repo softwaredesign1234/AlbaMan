@@ -78,6 +78,7 @@ public class AccountController extends DBBoundary{
 
     //개인 로그인
     public static IndividualAccount signinIndividual(String id, String password) {
+        System.out.println("컨트롤러 id: "+id);
         ArrayList<IndividualAccount> arr=readIndiDB();
         IndividualAccount resultIndividual=arr.stream()
                 .filter(account -> id.equals(account.getId())&&password.equals(account.getPassword()))
@@ -85,6 +86,7 @@ public class AccountController extends DBBoundary{
                 .orElse(null);
 
 
+        System.out.println("찾은id :"+resultIndividual.getId());
         return resultIndividual;
 
     }

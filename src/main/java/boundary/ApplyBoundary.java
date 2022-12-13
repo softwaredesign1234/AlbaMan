@@ -1,21 +1,21 @@
 package boundary;
 
 import model.Apply;
+import controller.ApplyController;
 
 public class ApplyBoundary {
-    public void inputapply()
-    {
-        //적절한 parameter 입력받고
-        //apply 함수 호출
-    }
 
-    public void inputPassOrFail(Boolean result)
-    {
+    public static ApplyController applyController;
+    public static Apply inputapply(String individualId,String enterpriseId) throws Exception {
+        Apply apply=applyController.makeApplytoIndividual(individualId,enterpriseId);
+
+        return apply;
 
     }
 
-    public void inputResult()
+    public void inputResult(int applyId,Boolean acceptOrNot)
     {
+        applyController.sendResult(applyId,acceptOrNot);
 
     }
     public Apply showApply()

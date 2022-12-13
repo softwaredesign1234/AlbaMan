@@ -8,11 +8,11 @@ import java.util.List;
 
 public class DBBoundary {
 
-    ArrayList<Apply> applyList = new ArrayList<>();
+    static ArrayList<Apply> applyList = new ArrayList<>();
     ArrayList<Report> reportList = new ArrayList<>();
     ArrayList<Question> questionList = new ArrayList<>();
     public static ArrayList<EnterpriseAccount> enterpriseAccountsList = new ArrayList<>();
-
+    public static ArrayList<Resume> resumeArrayList = new ArrayList<>();
     public static ArrayList<IndividualAccount> individualAccountsList=new ArrayList<>();
     //----------------------Account--------------------------//
     public static void saveIndiAccountDB(IndividualAccount individualAccount)
@@ -110,7 +110,7 @@ public class DBBoundary {
     public static ArrayList<IndividualAccount> readIndiDB() {
 
         try {
-            File f = new File("C:\\Users\\홍길동\\IdeaProjects\\Alba_Man\\src\\main\\java\\Database\\Individual.txt");
+            File f = new File("C:\\Users\\홍길동\\IdeaProjects\\Alba_Man\\src\\main\\java\\Database\\IndividualAccount.txt");
             BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
             String line = null;
             while((line = bufferedReader.readLine())!=null)
@@ -122,13 +122,11 @@ public class DBBoundary {
                 individualAccount.setEmail(info[2]);
                 individualAccount.setPhoneNumber(info[3]);
                 individualAccount.setAge(Integer.parseInt(info[4]));
-                individualAccount.setName(info[5]);
-                individualAccount.setGender(info[6]);
-                individualAccount.setName(info[7]);
-                individualAccount.setIsActive(Boolean.parseBoolean(info[8]));
-                individualAccount.setValid(Boolean.parseBoolean(info[9]));
-                individualAccount.setType(info[10]);
-
+                individualAccount.setGender(info[5]);
+                individualAccount.setName(info[6]);
+                individualAccount.setIsActive(Boolean.parseBoolean(info[7]));
+                individualAccount.setValid(Boolean.parseBoolean(info[8]));
+                individualAccount.setType(info[9]);
 
                 individualAccountsList.add(individualAccount);
             }
@@ -151,7 +149,7 @@ public class DBBoundary {
             resumeInfo.add(resume.getSelfIntroduction()+" ");
             resumeInfo.add(resume.getWorkExperience()+" ");
             resumeInfo.add(resume.getOpened()+" ");
-            resumeInfo.add(resume.getIndividualAccount().getId()+"\n");//db에는 객체를 통쨰로 저장하는게 아니라 id만 저장하자
+            resumeInfo.add(resume.getIndividualAccount()+"\n");//db에는 객체를 통쨰로 저장하는게 아니라 id만 저장하자
             //나중에 resume 관련 조회할 때는 id로 객체 찾아서 return
 
 
@@ -161,12 +159,37 @@ public class DBBoundary {
             bufferedWriter.flush();
             bufferedWriter.close();
 
-            System.out.println("이력서 저장 성공");
+            System.out.println("Resume Succefully saved!");
 
         }catch (Exception e){
 
         }
 
+    }
+    public static ArrayList<Resume> readResumeDB() {
+
+        try {
+            File f = new File("C:\\Users\\홍길동\\IdeaProjects\\Alba_Man\\src\\main\\java\\Database\\Resume.txt");
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
+            String line = null;
+            while((line = bufferedReader.readLine())!=null)
+            {
+                Resume resume = new Resume();
+                String[] info = line.split(" ");
+                resume.setId(Integer.parseInt(info[0]));
+                resume.setSelfIntroduction(info[1]);
+                resume.setWorkExperience(info[2]);
+                resume.setOpened(Boolean.parseBoolean(info[3]));
+                resume.setIndividualAccount(info[4]);
+
+                resumeArrayList.add(resume);
+            }
+            bufferedReader.close();
+
+        }catch (Exception e){
+
+        }
+        return resumeArrayList;
     }
 
 
@@ -237,17 +260,17 @@ public class DBBoundary {
 
 
 
-    public void saveApplyDB(Apply apply)
+    //--------------------------Apply---------------------------------------//
+    public static void saveApplyDB(Apply apply)
     {
         List<String> applyInfo = new ArrayList<>();
         try {
-            File f = new File("C:\\momo\\java_workspace\\AlbaMan\\AlbaMan\\src\\main\\java\\ApplyDB.txt");
-            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f));
+            File f = new File("C:\\Users\\홍길동\\IdeaProjects\\Alba_Man\\src\\main\\java\\Database\\Apply.txt");
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f,true));
             applyInfo.add(apply.getId()+" ");
             applyInfo.add(apply.getIndividualId()+" ");
             applyInfo.add(apply.getEnterpriseId()+" ");
-            applyInfo.add(apply.getAnnouncementId()+" ");
-            applyInfo.add(apply.getResumeId()+" ");
+            applyInfo.add(apply.getPassOrFail()+"\n");
 
             for (String info : applyInfo){
                 bufferedWriter.write(info,0,info.length());
@@ -262,18 +285,67 @@ public class DBBoundary {
         return;
     }
 
-    public void saveReportDB(Report report)
-    {
-        List<String> reportInfo = new ArrayList<>();
-        try {
-            File f = new File("C:\\momo\\java_workspace\\AlbaMan\\AlbaMan\\src\\main\\java\\ReportDB.txt");
-            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f));
-            reportInfo.add(report.getId()+" ");
-            reportInfo.add(report.getMemberId()+" ");
-            reportInfo.add(report.getReportedMemberId()+" ");
-            reportInfo.add(report.getReportContext()+" ");
 
-            for (String info : reportInfo){
+
+    public static ArrayList<Apply> readApplyDB() {
+
+        try {
+            File f = new File("C:\\Users\\홍길동\\IdeaProjects\\Alba_Man\\src\\main\\java\\Database\\Apply.txt");
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
+            String line = null;
+            while((line = bufferedReader.readLine())!=null)
+            {
+                Apply apply = new Apply();
+                String[] info = line.split(" ");
+                apply.setId(Integer.parseInt(info[0]));
+                apply.setIndividualId(info[1]);
+                apply.setEnterpriseId(info[2]);
+                apply.setPassOrFail(Boolean.parseBoolean(info[3]));
+                applyList.add(apply);
+            }
+            bufferedReader.close();
+
+        }catch (Exception e){
+
+        }
+        return applyList;
+    }
+
+    public static void deleteApplyDB(int id)
+    {
+        ArrayList<Apply> arr=readApplyDB();
+        Apply apply=arr.stream()
+                .filter(apply1 -> id== apply1.getId())
+                .findAny()
+                .orElse(null);
+        arr.remove(apply);
+        String path = "C:\\Users\\홍길동\\IdeaProjects\\Alba_Man\\src\\main\\java\\Database\\Apply.txt";
+
+        try (FileOutputStream fos = new FileOutputStream(path, false)) {
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        for(Apply applys:arr)
+        {
+            saveApplyDB(applys);
+        }
+    }
+
+
+    //---------------------workHistory----------------------------//
+    public static void saveWorkHistoryDB(Workhistory workhistory)
+    {
+        ArrayList<String> workhistoryinfo = new ArrayList<>();
+        try {
+            File f = new File("C:\\Users\\홍길동\\IdeaProjects\\Alba_Man\\src\\main\\java\\Database\\WorkHistory.txt");
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f,true));
+            workhistoryinfo.add(workhistory.getIndividualId()+" ");
+            workhistoryinfo.add(workhistory.getEnterpriseId()+"\n");
+
+
+            for (String info : workhistoryinfo){
                 bufferedWriter.write(info,0,info.length());
             }
             bufferedWriter.flush();
@@ -285,99 +357,4 @@ public class DBBoundary {
 
         return;
     }
-
-    public void saveQuestionDB(Question question)
-    {
-        List<String> questionInfo = new ArrayList<>();
-        try {
-            File f = new File("C:\\momo\\java_workspace\\AlbaMan\\AlbaMan\\src\\main\\java\\QuestionDB.txt");
-            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f));
-            questionInfo.add(question.getId()+" ");
-            questionInfo.add(question.getQuestion()+" ");
-            questionInfo.add(question.getAnswer()+" ");
-
-            for (String info : questionInfo){
-                bufferedWriter.write(info,0,info.length());
-            }
-            bufferedWriter.flush();
-            bufferedWriter.close();
-
-        }catch (Exception e){
-
-        }
-
-        return;
-    }
-
-//    public ArrayList<Question> readQuestionDB() {
-//
-//        try {
-//            File f = new File("C:\\momo\\java_workspace\\AlbaMan\\AlbaMan\\src\\main\\java\\QuestionDB.txt");
-//            BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
-//            String line = null;
-//            while((line = bufferedReader.readLine())!=null)
-//            {
-//                Question question = new Question();
-//                String[] info = line.split(" ");
-//                question.setId(Integer.parseInt(info[0]));
-//                question.setQuestion(info[1]);
-//                question.setAnswer(info[2]);
-//
-//                questionList.add(question);
-//            }
-//            bufferedReader.close();
-//
-//        }catch (Exception e){
-//
-//        }
-//        return questionList;
-//    }
-//
-//    public ArrayList<Apply> readApplyDB() {
-//
-//        try {
-//            File f = new File("C:\\momo\\java_workspace\\AlbaMan\\AlbaMan\\src\\main\\java\\ReportDB.txt");
-//            BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
-//            String line = null;
-//            while((line = bufferedReader.readLine())!=null)
-//            {
-//                Apply apply = new Apply();
-//                String[] info = line.split(" ");
-//                apply.setId(Integer.parseInt(info[0]));
-//                apply.setIndividualId(info[1]);
-//                apply.setEnterpriseId(info[2]);
-//                apply.setAnnouncementId(Integer.parseInt(info[3]));
-//                applyList.add(apply);
-//            }
-//            bufferedReader.close();
-//
-//        }catch (Exception e){
-//
-//        }
-//        return applyList;
-//    }
-
-//    public ArrayList<Report> readReportDB() {
-//
-//        try {
-//            File f = new File("C:\\momo\\java_workspace\\AlbaMan\\AlbaMan\\src\\main\\java\\ReportDB.txt");
-//            BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
-//            String line = null;
-//            while((line = bufferedReader.readLine())!=null)
-//            {
-//                Report report = new Report();
-//                String[] info = line.split(" ");
-//                report.setId(Integer.parseInt(info[0]));
-//                report.setReportedMemberId(info[1]);
-//                report.setReportedMemberId(info[2]);
-//                report.setReportContext(info[3]);
-//                reportList.add(report);
-//            }
-//            bufferedReader.close();
-//
-//        }catch (Exception e){
-//
-//        }
-//        return reportList;
-//    }
 }

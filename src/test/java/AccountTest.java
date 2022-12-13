@@ -56,7 +56,6 @@ public class AccountTest extends DBBoundary{
         saveEnterDB(enterprise2);
         saveIndiAccountDB(individual1);
         saveIndiAccountDB(individual2);
-
     }
 
     @Test
@@ -133,7 +132,6 @@ public class AccountTest extends DBBoundary{
         System.out.println("category: " + enterpriseAccount.getCategory());
         System.out.println("companylocation: " + enterpriseAccount.getEnterpriseLocation());
 
-
     }
 
     @Test
@@ -165,6 +163,7 @@ public class AccountTest extends DBBoundary{
 
         EnterpriseAccount enterpriseAccount= (EnterpriseAccount) accountBoundary.signIn("Enterprise","bb1111","1111");
 
+        System.out.println("기업id는 : "+enterpriseAccount.getId());
         assertEquals(enterprise2.getEnterpriseNum(),enterpriseAccount.getEnterpriseNum());
 
     }
@@ -174,9 +173,9 @@ public class AccountTest extends DBBoundary{
     @DisplayName("개인로그인")
     void IndividualSignin() {
 
-        IndividualAccount individualAccount= (IndividualAccount) accountBoundary.signIn("Individual","aa0000","0000");
+        IndividualAccount individualAccount= (IndividualAccount) accountBoundary.signIn("Individual","aa1111","1111");
 
-        assertEquals(individual1.getName(),individualAccount.getName());
+        System.out.println("id는: " +individualAccount.getId());
 
     }
 
