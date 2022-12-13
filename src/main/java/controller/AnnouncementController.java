@@ -5,6 +5,7 @@ import model.Announcement;
 import model.IndividualAccount;
 
 import javax.management.DescriptorAccess;
+import java.lang.reflect.Array;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -26,8 +27,9 @@ public class AnnouncementController extends DBBoundary {
         return;
     }
 
-    public static void scrapAnnouncement(String individualId,int id)
+    public void scrapAnnouncement(String individualId,Announcement announcement)
     {
+        saveScrapDB(individualId,announcement);
         return;
     }
 
@@ -70,15 +72,15 @@ public class AnnouncementController extends DBBoundary {
 
 
     //회사 이름으로 조회하기
-    public ArrayList<Announcement> readAnnouncementByCategory(String enterpriseId)
+    public ArrayList<Announcement> readAnnouncementByName(String enterpriseName)
     {
         announcementList.clear();
         for (Announcement a : readAnnouncementDB()){
-            if(a.getEnterpriseId().equals(enterpriseId)) {
+            if(a.getEnterpriseId().equals(enterpriseName)) {
                 announcementList.add(a);
             }
         }
-        return announcementList;
+        return validateList(announcementList);
     }
 
     //시급으로 조회하기
@@ -91,7 +93,7 @@ public class AnnouncementController extends DBBoundary {
                 announcementList.add(a);
             }
         }
-        return announcementList;
+        return validateList(announcementList);
     }
 
     //주시간으로 조회하기
@@ -104,27 +106,34 @@ public class AnnouncementController extends DBBoundary {
                 announcementList.add(a);
             }
         }
-        return announcementList;
+        return validateList(announcementList);
     }
 
     //주 근무일수로 조회하기
     public ArrayList<Announcement> readAnnouncementByDays(int days)
     {
         announcementList.clear();
-        announcementList = getAnnouncementList();
-        for (Announcement a : announcementList){
+        for (Announcement a : readAnnouncementDB()){
             if(a.getWorkingHourPerWeek() <= days) {
                 announcementList.add(a);
             }
         }
-        return announcementList;
+        return validateList(announcementList);
     }
 
 
     public ArrayList<Announcement> getAnnouncementList()
     {
+        announcementList.clear();
         announcementList = readAnnouncementDB();
         return announcementList;
+    }
+
+    private ArrayList<Announcement> validateList(ArrayList<Announcement> a){
+        if (a.size() == 0)
+            return getAnnouncementList();
+        else
+            return a;
     }
 
     public static void main(String args[]){
@@ -140,7 +149,7 @@ public class AnnouncementController extends DBBoundary {
             }
             System.out.println(a.CalculatedWage(1));
 
-            for(Announcement a2 : a.readAnnouncementByCategory("kakao")){
+            for(Announcement a2 : a.readAnnouncementByName("kakao")){
                 System.out.println(a2.getEnterpriseId());
             }
             //less than days
@@ -162,5 +171,24 @@ public class AnnouncementController extends DBBoundary {
         }catch(Exception e){
 
         }
+    }
+    public boolean deadlinePassed(String today, Announcement a){
+        String target = a.getDeadline();
+        String[] todayTime = today.split("/");
+        String[] targetTime = target.split("/");
+        int[] todayTimeInt = {0,0,0};
+        int[] targetTimeInt = {0,0,0};
+        for(int i=0;i<3;i++){
+            todayTimeInt[i] = Integer.parseInt(todayTime[i]);
+            targetTimeInt[i] = Integer.parseInt(targetTime[i]);
+        }
+        if(todayTimeInt[0] > targetTimeInt[0])
+            return true;
+        else if(todayTimeInt[1] > targetTimeInt[1])
+            return true;
+        else if(todayTimeInt[2] > targetTimeInt[2])
+            return true;
+        else
+            return false;
     }
 }

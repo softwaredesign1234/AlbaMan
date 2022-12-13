@@ -142,6 +142,52 @@ public class DBBoundary {
         return;
     }
 
+    public void saveScrapDB(String individualId, Announcement announcement)
+    {
+        List<String> scrapList = new ArrayList<>();
+        try {
+            File f = new File("C:\\momo\\java_workspace\\AlbaMan\\AlbaMan\\src\\main\\java\\ScrapDB.txt");
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f,true));
+
+            scrapList.add(individualId+" ");
+            scrapList.add(announcement.getId()+" ");
+
+            for (String info : scrapList){
+                bufferedWriter.write(info,0,info.length());
+            }
+            bufferedWriter.write("\n");
+            bufferedWriter.flush();
+            bufferedWriter.close();
+        }catch (Exception e){
+
+        }
+        return;
+    }
+
+    public void saveWorkHistoryDB(Workhistory workhistory)
+    {
+        List<String> workedInfo = new ArrayList<>();
+        try {
+            File f = new File("C:\\momo\\java_workspace\\AlbaMan\\AlbaMan\\src\\main\\java\\WorkHistoryDB.txt");
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f,true));
+
+
+            workedInfo.add(workhistory.getEnterpriseId()+" ");
+            workedInfo.add(workhistory.getIndividualId()+" ");
+
+            for (String info : workedInfo){
+                bufferedWriter.write(info,0,info.length());
+            }
+            bufferedWriter.write("\n");
+            bufferedWriter.flush();
+            bufferedWriter.close();
+        }catch (Exception e){
+
+        }
+        return;
+    }
+
+
     public ArrayList<Question> readQuestionDB() {
 
         try {

@@ -1,0 +1,147 @@
+import boundary.AnnouncementBoundary;
+import boundary.ApplyBoundary;
+import boundary.DBBoundary;
+import controller.AnnouncementController;
+import controller.ApplyController;
+import model.Announcement;
+import model.Apply;
+import model.EnterpriseAccount;
+import model.IndividualAccount;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
+
+import javax.security.auth.login.AccountNotFoundException;
+import java.util.ArrayList;
+
+public class applyIndividualToEnterpriseTest {
+    int option = 1;
+    AnnouncementController announcementController = new AnnouncementController();
+    ApplyController applyController = new ApplyController();
+    AnnouncementBoundary announcementBoundary = new AnnouncementBoundary();
+    ApplyBoundary applyBoundary = new ApplyBoundary();
+    DBBoundary dbBoundary = new DBBoundary();
+
+
+    Announcement filteredAnnouncement;
+    ArrayList<Announcement> announcementList = new ArrayList<>();
+    ArrayList<Announcement> filteredAnnouncementList = new ArrayList<>();
+
+    IndividualAccount a1 = new IndividualAccount("aa0000@naver.com","010-0000-0000",25,"F","aa0000","0000","janny",true,true,"Individual");
+    IndividualAccount a2 = new IndividualAccount("aa1111@naver.com","010-1111-1111",23,"M","1","1111","mo",true,true,"Individual");
+    EnterpriseAccount e1 = new EnterpriseAccount("000-00-00000","Restaurant","053-222-2222","Daegu","bb0000","0000","steakhouse",true,true,"Enterprise");
+    EnterpriseAccount e2 = new EnterpriseAccount("111-11-11111","IT","053-111-1111","Daegu","bb0001","0001","kakao",true,true,"Enterprise");
+
+    Announcement a;
+    Announcement b;
+    Announcement c;
+    Announcement d;
+
+
+
+    @BeforeEach
+    void setting(){
+        try {
+            dbBoundary.clearDB("Apply");
+            dbBoundary.clearDB("Announcement");
+            dbBoundary.clearDB("Scrap");
+            announcementList.clear();
+            filteredAnnouncementList.clear();
+            announcementBoundary.inputAnnouncement(e1.getId(), 12000, 50, 5, "22/12/31");
+            announcementBoundary.inputAnnouncement(e1.getId(), 11000, 48, 4, "22/12/31");
+            announcementBoundary.inputAnnouncement(e2.getId(), 10000, 46, 5, "22/12/31");
+            announcementBoundary.inputAnnouncement(e2.getId(), 9000, 40, 4, "22/12/31");
+        }catch (Exception e){
+
+        }
+    }
+    @Test
+    public void checkAnnouncements(){
+        try {
+            announcementList = announcementController.getAnnouncementList();
+            announcementBoundary.showAnnouncement(announcementList);
+
+            for(int i=0; i<5;i++) {
+                announcementList.clear();
+                if(i==1) {
+                    filteredAnnouncement = announcementController.readAnnouncementById(1);
+                    announcementList.add(filteredAnnouncement);
+                }
+                if(i==2)
+                    filteredAnnouncementList = announcementController.readAnnouncementByWage(5000);
+                if(i==3)
+                    filteredAnnouncementList = announcementController.readAnnouncementByName(e1.getId());
+                if(i==4)
+                    filteredAnnouncementList = announcementController.readAnnouncementByDays(5);
+                if(i==5)
+                    filteredAnnouncementList = announcementController.readAnnouncementByHours(48);
+
+                announcementBoundary.showAnnouncement(announcementList);
+
+                //scrap
+                announcementBoundary.scrapAnnouncementId(a1.getId(),a);
+
+                //makeApply
+                try {
+                    Apply apply;
+                    apply = announcementBoundary.inputApplyToEnterprise(a1.getId(), e1.getId(), a.getId());
+                    announcementBoundary.inputPassOrFail(apply.getId(),true);
+                }catch (Exception e){
+
+                }
+                //delete
+                announcementController.deleteAnnouncement(a.getId());
+
+
+            }
+        }catch(Exception e){
+
+        }
+    }
+
+    @Test
+    public void noResult(){
+
+    }
+
+    @Test
+    public void scrap(){
+        announcementBoundary.scrapAnnouncementId(a1.getId(),a);
+    }
+
+    @Test
+    public void apply(){
+        try {
+            Apply apply;
+            apply = announcementBoundary.inputApplyToEnterprise(a1.getId(), e1.getId(), a.getId());
+            announcementBoundary.inputPassOrFail(apply.getId(),true);
+        }catch (Exception e){
+
+        }
+    }
+
+    @Test
+    public void delete(){
+        announcementController.deleteAnnouncement(a.getId());
+    }
+
+    @Test
+    public void failedResult(){
+        try {
+            Apply apply;
+            apply = announcementBoundary.inputApplyToEnterprise(a1.getId(), e1.getId(), a.getId());
+            announcementBoundary.inputPassOrFail(apply.getId(),false);
+        }catch (Exception e){
+
+        }
+    }
+
+    @Test
+    public void deadlinePassed(){
+        String today = "23/1/1";
+        boolean passed = announcementController.deadlinePassed(today,a);
+        if(passed){
+            announcementController.deleteAnnouncement(a.getId());
+        }
+    }
+}

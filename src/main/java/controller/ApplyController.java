@@ -1,10 +1,7 @@
 package controller;
 
 import boundary.DBBoundary;
-import model.Apply;
-import model.IndividualAccount;
-import model.Question;
-import model.Report;
+import model.*;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -15,19 +12,19 @@ import static java.lang.System.exit;
 public class ApplyController extends DBBoundary{
     public static ArrayList<Apply> applyList=new ArrayList<>();
 
-
+    Apply apply;
     //기업->개인
     public static void makeApplytoIndividual(String individualId,String enterpriseId,int resumeId) throws Exception {
         return;
     }
     //개인->기업
-    public void makeApplytoEnterprise(String individualId, String enterpriseId,int announcementId){
+    public Apply makeApplytoEnterprise(String individualId, String enterpriseId,int announcementId){
         Apply a = new Apply();
         a.setIndividualId(individualId);
         a.setEnterpriseId(enterpriseId);
         a.setAnnouncementId(announcementId);
         saveApplyDB(a);
-        return;
+        return a;
     }
 
 
@@ -39,12 +36,17 @@ public class ApplyController extends DBBoundary{
         clearDB("Question");
         for (Apply a : applyList){
             if (a.getId() == applyId) {
+                apply = a;
                 a.setPassOrFail(result);
                 saveApplyDB(a);
             }
             else{
                 saveApplyDB(a);
             }
+        }
+        if(result == true){
+            Workhistory workhistory = new Workhistory(apply.getEnterpriseId(),apply.getIndividualId());
+            saveWorkHistoryDB(workhistory);
         }
         return;
     }
