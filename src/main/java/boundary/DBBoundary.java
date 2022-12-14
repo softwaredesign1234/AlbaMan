@@ -217,7 +217,7 @@ public class DBBoundary {
     public static void saveApplyDB(Apply apply) {
         List<String> applyInfo = new ArrayList<>();
         try {
-            File f = new File("C:\\Users\\홍길동\\IdeaProjects\\Alba_Man\\src\\main\\java\\Database\\ApplyDB.txt");
+            File f = new File("AlbaMan/src/main/java/Database/ApplyDB.txt");
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f, true));
             applyInfo.add(apply.getId() + " ");
             applyInfo.add(apply.getIndividualId() + " ");
@@ -242,7 +242,7 @@ public class DBBoundary {
     public static ArrayList<Apply> readApplyDB() {
 
         try {
-            File f = new File("C:\\Users\\홍길동\\IdeaProjects\\Alba_Man\\src\\main\\java\\Database\\ApplyDB.txt");
+            File f = new File("AlbaMan/src/main/java/Database/ApplyDB.txt");
             BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
             String line = null;
             while ((line = bufferedReader.readLine()) != null) {
@@ -288,7 +288,7 @@ public class DBBoundary {
     public static void saveWorkHistoryDB(Workhistory workhistory) {
         ArrayList<String> workhistoryinfo = new ArrayList<>();
         try {
-            File f = new File("C:\\Users\\홍길동\\IdeaProjects\\Alba_Man\\src\\main\\java\\Database\\WorkHistoryDB.txt");
+            File f = new File("AlbaMan/src/main/java/Database/WorkHistoryDB.txt");
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f, true));
             workhistoryinfo.add(workhistory.getIndividualId() + " ");
             workhistoryinfo.add(workhistory.getEnterpriseId() + "\n");
@@ -417,7 +417,7 @@ public class DBBoundary {
 
 
     public static void clearDB(String dbname){
-        String db = "C:\\Users\\홍길동\\IdeaProjects\\Alba_Man\\src\\main\\java\\Database\\"+dbname+"DB.txt";
+        String db = "AlbaMan/src/main/java/Database/"+dbname+"DB.txt";
         try {
             File f = new File(db);
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f));
@@ -435,7 +435,7 @@ public class DBBoundary {
     {
         List<String> AnnouncementInfo = new ArrayList<>();
         try {
-            File f = new File("C:\\Users\\홍길동\\IdeaProjects\\Alba_Man\\src\\main\\java\\Database\\AnnouncementDB.txt");
+            File f = new File("AlbaMan/src/main/java/Database/AnnouncementDB.txt");
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f,true));
             BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
 
@@ -468,7 +468,7 @@ public class DBBoundary {
     {
         List<String> reportInfo = new ArrayList<>();
         try {
-            File f = new File("C:\\Users\\홍길동\\IdeaProjects\\Alba_Man\\src\\main\\java\\Database\\ReportDB.txt");
+            File f = new File("AlbaMan/src/main/java/Database/ReportDB.txt");
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f,true));
             BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
 
@@ -498,7 +498,7 @@ public class DBBoundary {
     {
         List<String> questionInfo = new ArrayList<>();
         try {
-            File f = new File("C:\\Users\\홍길동\\IdeaProjects\\Alba_Man\\src\\main\\java\\Database\\QuestionDB.txt");
+            File f = new File("AlbaMan/src/main/java/Database/QuestionDB.txt");
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f,true));
             BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
 
@@ -526,7 +526,7 @@ public class DBBoundary {
     {
         List<String> scrapList = new ArrayList<>();
         try {
-            File f = new File("C:\\Users\\홍길동\\IdeaProjects\\Alba_Man\\src\\main\\java\\Database\\ScrapAnnouncementDB.txt");
+            File f = new File("AlbaMan/src/main/java/Database/ScrapDB.txt");
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f,true));
 
             scrapList.add(individualId+" ");
@@ -547,7 +547,7 @@ public class DBBoundary {
     public ArrayList<Question> readQuestionDB() {
 
         try {
-            File f = new File("C:\\Users\\홍길동\\IdeaProjects\\Alba_Man\\src\\main\\java\\Database\\QuestionDB.txt");
+            File f = new File("AlbaMan/src/main/java/Database/QuestionDB.txt");
             BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
             String line = null;
             while((line = bufferedReader.readLine())!=null)
@@ -572,7 +572,7 @@ public class DBBoundary {
     public ArrayList<Report> readReportDB() {
 
         try {
-            File f = new File("C:\\Users\\홍길동\\IdeaProjects\\Alba_Man\\src\\main\\java\\Database\\ReportDB.txt");
+            File f = new File("AlbaMan/src/main/java/Database/ReportDB.txt");
             BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
             String line = null;
             while((line = bufferedReader.readLine())!=null)
@@ -597,7 +597,7 @@ public class DBBoundary {
     public ArrayList<Announcement> readAnnouncementDB() {
 
         try {
-            File f = new File("C:\\Users\\홍길동\\IdeaProjects\\Alba_Man\\src\\main\\java\\Database\\AnnouncementDB.txt");
+            File f = new File("AlbaMan/src/main/java/Database/AnnouncementDB.txt");
             BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
             String line = null;
             while((line = bufferedReader.readLine())!=null)
