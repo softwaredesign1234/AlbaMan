@@ -9,6 +9,9 @@ Web Service for hiring & recruitment
 - Gradle 7.4
 - JDK 18
 
+or
+- window
+
 
 ### Project Settings
 
@@ -28,6 +31,7 @@ cd AlbaMan
 ### Build
 Builds are run in "~/AlbaMan/" directory
 
+### In Ubuntu
 make Gradle Wrapper
 
 ```
@@ -41,6 +45,15 @@ Build
 
 ```
 ./gradlew build
+
+BUILD SUCCESSFUL in 3s
+
+```
+
+### In window
+
+```
+gradlew
 
 BUILD SUCCESSFUL in 3s
 
@@ -86,12 +99,19 @@ BUILD SUCCESSFUL in 3s
 
 ## How to build testcode in command line
 
-<aside>
-💡 gradlew clean test --test <testcode class name>.<testcode method name> -i
+### In window
 
-</aside>
+```
+gradlew clean test --test <testcode class name>.<testcode method name> -i
 
+```
+
+💡Refer to the attached test code documentation for class name.
+
+```
 ex) gradlew clean test --tests AccountTest.IndividualSignupSuccess -i
+```
+
 ![성공샷](https://user-images.githubusercontent.com/86733856/207552076-3142d7fa-c9ba-45a3-bcda-6791e1e1620b.png)
 
 
