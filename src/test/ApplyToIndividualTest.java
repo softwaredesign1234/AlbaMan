@@ -9,12 +9,10 @@ import model.EnterpriseAccount;
 import model.IndividualAccount;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 
-import javax.security.auth.login.AccountNotFoundException;
 import java.util.ArrayList;
 
-public class applyIndividualToEnterpriseTest {
+public class ApplyToIndividualTest {
     int option = 1;
     AnnouncementController announcementController = new AnnouncementController();
     ApplyController applyController = new ApplyController();

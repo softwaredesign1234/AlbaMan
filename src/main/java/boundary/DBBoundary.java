@@ -15,10 +15,7 @@ import static controller.ApplyController.applyList;
 
 public class DBBoundary {
 
-    ArrayList<Apply> applyList = new ArrayList<>();
-    ArrayList<Report> reportList = new ArrayList<>();
-    ArrayList<Question> questionList = new ArrayList<>();
-    ArrayList<Announcement> announcementList = new ArrayList<>();
+
 
 
     public void saveAnnouncementDB(Announcement announcement)
@@ -189,7 +186,7 @@ public class DBBoundary {
 
 
     public ArrayList<Question> readQuestionDB() {
-
+        ArrayList<Question> questionList = new ArrayList<>();
         try {
             File f = new File("C:\\momo\\java_workspace\\AlbaMan\\AlbaMan\\src\\main\\java\\QuestionDB.txt");
             BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
@@ -214,7 +211,7 @@ public class DBBoundary {
     }
 
     public ArrayList<Apply> readApplyDB() {
-
+        ArrayList<Apply> applyList = new ArrayList<>();
         try {
             File f = new File("C:\\momo\\java_workspace\\AlbaMan\\AlbaMan\\src\\main\\java\\ReportDB.txt");
             BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
@@ -238,7 +235,7 @@ public class DBBoundary {
     }
 
     public ArrayList<Report> readReportDB() {
-
+        ArrayList<Report> reportList = new ArrayList<>();
         try {
             File f = new File("C:\\momo\\java_workspace\\AlbaMan\\AlbaMan\\src\\main\\java\\ReportDB.txt");
             BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
@@ -263,7 +260,7 @@ public class DBBoundary {
     }
 
     public ArrayList<Announcement> readAnnouncementDB() {
-
+        ArrayList<Announcement> announcementList = new ArrayList<>();
         try {
             File f = new File("C:\\momo\\java_workspace\\AlbaMan\\AlbaMan\\src\\main\\java\\AnnouncementDB.txt");
             BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
