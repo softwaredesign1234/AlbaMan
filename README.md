@@ -84,6 +84,19 @@ BUILD SUCCESSFUL in 3s
 ```
 
 
+## How to build testcode in command line
+
+<aside>
+💡 gradlew clean test --test <testcode class name>.<testcode method name> -i
+
+</aside>
+
+ex) gradlew clean test --tests AccountTest.IndividualSignupSuccess -i
+
+![성공샷.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/27994d61-41aa-4fda-ad22-261ae025048a/%EC%84%B1%EA%B3%B5%EC%83%B7.png)
+
+
+
 ## Built With
 
 * [Gradle](https://gradle.org/)
