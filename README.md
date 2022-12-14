@@ -15,7 +15,7 @@ or
 ### Project Settings
 
 ```
-git clone ...
+git clone https://github.com/softwaredesign1234/AlbaMan.git
 ```
 
 project directory added ~/AlbaMan
