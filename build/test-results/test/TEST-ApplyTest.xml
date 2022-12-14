@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ApplyTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-12-14T08:27:46" hostname="DESKTOP-29CPMJ4" time="0.016">
+<testsuite name="ApplyTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-12-14T12:19:50" hostname="DESKTOP-29CPMJ4" time="0.017">
   <properties/>
-  <testcase name="UC5-媛쒖씤�씠 嫄곗젅" classname="ApplyTest" time="0.006"/>
-  <testcase name="UC5-�젙�긽" classname="ApplyTest" time="0.004"/>
-  <testcase name="UC5-媛쒖씤�씠 �닔�씫" classname="ApplyTest" time="0.005"/>
+  <testcase name="UC5-개인이 거절" classname="ApplyTest" time="0.007"/>
+  <testcase name="UC5-정상" classname="ApplyTest" time="0.004"/>
+  <testcase name="UC5-개인이 수락" classname="ApplyTest" time="0.005"/>
   <system-out><![CDATA[apply saved!
 apply saved!
 Apply is not accepted!

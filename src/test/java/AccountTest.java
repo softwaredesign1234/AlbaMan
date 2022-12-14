@@ -23,9 +23,9 @@ public class AccountTest extends DBBoundary{
     EnterpriseAccount enterprise2;
     @Mock
     AccountBoundary accountBoundary;
-    private static String id = "individual";
+    private static String id = "aa1234";
     private static String password = "1234";
-    private static String name = "individual Name";
+    private static String name = "individualName";
     private static String email = "aa1234@naver.com";
     private static String phoneNumber = "010-7777-7777";
     private static int age = 55;
@@ -34,8 +34,8 @@ public class AccountTest extends DBBoundary{
     @Mock
     private static String companyName = "KakaoEnterprise";
     private static String companyNum = "123-45-67890";
-    private static String companyId = "companyid";
-    private static String companypassword="companypassword";
+    private static String companyId = "bb134";
+    private static String companypassword="1234";
     private static String companyLocation = "Daegu";
     private static String inditype = "Individual";
     private static String entertype = "Enterprise";
