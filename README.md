@@ -462,6 +462,254 @@ readFAQDB()
 // print
 FAQ search 실패: FAQ가 없음
 ```
+---
+## ApplyIndividualToEnterpriseTest
+
+**공통 :** 취업공고를 입력하고, 취업공고를 등록한다
+```
+inputAnnouncement()
+makeAnnouncement()
+saveAnnouncementDB()
+```
+### **ApplyIndividualToEnterpriseTest** - **applyAnnouncements()**
+
+#### DisplayName: UC4-정상
+
+개인이 공고를 보고 지원하고 성공하는 기본 흐름
+
+- 공고 목록을 보고, 특정 검색 조건으로 공고를 검색한다.
+
+```
+showAnnouncement()
+getAnnouncementList()
+readAnnouncementDB()
+showAnnouncement()
+
+readAnnouncementById() // 특정 공고 선택
+readAnnouncementByWage() // 특정 시급 이상으로 검색
+readAnnouncementByHours() // 최대 근무시간으로 검색
+readAnnouncementByDays() // 최대 주당 근무날짜로 검색
+readAnnouncementByName() // 공고 제목으로 검색
+
+//print
+-----AnnouncementList-----
+announcement1
+announcement2
+..
+```
+
+- 공고 목록중 마음에 드는 공고를 스크랩
+
+```
+scrapAnnouncementId()
+scrapAnnouncement()
+saveScrapDB()
+```
+
+- 공고에 지원
+
+```
+inputApply()
+makeApplytoEnterprise()
+saveApplyDB()
+
+//print
+apply saved
+```
+
+- 기업이 지원내용을 승인하고, 그즉시 개인 근무이력에 추가
+
+```
+inputPassOrNot()
+passOrNot()
+saveApplyDB()
+addWorkHistory()
+saveWorkHistoryDB()
+
+//print
+Passed!
+workhistory saved!
+```
+
+- 기업이 공고를 내린다
+
+```
+deleteAnnouncementId()
+```
+
+
+### **ApplyIndividualToEnterpriseTest - noResult()**
+
+#### DisplayName: UC4-검색결과 없음
+
+- 조건을 넣어 검색했을 때, 일치하는 결과가 없다.
+
+```
+readAnnouncementById()
+getAnnouncementList()
+readAnnouncementDB()
+
+//print
+No result has been found! Display all announcement //검색결과 없음
+
+---AnnouncementList----
+announcement1
+announcement2
+..
+
+```
+
+### **ApplyIndividualToEnterpriseTest - deadlinePassed()**
+
+#### DisplayName: UC4-공고기한 만료
+
+- 공고를 생성할때 정해놓은 기간이 지나갔을 때
+
+```
+deadlinePassed()
+deleteAnnouncement()
+
+//print
+Today = yy/mm/dd Announcement’s deadline : yy/mm/dd
+Delete announcement Id: //기간 만료시
+```
+
+### **ApplyIndividualToEnterpriseTest-failedResult()**
+
+#### DisplayName: UC4-기업 지원 불합격
+
+- 기업이 지원에 대해 불합격 처리한 경우
+
+```
+inputPassOrNot()
+passOrNot()
+saveApplyDB()
+
+//print
+result : false
+Failed..
+```
+
+### **ApplyIndividualToEnterpriseTest - calculatedWage()**
+
+#### DisplayName: UC11 - 공고 임금 계산기
+
+- 특정 공고에 대해 한달 월급을 계산하여 보여준다
+
+```
+readAnnouncementById()
+CalculateWage()
+showAnnouncement()
+
+//print
+-----AnnouncementList-----
+announcement1
+announcement2
+...
+
+wage = …. wage per hour = …. working hours per week = …. //공고 월급 계산
+```
+---
+### **QuestionTest - makeQuestion()**
+
+#### DisplayName: UC9-질문 등록 정상
+
+질문 등록과 답변의 정상 흐름
+
+- 질문 등록
+
+```
+inputQuestion()
+addQuestion()
+saveQuestionDB()
+
+//print
+question saved!!
+```
+
+- 매니저가 질문에 답변
+
+```
+findQuestion()
+showQuestionList()
+inputAnswer()
+addAnswer()
+saveQuestionDB()
+
+//print
+questionInformation // before answer
+questionInformation // after answer
+
+```
+
+### **QuestionTest - directAsk()**
+
+#### DisplayName: UC9-관리자 직접연락 정보조회
+
+- 관리자의 메일, 전화번호 정보를 가져온다
+
+```
+showMail()
+showPhoneNumber()
+showAdminInform()
+
+//print
+Contract Email : , Contract number :
+
+```
+
+### **ReportTest**
+
+### **ReportTest - addReport()**
+
+#### DisplayName: UC10-신고 정상
+
+신고등록-신고 판단의 정상 흐름
+
+- 신고 접수
+
+```
+inputReport()
+addReport()
+saveReportDB()
+
+//print
+report saved!!
+
+```
+
+- 매니저의 신고 판단
+
+```
+findReport()
+makeJudgement()
+findMemberInfo()
+deactivateMember()
+modifyIndividualAccountInfo()
+
+//print
+Judgement =                        //makeJudgement()
+ReportedMember's Info =            //findMemberInfo()
+memberId member has been blocked   //deactivateMember
+개인회원 정보 수정 성공             //modifyIndividualAccountInfo
+```
+
+### **ReportTest - rejectReport()**
+
+#### DisplayName: UC10-신고 반려
+
+- 신고 내역에 대해 반려
+```
+findReport()
+makeJudgement()
+removeReport()
+
+//print
+Judgement =
+Remove report Id :
+```
+---
+
 
 ### tree
 
