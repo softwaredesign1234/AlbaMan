@@ -25,6 +25,7 @@ public class ApplyController extends DBBoundary {
         applyList.add(apply);
         saveApplyDB(apply);
 
+        System.out.println("Apply success!");
         System.out.println("Apply id :"+apply.getId());
         System.out.println("Apply individualId :"+apply.getIndividualId());
         System.out.println("Apply enterpriseId :"+apply.getEnterpriseId());

@@ -1,92 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AccountTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2022-12-14T03:35:49" hostname="DESKTOP-29CPMJ4" time="0.544">
+<testsuite name="AccountTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2022-12-14T08:01:24" hostname="DESKTOP-29CPMJ4" time="0.447">
   <properties/>
-  <testcase name="개인 회원 정보 수정 - 비밀번호 불일치 실패" classname="AccountTest" time="0.073"/>
-  <testcase name="개인 회원 탈퇴" classname="AccountTest" time="0.015"/>
-  <testcase name="UC2-실패(사업자번호 형식 틀림)" classname="AccountTest" time="0.012"/>
-  <testcase name="UC1-정상" classname="AccountTest" time="0.012"/>
-  <testcase name="기업 회원 탈퇴 실패 - 비밀번호 불일치" classname="AccountTest" time="0.013"/>
-  <testcase name="UC2-정상" classname="AccountTest" time="0.014"/>
-  <testcase name="기업회원 정보 수정" classname="AccountTest" time="0.169"/>
-  <testcase name="UC1-실패(이메일 형식 틀림)" classname="AccountTest" time="0.037"/>
-  <testcase name="UC3-정상(개인로그인)" classname="AccountTest" time="0.019"/>
-  <testcase name="개인회원 정보 수정" classname="AccountTest" time="0.045"/>
-  <testcase name="UC3-정상(기업로그인)" classname="AccountTest" time="0.017"/>
-  <testcase name="기업 회원 정보 수정 - 비밀번호 불일치 실패" classname="AccountTest" time="0.018"/>
-  <testcase name="UC3-실패(비밀번호 잘못 입력)" classname="AccountTest" time="0.017"/>
-  <testcase name="UC1-실패(타입 잘못 입력)" classname="AccountTest" time="0.015"/>
-  <testcase name="UC2-실패(타입 잘못 입력)" classname="AccountTest" time="0.016"/>
-  <system-out><![CDATA[기업계정 저장 성공
-기업계정 저장 성공
-개인계정 저장 성공
-개인계정 저장 성공
-권한 성공
-개인계정 저장 성공
-개인계정 저장 성공
+  <testcase name="UC6.1-개인 회원 정보 수정 - 비밀번호 불일치 실패" classname="AccountTest" time="0.142"/>
+  <testcase name="UC7.1-개인 회원 탈퇴" classname="AccountTest" time="0.011"/>
+  <testcase name="UC2-실패(사업자번호 형식 틀림)" classname="AccountTest" time="0.008"/>
+  <testcase name="UC7.2-기업 회원 탈퇴" classname="AccountTest" time="0.036"/>
+  <testcase name="UC1-정상" classname="AccountTest" time="0.011"/>
+  <testcase name="UC7.2-기업 회원 탈퇴 실패 - 비밀번호 불일치" classname="AccountTest" time="0.012"/>
+  <testcase name="UC2-정상" classname="AccountTest" time="0.006"/>
+  <testcase name="UC6.2-기업회원정보 수정 정상" classname="AccountTest" time="0.109"/>
+  <testcase name="UC1-실패(이메일 형식 틀림)" classname="AccountTest" time="0.018"/>
+  <testcase name="UC3-정상(개인로그인)" classname="AccountTest" time="0.007"/>
+  <testcase name="UC6.1-개인회원정보 수정 정상" classname="AccountTest" time="0.012"/>
+  <testcase name="UC3-정상(기업로그인)" classname="AccountTest" time="0.004"/>
+  <testcase name="UC6.2-기업 회원 정보 수정 - 비밀번호 불일치 실패" classname="AccountTest" time="0.004"/>
+  <testcase name="UC3-실패(비밀번호 잘못 입력)" classname="AccountTest" time="0.005"/>
+  <testcase name="UC7.1-개인 회원 탈퇴 실패 - 비밀번호 불일치" classname="AccountTest" time="0.005"/>
+  <testcase name="UC1-실패(타입 잘못 입력)" classname="AccountTest" time="0.005"/>
+  <testcase name="UC2-실패(타입 잘못 입력)" classname="AccountTest" time="0.003"/>
+  <system-out><![CDATA[권한 성공
 개인회원 정보 수정 성공
 종료
-기업계정 저장 성공
-기업계정 저장 성공
-개인계정 저장 성공
-개인계정 저장 성공
 탈퇴 약관
-개인계정 저장 성공
 개인회원 탈퇴 성공
 권한 성공
 종료
-기업계정 저장 성공
-기업계정 저장 성공
-개인계정 저장 성공
-개인계정 저장 성공
 이용약관에 대해 안내드립니다.
+권한 실패
 인증정보를 정확히 입력해주세요.
-인증정보를 형식에 맞게 입력해주세요
-기업계정 저장 성공
-기업계정 저장 성공
-개인계정 저장 성공
-개인계정 저장 성공
+탈퇴 약관
+기업회원 탈퇴 성공
+권한 성공
+종료
 이용약관에 대해 안내드립니다.
-개인계정 저장 성공
+권한 성공
 Signup Success!
-개인회원 가입성공!
-id: individual
-password: 1234
-name: individual Name
-email: aa1234@naver.com
-phoneNumber: 010-7777-7777
-age: 55
-gender: F
-기업계정 저장 성공
-기업계정 저장 성공
-개인계정 저장 성공
-개인계정 저장 성공
+your Id: individual
 비밀번호 불일치
 권한 실패
 종료
-기업계정 저장 성공
-기업계정 저장 성공
-개인계정 저장 성공
-개인계정 저장 성공
 이용약관에 대해 안내드립니다.
-회사폰넘버: 053-333-3333
-기업계정 저장 성공
+권한 성공
 Signup Success!
-기업회원 가입성공! id는: companyid
-companyphoneNumber053-333-3333
-id: companyid
-password: companypassword
-companyname: KakaoEnterprise
-companynum: 123-45-67890
-companyPhonenumber: 053-333-3333
-category: IT
-companylocation: Daegu
-기업계정 저장 성공
-기업계정 저장 성공
-개인계정 저장 성공
-개인계정 저장 성공
-id : bb0000
-name : steakhouse
-Location : Daegu
+your Id: companyid
 id : bb1111
 name : blueswimming
 Location : Daegu
@@ -107,6 +63,27 @@ name : steakhouse
 Location : Daegu
 id : bb1111
 name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : companyid
+name : KakaoEnterprise
 Location : Daegu
 id : bb0000
 name : steakhouse
@@ -116,90 +93,10 @@ name : blueswimming
 Location : Daegu
 --------------modify---------------
 권한 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
 기업회원 정보 수정 성공
 종료
 -------------------------------------------
 권한 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
-기업계정 저장 성공
 기업회원 정보 수정 성공
 종료
 --------------result----------------
@@ -209,9 +106,6 @@ Location : Daegu
 id : bb1111
 name : blueswimming
 Location : Daegu
-id : bb0000
-name : steakhouse
-Location : Daegu
 id : bb1111
 name : blueswimming
 Location : Daegu
@@ -239,35 +133,8 @@ Location : Daegu
 id : bb1111
 name : blueswimming
 Location : Daegu
-id : bb0000
-name : steakhouse
-Location : Daegu
-id : bb1111
-name : blueswimming
-Location : Daegu
-id : bb0000
-name : different_company_Name
-Location : Daegu
-id : bb1111
-name : blueswimming
-Location : Daegu
-id : bb0000
-name : steakhouse
-Location : Daegu
-id : bb1111
-name : blueswimming
-Location : Daegu
-id : bb0000
-name : steakhouse
-Location : Daegu
-id : bb1111
-name : blueswimming
-Location : Daegu
-id : bb0000
-name : steakhouse
-Location : Daegu
-id : bb1111
-name : blueswimming
+id : companyid
+name : KakaoEnterprise
 Location : Daegu
 id : bb0000
 name : steakhouse
@@ -299,9 +166,6 @@ Location : Daegu
 id : bb1111
 name : blueswimming
 Location : Daegu
-id : bb0000
-name : steakhouse
-Location : Daegu
 id : bb1111
 name : blueswimming
 Location : Daegu
@@ -335,83 +199,8 @@ Location : Daegu
 id : bb1111
 name : blueswimming
 Location : Daegu
-id : bb0000
-name : steakhouse
-Location : Daegu
-id : bb1111
-name : blueswimming
-Location : Daegu
-id : bb0000
-name : different_company_Name
-Location : Daegu
-id : bb1111
-name : blueswimming
-Location : Daegu
-id : bb0000
-name : steakhouse
-Location : Daegu
-id : bb1111
-name : blueswimming
-Location : Daegu
-id : bb0000
-name : steakhouse
-Location : Daegu
-id : bb1111
-name : blueswimming
-Location : Daegu
-id : bb0000
-name : steakhouse
-Location : Daegu
-id : bb1111
-name : blueswimming
-Location : Daegu
-id : bb0000
-name : steakhouse
-Location : Daegu
-id : bb1111
-name : blueswimming
-Location : Daegu
-id : bb0000
-name : steakhouse
-Location : Daegu
-id : bb1111
-name : blueswimming
-Location : Daegu
-id : bb0000
-name : steakhouse
-Location : Daegu
-id : bb1111
-name : blueswimming
-Location : Daegu
-id : bb0000
-name : steakhouse
-Location : Daegu
-id : bb1111
-name : blueswimming
-Location : Daegu
-id : bb0000
-name : different_company_Name
-Location : Daegu
-id : bb0000
-name : steakhouse
-Location : Seoul
-id : bb1111
-name : blueswimming
-Location : Daegu
-id : bb1111
-name : blueswimming
-Location : Daegu
-id : bb0000
-name : steakhouse
-Location : Daegu
-id : bb1111
-name : blueswimming
-Location : Daegu
-id : bb0000
-name : steakhouse
-Location : Daegu
-id : bb1111
-name : blueswimming
+id : companyid
+name : KakaoEnterprise
 Location : Daegu
 id : bb0000
 name : steakhouse
@@ -443,9 +232,6 @@ Location : Daegu
 id : bb1111
 name : blueswimming
 Location : Daegu
-id : bb0000
-name : steakhouse
-Location : Daegu
 id : bb1111
 name : blueswimming
 Location : Daegu
@@ -479,35 +265,8 @@ Location : Daegu
 id : bb1111
 name : blueswimming
 Location : Daegu
-id : bb0000
-name : steakhouse
-Location : Daegu
-id : bb1111
-name : blueswimming
-Location : Daegu
-id : bb0000
-name : different_company_Name
-Location : Daegu
-id : bb1111
-name : blueswimming
-Location : Daegu
-id : bb0000
-name : steakhouse
-Location : Daegu
-id : bb1111
-name : blueswimming
-Location : Daegu
-id : bb0000
-name : steakhouse
-Location : Daegu
-id : bb1111
-name : blueswimming
-Location : Daegu
-id : bb0000
-name : steakhouse
-Location : Daegu
-id : bb1111
-name : blueswimming
+id : companyid
+name : KakaoEnterprise
 Location : Daegu
 id : bb0000
 name : steakhouse
@@ -539,6 +298,21 @@ Location : Daegu
 id : bb1111
 name : blueswimming
 Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
 id : bb0000
 name : steakhouse
 Location : Daegu
@@ -556,6 +330,9 @@ name : steakhouse
 Location : Daegu
 id : bb1111
 name : blueswimming
+Location : Daegu
+id : companyid
+name : KakaoEnterprise
 Location : Daegu
 id : bb0000
 name : steakhouse
@@ -587,22 +364,275 @@ Location : Daegu
 id : bb0000
 name : steakhouse
 Location : Seoul
-기업계정 저장 성공
-기업계정 저장 성공
-개인계정 저장 성공
-개인계정 저장 성공
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : companyid
+name : KakaoEnterprise
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : different_company_Name
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : companyid
+name : KakaoEnterprise
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : different_company_Name
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : companyid
+name : KakaoEnterprise
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : different_company_Name
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : companyid
+name : KakaoEnterprise
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : different_company_Name
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Seoul
 이용약관에 대해 안내드립니다.
+권한 실패
 인증정보를 정확히 입력해주세요.
-기업계정 저장 성공
-기업계정 저장 성공
-개인계정 저장 성공
-개인계정 저장 성공
 권한 성공
-id는: aa1111
-기업계정 저장 성공
-기업계정 저장 성공
-개인계정 저장 성공
-개인계정 저장 성공
+개인 id는: aa1111
 id : aa0000
 name : janny
 Age : 25
@@ -611,14 +641,10 @@ name : Tom
 Age : 21
 --------------modify---------------
 권한 성공
-개인계정 저장 성공
-개인계정 저장 성공
 개인회원 정보 수정 성공
 종료
 -------------------------------------------
 권한 성공
-개인계정 저장 성공
-개인계정 저장 성공
 개인회원 정보 수정 성공
 종료
 --------------result----------------
@@ -628,36 +654,21 @@ Age : 25
 id : aa1111
 name : Tom
 Age : 88
-기업계정 저장 성공
-기업계정 저장 성공
-개인계정 저장 성공
-개인계정 저장 성공
 권한 성공
 기업id는 : bb1111
-기업계정 저장 성공
-기업계정 저장 성공
-개인계정 저장 성공
-개인계정 저장 성공
 비밀번호 불일치
 권한 실패
 종료
-기업계정 저장 성공
-기업계정 저장 성공
-개인계정 저장 성공
-개인계정 저장 성공
+권한 실패
 비밀번호가 틀렸습니다
-기업계정 저장 성공
-기업계정 저장 성공
-개인계정 저장 성공
-개인계정 저장 성공
+비밀번호 불일치
+권한 실패
+종료
 이용약관에 대해 안내드립니다.
+권한 실패
 타입은 Individual과 Enterprise 중 하나로 입력해주세요
-기업계정 저장 성공
-기업계정 저장 성공
-개인계정 저장 성공
-개인계정 저장 성공
 이용약관에 대해 안내드립니다.
-타입은 Individual과 Enterprise 중 하나로 입력해주세요
+권한 실패
 타입은 Individual과 Enterprise 중 하나로 입력해주세요
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>

@@ -7,6 +7,7 @@ import model.Apply;
 import model.EnterpriseAccount;
 import model.IndividualAccount;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 
@@ -56,6 +57,7 @@ public class applyIndividualToEnterpriseTest {
         }
     }
     @Test
+    @DisplayName("UC4-정상")
     public void applyAnnouncements(){
         try {
             announcementList1 = announcementController.getAnnouncementList();
@@ -102,6 +104,7 @@ public class applyIndividualToEnterpriseTest {
     }
 
     @Test
+    @DisplayName("UC4-검색결과 없음")
     public void noResult(){
         announcementList1 = announcementController.getAnnouncementList();
         announcementBoundary.showAnnouncement(announcementList1);
@@ -113,6 +116,7 @@ public class applyIndividualToEnterpriseTest {
 
 
     @Test
+    @DisplayName("UC4-기업 지원 불합격")
     public void failedResult(){
         try {
             Apply apply;
@@ -124,11 +128,13 @@ public class applyIndividualToEnterpriseTest {
     }
 
     @Test
+    @DisplayName("UC4-공고기한 만료")
     public void deadlinePassed(){
         String today = "23/1/1";
         boolean passed = announcementController.deadlinePassed(today,a);
     }
     @Test
+    @DisplayName("UC11-공고 임금 계산기")
     public void calculateWage(){
         int wage;
         Announcement announcement = new Announcement();

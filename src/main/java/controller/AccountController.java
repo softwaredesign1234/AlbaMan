@@ -31,7 +31,7 @@ public class AccountController extends DBBoundary{
         individualAccounts.add(individualAccount); //개인계정 db에 추가
         saveIndiDB(individualAccount);
         System.out.println("Signup Success!");
-
+        System.out.println("your Id: "+individualAccount.getId());
         return individualAccount;
 }
 
@@ -46,9 +46,9 @@ public class AccountController extends DBBoundary{
                validation, isActivate,"Enterprise");
         enterpriseAccounts.add(enterpriseAccount); //개인계정 db에 추가
 
-        System.out.println("회사폰넘버: "+enterpriseAccount.getEnterprisePhoneNumber());
         saveEnterDB(enterpriseAccount);
-        System.out.println("Signup Success!");;
+        System.out.println("Signup Success!");
+        System.out.println("your Id: "+enterpriseAccount.getId());
         return enterpriseAccount;
     }
 

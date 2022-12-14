@@ -45,11 +45,9 @@ public class ApplyTest extends DBBoundary {
     void saveApplyToIndividual() throws Exception {
 
         Apply apply=resumeBoundary.inputapply("aa1234","bb1234");
-        Apply apply1=resumeBoundary.inputapply("aa5678","bb5678");
         assertEquals("aa1234",apply.getIndividualId());
         assertEquals("bb1234",apply.getEnterpriseId());
-        assertEquals("aa5678",apply1.getIndividualId());
-        assertEquals("bb5678",apply1.getEnterpriseId());
+
 
     }
 

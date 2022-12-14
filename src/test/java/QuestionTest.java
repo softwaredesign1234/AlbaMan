@@ -6,6 +6,7 @@ import model.Account;
 import model.IndividualAccount;
 import model.Question;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 
@@ -23,6 +24,7 @@ public class QuestionTest {
         dbBoundary.clearDB("Question");
     }
     @Test
+    @DisplayName("UC9-질문 등록 정상")
     public void makeQuestion(){
         ArrayList<Question> questionList = new ArrayList<>();
         String context = "";
@@ -44,6 +46,7 @@ public class QuestionTest {
     }
 
     @Test
+    @DisplayName("UC9-관리자 직접연락 정보조회")
     public void directAsk(){
         String email = "";
         String phone = "";

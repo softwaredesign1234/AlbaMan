@@ -1,28 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ApplyTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-12-14T03:35:50" hostname="DESKTOP-29CPMJ4" time="0.056">
+<testsuite name="ApplyTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-12-14T08:01:25" hostname="DESKTOP-29CPMJ4" time="0.017">
   <properties/>
-  <testcase name="UC5-개인이 거절" classname="ApplyTest" time="0.018"/>
-  <testcase name="UC5-정상" classname="ApplyTest" time="0.018"/>
-  <testcase name="UC5-개인이 수락" classname="ApplyTest" time="0.017"/>
-  <system-out><![CDATA[기업계정 저장 성공
-기업계정 저장 성공
-개인계정 저장 성공
-개인계정 저장 성공
-Apply is not accepted!
-기업계정 저장 성공
-기업계정 저장 성공
-개인계정 저장 성공
-개인계정 저장 성공
+  <testcase name="UC5-개인이 거절" classname="ApplyTest" time="0.006"/>
+  <testcase name="UC5-정상" classname="ApplyTest" time="0.003"/>
+  <testcase name="UC5-개인이 수락" classname="ApplyTest" time="0.006"/>
+  <system-out><![CDATA[Apply is not accepted!
+Apply success!
 Apply id :11
 Apply individualId :aa1234
 Apply enterpriseId :bb1234
-Apply id :19
-Apply individualId :aa5678
-Apply enterpriseId :bb5678
-기업계정 저장 성공
-기업계정 저장 성공
-개인계정 저장 성공
-개인계정 저장 성공
 Apply is accepted!
 workhistory Individual: aa0000
 workhistory Enterprise: bb0000

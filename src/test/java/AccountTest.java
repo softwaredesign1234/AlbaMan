@@ -74,14 +74,6 @@ public class AccountTest extends DBBoundary{
         assertEquals(age, individualAccount.getAge());
         assertEquals(gender, individualAccount.getGender());
 
-        System.out.println("id: " + individualAccount.getId());
-        System.out.println("password: " + individualAccount.getPassword());
-        System.out.println("name: " + individualAccount.getName());
-        System.out.println("email: " + individualAccount.getEmail());
-        System.out.println("phoneNumber: " + individualAccount.getPhoneNumber());
-        System.out.println("age: " + individualAccount.getAge());
-        System.out.println("gender: " + individualAccount.getGender());
-
 
     }
     @Test
@@ -113,7 +105,6 @@ public class AccountTest extends DBBoundary{
         String message=accountBoundary.inputValidationInput(entertype, companyNum); //valid 확인: boundary ->개인=이메일, 기업=사업자번호->controller 형식 확인 -> boundary에 권한 return
         EnterpriseAccount enterpriseAccount = accountBoundary.enterSignup(companyNum, category,companyPhonenumber, companyLocation,companyId,companypassword,companyName);
 
-        System.out.println("companyphoneNumber"+enterpriseAccount.getEnterprisePhoneNumber());
         assertEquals(message, "권한 성공");
         assertEquals(companyId, enterpriseAccount.getId());
         assertEquals(companypassword, enterpriseAccount.getPassword());
@@ -123,13 +114,7 @@ public class AccountTest extends DBBoundary{
         assertEquals(category, enterpriseAccount.getCategory());
         assertEquals(companyLocation, enterpriseAccount.getEnterpriseLocation());
 
-        System.out.println("id: " + enterpriseAccount.getId());
-        System.out.println("password: " + enterpriseAccount.getPassword());
-        System.out.println("companyname: " + enterpriseAccount.getName());
-        System.out.println("companynum: " + enterpriseAccount.getEnterpriseNum());
-        System.out.println("companyPhonenumber: " + enterpriseAccount.getEnterprisePhoneNumber());
-        System.out.println("category: " + enterpriseAccount.getCategory());
-        System.out.println("companylocation: " + enterpriseAccount.getEnterpriseLocation());
+
 
     }
 
@@ -142,7 +127,6 @@ public class AccountTest extends DBBoundary{
         String message=accountBoundary.inputValidationInput(entertype, wrongCompanynum); //valid 확인: boundary ->개인=이메일, 기업=사업자번호->controller 형식 확인 -> boundary에 권한 return
 
         assertEquals(message,"권한 실패");
-        System.out.println("인증정보를 형식에 맞게 입력해주세요");
     }
     @Test
     @DisplayName("UC2-실패(타입 잘못 입력)")
@@ -153,7 +137,6 @@ public class AccountTest extends DBBoundary{
 
 
         assertEquals(message,"타입은 Individual과 Enterprise 중 하나로 입력해주세요");
-        System.out.println(message);
     }
 
     @Test
@@ -174,7 +157,7 @@ public class AccountTest extends DBBoundary{
 
         IndividualAccount individualAccount= (IndividualAccount) accountBoundary.signIn("Individual","aa1111","1111");
 
-        System.out.println("id는: " +individualAccount.getId());
+        System.out.println("개인 id는: " +individualAccount.getId());
 
     }
 
@@ -192,7 +175,7 @@ public class AccountTest extends DBBoundary{
 
 
     @Test
-    @DisplayName("개인회원 정보 수정")
+    @DisplayName("UC6.1-개인회원정보 수정 정상")
     void IndividualModifyInfoSuccess() {
 
         String changedName = "different_Name";
@@ -221,7 +204,7 @@ public class AccountTest extends DBBoundary{
     }
 
     @Test
-    @DisplayName("기업회원 정보 수정")
+    @DisplayName("UC6.2-기업회원정보 수정 정상")
     void EnterpriseModifyInfoSuccess() {
 
         String changedName = "different_company_Name";
@@ -249,7 +232,7 @@ public class AccountTest extends DBBoundary{
     }
 
     @Test
-    @DisplayName("개인 회원 정보 수정 - 비밀번호 불일치 실패")
+    @DisplayName("UC6.1-개인 회원 정보 수정 - 비밀번호 불일치 실패")
     void IndividualModifyInfoFail() {
         String changedName = "different name";
 
@@ -257,7 +240,7 @@ public class AccountTest extends DBBoundary{
     }
 
     @Test
-    @DisplayName("기업 회원 정보 수정 - 비밀번호 불일치 실패")
+    @DisplayName("UC6.2-기업 회원 정보 수정 - 비밀번호 불일치 실패")
     void EnterpriseModifyInfoFail() {
         String changedName = "different company Name";
 
@@ -265,13 +248,26 @@ public class AccountTest extends DBBoundary{
     }
 
     @Test
-    @DisplayName("개인 회원 탈퇴")
+    @DisplayName("UC7.1-개인 회원 탈퇴")
     void IndividualWithdraw() {
         AccountBoundary.withdrawAccount("Individual", "aa0000", "0000");
     }
 
+
     @Test
-    @DisplayName("기업 회원 탈퇴 실패 - 비밀번호 불일치")
+    @DisplayName("UC7.1-개인 회원 탈퇴 실패 - 비밀번호 불일치")
+    void IndividualWithdrawalFail() {
+        AccountBoundary.withdrawAccount("Individual", "aa0000", "1111");
+    }
+
+    @Test
+    @DisplayName("UC7.2-기업 회원 탈퇴")
+    void EnterpriseWithdraw() {
+        AccountBoundary.withdrawAccount("Enterprise", "bb0000", "0000");
+    }
+
+    @Test
+    @DisplayName("UC7.2-기업 회원 탈퇴 실패 - 비밀번호 불일치")
     void EnterpriseWithdrawalFail() {
         AccountBoundary.withdrawAccount("Enterprise", "bb0000", "1111");
     }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="applyIndividualToEnterpriseTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-12-14T03:35:50" hostname="DESKTOP-29CPMJ4" time="0.178">
+<testsuite name="applyIndividualToEnterpriseTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-12-14T08:01:25" hostname="DESKTOP-29CPMJ4" time="0.036">
   <properties/>
-  <testcase name="calculateWage()" classname="applyIndividualToEnterpriseTest" time="0.032"/>
-  <testcase name="noResult()" classname="applyIndividualToEnterpriseTest" time="0.029"/>
-  <testcase name="deadlinePassed()" classname="applyIndividualToEnterpriseTest" time="0.026"/>
-  <testcase name="applyAnnouncements()" classname="applyIndividualToEnterpriseTest" time="0.047"/>
-  <testcase name="failedResult()" classname="applyIndividualToEnterpriseTest" time="0.034"/>
+  <testcase name="UC11-공고 임금 계산기" classname="applyIndividualToEnterpriseTest" time="0.006"/>
+  <testcase name="UC4-검색결과 없음" classname="applyIndividualToEnterpriseTest" time="0.005"/>
+  <testcase name="UC4-공고기한 만료" classname="applyIndividualToEnterpriseTest" time="0.004"/>
+  <testcase name="UC4-정상" classname="applyIndividualToEnterpriseTest" time="0.011"/>
+  <testcase name="UC4-기업 지원 불합격" classname="applyIndividualToEnterpriseTest" time="0.007"/>
   <system-out><![CDATA[User making announcement..
 enterpriseId : bb0000...
 User making announcement..

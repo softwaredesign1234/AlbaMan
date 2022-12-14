@@ -22,7 +22,7 @@ public class FAQTest extends DBBoundary {
     FAQController faqController = new FAQController();
 
     @Test
-    @DisplayName("FAQ 등록")
+    @DisplayName("UC9-FAQ 등록 정상")
     void createFAQ() {
 
         String question1 = "i_can't_find_my_id";
@@ -36,7 +36,7 @@ public class FAQTest extends DBBoundary {
     }
 
     @Test
-    @DisplayName("FAQ 조회")
+    @DisplayName("UC9-FAQ 조회 정상")
     void searchFAQ() {
         createFAQ();
 
@@ -49,7 +49,7 @@ public class FAQTest extends DBBoundary {
     }
 
     @Test
-    @DisplayName("FAQ 조회 실패 - FAQ 없음")
+    @DisplayName("UC9-FAQ 없음 조회 실패")
     void searchFAQFail() {
         clearDB("FAQ");
 

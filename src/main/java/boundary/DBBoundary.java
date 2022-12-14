@@ -42,7 +42,6 @@ public class DBBoundary {
             bufferedWriter.flush();
             bufferedWriter.close();
 
-            System.out.println("개인계정 저장 성공");
 
         } catch (Exception e) {
 
@@ -80,7 +79,6 @@ public class DBBoundary {
             bufferedWriter.flush();
             bufferedWriter.close();
 
-            System.out.println("기업계정 저장 성공");
 
         } catch (Exception e) {
 

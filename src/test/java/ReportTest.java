@@ -5,6 +5,7 @@ import controller.ReportController;
 import model.IndividualAccount;
 import model.Report;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 
@@ -34,6 +35,7 @@ public class ReportTest {
 
     }
     @Test
+    @DisplayName("UC10-신고 정상")
     public void addReport() {
         String judgement = "";
         boolean isActive;
@@ -54,6 +56,7 @@ public class ReportTest {
     }
 
     @Test
+    @DisplayName("UC10-신고 반려")
     public void rejectReport() {
         String judgement = "";
         String reportContext = reportBoundary.inputReport();

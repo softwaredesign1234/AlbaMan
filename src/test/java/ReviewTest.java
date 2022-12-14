@@ -58,7 +58,7 @@ public class ReviewTest extends DBBoundary {
     }
 
     @Test
-    @DisplayName("리뷰 작성")
+    @DisplayName("UC8-리뷰 작성 정상")
     void createAReview() {
         String review1 = "1234";
         String review2 = "5678";
@@ -70,7 +70,7 @@ public class ReviewTest extends DBBoundary {
     }
 
     @Test
-    @DisplayName("리뷰 작성 - workhistory 없어서 실패")
+    @DisplayName("UC8-근무 이력 없음")
     void createAReviewFail() {
         String review1 = "review1";
 
@@ -78,7 +78,7 @@ public class ReviewTest extends DBBoundary {
     }
 
     @Test
-    @DisplayName("리뷰 조회")
+    @DisplayName("UC8-리뷰 조회 정상")
     void searchReviews() {
 
         createAReview();
@@ -99,7 +99,7 @@ public class ReviewTest extends DBBoundary {
     }
 
     @Test
-    @DisplayName("리뷰 조회 실패 - 기업 id 일치 항목 없음")
+    @DisplayName("UC8-리뷰 조회 실패(기업 id 일치 항목 없음)")
     void searchReviewFail() {
         createAReview();
         System.out.println("--------------------------");

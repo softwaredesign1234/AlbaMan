@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="FAQTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-12-14T03:35:50" hostname="DESKTOP-29CPMJ4" time="0.023">
+<testsuite name="FAQTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-12-14T08:01:25" hostname="DESKTOP-29CPMJ4" time="0.008">
   <properties/>
-  <testcase name="FAQ 조회 실패 - FAQ 없음" classname="FAQTest" time="0.007"/>
-  <testcase name="FAQ 등록" classname="FAQTest" time="0.006"/>
-  <testcase name="FAQ 조회" classname="FAQTest" time="0.006"/>
+  <testcase name="UC9-FAQ 없음 조회 실패" classname="FAQTest" time="0.003"/>
+  <testcase name="UC9-FAQ 등록 정상" classname="FAQTest" time="0.002"/>
+  <testcase name="UC9-FAQ 조회 정상" classname="FAQTest" time="0.002"/>
   <system-out><![CDATA[FAQ search 실패: FAQ가 없음
 FAQ 등록 성공
 FAQ 등록 성공

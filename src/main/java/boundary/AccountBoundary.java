@@ -32,15 +32,21 @@ public class AccountBoundary {
         } else if (type.equals("Enterprise")) {
             isvalid = accountController.isValidate(type, info);
         }else{
+            System.out.println(permission(false));
             System.out.println("타입은 Individual과 Enterprise 중 하나로 입력해주세요");
             return "타입은 Individual과 Enterprise 중 하나로 입력해주세요";
         }
 
 
         if(isvalid == true)
+        {
+            System.out.println("권한 성공");
             return permission(true);
+        }
+
         else
         {
+            System.out.println(permission(false));
             System.out.println("인증정보를 정확히 입력해주세요.");
             return permission(false);
         }
@@ -50,8 +56,8 @@ public class AccountBoundary {
 
     public static IndividualAccount indiSignup(String id, String password, String name, String email, String phoneNumber, int age, String gender) {
         IndividualAccount individualAccount = accountController.signupIndividual(id, password, name, email, phoneNumber, age, gender);
-
-        System.out.println("개인회원 가입성공!");
+        if(individualAccount==null)
+            System.out.println(permission(false));
         return individualAccount;
     }
 
@@ -59,7 +65,6 @@ public class AccountBoundary {
                                                 String id, String password, String name) {
         EnterpriseAccount enterpriseAccount = accountController.signupEnterprise(companyNum, category, companyPhoneNumber, companyLocation,
                 id,password, name);
-        System.out.println("기업회원 가입성공! id는: " + enterpriseAccount.getId());
         return enterpriseAccount;
     }
 
@@ -86,7 +91,11 @@ public class AccountBoundary {
                 return individualAccount;
             }
             else
+            {
+                System.out.println(permission(false));
                 return permission(false);
+            }
+
 
 
         }
@@ -99,7 +108,10 @@ public class AccountBoundary {
                 return enterpriseAccount;
             }
             else
+            {
+                System.out.println(permission(false));
                 return permission(false);
+            }
         }
 
     }
