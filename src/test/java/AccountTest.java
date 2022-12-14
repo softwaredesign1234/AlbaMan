@@ -1,5 +1,6 @@
 import boundary.DBBoundary;
 import controller.AccountController;
+import model.Account;
 import model.EnterpriseAccount;
 import model.IndividualAccount;
 import org.junit.*;
@@ -265,9 +266,21 @@ public class AccountTest extends DBBoundary{
     }
 
     @Test
+    @DisplayName("개인 회원 탈퇴 실패 - 비밀번호 불일치")
+    void IndividualWithdrawalFail() {
+        AccountBoundary.withdrawAccount("Individual", "aa0000", "1111");
+    }
+
+    @Test
     @DisplayName("기업 회원 탈퇴")
     void EnterpriseWithdraw() {
+        AccountBoundary.withdrawAccount("Enterprise", "bb0000", "0000");
+    }
 
+    @Test
+    @DisplayName("기업 회원 탈퇴 실패 - 비밀번호 불일치")
+    void EnterpriseWithdrawalFail() {
+        AccountBoundary.withdrawAccount("Enterprise", "bb0000", "1111");
     }
 
 
