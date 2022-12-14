@@ -82,6 +82,330 @@ You can see the result of testcode method.
 
 ## Test Code Reference
     <testcode class name> - <testcode method name>
+    
+    
+### AccountTest - IndividualSignupSuccess() 
+#### DisplayName : UC1. 정상
+
+회원 가입 시작 전 이용약관을 출력한다.
+```
+startSignup()
+showTermsOfService()
+
+// print
+이용약관에 대해 안내드립니다.
+```
+
+인증 정보의 유효성을 검사한다.
+```
+inputValidationInput()
+isValidate()
+
+// print
+if (success)
+    권한 성공
+```
+
+회원가입을 진행한다.
+```
+indiSignup()
+signupIndividual()
+IndividualAccount()
+saveIndiDB()
+
+// print
+if (success)
+    Signup Success!
+    your Id:
+else 
+    권한 실패
+```
+
+
+### AccountTest - IndividualSignupFailwrongemail()
+#### DisplayName : UC1. 실패(이메일 형식 틀림)
+
+인증 정보의 유효성 검사할 때 이메일 형식이 맞지 않을 시: 
+```
+startSignup()
+inputValidationInput()
+
+// print
+권한 실패
+인증정보를 정확히 입력해주세요.
+```
+
+
+### AccountTest - IndividualSignupFailwrongtype()
+#### DisplayName : UC1. 실패(타입 잘못 입력)
+
+인증 정보의 유효성 검사할 때 타입을 잘못 입력했을 때:
+```
+startSignup()
+inputValidationInput()
+
+// print
+권한 실패
+타입은 Individual과 Enterprise 중 하나로 입력해주세요
+```
+
+
+   
+### AccountTest - EnterpriseSignupSuccess()
+#### DisplayName : UC2. 정상
+
+회원 가입 시작 전 이용약관을 출력한다.
+```
+startSignup()
+showTermsOfService()
+
+// print
+이용약관에 대해 안내드립니다.
+```
+
+인증 정보의 유효성을 검사한다.
+```
+inputValidationInput()
+isValidate()
+
+// print
+if (success)
+    권한 성공
+```
+
+회원가입을 진행한다.
+```
+enterSignup()
+signupEnterprise()
+EnterpriseAccount()
+saveEnterDB()
+
+// print
+if (success)
+    Signup Success!
+    your Id:
+else 
+    권한 실패
+```
+
+
+
+### AccountTest - EnterpriseSignupFailwrongecompanyNum()
+#### DisplayName : UC2. 실패(사업자번호 형식 틀림)
+
+
+인증 정보의 유효성 검사할 때 사업자번호 형식이 맞지 않을 때:
+```
+startSignup()
+inputValidationInput()
+
+// print
+권한 실패
+```
+
+
+
+### AccountTest - EnterpriseSignupFailwrongtype()
+#### DisplayName : UC2. 실패(타입 잘못 입력)
+
+
+인증 정보의 유효성 검사할 때 타입을 잘못 입력했을 때:
+```
+startSignup()
+inputValidationInput()
+
+// print
+권한 실패
+타입은 Individual과 Enterprise 중 하나로 입력해주세요
+```
+
+
+
+### AccountTest - EnterpriseSignin()
+#### DisplayName : UC3. 정상(기업로그인)
+
+```
+signIn()
+signinEnterprise()
+readEnterDB()
+```
+
+로그인 성공 시:
+```
+// print
+권한 성공
+기업 id는 : <기업 id>
+```
+
+
+
+### AccountTest - IndividualSignin()
+#### DisplayName : UC3. 정상(개인로그인)
+
+```
+singIn()
+singinIndividual()
+readIndiDB()
+```
+
+로그인 성공 시:
+```
+// print
+권한 성공
+개인 id는 : <개인 id>
+```
+
+
+### AccountTest - IndividualSigninWrongpassword()
+#### DisplayName : UC3. 실패(비밀번호 잘못 입력)
+
+```
+signIn()
+signinIndividual()
+readIndiDB()
+```
+
+로그인 실패 시:
+```
+// print
+권한 실패
+비밀번호가 틀렸습니다.
+```
+
+
+
+### basicMember()
+#### @BeforeEach -> @Mock (mock 객체 저장)
+
+individual1
+```
+id : aa0000
+password : 0000
+type : Individual
+```
+
+individual2
+```
+id : aa1111
+password : 1111
+type Individual
+```
+
+enterprise1
+```
+id : bb1111
+password : 1111
+type : Enterprise
+```
+
+enterprise2
+```
+id : bb0000
+password : 0000
+type : Enterprise
+```
+
+### ResumeTest - saveResume()
+#### DisplayName : UC5. 이력서 작성
+
+```
+inputResume()
+saveResume()
+getResumeList()
+Resume()
+saveResumeDB()
+```
+
+이력서 저장 성공 시:
+```
+// print
+Resume Successfully saved!
+Resume Id: <이력서 Id>
+Resume Owner(Individual) Id: <작성자 Id>
+Resume selfIntroduction: <자기소개>
+Resume workExperience: <경력사항>
+Resume isOpen: <공개여부>
+```
+
+### ResumeTest - readResume()
+#### DisplayName : UC5. 이력서 조회
+
+```
+showResume()
+showResume()
+readResumeDB()
+```
+
+이력서 조회 성공 시:
+```
+// print
+Success find resume
+Resume Id: <이력서 Id>
+Resume Owner(Individual) Id: <작성자 Id>
+Resume selfIntroduction: <자기소개>
+Resume workExperience: <경력사항>
+Resume isOpen: <공개여부>
+```
+
+이력서 조회 실패 시:
+```
+// print
+Can't find the resume
+```
+
+
+### ApplyTest - saveApplyToIndividual()
+#### DisplayName : UC5. 정상
+
+```
+inputapply()
+makeApplytoIndividual()
+getApplyList()
+Apply()
+saveApplyDB()
+```
+
+지원 성공 시:
+```
+// print
+Apply success!
+Apply individualId : <지원받는 개인 Id>
+Apply enterpriseId : <지원하는 기업 Id>
+```
+
+### ApplyTest - individualAccept()
+#### DisplayName : UC5. 개인이 수락
+
+```
+inputResult()
+sendResult()
+readApplyDB()
+Workhistory()
+saveWorkHistoryDB()
+```
+
+개인이 수락 시:
+```
+// print
+Apply is accepted!
+workhistory Individual: <고용된 개인의 Id>
+workhistory Enterprise: <고용하는 기업의 Id>
+```
+
+### ApplyTest - individualNotAccept()
+#### DisplayName : UC5. 개인이 거절
+
+```
+inputResult()
+sendResult()
+readApplyDB()
+```
+
+개인이 거절 시:
+```
+// print
+Apply is not accepted!
+```
 
 ### AccountTest - IndividualModifyInfoSuccess()
 #### DisplayName : UC6-1. 개인 정상
@@ -128,8 +452,6 @@ Age :
 
 
 
-
-
 ### AccountTest - IndividualModifyInfoFail()
 #### DisplayName : UC6-1. 개인 비밀번호 불일치
 
@@ -146,8 +468,6 @@ showResultMessage()
 권한 실패
 종료
 ```
-
-
 
 
 
@@ -218,8 +538,6 @@ showResultMessage()
 
 
 
-
-
 ### AccountTest - IndividualWithdraw()
 #### DisplayName : UC7-1. 개인 정상
 
@@ -254,8 +572,6 @@ showResultMessage()
 
 
 
-
-
 ### AccountTest - IndividualWithdrawalFail()
 #### DisplayName : UC7-1. 개인 비밀번호 불일치
 
@@ -272,8 +588,6 @@ showResultMessage
 권한 실패
 종료
 ```
-
-
 
 
 
@@ -311,8 +625,6 @@ showResultMessage()
 
 
 
-
-
 ### AccountTest - EnterpriseWithdrawalFail()
 #### DisplayName : UC7-2. 기업 비밀번호 불일치
 
@@ -329,8 +641,6 @@ showResultMessage
 권한 실패
 종료
 ```
-
-
 
 
 
@@ -359,8 +669,6 @@ saveReviewDB()
 
 
 
-
-
 ### ReviewTest - createAReviewFail()
 #### DisplayName : UC8. 근무 이력 없음
 
@@ -375,8 +683,6 @@ verifyWorkHistory
 workhistory 확인 실패: 리뷰 권한 실패
 리뷰 작성 실패: 권한 없음
 ```
-
-
 
 
 
@@ -405,8 +711,6 @@ readReviewById()
 
 
 
-
-
 ### ReviewTest - searchReviewFail()
 #### DisplayName : UC8. 기업 id 일치 항목 없음
 
@@ -430,8 +734,6 @@ readReviewById()
 
 
 
-
-
 ### FAQTest - createFAQ()
 #### DisplayName : UC9. FAQ 등록 정상
 
@@ -445,8 +747,6 @@ saveFAQDB()
 // print
 FAQ 등록 성공
 ```
-
-
 
 
 
@@ -477,8 +777,6 @@ FAQ search 성공
 
 
 
-
-
 ### FAQTest - searchFAQFail()
 #### DisplayName : UC9. FAQ 없음 조회 실패
 
@@ -496,6 +794,8 @@ readFAQDB()
 // print
 FAQ search 실패: FAQ가 없음
 ```
+
+
 ---
 ## ApplyIndividualToEnterpriseTest
 
