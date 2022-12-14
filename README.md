@@ -92,8 +92,8 @@ BUILD SUCCESSFUL in 3s
 </aside>
 
 ex) gradlew clean test --tests AccountTest.IndividualSignupSuccess -i
+![성공샷](https://user-images.githubusercontent.com/86733856/207552076-3142d7fa-c9ba-45a3-bcda-6791e1e1620b.png)
 
-![성공샷.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/27994d61-41aa-4fda-ad22-261ae025048a/%EC%84%B1%EA%B3%B5%EC%83%B7.png)
 
 
 
