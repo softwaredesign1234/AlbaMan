@@ -10,6 +10,7 @@ import java.util.Scanner;
 public class QuestionBoundary {
 
     public static void makeAFAQ(String question, String answer) {
+        System.out.println("QuestionBoundary - makeAFAQ() visited");
         FAQController.addToFAQ(question, answer);
     }
 

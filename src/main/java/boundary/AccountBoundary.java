@@ -11,10 +11,10 @@ import java.util.*;
 public class AccountBoundary {
 
     public static AccountController accountController;
-    //나중에 NullPointerException으로 수정하기
 
     public static void startSignup() {
         //SEQ1: showTerms호출
+        System.out.println("Boundary - startSignup() visited");
         String terms = accountController.showTermsOfService();
         System.out.println(terms);
     }
@@ -23,7 +23,7 @@ public class AccountBoundary {
     public static String inputValidationInput(String type, String info)
     {
         //SEQ1: 회원가입 전 액터가 인증정보 입력 (Loop 첫단계)
-
+        System.out.println("Boundary - inputValidationInput() visited");
         Boolean isvalid = false;
 
         //AccountController에 isValidate 함수 호출
@@ -55,6 +55,7 @@ public class AccountBoundary {
 
 
     public static IndividualAccount indiSignup(String id, String password, String name, String email, String phoneNumber, int age, String gender) {
+        System.out.println("Boundary - indiSignup() visited");
         IndividualAccount individualAccount = accountController.signupIndividual(id, password, name, email, phoneNumber, age, gender);
         if(individualAccount==null)
             System.out.println(permission(false));
@@ -63,6 +64,7 @@ public class AccountBoundary {
 
     public static EnterpriseAccount enterSignup(String companyNum, String category, String companyPhoneNumber, String companyLocation,
                                                 String id, String password, String name) {
+        System.out.println("AccountBoundary - enterSignup() visited");
         EnterpriseAccount enterpriseAccount = accountController.signupEnterprise(companyNum, category, companyPhoneNumber, companyLocation,
                 id,password, name);
         return enterpriseAccount;
@@ -71,6 +73,7 @@ public class AccountBoundary {
 
     public static String permission(Boolean isSuccess) //give permission,show failMessage
     {
+        System.out.println("AccountBoundary - permission() visited");
         String permissionMessage;
         //singup 결과를 불러와서 true면 성공메시지, false면 실패메시지 출력하기
         if (isSuccess == true)
@@ -81,7 +84,7 @@ public class AccountBoundary {
     }
 
     public static Object signIn(String type,String id,String password) {
-
+        System.out.println("AccountBoundary - signIn() visited");
         if(type.equals("Individual"))
         {
             IndividualAccount individualAccount= accountController.signinIndividual(id,password);
@@ -116,7 +119,7 @@ public class AccountBoundary {
 
     }
     public static void modifyIndividualInfo(String id, String password, int infoType, String modifiedInfo) {
-
+        System.out.println("AccountBoundary - modifyIndividualInfo() visited");
         ArrayList<IndividualAccount> iAccounts = accountController.getIndividualAccounts();
 
         Boolean result = AccountController.verifyPassword("Individual", id, password);
@@ -135,7 +138,7 @@ public class AccountBoundary {
     }
 
     public static void modifyEnterpriseInfo(String id, String password, int infoType, String modifiedInfo) {
-
+        System.out.println("AccountBoundary - modifyEnterpriseInfo() visited");
         ArrayList<EnterpriseAccount> eAccounts = accountController.getEnterpriseAccounts();
 
         Boolean result = accountController.verifyPassword("Enterprise", id, password);
@@ -153,7 +156,7 @@ public class AccountBoundary {
     }
 
     public static void withdrawAccount(String type, String id, String password) {
-
+        System.out.println("AccountBoundary - withdrawAccount() visited");
         if (type.equals("Individual")) {
             ArrayList<IndividualAccount> iAccounts = AccountController.getIndividualAccounts();
 
@@ -192,6 +195,8 @@ public class AccountBoundary {
     }
 
     public static String showResultMessage() {
+
+        System.out.println("AccountBoundary - showResultMessage() visited");
         return "종료";
     }
 

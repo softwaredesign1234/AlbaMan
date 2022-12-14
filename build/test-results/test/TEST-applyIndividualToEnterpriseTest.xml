@@ -1,23 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="applyIndividualToEnterpriseTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-12-14T12:20:52" hostname="DESKTOP-29CPMJ4" time="0.034">
+<testsuite name="applyIndividualToEnterpriseTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-12-14T13:03:50" hostname="DESKTOP-29CPMJ4" time="0.031">
   <properties/>
-  <testcase name="UC11-공고 임금 계산기" classname="applyIndividualToEnterpriseTest" time="0.006"/>
-  <testcase name="UC4-검색결과 없음" classname="applyIndividualToEnterpriseTest" time="0.007"/>
-  <testcase name="UC4-공고기한 만료" classname="applyIndividualToEnterpriseTest" time="0.005"/>
-  <testcase name="UC4-정상" classname="applyIndividualToEnterpriseTest" time="0.008"/>
+  <testcase name="UC11-공고 임금 계산기" classname="applyIndividualToEnterpriseTest" time="0.007"/>
+  <testcase name="UC4-검색결과 없음" classname="applyIndividualToEnterpriseTest" time="0.004"/>
+  <testcase name="UC4-공고기한 만료" classname="applyIndividualToEnterpriseTest" time="0.003"/>
+  <testcase name="UC4-정상" classname="applyIndividualToEnterpriseTest" time="0.007"/>
   <testcase name="UC4-기업 지원 불합격" classname="applyIndividualToEnterpriseTest" time="0.007"/>
-  <system-out><![CDATA[Announcement saved!
-User making announcement..
-enterpriseId : bb0000 ... 
+  <system-out><![CDATA[DBBoundary - clearDB() visited
+DBBoundary - clearDB() visited
+DBBoundary - clearDB() visited
+AnnouncementBoundary - inputAnnouncement() visited
+AnnouncementController - makeAnnouncement() visited
+DBBoundary - saveAnnouncementDB() visited
+DBBoundary - countLine() visited
 Announcement saved!
 User making announcement..
 enterpriseId : bb0000 ... 
+AnnouncementBoundary - inputAnnouncement() visited
+AnnouncementController - makeAnnouncement() visited
+DBBoundary - saveAnnouncementDB() visited
+DBBoundary - countLine() visited
+Announcement saved!
+User making announcement..
+enterpriseId : bb0000 ... 
+AnnouncementBoundary - inputAnnouncement() visited
+AnnouncementController - makeAnnouncement() visited
+DBBoundary - saveAnnouncementDB() visited
+DBBoundary - countLine() visited
 Announcement saved!
 User making announcement..
 enterpriseId : bb0001 ... 
+AnnouncementBoundary - inputAnnouncement() visited
+AnnouncementController - makeAnnouncement() visited
+DBBoundary - saveAnnouncementDB() visited
+DBBoundary - countLine() visited
 Announcement saved!
 User making announcement..
 enterpriseId : bb0001 ... 
+AnnouncementController - getAnnouncementList() visited
+DBBoundary - readAnnouncementDB() visited
+AnnouncementBoundary - showAnnouncement() visited
 
 -----Announcement List-----
 ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
@@ -25,25 +47,52 @@ ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working day
 ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
 ID : 4	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 9000	Working days per week : 4
 
+AnnouncementController - readAnnouncementById() visited
+DBBoundary - readAnnouncementDB() visited
 
 Announcement filtered by ID : 1
+AnnouncementBoundary - showAnnouncement() visited
 
 -----Announcement List-----
 ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
 
+AnnouncementController - CalculatedWage() visited
+DBBoundary - readAnnouncementDB() visited
 wage = 2400000 WagePerHour = 12000 Working hours per week = 50
+DBBoundary - clearDB() visited
+DBBoundary - clearDB() visited
+DBBoundary - clearDB() visited
+AnnouncementBoundary - inputAnnouncement() visited
+AnnouncementController - makeAnnouncement() visited
+DBBoundary - saveAnnouncementDB() visited
+DBBoundary - countLine() visited
 Announcement saved!
 User making announcement..
 enterpriseId : bb0000 ... 
+AnnouncementBoundary - inputAnnouncement() visited
+AnnouncementController - makeAnnouncement() visited
+DBBoundary - saveAnnouncementDB() visited
+DBBoundary - countLine() visited
 Announcement saved!
 User making announcement..
 enterpriseId : bb0000 ... 
+AnnouncementBoundary - inputAnnouncement() visited
+AnnouncementController - makeAnnouncement() visited
+DBBoundary - saveAnnouncementDB() visited
+DBBoundary - countLine() visited
 Announcement saved!
 User making announcement..
 enterpriseId : bb0001 ... 
+AnnouncementBoundary - inputAnnouncement() visited
+AnnouncementController - makeAnnouncement() visited
+DBBoundary - saveAnnouncementDB() visited
+DBBoundary - countLine() visited
 Announcement saved!
 User making announcement..
 enterpriseId : bb0001 ... 
+AnnouncementController - getAnnouncementList() visited
+DBBoundary - readAnnouncementDB() visited
+AnnouncementBoundary - showAnnouncement() visited
 
 -----Announcement List-----
 ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
@@ -51,9 +100,16 @@ ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working day
 ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
 ID : 4	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 9000	Working days per week : 4
 
+AnnouncementController - readAnnouncementByWage() visited
+AnnouncementController - getAnnouncementList() visited
+DBBoundary - readAnnouncementDB() visited
 
 Announcement filtered by wage : 20000
+AnnouncementController - validateList() visited
 No result has been found! Display all announcement
+AnnouncementController - getAnnouncementList() visited
+DBBoundary - readAnnouncementDB() visited
+AnnouncementBoundary - showAnnouncement() visited
 
 -----Announcement List-----
 ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
@@ -61,33 +117,76 @@ ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working day
 ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
 ID : 4	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 9000	Working days per week : 4
 
+DBBoundary - clearDB() visited
+DBBoundary - clearDB() visited
+DBBoundary - clearDB() visited
+AnnouncementBoundary - inputAnnouncement() visited
+AnnouncementController - makeAnnouncement() visited
+DBBoundary - saveAnnouncementDB() visited
+DBBoundary - countLine() visited
 Announcement saved!
 User making announcement..
 enterpriseId : bb0000 ... 
+AnnouncementBoundary - inputAnnouncement() visited
+AnnouncementController - makeAnnouncement() visited
+DBBoundary - saveAnnouncementDB() visited
+DBBoundary - countLine() visited
 Announcement saved!
 User making announcement..
 enterpriseId : bb0000 ... 
+AnnouncementBoundary - inputAnnouncement() visited
+AnnouncementController - makeAnnouncement() visited
+DBBoundary - saveAnnouncementDB() visited
+DBBoundary - countLine() visited
 Announcement saved!
 User making announcement..
 enterpriseId : bb0001 ... 
+AnnouncementBoundary - inputAnnouncement() visited
+AnnouncementController - makeAnnouncement() visited
+DBBoundary - saveAnnouncementDB() visited
+DBBoundary - countLine() visited
 Announcement saved!
 User making announcement..
 enterpriseId : bb0001 ... 
+AnnouncementController - deadlinePassed() visited
 Today = 23/1/1 Announcement's deadline : 22/12/31
+AnnouncementController - deleteAnnouncement() visited
 
 Delete announcement Id : 1
+DBBoundary - clearDB() visited
+DBBoundary - clearDB() visited
+DBBoundary - clearDB() visited
+AnnouncementBoundary - inputAnnouncement() visited
+AnnouncementController - makeAnnouncement() visited
+DBBoundary - saveAnnouncementDB() visited
+DBBoundary - countLine() visited
 Announcement saved!
 User making announcement..
 enterpriseId : bb0000 ... 
+AnnouncementBoundary - inputAnnouncement() visited
+AnnouncementController - makeAnnouncement() visited
+DBBoundary - saveAnnouncementDB() visited
+DBBoundary - countLine() visited
 Announcement saved!
 User making announcement..
 enterpriseId : bb0000 ... 
+AnnouncementBoundary - inputAnnouncement() visited
+AnnouncementController - makeAnnouncement() visited
+DBBoundary - saveAnnouncementDB() visited
+DBBoundary - countLine() visited
 Announcement saved!
 User making announcement..
 enterpriseId : bb0001 ... 
+AnnouncementBoundary - inputAnnouncement() visited
+AnnouncementController - makeAnnouncement() visited
+DBBoundary - saveAnnouncementDB() visited
+DBBoundary - countLine() visited
 Announcement saved!
 User making announcement..
 enterpriseId : bb0001 ... 
+AnnouncementController - getAnnouncementList() visited
+DBBoundary - readAnnouncementDB() visited
+AnnouncementBoundary - showAnnouncement() visited
 
 -----Announcement List-----
 ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
@@ -95,28 +194,44 @@ ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working day
 ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
 ID : 4	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 9000	Working days per week : 4
 
+AnnouncementController - readAnnouncementById() visited
+DBBoundary - readAnnouncementDB() visited
 
 Announcement filtered by ID : 1
+AnnouncementBoundary - showAnnouncement() visited
 
 -----Announcement List-----
 ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
 
+AnnouncementController - readAnnouncementByWage() visited
+AnnouncementController - getAnnouncementList() visited
+DBBoundary - readAnnouncementDB() visited
 
 Announcement filtered by wage : 10000
+AnnouncementController - validateList() visited
+AnnouncementBoundary - showAnnouncement() visited
 
 -----Announcement List-----
 ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
 ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working days per week : 4
 ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
 
+AnnouncementController - readAnnouncementByName() visited
+DBBoundary - readAnnouncementDB() visited
 
 Announcement filtered by enterprise name : bb0000
+AnnouncementController - validateList() visited
+AnnouncementBoundary - showAnnouncement() visited
 
 -----Announcement List-----
 ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
 ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working days per week : 4
 
+AnnouncementController - readAnnouncementByDays() visited
+DBBoundary - readAnnouncementDB() visited
 Announcement filtered by working days : 5
+AnnouncementController - validateList() visited
+AnnouncementBoundary - showAnnouncement() visited
 
 -----Announcement List-----
 ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
@@ -124,47 +239,92 @@ ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working day
 ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
 ID : 4	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 9000	Working days per week : 4
 
+AnnouncementController - readAnnouncementByHours() visited
+AnnouncementController - getAnnouncementList() visited
+DBBoundary - readAnnouncementDB() visited
 
 Announcement filtered by hours : 48
+AnnouncementController - validateList() visited
+AnnouncementBoundary - showAnnouncement() visited
 
 -----Announcement List-----
 ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working days per week : 4
 ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
 ID : 4	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 9000	Working days per week : 4
 
+AnnouncementBoundary - scrapAnnouncementId() visited
 scrapAnnouncementId() 
 scrapping announcement...
+AnnouncementController - scrapAnnouncement() visited
 scrap announcement : 1
+DBBoundary - saveScrapDB() visited
+AnnouncementBoundary - inputApplyToEnterprise() visited
 
 Individual User (aa0000) making apply to enterprise (bb0000)
+ApplyController - makeApplytoEnterprise() visited
+DBBoundary - saveApplyDB() visited
 apply saved!
+AnnouncementBoundary - inputPassOrNot() visited
 
 Enterprise user make result to apply
 Applying announcement id : 1 
 result : true
+ApplyController - passOrNot() visited
+DBBoundary - readApplyDB() visited
+DBBoundary - clearDB() visited
+DBBoundary - saveApplyDB() visited
 apply saved!
 Passed!
+DBBoundary - saveWorkHistoryDB() visited
+AnnouncementController - deleteAnnouncement() visited
 
 Delete announcement Id : 1
+DBBoundary - clearDB() visited
+DBBoundary - clearDB() visited
+DBBoundary - clearDB() visited
+AnnouncementBoundary - inputAnnouncement() visited
+AnnouncementController - makeAnnouncement() visited
+DBBoundary - saveAnnouncementDB() visited
+DBBoundary - countLine() visited
 Announcement saved!
 User making announcement..
 enterpriseId : bb0000 ... 
+AnnouncementBoundary - inputAnnouncement() visited
+AnnouncementController - makeAnnouncement() visited
+DBBoundary - saveAnnouncementDB() visited
+DBBoundary - countLine() visited
 Announcement saved!
 User making announcement..
 enterpriseId : bb0000 ... 
+AnnouncementBoundary - inputAnnouncement() visited
+AnnouncementController - makeAnnouncement() visited
+DBBoundary - saveAnnouncementDB() visited
+DBBoundary - countLine() visited
 Announcement saved!
 User making announcement..
 enterpriseId : bb0001 ... 
+AnnouncementBoundary - inputAnnouncement() visited
+AnnouncementController - makeAnnouncement() visited
+DBBoundary - saveAnnouncementDB() visited
+DBBoundary - countLine() visited
 Announcement saved!
 User making announcement..
 enterpriseId : bb0001 ... 
+AnnouncementBoundary - inputApplyToEnterprise() visited
 
 Individual User (aa0000) making apply to enterprise (bb0000)
+ApplyController - makeApplytoEnterprise() visited
+DBBoundary - saveApplyDB() visited
 apply saved!
+AnnouncementBoundary - inputPassOrNot() visited
 
 Enterprise user make result to apply
 Applying announcement id : 1 
 result : false
+ApplyController - passOrNot() visited
+DBBoundary - readApplyDB() visited
+DBBoundary - clearDB() visited
+DBBoundary - saveApplyDB() visited
 apply saved!
 Failed..
 ]]></system-out>

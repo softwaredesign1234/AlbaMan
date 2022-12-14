@@ -12,6 +12,7 @@ public class ResumeBoundary {
 
     public static ResumeController resumeController;
     public static Resume inputResume(String individualId, String selfIntroduction, String workExperience, Boolean isopen) throws Exception {
+        System.out.println("ResumeBoundary - inputResume() visited");
 
         Resume resume=resumeController.saveResume(individualId,selfIntroduction,workExperience,isopen);
 
@@ -22,6 +23,8 @@ public class ResumeBoundary {
 
     public static Resume showResume(int resumeId)
     {
+        System.out.println("ResumeBoundary - showResume() visited");
+
 
         Resume resume=resumeController.showResume(resumeId);
         if(resume!=null)
@@ -35,6 +38,8 @@ public class ResumeBoundary {
         return resume;
     }
     public static Apply inputapply(String individualId, String enterpriseId) throws Exception {
+        System.out.println("ResumeBoundary - inputapply() visited");
+
         Apply apply=applyController.makeApplytoIndividual(individualId,enterpriseId);
 
         return apply;
@@ -43,6 +48,8 @@ public class ResumeBoundary {
 
     public static void inputResult(int applyId, Boolean acceptOrNot)
     {
+        System.out.println("ResumeBoundary - inputResult() visited");
+
         applyController.sendResult(applyId,acceptOrNot);
 
     }

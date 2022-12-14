@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.042s</div>
+<div class="counter">0.049s</div>
 <p>duration</p>
 </div>
 </td>
@@ -81,25 +81,25 @@
 <tr>
 <td class="success">UC8-리뷰 작성 정상</td>
 <td class="success">createAReview()</td>
-<td class="success">0.010s</td>
+<td class="success">0.014s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">UC8-근무 이력 없음</td>
 <td class="success">createAReviewFail()</td>
-<td class="success">0.006s</td>
+<td class="success">0.007s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">UC8-리뷰 조회 실패(기업 id 일치 항목 없음)</td>
 <td class="success">searchReviewFail()</td>
-<td class="success">0.011s</td>
+<td class="success">0.014s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
 <td class="success">UC8-리뷰 조회 정상</td>
 <td class="success">searchReviews()</td>
-<td class="success">0.015s</td>
+<td class="success">0.014s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -107,15 +107,50 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>workhistory 확인 완료: 리뷰 권한 성공
-리뷰 작성 성공
+<pre>DBBoundary - saveEnterDB() visited
+DBBoundary - saveEnterDB() visited
+DBBoundary - saveIndiDB() visited
+DBBoundary - saveIndiDB() visited
+DBBoundary - saveWorkHistoryDB() visited
+DBBoundary - saveWorkHistoryDB() visited
+DBBoundary - saveWorkHistoryDB() visited
+DBBoundary - saveWorkHistoryDB() visited
+ReviewBoundary - makeAReview() visited
+ReviewController - verifyWorkHistory() visited
+DBBoundary - readIndiDB() visited
+DBBoundary - readWorkHistoryDB() visited
 workhistory 확인 완료: 리뷰 권한 성공
+ReviewController - addToReviewList() visited
+DBBoundary - saveReviewDB() visited
 리뷰 작성 성공
+ReviewBoundary - makeAReview() visited
+ReviewController - verifyWorkHistory() visited
+DBBoundary - readIndiDB() visited
+DBBoundary - readWorkHistoryDB() visited
 workhistory 확인 완료: 리뷰 권한 성공
+ReviewController - addToReviewList() visited
+DBBoundary - saveReviewDB() visited
 리뷰 작성 성공
+ReviewBoundary - makeAReview() visited
+ReviewController - verifyWorkHistory() visited
+DBBoundary - readIndiDB() visited
+DBBoundary - readWorkHistoryDB() visited
 workhistory 확인 완료: 리뷰 권한 성공
+ReviewController - addToReviewList() visited
+DBBoundary - saveReviewDB() visited
+리뷰 작성 성공
+ReviewBoundary - makeAReview() visited
+ReviewController - verifyWorkHistory() visited
+DBBoundary - readIndiDB() visited
+DBBoundary - readWorkHistoryDB() visited
+workhistory 확인 완료: 리뷰 권한 성공
+ReviewController - addToReviewList() visited
+DBBoundary - saveReviewDB() visited
 리뷰 작성 성공
 --------------------------
+ReviewBoundary - searchAReview() visited
+ReviewController - readReviewById() visited
+DBBoundary - readReviewDB() visited
 리뷰 검색 성공
 기업 id: bb0000
 리뷰 내용: 1234
@@ -277,7 +312,30 @@ workhistory 확인 완료: 리뷰 권한 성공
 리뷰 내용: 1234
 기업 id: bb0000
 리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
 --------------------------
+ReviewBoundary - searchAReview() visited
+ReviewController - readReviewById() visited
+DBBoundary - readReviewDB() visited
 리뷰 검색 성공
 기업 id: bb0000
 리뷰 내용: 1234
@@ -439,25 +497,124 @@ workhistory 확인 완료: 리뷰 권한 성공
 리뷰 내용: 1234
 기업 id: bb0000
 리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+DBBoundary - saveEnterDB() visited
+DBBoundary - saveEnterDB() visited
+DBBoundary - saveIndiDB() visited
+DBBoundary - saveIndiDB() visited
+DBBoundary - saveWorkHistoryDB() visited
+DBBoundary - saveWorkHistoryDB() visited
+DBBoundary - saveWorkHistoryDB() visited
+DBBoundary - saveWorkHistoryDB() visited
+ReviewBoundary - makeAReview() visited
+ReviewController - verifyWorkHistory() visited
+DBBoundary - readIndiDB() visited
+DBBoundary - readWorkHistoryDB() visited
 workhistory 확인 실패: 리뷰 권한 실패
 리뷰 작성 실패: 권한 없음
+DBBoundary - saveEnterDB() visited
+DBBoundary - saveEnterDB() visited
+DBBoundary - saveIndiDB() visited
+DBBoundary - saveIndiDB() visited
+DBBoundary - saveWorkHistoryDB() visited
+DBBoundary - saveWorkHistoryDB() visited
+DBBoundary - saveWorkHistoryDB() visited
+DBBoundary - saveWorkHistoryDB() visited
+ReviewBoundary - makeAReview() visited
+ReviewController - verifyWorkHistory() visited
+DBBoundary - readIndiDB() visited
+DBBoundary - readWorkHistoryDB() visited
 workhistory 확인 완료: 리뷰 권한 성공
+ReviewController - addToReviewList() visited
+DBBoundary - saveReviewDB() visited
 리뷰 작성 성공
+ReviewBoundary - makeAReview() visited
+ReviewController - verifyWorkHistory() visited
+DBBoundary - readIndiDB() visited
+DBBoundary - readWorkHistoryDB() visited
 workhistory 확인 완료: 리뷰 권한 성공
+ReviewController - addToReviewList() visited
+DBBoundary - saveReviewDB() visited
 리뷰 작성 성공
+ReviewBoundary - makeAReview() visited
+ReviewController - verifyWorkHistory() visited
+DBBoundary - readIndiDB() visited
+DBBoundary - readWorkHistoryDB() visited
 workhistory 확인 완료: 리뷰 권한 성공
+ReviewController - addToReviewList() visited
+DBBoundary - saveReviewDB() visited
 리뷰 작성 성공
+ReviewBoundary - makeAReview() visited
+ReviewController - verifyWorkHistory() visited
+DBBoundary - readIndiDB() visited
+DBBoundary - readWorkHistoryDB() visited
 workhistory 확인 완료: 리뷰 권한 성공
+ReviewController - addToReviewList() visited
+DBBoundary - saveReviewDB() visited
 리뷰 작성 성공
 --------------------------
+ReviewBoundary - searchAReview() visited
+ReviewController - readReviewById() visited
+DBBoundary - readReviewDB() visited
 검색 결과 없음
+DBBoundary - saveEnterDB() visited
+DBBoundary - saveEnterDB() visited
+DBBoundary - saveIndiDB() visited
+DBBoundary - saveIndiDB() visited
+DBBoundary - saveWorkHistoryDB() visited
+DBBoundary - saveWorkHistoryDB() visited
+DBBoundary - saveWorkHistoryDB() visited
+DBBoundary - saveWorkHistoryDB() visited
+ReviewBoundary - makeAReview() visited
+ReviewController - verifyWorkHistory() visited
+DBBoundary - readIndiDB() visited
+DBBoundary - readWorkHistoryDB() visited
 workhistory 확인 완료: 리뷰 권한 성공
+ReviewController - addToReviewList() visited
+DBBoundary - saveReviewDB() visited
 리뷰 작성 성공
+ReviewBoundary - makeAReview() visited
+ReviewController - verifyWorkHistory() visited
+DBBoundary - readIndiDB() visited
+DBBoundary - readWorkHistoryDB() visited
 workhistory 확인 완료: 리뷰 권한 성공
+ReviewController - addToReviewList() visited
+DBBoundary - saveReviewDB() visited
 리뷰 작성 성공
+ReviewBoundary - makeAReview() visited
+ReviewController - verifyWorkHistory() visited
+DBBoundary - readIndiDB() visited
+DBBoundary - readWorkHistoryDB() visited
 workhistory 확인 완료: 리뷰 권한 성공
+ReviewController - addToReviewList() visited
+DBBoundary - saveReviewDB() visited
 리뷰 작성 성공
+ReviewBoundary - makeAReview() visited
+ReviewController - verifyWorkHistory() visited
+DBBoundary - readIndiDB() visited
+DBBoundary - readWorkHistoryDB() visited
 workhistory 확인 완료: 리뷰 권한 성공
+ReviewController - addToReviewList() visited
+DBBoundary - saveReviewDB() visited
 리뷰 작성 성공
 </pre>
 </span>
@@ -470,7 +627,7 @@ workhistory 확인 완료: 리뷰 권한 성공
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.4</a> at 2022. 12. 14 오후 9:20:52</p>
+<a href="http://www.gradle.org">Gradle 7.4</a> at 2022. 12. 14 오후 10:03:50</p>
 </div>
 </div>
 </body>

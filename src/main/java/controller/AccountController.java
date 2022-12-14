@@ -18,6 +18,7 @@ public class AccountController extends DBBoundary{
 
 
     public static String showTermsOfService() {
+        System.out.println("AccountController - showTermsOfService() visited");
 
         String term = "이용약관에 대해 안내드립니다.";
         return term;
@@ -25,6 +26,7 @@ public class AccountController extends DBBoundary{
 
     public static IndividualAccount signupIndividual(String id, String password, String name,
                                         String email, String phoneNumber, int age, String gender) {
+        System.out.println("AccountController - signupIndividual() visited");
 
         Boolean isActivate = true;
         IndividualAccount individualAccount = new IndividualAccount(email, phoneNumber, age, gender, id, password, name, true, isActivate, "Individual");
@@ -38,6 +40,8 @@ public class AccountController extends DBBoundary{
     //000-00-00000
     public static EnterpriseAccount signupEnterprise(String companyNum, String category, String companyPhoneNumber, String companyLocation,
                                         String id, String password, String name) {
+        System.out.println("AccountController - signupEnterprise() visited");
+
         Boolean validation = isValidate("Enterprise", companyNum);
         Boolean isActivate = true;
 
@@ -54,6 +58,7 @@ public class AccountController extends DBBoundary{
 
 
     public static Object signIn(String type, String id, String password) {
+        System.out.println("AccountController - signIn() visited");
 
         Boolean isSigninSuccess=false;
         Object account = null;
@@ -79,6 +84,7 @@ public class AccountController extends DBBoundary{
 
     //개인 로그인
     public static IndividualAccount signinIndividual(String id, String password) {
+        System.out.println("AccountController - signinIndividual() visited");
         ArrayList<IndividualAccount> arr=readIndiDB();
         IndividualAccount resultIndividual=arr.stream()
                 .filter(account -> id.equals(account.getId())&&password.equals(account.getPassword()))
@@ -92,6 +98,7 @@ public class AccountController extends DBBoundary{
 
     //기업 로그인
     public static EnterpriseAccount signinEnterprise(String id, String password) {
+        System.out.println("AccountController - signinEnterprise() visited");
         ArrayList<EnterpriseAccount> arr=readEnterDB();
         EnterpriseAccount resultEnterprise=arr.stream()
                 .filter(account -> id.equals(account.getId())&&password.equals(account.getPassword()))
@@ -106,6 +113,7 @@ public class AccountController extends DBBoundary{
 
     //회원가입시 email, 사업자번호 인증
     public static Boolean isValidate(String type, String info) {
+        System.out.println("AccountController - isValidate() visited");
         Boolean valid = false;
         String indiRegex = "^[_a-z0-9-]+(.[_a-z0-9-]+)*@(?:\\w+\\.)+\\w+$";
         Pattern indip = Pattern.compile(indiRegex);
@@ -127,7 +135,7 @@ public class AccountController extends DBBoundary{
     }
 
     public static Boolean verifyPassword(String type, String id, String password) {
-
+        System.out.println("AccountController - verifyPassword() visited");
         ArrayList<IndividualAccount> indiAccounts = getIndividualAccounts();
         ArrayList<EnterpriseAccount> enterAccounts = getEnterpriseAccounts();
 
@@ -141,7 +149,8 @@ public class AccountController extends DBBoundary{
                 System.out.println("비밀번호 불일치");
                 return false;
             }
-            else 					return true;
+            else
+                return true;
         }
         else {
             EnterpriseAccount eAccount = (EnterpriseAccount) enterAccounts.stream()
@@ -153,11 +162,13 @@ public class AccountController extends DBBoundary{
                 System.out.println("비밀번호 불일치");
                 return false;
             }
-            else 					return true;
+            else
+                return true;
         }
     }
 
     public static void modifyIndividualAccountInfo(String individualId, int infoType, String modifiedInfo) {
+        System.out.println("AccountController - modifyIndividualAccountInfo() visited");
 
         // protected String name;      -> #1
         // private String phoneNumber; -> #2
@@ -203,7 +214,7 @@ public class AccountController extends DBBoundary{
     }
 
     public static void modifyEnterpriseAccountInfo(String enterpriseId, int infoType, String modifiedInfo) {
-
+        System.out.println("AccountController - modifyEnterpriseAccountInfo() visited");
         // protected String name;                  -> #1
         // private String enterpriseNum;           -> #2
         // private String category;                -> #3
@@ -248,7 +259,7 @@ public class AccountController extends DBBoundary{
     }
 
     public static void deleteAccount(String type, String id) {
-
+        System.out.println("AccountController - deleteAccount() visited");
         if (type.equals("Individual")) {
             individualAccounts = getIndividualAccounts();
             IndividualAccount iAccount = (IndividualAccount) individualAccounts.stream()
@@ -275,37 +286,21 @@ public class AccountController extends DBBoundary{
         }
     }
     public static ArrayList<IndividualAccount> getIndividualAccounts() {
+        System.out.println("AccountController - getIndividualAccounts() visited");
         ArrayList<IndividualAccount> indiAccounts = readIndiDB();
         return indiAccounts;
     }
 
     public static ArrayList<EnterpriseAccount> getEnterpriseAccounts() {
+        System.out.println("AccountController - getEnterpriseAccounts() visited");
         ArrayList<EnterpriseAccount> enterAccounts = readEnterDB();
         return enterAccounts;
     }
 
     public static String showWithdrawalTerms() {
+
+        System.out.println("AccountController - showWithdrawalTerms() visited");
         return "탈퇴 약관";
     }
 
-
-
-
-    public static void main(String[] args) throws Exception{
-        signupIndividual("aa1234","aaaa","name","aa1234@naver.com","010-1111-1111",25,"F");
-        signupEnterprise("000-00-00000","IT","053-777-7777","대구","bb4567","4567","kakao");
-        Object object=signIn("Enterprise","bb4657","4567");
-        System.out.println(object);
-        IndividualAccount individual1=new IndividualAccount("aa0000@naver.com","010-0000-0000",25,"F","aa0000","0000","janny",true,true,"Individual");
-        IndividualAccount individual2=new IndividualAccount("aa1111@naver.com","010-1111-1111",21,"M","aa1111","1111","Tom",true,true,"Individual");
-        EnterpriseAccount enterprise1=new EnterpriseAccount("000-00-00000","Restaurant","053-222-2222","Daegu","bb0000","0000","steakhouse",true,true,"Enterprise");
-        EnterpriseAccount enterprise2=new EnterpriseAccount("111-11-11111","SwimmingPool","053-333-3333","Daegu","bb1111","1111","blueswimming",true,true,"Enterprise");
-
-//        saveEnterDB(enterprise1);
-//        saveEnterDB(enterprise2);
-        saveIndiDB(individual1);
-        saveIndiDB(individual2);
-
-        modifyIndividualInfo("aa1234","aaaa",1,"namememe");
-    }
 }

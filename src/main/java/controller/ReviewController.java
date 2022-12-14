@@ -13,6 +13,8 @@ public class ReviewController extends DBBoundary {
     public ArrayList<Review> reviewList = new ArrayList<Review>();
 
     public static ArrayList<Review> readReviewById(String enterpriseId) {
+        System.out.println("ReviewController - readReviewById() visited");
+
 
         Boolean result = false;
 
@@ -37,6 +39,7 @@ public class ReviewController extends DBBoundary {
     }
 
     public static Boolean verifyWorkHistory(String individualId, String enterpriseId) {
+        System.out.println("ReviewController - verifyWorkHistory() visited");
 
         ArrayList<IndividualAccount> individualAccounts = DBBoundary.readIndiDB();
         ArrayList<Workhistory> workHistoryDB = DBBoundary.readWorkHistoryDB();
@@ -73,6 +76,7 @@ public class ReviewController extends DBBoundary {
     }
 
     public static Review addToReviewList( String enterpriseId, String individualId, String review) {
+        System.out.println("ReviewController - addToReviewList() visited");
 
         Review newReview = new Review(enterpriseId, individualId, review);
         DBBoundary.saveReviewDB(newReview);

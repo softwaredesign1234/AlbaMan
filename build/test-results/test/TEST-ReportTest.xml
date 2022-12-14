@@ -1,18 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ReportTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-12-14T12:20:52" hostname="DESKTOP-29CPMJ4" time="0.008">
+<testsuite name="ReportTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-12-14T13:03:50" hostname="DESKTOP-29CPMJ4" time="0.008">
   <properties/>
-  <testcase name="UC10-신고 반려" classname="ReportTest" time="0.003"/>
+  <testcase name="UC10-신고 반려" classname="ReportTest" time="0.002"/>
   <testcase name="UC10-신고 정상" classname="ReportTest" time="0.005"/>
-  <system-out><![CDATA[User Input Report Context = SpamContents
-reportID : 1 reportMemberID : aa0000 reportedMemberID : aa1111 ReportContext : SpamContents
-Judgement = true
-Remove report id : 1
+  <system-out><![CDATA[DBBoundary - clearDB() visited
+ReportBoundary - inputReport() visited
 User Input Report Context = SpamContents
+ReportController - addReport() visited
+DBBoundary - saveReportDB() visited
+DBBoundary - countLine() visited
+ReportBoundary - showReport() visited
 reportID : 1 reportMemberID : aa0000 reportedMemberID : aa1111 ReportContext : SpamContents
+ReportBoundary - makeJudgement() visited
 Judgement = true
+ReportController - removeReport() visited
+DBBoundary - readReportDB() visited
+DBBoundary - clearDB() visited
+Remove report id : 1
+DBBoundary - clearDB() visited
+ReportBoundary - inputReport() visited
+User Input Report Context = SpamContents
+ReportController - addReport() visited
+DBBoundary - saveReportDB() visited
+DBBoundary - countLine() visited
+ReportBoundary - showReport() visited
+reportID : 1 reportMemberID : aa0000 reportedMemberID : aa1111 ReportContext : SpamContents
+ReportBoundary - makeJudgement() visited
+Judgement = true
+ReportController - findReport() visited
+DBBoundary - readReportDB() visited
+ReportController - findMemberInfo() visited
 Reported Member's Info = 
 aa111123aa1111@naver.com010-1111-1111
+ReportController - deactivateMember() visited
 aa1111 member has been blocked
+AccountController - modifyIndividualAccountInfo() visited
+AccountController - getIndividualAccounts() visited
+DBBoundary - readIndiDB() visited
+DBBoundary - saveIndiDB() visited
+DBBoundary - clearDB() visited
+DBBoundary - saveIndiDB() visited
+DBBoundary - saveIndiDB() visited
+DBBoundary - saveIndiDB() visited
+DBBoundary - saveIndiDB() visited
+DBBoundary - saveIndiDB() visited
+DBBoundary - saveIndiDB() visited
+DBBoundary - saveIndiDB() visited
+DBBoundary - saveIndiDB() visited
 개인회원 정보 수정 성공
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>

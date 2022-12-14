@@ -21,6 +21,7 @@ public class DBBoundary {
     ArrayList<Announcement> announcementList = new ArrayList<>();
     //----------------------Account--------------------------//
     public static void saveIndiDB(IndividualAccount individualAccount) {
+        System.out.println("DBBoundary - saveIndiDB() visited");
         ArrayList<String> accountInfo = new ArrayList<>();
         try {
             File f = new File("src/main/java/Database/IndividualAccountDB.txt");
@@ -49,7 +50,7 @@ public class DBBoundary {
     }
 
     public static void saveIndiDB(ArrayList<IndividualAccount> individualAccounts){
-
+        System.out.println("DBBoundary - saveIndiDB() visited");
         clearDB("IndividualAccount");
 
 
@@ -59,6 +60,7 @@ public class DBBoundary {
     }
 
     public static void saveEnterDB(EnterpriseAccount enterpriseAccount) {
+        System.out.println("DBBoundary - saveEnterDB() visited");
         ArrayList<String> accountInfo = new ArrayList<>();
         try {
             File f = new File("src/main/java/Database/EnterpriseAccountDB.txt");
@@ -88,7 +90,7 @@ public class DBBoundary {
     }
 
     public static void saveEnterDB(ArrayList<EnterpriseAccount> enterpriseAccounts){
-
+        System.out.println("DBBoundary - saveEnterDB() visited");
         clearDB("EnterpriseAccount");
 
         for (EnterpriseAccount eAccount : enterpriseAccounts) {
@@ -96,7 +98,7 @@ public class DBBoundary {
         }
     }
     public static ArrayList<EnterpriseAccount> readEnterDB() {
-
+        System.out.println("DBBoundary - readEnterDB() visited");
         try {
             File f = new File("src/main/java/Database/EnterpriseAccountDB.txt");
             BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
@@ -125,6 +127,7 @@ public class DBBoundary {
     }
 
     public static ArrayList<IndividualAccount> readIndiDB() {
+        System.out.println("DBBoundary - readIndiDB() visited");
         individualAccountsList.clear();
         try {
             File f = new File("src/main/java/Database/IndividualAccountDB.txt");
@@ -156,6 +159,7 @@ public class DBBoundary {
 
     //---------------------Resume----------------------------//
     public static void saveResumeDB(Resume resume) {
+        System.out.println("DBBoundary - saveResumeDB() visited");
         ArrayList<String> resumeInfo = new ArrayList<>();
         try {
             File f = new File("src/main/java/Database/ResumeDB.txt");
@@ -184,6 +188,7 @@ public class DBBoundary {
 
     public static ArrayList<Resume> readResumeDB() {
 
+        System.out.println("DBBoundary - readResumeDB() visited");
         try {
             File f = new File("src/main/java/Database/ResumeDB.txt");
             BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
@@ -213,6 +218,7 @@ public class DBBoundary {
 
     //--------------------------Apply---------------------------------------//
     public static void saveApplyDB(Apply apply) {
+        System.out.println("DBBoundary - saveApplyDB() visited");
         List<String> applyInfo = new ArrayList<>();
         try {
             File f = new File("src/main/java/Database/ApplyDB.txt");
@@ -238,7 +244,7 @@ public class DBBoundary {
 
 
     public static ArrayList<Apply> readApplyDB() {
-
+        System.out.println("DBBoundary - readApplyDB() visited");
         try {
             File f = new File("src/main/java/Database/ApplyDB.txt");
             BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
@@ -261,29 +267,12 @@ public class DBBoundary {
         return applyList;
     }
 
-    public static void deleteApplyDB(int id) {
-        ArrayList<Apply> arr = readApplyDB();
-        Apply apply = arr.stream()
-                .filter(apply1 -> id == apply1.getId())
-                .findAny()
-                .orElse(null);
-        arr.remove(apply);
-        String path = "src/main/java/Database/ApplyDB.txt";
 
-        try (FileOutputStream fos = new FileOutputStream(path, false)) {
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        for (Apply applys : arr) {
-            saveApplyDB(applys);
-        }
-    }
 
 
     //---------------------workHistory----------------------------//
     public static void saveWorkHistoryDB(Workhistory workhistory) {
+        System.out.println("DBBoundary - saveWorkHistoryDB() visited");
         ArrayList<String> workhistoryinfo = new ArrayList<>();
         try {
             File f = new File("src/main/java/Database/WorkHistoryDB.txt");
@@ -306,7 +295,7 @@ public class DBBoundary {
     }
 
     public static ArrayList<Workhistory> readWorkHistoryDB() {
-
+        System.out.println("DBBoundary - readWorkHistoryDB() visited");
         try {
             File f = new File("src/main/java/Database/WorkHistoryDB.txt");
             BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
@@ -329,6 +318,7 @@ public class DBBoundary {
 
 
     public static void saveReviewDB(Review review) {
+        System.out.println("DBBoundary - saveReviewDB() visited");
         List<String> reviewInfo = new ArrayList<>();
 
         try {
@@ -349,7 +339,7 @@ public class DBBoundary {
     }
 
     public static ArrayList<Review> readReviewDB() {
-
+        System.out.println("DBBoundary - readReviewDB() visited");
         try {
             File f = new File("src/main/java/Database/ReviewDB.txt");
             BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
@@ -373,6 +363,7 @@ public class DBBoundary {
     }
 
     public static void saveFAQDB(FAQ faq) {
+        System.out.println("DBBoundary - saveFAQDB() visited");
         List<String> FAQInfo = new ArrayList<>();
         try {
             File f = new File("src/main/java/Database/FAQDB.txt");
@@ -392,6 +383,7 @@ public class DBBoundary {
     }
 
     public static ArrayList<FAQ> readFAQDB() {
+        System.out.println("DBBoundary - readFAQDB() visited");
         try {
             File f = new File("src/main/java/Database/FAQDB.txt");
             BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
@@ -415,6 +407,7 @@ public class DBBoundary {
 
 
     public static void clearDB(String dbname){
+        System.out.println("DBBoundary - clearDB() visited");
         String db = "src/main/java/Database/"+dbname+"DB.txt";
         try {
             File f = new File(db);
@@ -431,6 +424,7 @@ public class DBBoundary {
 
     public void saveAnnouncementDB(Announcement announcement)
     {
+        System.out.println("DBBoundary - saveAnnouncementDB() visited");
         List<String> AnnouncementInfo = new ArrayList<>();
         try {
             File f = new File("src/main/java/Database/AnnouncementDB.txt");
@@ -465,6 +459,7 @@ public class DBBoundary {
 
     public void saveReportDB(Report report)
     {
+        System.out.println("DBBoundary - saveReportDB() visited");
         List<String> reportInfo = new ArrayList<>();
         try {
             File f = new File("src/main/java/Database/ReportDB.txt");
@@ -495,6 +490,7 @@ public class DBBoundary {
 
     public void saveQuestionDB(Question question)
     {
+        System.out.println("DBBoundary - saveQuestionDB() visited");
         List<String> questionInfo = new ArrayList<>();
         try {
             File f = new File("src/main/java/Database/QuestionDB.txt");
@@ -523,6 +519,7 @@ public class DBBoundary {
 
     public void saveScrapDB(String individualId, Announcement announcement)
     {
+        System.out.println("DBBoundary - saveScrapDB() visited");
         List<String> scrapList = new ArrayList<>();
         try {
             File f = new File("src/main/java/Database/ScrapDB.txt");
@@ -544,6 +541,7 @@ public class DBBoundary {
     }
 
     public ArrayList<Question> readQuestionDB() {
+        System.out.println("DBBoundary - readQuestionDB() visited");
         questionList.clear();
         try {
             File f = new File("src/main/java/Database/QuestionDB.txt");
@@ -569,6 +567,7 @@ public class DBBoundary {
     }
 
     public ArrayList<Report> readReportDB() {
+        System.out.println("DBBoundary - readReportDB() visited");
         reportList.clear();
         try {
             File f = new File("src/main/java/Database/ReportDB.txt");
@@ -594,6 +593,7 @@ public class DBBoundary {
     }
 
     public ArrayList<Announcement> readAnnouncementDB() {
+        System.out.println("DBBoundary - readAnnouncementDB() visited");
         announcementList.clear();
         try {
             File f = new File("src/main/java/Database/AnnouncementDB.txt");
@@ -621,6 +621,7 @@ public class DBBoundary {
 
 
     private int countLine(BufferedReader bufferedReader){
+        System.out.println("DBBoundary - countLine() visited");
         String line = null;
         int num = 0;
 //            num = bufferedReader.readLine().length()

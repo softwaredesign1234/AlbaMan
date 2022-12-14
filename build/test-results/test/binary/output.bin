@@ -1,28 +1,169 @@
+ DBBoundary - clearDB() visited
+ DBBoundary - clearDB() visited
+$DBBoundary - saveEnterDB() visited
+$DBBoundary - saveEnterDB() visited
+#DBBoundary - saveIndiDB() visited
+#DBBoundary - saveIndiDB() visited
+2AccountBoundary - modifyIndividualInfo() visited
+5AccountController - getIndividualAccounts() visited
+#DBBoundary - readIndiDB() visited
+.AccountController - verifyPassword() visited
+5AccountController - getIndividualAccounts() visited
+#DBBoundary - readIndiDB() visited
+5AccountController - getEnterpriseAccounts() visited
+$DBBoundary - readEnterDB() visited
+(AccountBoundary - permission() visited
 권한 성공
+;AccountController - modifyIndividualAccountInfo() visited
+5AccountController - getIndividualAccounts() visited
+#DBBoundary - readIndiDB() visited
+#DBBoundary - saveIndiDB() visited
+ DBBoundary - clearDB() visited
+#DBBoundary - saveIndiDB() visited
+#DBBoundary - saveIndiDB() visited
 #개인회원 정보 수정 성공
+/AccountBoundary - showResultMessage() visited
 종료
+ DBBoundary - clearDB() visited
+ DBBoundary - clearDB() visited
+$DBBoundary - saveEnterDB() visited
+$DBBoundary - saveEnterDB() visited
+#DBBoundary - saveIndiDB() visited
+#DBBoundary - saveIndiDB() visited
+-AccountBoundary - withdrawAccount() visited
+5AccountController - getIndividualAccounts() visited
+#DBBoundary - readIndiDB() visited
+.AccountController - verifyPassword() visited
+5AccountController - getIndividualAccounts() visited
+#DBBoundary - readIndiDB() visited
+5AccountController - getEnterpriseAccounts() visited
+$DBBoundary - readEnterDB() visited
+(AccountBoundary - permission() visited
+3AccountController - showWithdrawalTerms() visited
 탈퇴 약관
+-AccountController - deleteAccount() visited
+5AccountController - getIndividualAccounts() visited
+#DBBoundary - readIndiDB() visited
+#DBBoundary - saveIndiDB() visited
+ DBBoundary - clearDB() visited
+#DBBoundary - saveIndiDB() visited
 개인회원 탈퇴 성공
 권한 성공
+/AccountBoundary - showResultMessage() visited
 종료
+ DBBoundary - clearDB() visited
+ DBBoundary - clearDB() visited
+$DBBoundary - saveEnterDB() visited
+$DBBoundary - saveEnterDB() visited
+#DBBoundary - saveIndiDB() visited
+#DBBoundary - saveIndiDB() visited
+"Boundary - startSignup() visited
+2AccountController - showTermsOfService() visited
 ,이용약관에 대해 안내드립니다.
++Boundary - inputValidationInput() visited
+*AccountController - isValidate() visited
+(AccountBoundary - permission() visited
 권한 실패
 /인증정보를 정확히 입력해주세요.
+(AccountBoundary - permission() visited
+ DBBoundary - clearDB() visited
+ DBBoundary - clearDB() visited
+$DBBoundary - saveEnterDB() visited
+$DBBoundary - saveEnterDB() visited
+#DBBoundary - saveIndiDB() visited
+#DBBoundary - saveIndiDB() visited
+-AccountBoundary - withdrawAccount() visited
+5AccountController - getEnterpriseAccounts() visited
+$DBBoundary - readEnterDB() visited
+.AccountController - verifyPassword() visited
+5AccountController - getIndividualAccounts() visited
+#DBBoundary - readIndiDB() visited
+5AccountController - getEnterpriseAccounts() visited
+$DBBoundary - readEnterDB() visited
+(AccountBoundary - permission() visited
+3AccountController - showWithdrawalTerms() visited
 탈퇴 약관
+-AccountController - deleteAccount() visited
+5AccountController - getEnterpriseAccounts() visited
+$DBBoundary - readEnterDB() visited
+$DBBoundary - saveEnterDB() visited
+ DBBoundary - clearDB() visited
+$DBBoundary - saveEnterDB() visited
+$DBBoundary - saveEnterDB() visited
+$DBBoundary - saveEnterDB() visited
+$DBBoundary - saveEnterDB() visited
+$DBBoundary - saveEnterDB() visited
+$DBBoundary - saveEnterDB() visited
+$DBBoundary - saveEnterDB() visited
+$DBBoundary - saveEnterDB() visited
+$DBBoundary - saveEnterDB() visited
 기업회원 탈퇴 성공
 권한 성공
+/AccountBoundary - showResultMessage() visited
 종료
+ DBBoundary - clearDB() visited
+ DBBoundary - clearDB() visited
+$DBBoundary - saveEnterDB() visited
+$DBBoundary - saveEnterDB() visited
+#DBBoundary - saveIndiDB() visited
+#DBBoundary - saveIndiDB() visited
+"Boundary - startSignup() visited
+2AccountController - showTermsOfService() visited
 ,이용약관에 대해 안내드립니다.
++Boundary - inputValidationInput() visited
+*AccountController - isValidate() visited
 권한 성공
+(AccountBoundary - permission() visited
+!Boundary - indiSignup() visited
+0AccountController - signupIndividual() visited
+#DBBoundary - saveIndiDB() visited
 Signup Success!
 your Id: aa1234
+ DBBoundary - clearDB() visited
+ DBBoundary - clearDB() visited
+$DBBoundary - saveEnterDB() visited
+$DBBoundary - saveEnterDB() visited
+#DBBoundary - saveIndiDB() visited
+#DBBoundary - saveIndiDB() visited
+-AccountBoundary - withdrawAccount() visited
+5AccountController - getEnterpriseAccounts() visited
+$DBBoundary - readEnterDB() visited
+.AccountController - verifyPassword() visited
+5AccountController - getIndividualAccounts() visited
+#DBBoundary - readIndiDB() visited
+5AccountController - getEnterpriseAccounts() visited
+$DBBoundary - readEnterDB() visited
 비밀번호 불일치
+(AccountBoundary - permission() visited
 권한 실패
+/AccountBoundary - showResultMessage() visited
 종료
+ DBBoundary - clearDB() visited
+ DBBoundary - clearDB() visited
+$DBBoundary - saveEnterDB() visited
+$DBBoundary - saveEnterDB() visited
+#DBBoundary - saveIndiDB() visited
+#DBBoundary - saveIndiDB() visited
+"Boundary - startSignup() visited
+2AccountController - showTermsOfService() visited
 ,이용약관에 대해 안내드립니다.
++Boundary - inputValidationInput() visited
+*AccountController - isValidate() visited
 권한 성공
+(AccountBoundary - permission() visited
+)AccountBoundary - enterSignup() visited
+0AccountController - signupEnterprise() visited
+*AccountController - isValidate() visited
+$DBBoundary - saveEnterDB() visited
 Signup Success!
 your Id: bb134
+	 DBBoundary - clearDB() visited
+	 DBBoundary - clearDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	#DBBoundary - saveIndiDB() visited
+	#DBBoundary - saveIndiDB() visited
+	$DBBoundary - readEnterDB() visited
 	id : bb1111
 	name : blueswimming
 	Location : Daegu
@@ -72,14 +213,155 @@
 	name : blueswimming
 	Location : Daegu
 	%--------------modify---------------
+	2AccountBoundary - modifyEnterpriseInfo() visited
+	5AccountController - getEnterpriseAccounts() visited
+	$DBBoundary - readEnterDB() visited
+	.AccountController - verifyPassword() visited
+	5AccountController - getIndividualAccounts() visited
+	#DBBoundary - readIndiDB() visited
+	5AccountController - getEnterpriseAccounts() visited
+	$DBBoundary - readEnterDB() visited
+	(AccountBoundary - permission() visited
 	권한 성공
+	;AccountController - modifyEnterpriseAccountInfo() visited
+	5AccountController - getEnterpriseAccounts() visited
+	$DBBoundary - readEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	 DBBoundary - clearDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
 	#기업회원 정보 수정 성공
+	/AccountBoundary - showResultMessage() visited
 	종료
 	--------------------------------------------
+	2AccountBoundary - modifyEnterpriseInfo() visited
+	5AccountController - getEnterpriseAccounts() visited
+	$DBBoundary - readEnterDB() visited
+	.AccountController - verifyPassword() visited
+	5AccountController - getIndividualAccounts() visited
+	#DBBoundary - readIndiDB() visited
+	5AccountController - getEnterpriseAccounts() visited
+	$DBBoundary - readEnterDB() visited
+	(AccountBoundary - permission() visited
 	권한 성공
+	;AccountController - modifyEnterpriseAccountInfo() visited
+	5AccountController - getEnterpriseAccounts() visited
+	$DBBoundary - readEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	 DBBoundary - clearDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
+	$DBBoundary - saveEnterDB() visited
 	#기업회원 정보 수정 성공
+	/AccountBoundary - showResultMessage() visited
 	종료
 	&--------------result----------------
+	$DBBoundary - readEnterDB() visited
 	id : bb1111
 	name : blueswimming
 	Location : Daegu
@@ -609,13 +891,54 @@
 	name : steakhouse
 	Location : Seoul
 
+ DBBoundary - clearDB() visited
+
+ DBBoundary - clearDB() visited
+
+$DBBoundary - saveEnterDB() visited
+
+$DBBoundary - saveEnterDB() visited
+
+#DBBoundary - saveIndiDB() visited
+
+#DBBoundary - saveIndiDB() visited
+
+"Boundary - startSignup() visited
+
+2AccountController - showTermsOfService() visited
+
 ,이용약관에 대해 안내드립니다.
+
++Boundary - inputValidationInput() visited
+
+*AccountController - isValidate() visited
+
+(AccountBoundary - permission() visited
 
 권한 실패
 
 /인증정보를 정확히 입력해주세요.
+
+(AccountBoundary - permission() visited
+ DBBoundary - clearDB() visited
+ DBBoundary - clearDB() visited
+$DBBoundary - saveEnterDB() visited
+$DBBoundary - saveEnterDB() visited
+#DBBoundary - saveIndiDB() visited
+#DBBoundary - saveIndiDB() visited
+$AccountBoundary - signIn() visited
+0AccountController - signinIndividual() visited
+#DBBoundary - readIndiDB() visited
+(AccountBoundary - permission() visited
 권한 성공
 개인 id는: aa1111
+ DBBoundary - clearDB() visited
+ DBBoundary - clearDB() visited
+$DBBoundary - saveEnterDB() visited
+$DBBoundary - saveEnterDB() visited
+#DBBoundary - saveIndiDB() visited
+#DBBoundary - saveIndiDB() visited
+#DBBoundary - readIndiDB() visited
 id : aa0000
 name : janny
 
@@ -625,14 +948,49 @@ Age : 25
 
 Age : 21
 %--------------modify---------------
+2AccountBoundary - modifyIndividualInfo() visited
+5AccountController - getIndividualAccounts() visited
+#DBBoundary - readIndiDB() visited
+.AccountController - verifyPassword() visited
+5AccountController - getIndividualAccounts() visited
+#DBBoundary - readIndiDB() visited
+5AccountController - getEnterpriseAccounts() visited
+$DBBoundary - readEnterDB() visited
+(AccountBoundary - permission() visited
 권한 성공
+;AccountController - modifyIndividualAccountInfo() visited
+5AccountController - getIndividualAccounts() visited
+#DBBoundary - readIndiDB() visited
+#DBBoundary - saveIndiDB() visited
+ DBBoundary - clearDB() visited
+#DBBoundary - saveIndiDB() visited
+#DBBoundary - saveIndiDB() visited
 #개인회원 정보 수정 성공
+/AccountBoundary - showResultMessage() visited
 종료
 --------------------------------------------
+2AccountBoundary - modifyIndividualInfo() visited
+5AccountController - getIndividualAccounts() visited
+#DBBoundary - readIndiDB() visited
+.AccountController - verifyPassword() visited
+5AccountController - getIndividualAccounts() visited
+#DBBoundary - readIndiDB() visited
+5AccountController - getEnterpriseAccounts() visited
+$DBBoundary - readEnterDB() visited
+(AccountBoundary - permission() visited
 권한 성공
+;AccountController - modifyIndividualAccountInfo() visited
+5AccountController - getIndividualAccounts() visited
+#DBBoundary - readIndiDB() visited
+#DBBoundary - saveIndiDB() visited
+ DBBoundary - clearDB() visited
+#DBBoundary - saveIndiDB() visited
+#DBBoundary - saveIndiDB() visited
 #개인회원 정보 수정 성공
+/AccountBoundary - showResultMessage() visited
 종료
 &--------------result----------------
+#DBBoundary - readIndiDB() visited
 id : aa0000
 name : different_Name
 
@@ -641,99 +999,326 @@ Age : 25
 name : Tom
 
 Age : 88
+ DBBoundary - clearDB() visited
+ DBBoundary - clearDB() visited
+$DBBoundary - saveEnterDB() visited
+$DBBoundary - saveEnterDB() visited
+#DBBoundary - saveIndiDB() visited
+#DBBoundary - saveIndiDB() visited
+$AccountBoundary - signIn() visited
+0AccountController - signinEnterprise() visited
+$DBBoundary - readEnterDB() visited
 기업id는 : bb1111
+(AccountBoundary - permission() visited
 권한 성공
 기업id는 : bb1111
+ DBBoundary - clearDB() visited
+ DBBoundary - clearDB() visited
+$DBBoundary - saveEnterDB() visited
+$DBBoundary - saveEnterDB() visited
+#DBBoundary - saveIndiDB() visited
+#DBBoundary - saveIndiDB() visited
+2AccountBoundary - modifyEnterpriseInfo() visited
+5AccountController - getEnterpriseAccounts() visited
+$DBBoundary - readEnterDB() visited
+.AccountController - verifyPassword() visited
+5AccountController - getIndividualAccounts() visited
+#DBBoundary - readIndiDB() visited
+5AccountController - getEnterpriseAccounts() visited
+$DBBoundary - readEnterDB() visited
 비밀번호 불일치
+(AccountBoundary - permission() visited
 권한 실패
+/AccountBoundary - showResultMessage() visited
 종료
+ DBBoundary - clearDB() visited
+ DBBoundary - clearDB() visited
+$DBBoundary - saveEnterDB() visited
+$DBBoundary - saveEnterDB() visited
+#DBBoundary - saveIndiDB() visited
+#DBBoundary - saveIndiDB() visited
+$AccountBoundary - signIn() visited
+0AccountController - signinIndividual() visited
+#DBBoundary - readIndiDB() visited
+(AccountBoundary - permission() visited
 권한 실패
+(AccountBoundary - permission() visited
 !비밀번호가 틀렸습니다
+ DBBoundary - clearDB() visited
+ DBBoundary - clearDB() visited
+$DBBoundary - saveEnterDB() visited
+$DBBoundary - saveEnterDB() visited
+#DBBoundary - saveIndiDB() visited
+#DBBoundary - saveIndiDB() visited
+-AccountBoundary - withdrawAccount() visited
+5AccountController - getIndividualAccounts() visited
+#DBBoundary - readIndiDB() visited
+.AccountController - verifyPassword() visited
+5AccountController - getIndividualAccounts() visited
+#DBBoundary - readIndiDB() visited
+5AccountController - getEnterpriseAccounts() visited
+$DBBoundary - readEnterDB() visited
 비밀번호 불일치
+(AccountBoundary - permission() visited
 권한 실패
+/AccountBoundary - showResultMessage() visited
 종료
+ DBBoundary - clearDB() visited
+ DBBoundary - clearDB() visited
+$DBBoundary - saveEnterDB() visited
+$DBBoundary - saveEnterDB() visited
+#DBBoundary - saveIndiDB() visited
+#DBBoundary - saveIndiDB() visited
+"Boundary - startSignup() visited
+2AccountController - showTermsOfService() visited
 ,이용약관에 대해 안내드립니다.
++Boundary - inputValidationInput() visited
+(AccountBoundary - permission() visited
 권한 실패
 E타입은 Individual과 Enterprise 중 하나로 입력해주세요
+ DBBoundary - clearDB() visited
+ DBBoundary - clearDB() visited
+$DBBoundary - saveEnterDB() visited
+$DBBoundary - saveEnterDB() visited
+#DBBoundary - saveIndiDB() visited
+#DBBoundary - saveIndiDB() visited
+"Boundary - startSignup() visited
+2AccountController - showTermsOfService() visited
 ,이용약관에 대해 안내드립니다.
++Boundary - inputValidationInput() visited
+(AccountBoundary - permission() visited
 권한 실패
 E타입은 Individual과 Enterprise 중 하나로 입력해주세요
+$DBBoundary - saveEnterDB() visited
+$DBBoundary - saveEnterDB() visited
+#DBBoundary - saveIndiDB() visited
+#DBBoundary - saveIndiDB() visited
+$DBBoundary - saveApplyDB() visited
 apply saved!
+$DBBoundary - saveApplyDB() visited
 apply saved!
+(ResumeBoundary - inputResult() visited
+(ApplyController - sendResult() visited
+$DBBoundary - readApplyDB() visited
 Apply is not accepted!
+$DBBoundary - saveEnterDB() visited
+$DBBoundary - saveEnterDB() visited
+#DBBoundary - saveIndiDB() visited
+#DBBoundary - saveIndiDB() visited
+$DBBoundary - saveApplyDB() visited
 apply saved!
+$DBBoundary - saveApplyDB() visited
 apply saved!
+'ResumeBoundary - inputapply() visited
+3ApplyController - makeApplytoIndividual() visited
+*ApplyController - getApplyList() visited
+$DBBoundary - readApplyDB() visited
+$DBBoundary - saveApplyDB() visited
 apply saved!
 Apply success!
 Apply id :11
 Apply individualId :aa1234
 Apply enterpriseId :bb1234
+$DBBoundary - saveEnterDB() visited
+$DBBoundary - saveEnterDB() visited
+#DBBoundary - saveIndiDB() visited
+#DBBoundary - saveIndiDB() visited
+$DBBoundary - saveApplyDB() visited
 apply saved!
+$DBBoundary - saveApplyDB() visited
 apply saved!
+(ResumeBoundary - inputResult() visited
+(ApplyController - sendResult() visited
+$DBBoundary - readApplyDB() visited
+*DBBoundary - saveWorkHistoryDB() visited
 Apply is accepted!
+*DBBoundary - readWorkHistoryDB() visited
  workhistory Individual: aa0000
  workhistory Enterprise: bb0000
+ DBBoundary - clearDB() visited
+&FAQController - getFAQList() visited
+"DBBoundary - readFAQDB() visited
 "FAQ search 실패: FAQ가 없음
+'QuestionBoundary - makeAFAQ() visited
+$FAQController - addToFAQ() visited
+"DBBoundary - saveFAQDB() visited
 FAQ 등록 성공
+'QuestionBoundary - makeAFAQ() visited
+$FAQController - addToFAQ() visited
+"DBBoundary - saveFAQDB() visited
 FAQ 등록 성공
+'QuestionBoundary - makeAFAQ() visited
+$FAQController - addToFAQ() visited
+"DBBoundary - saveFAQDB() visited
 FAQ 등록 성공
+'QuestionBoundary - makeAFAQ() visited
+$FAQController - addToFAQ() visited
+"DBBoundary - saveFAQDB() visited
 FAQ 등록 성공
+&FAQController - getFAQList() visited
+"DBBoundary - readFAQDB() visited
 FAQ search 성공
 .1번 Q: i_can't_find_my_id/ A: we_don't_know
 &2번 Q: where-are-you/ A: behind-you
 .3번 Q: i_can't_find_my_id/ A: we_don't_know
 &4번 Q: where-are-you/ A: behind-you
+ DBBoundary - clearDB() visited
+)QuestionController - showMail() visited
+0QuestionController - showPhoneNumber() visited
 Contract Email : 01051111111
  Contract number : 11@naver.com
+ DBBoundary - clearDB() visited
 Input your question
+,QuestionController - addQuestion() visited
+'DBBoundary - saveQuestionDB() visited
+"DBBoundary - countLine() visited
 Member id : aa0000
 !Add question : DoesSign-upFree?
+-QuestionController - findQuestion() visited
+'DBBoundary - readQuestionDB() visited
 ZQuestion ID : 1 Individual ID : aa0000 Question context : DoesSign-upFree? Answer : null
 set questionID = 1
+*QuestionController - addAnswer() visited
+'DBBoundary - readQuestionDB() visited
+ DBBoundary - clearDB() visited
+'DBBoundary - saveQuestionDB() visited
+"DBBoundary - countLine() visited
+ DBBoundary - clearDB() visited
+(ReportBoundary - inputReport() visited
 *User Input Report Context = SpamContents
+(ReportController - addReport() visited
+%DBBoundary - saveReportDB() visited
+"DBBoundary - countLine() visited
+'ReportBoundary - showReport() visited
 ]reportID : 1 reportMemberID : aa0000 reportedMemberID : aa1111 ReportContext : SpamContents
+*ReportBoundary - makeJudgement() visited
 Judgement = true
++ReportController - removeReport() visited
+%DBBoundary - readReportDB() visited
+ DBBoundary - clearDB() visited
 Remove report id : 1
+  DBBoundary - clearDB() visited
+ (ReportBoundary - inputReport() visited
  *User Input Report Context = SpamContents
+ (ReportController - addReport() visited
+ %DBBoundary - saveReportDB() visited
+ "DBBoundary - countLine() visited
+ 'ReportBoundary - showReport() visited
  ]reportID : 1 reportMemberID : aa0000 reportedMemberID : aa1111 ReportContext : SpamContents
+ *ReportBoundary - makeJudgement() visited
  Judgement = true
+ )ReportController - findReport() visited
+ %DBBoundary - readReportDB() visited
+ -ReportController - findMemberInfo() visited
  Reported Member's Info = 
  'aa111123aa1111@naver.com010-1111-1111
+ /ReportController - deactivateMember() visited
   aa1111 member has been blocked
+ ;AccountController - modifyIndividualAccountInfo() visited
+ 5AccountController - getIndividualAccounts() visited
+ #DBBoundary - readIndiDB() visited
+ #DBBoundary - saveIndiDB() visited
+  DBBoundary - clearDB() visited
+ #DBBoundary - saveIndiDB() visited
+ #DBBoundary - saveIndiDB() visited
+ #DBBoundary - saveIndiDB() visited
+ #DBBoundary - saveIndiDB() visited
+ #DBBoundary - saveIndiDB() visited
+ #DBBoundary - saveIndiDB() visited
+ #DBBoundary - saveIndiDB() visited
+ #DBBoundary - saveIndiDB() visited
  #개인회원 정보 수정 성공
+"!$DBBoundary - saveEnterDB() visited
+"!$DBBoundary - saveEnterDB() visited
+"!#DBBoundary - saveIndiDB() visited
+"!#DBBoundary - saveIndiDB() visited
+"!'ResumeBoundary - showResume() visited
+"!)ResumeController - showResume() visited
+"!%DBBoundary - readResumeDB() visited
 "!Success find resume
 "!resumeId: 2
 "!'resumeSelfIntroduction: pleaseHireMe!
 "!resumeWorkExperience: 0year
 "!resumeIsOpened: true
 "!resumeIndividualId: aa0000
+"#$DBBoundary - saveEnterDB() visited
+"#$DBBoundary - saveEnterDB() visited
+"##DBBoundary - saveIndiDB() visited
+"##DBBoundary - saveIndiDB() visited
+"#(ResumeBoundary - inputResume() visited
+"#)ResumeController - saveResume() visited
+"#,ResumeController - getResumeList() visited
+"#%DBBoundary - saveResumeDB() visited
 "#Resume Succefully saved!
 "#Resume Id: 1
 "#%Resume Owner(Individual) Id: aa1111
 "#%Resume selfIntroduction: mynameisaa
 "#!Resume workExperience: 1-2years
 "#Resume isOpen: false
+"#(ResumeBoundary - inputResume() visited
+"#)ResumeController - saveResume() visited
+"#,ResumeController - getResumeList() visited
+"#%DBBoundary - saveResumeDB() visited
 "#Resume Succefully saved!
 "#Resume Id: 2
 "#%Resume Owner(Individual) Id: aa0000
 "#(Resume selfIntroduction: pleaseHireMe!
 "#Resume workExperience: 0year
 "#Resume isOpen: true
+"#(ResumeBoundary - inputResume() visited
+"#)ResumeController - saveResume() visited
+"#,ResumeController - getResumeList() visited
+"#%DBBoundary - saveResumeDB() visited
 "#Resume Succefully saved!
 "#Resume Id: 3
 "#%Resume Owner(Individual) Id: aa1234
 "#!Resume selfIntroduction: hello!
 "#Resume workExperience: 5year
 "#Resume isOpen: true
+%$$DBBoundary - saveEnterDB() visited
+%$$DBBoundary - saveEnterDB() visited
+%$#DBBoundary - saveIndiDB() visited
+%$#DBBoundary - saveIndiDB() visited
+%$*DBBoundary - saveWorkHistoryDB() visited
+%$*DBBoundary - saveWorkHistoryDB() visited
+%$*DBBoundary - saveWorkHistoryDB() visited
+%$*DBBoundary - saveWorkHistoryDB() visited
+%$(ReviewBoundary - makeAReview() visited
+%$0ReviewController - verifyWorkHistory() visited
+%$#DBBoundary - readIndiDB() visited
+%$*DBBoundary - readWorkHistoryDB() visited
 %$1workhistory 확인 완료: 리뷰 권한 성공
+%$.ReviewController - addToReviewList() visited
+%$%DBBoundary - saveReviewDB() visited
 %$리뷰 작성 성공
+%$(ReviewBoundary - makeAReview() visited
+%$0ReviewController - verifyWorkHistory() visited
+%$#DBBoundary - readIndiDB() visited
+%$*DBBoundary - readWorkHistoryDB() visited
 %$1workhistory 확인 완료: 리뷰 권한 성공
+%$.ReviewController - addToReviewList() visited
+%$%DBBoundary - saveReviewDB() visited
 %$리뷰 작성 성공
+%$(ReviewBoundary - makeAReview() visited
+%$0ReviewController - verifyWorkHistory() visited
+%$#DBBoundary - readIndiDB() visited
+%$*DBBoundary - readWorkHistoryDB() visited
 %$1workhistory 확인 완료: 리뷰 권한 성공
+%$.ReviewController - addToReviewList() visited
+%$%DBBoundary - saveReviewDB() visited
 %$리뷰 작성 성공
+%$(ReviewBoundary - makeAReview() visited
+%$0ReviewController - verifyWorkHistory() visited
+%$#DBBoundary - readIndiDB() visited
+%$*DBBoundary - readWorkHistoryDB() visited
 %$1workhistory 확인 완료: 리뷰 권한 성공
+%$.ReviewController - addToReviewList() visited
+%$%DBBoundary - saveReviewDB() visited
 %$리뷰 작성 성공
 %$--------------------------
+%$*ReviewBoundary - searchAReview() visited
+%$-ReviewController - readReviewById() visited
+%$%DBBoundary - readReviewDB() visited
 %$리뷰 검색 성공
 %$기업 id: bb0000
 %$리뷰 내용: 1234
@@ -895,7 +1480,30 @@ Age : 88
 %$리뷰 내용: 1234
 %$기업 id: bb0000
 %$리뷰 내용: 1234
+%$기업 id: bb0000
+%$리뷰 내용: 1234
+%$기업 id: bb0000
+%$리뷰 내용: 1234
+%$기업 id: bb0000
+%$리뷰 내용: 1234
+%$기업 id: bb0000
+%$리뷰 내용: 1234
+%$기업 id: bb0000
+%$리뷰 내용: 1234
+%$기업 id: bb0000
+%$리뷰 내용: 1234
+%$기업 id: bb0000
+%$리뷰 내용: 1234
+%$기업 id: bb0000
+%$리뷰 내용: 1234
+%$기업 id: bb0000
+%$리뷰 내용: 1234
+%$기업 id: bb0000
+%$리뷰 내용: 1234
 %$--------------------------
+%$*ReviewBoundary - searchAReview() visited
+%$-ReviewController - readReviewById() visited
+%$%DBBoundary - readReviewDB() visited
 %$리뷰 검색 성공
 %$기업 id: bb0000
 %$리뷰 내용: 1234
@@ -1057,38 +1665,159 @@ Age : 88
 %$리뷰 내용: 1234
 %$기업 id: bb0000
 %$리뷰 내용: 1234
+%$기업 id: bb0000
+%$리뷰 내용: 1234
+%$기업 id: bb0000
+%$리뷰 내용: 1234
+%$기업 id: bb0000
+%$리뷰 내용: 1234
+%$기업 id: bb0000
+%$리뷰 내용: 1234
+%$기업 id: bb0000
+%$리뷰 내용: 1234
+%$기업 id: bb0000
+%$리뷰 내용: 1234
+%$기업 id: bb0000
+%$리뷰 내용: 1234
+%$기업 id: bb0000
+%$리뷰 내용: 1234
+%$기업 id: bb0000
+%$리뷰 내용: 1234
+%$기업 id: bb0000
+%$리뷰 내용: 1234
+%&$DBBoundary - saveEnterDB() visited
+%&$DBBoundary - saveEnterDB() visited
+%&#DBBoundary - saveIndiDB() visited
+%&#DBBoundary - saveIndiDB() visited
+%&*DBBoundary - saveWorkHistoryDB() visited
+%&*DBBoundary - saveWorkHistoryDB() visited
+%&*DBBoundary - saveWorkHistoryDB() visited
+%&*DBBoundary - saveWorkHistoryDB() visited
+%&(ReviewBoundary - makeAReview() visited
+%&0ReviewController - verifyWorkHistory() visited
+%&#DBBoundary - readIndiDB() visited
+%&*DBBoundary - readWorkHistoryDB() visited
 %&1workhistory 확인 실패: 리뷰 권한 실패
 %&%리뷰 작성 실패: 권한 없음
+%'$DBBoundary - saveEnterDB() visited
+%'$DBBoundary - saveEnterDB() visited
+%'#DBBoundary - saveIndiDB() visited
+%'#DBBoundary - saveIndiDB() visited
+%'*DBBoundary - saveWorkHistoryDB() visited
+%'*DBBoundary - saveWorkHistoryDB() visited
+%'*DBBoundary - saveWorkHistoryDB() visited
+%'*DBBoundary - saveWorkHistoryDB() visited
+%'(ReviewBoundary - makeAReview() visited
+%'0ReviewController - verifyWorkHistory() visited
+%'#DBBoundary - readIndiDB() visited
+%'*DBBoundary - readWorkHistoryDB() visited
 %'1workhistory 확인 완료: 리뷰 권한 성공
+%'.ReviewController - addToReviewList() visited
+%'%DBBoundary - saveReviewDB() visited
 %'리뷰 작성 성공
+%'(ReviewBoundary - makeAReview() visited
+%'0ReviewController - verifyWorkHistory() visited
+%'#DBBoundary - readIndiDB() visited
+%'*DBBoundary - readWorkHistoryDB() visited
 %'1workhistory 확인 완료: 리뷰 권한 성공
+%'.ReviewController - addToReviewList() visited
+%'%DBBoundary - saveReviewDB() visited
 %'리뷰 작성 성공
+%'(ReviewBoundary - makeAReview() visited
+%'0ReviewController - verifyWorkHistory() visited
+%'#DBBoundary - readIndiDB() visited
+%'*DBBoundary - readWorkHistoryDB() visited
 %'1workhistory 확인 완료: 리뷰 권한 성공
+%'.ReviewController - addToReviewList() visited
+%'%DBBoundary - saveReviewDB() visited
 %'리뷰 작성 성공
+%'(ReviewBoundary - makeAReview() visited
+%'0ReviewController - verifyWorkHistory() visited
+%'#DBBoundary - readIndiDB() visited
+%'*DBBoundary - readWorkHistoryDB() visited
 %'1workhistory 확인 완료: 리뷰 권한 성공
+%'.ReviewController - addToReviewList() visited
+%'%DBBoundary - saveReviewDB() visited
 %'리뷰 작성 성공
 %'--------------------------
+%'*ReviewBoundary - searchAReview() visited
+%'-ReviewController - readReviewById() visited
+%'%DBBoundary - readReviewDB() visited
 %'검색 결과 없음
+%($DBBoundary - saveEnterDB() visited
+%($DBBoundary - saveEnterDB() visited
+%(#DBBoundary - saveIndiDB() visited
+%(#DBBoundary - saveIndiDB() visited
+%(*DBBoundary - saveWorkHistoryDB() visited
+%(*DBBoundary - saveWorkHistoryDB() visited
+%(*DBBoundary - saveWorkHistoryDB() visited
+%(*DBBoundary - saveWorkHistoryDB() visited
+%((ReviewBoundary - makeAReview() visited
+%(0ReviewController - verifyWorkHistory() visited
+%(#DBBoundary - readIndiDB() visited
+%(*DBBoundary - readWorkHistoryDB() visited
 %(1workhistory 확인 완료: 리뷰 권한 성공
+%(.ReviewController - addToReviewList() visited
+%(%DBBoundary - saveReviewDB() visited
 %(리뷰 작성 성공
+%((ReviewBoundary - makeAReview() visited
+%(0ReviewController - verifyWorkHistory() visited
+%(#DBBoundary - readIndiDB() visited
+%(*DBBoundary - readWorkHistoryDB() visited
 %(1workhistory 확인 완료: 리뷰 권한 성공
+%(.ReviewController - addToReviewList() visited
+%(%DBBoundary - saveReviewDB() visited
 %(리뷰 작성 성공
+%((ReviewBoundary - makeAReview() visited
+%(0ReviewController - verifyWorkHistory() visited
+%(#DBBoundary - readIndiDB() visited
+%(*DBBoundary - readWorkHistoryDB() visited
 %(1workhistory 확인 완료: 리뷰 권한 성공
+%(.ReviewController - addToReviewList() visited
+%(%DBBoundary - saveReviewDB() visited
 %(리뷰 작성 성공
+%((ReviewBoundary - makeAReview() visited
+%(0ReviewController - verifyWorkHistory() visited
+%(#DBBoundary - readIndiDB() visited
+%(*DBBoundary - readWorkHistoryDB() visited
 %(1workhistory 확인 완료: 리뷰 권한 성공
+%(.ReviewController - addToReviewList() visited
+%(%DBBoundary - saveReviewDB() visited
 %(리뷰 작성 성공
+*) DBBoundary - clearDB() visited
+*) DBBoundary - clearDB() visited
+*) DBBoundary - clearDB() visited
+*)4AnnouncementBoundary - inputAnnouncement() visited
+*)5AnnouncementController - makeAnnouncement() visited
+*)+DBBoundary - saveAnnouncementDB() visited
+*)"DBBoundary - countLine() visited
 *)Announcement saved!
 *)User making announcement..
 *)enterpriseId : bb0000 ... 
+*)4AnnouncementBoundary - inputAnnouncement() visited
+*)5AnnouncementController - makeAnnouncement() visited
+*)+DBBoundary - saveAnnouncementDB() visited
+*)"DBBoundary - countLine() visited
 *)Announcement saved!
 *)User making announcement..
 *)enterpriseId : bb0000 ... 
+*)4AnnouncementBoundary - inputAnnouncement() visited
+*)5AnnouncementController - makeAnnouncement() visited
+*)+DBBoundary - saveAnnouncementDB() visited
+*)"DBBoundary - countLine() visited
 *)Announcement saved!
 *)User making announcement..
 *)enterpriseId : bb0001 ... 
+*)4AnnouncementBoundary - inputAnnouncement() visited
+*)5AnnouncementController - makeAnnouncement() visited
+*)+DBBoundary - saveAnnouncementDB() visited
+*)"DBBoundary - countLine() visited
 *)Announcement saved!
 *)User making announcement..
 *)enterpriseId : bb0001 ... 
+*)8AnnouncementController - getAnnouncementList() visited
+*)+DBBoundary - readAnnouncementDB() visited
+*)3AnnouncementBoundary - showAnnouncement() visited
 *)
 *)-----Announcement List-----
 *)`ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
@@ -1096,25 +1825,52 @@ Age : 88
 *)`ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
 *)_ID : 4	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 9000	Working days per week : 4
 *)
+*)9AnnouncementController - readAnnouncementById() visited
+*)+DBBoundary - readAnnouncementDB() visited
 *)
 *)!Announcement filtered by ID : 1
+*)3AnnouncementBoundary - showAnnouncement() visited
 *)
 *)-----Announcement List-----
 *)`ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
 *)
+*)3AnnouncementController - CalculatedWage() visited
+*)+DBBoundary - readAnnouncementDB() visited
 *)@wage = 2400000 WagePerHour = 12000 Working hours per week = 50
+*+ DBBoundary - clearDB() visited
+*+ DBBoundary - clearDB() visited
+*+ DBBoundary - clearDB() visited
+*+4AnnouncementBoundary - inputAnnouncement() visited
+*+5AnnouncementController - makeAnnouncement() visited
+*++DBBoundary - saveAnnouncementDB() visited
+*+"DBBoundary - countLine() visited
 *+Announcement saved!
 *+User making announcement..
 *+enterpriseId : bb0000 ... 
+*+4AnnouncementBoundary - inputAnnouncement() visited
+*+5AnnouncementController - makeAnnouncement() visited
+*++DBBoundary - saveAnnouncementDB() visited
+*+"DBBoundary - countLine() visited
 *+Announcement saved!
 *+User making announcement..
 *+enterpriseId : bb0000 ... 
+*+4AnnouncementBoundary - inputAnnouncement() visited
+*+5AnnouncementController - makeAnnouncement() visited
+*++DBBoundary - saveAnnouncementDB() visited
+*+"DBBoundary - countLine() visited
 *+Announcement saved!
 *+User making announcement..
 *+enterpriseId : bb0001 ... 
+*+4AnnouncementBoundary - inputAnnouncement() visited
+*+5AnnouncementController - makeAnnouncement() visited
+*++DBBoundary - saveAnnouncementDB() visited
+*+"DBBoundary - countLine() visited
 *+Announcement saved!
 *+User making announcement..
 *+enterpriseId : bb0001 ... 
+*+8AnnouncementController - getAnnouncementList() visited
+*++DBBoundary - readAnnouncementDB() visited
+*+3AnnouncementBoundary - showAnnouncement() visited
 *+
 *+-----Announcement List-----
 *+`ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
@@ -1122,9 +1878,16 @@ Age : 88
 *+`ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
 *+_ID : 4	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 9000	Working days per week : 4
 *+
+*+;AnnouncementController - readAnnouncementByWage() visited
+*+8AnnouncementController - getAnnouncementList() visited
+*++DBBoundary - readAnnouncementDB() visited
 *+
 *+'Announcement filtered by wage : 20000
+*+1AnnouncementController - validateList() visited
 *+4No result has been found! Display all announcement
+*+8AnnouncementController - getAnnouncementList() visited
+*++DBBoundary - readAnnouncementDB() visited
+*+3AnnouncementBoundary - showAnnouncement() visited
 *+
 *+-----Announcement List-----
 *+`ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
@@ -1132,33 +1895,76 @@ Age : 88
 *+`ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
 *+_ID : 4	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 9000	Working days per week : 4
 *+
+*, DBBoundary - clearDB() visited
+*, DBBoundary - clearDB() visited
+*, DBBoundary - clearDB() visited
+*,4AnnouncementBoundary - inputAnnouncement() visited
+*,5AnnouncementController - makeAnnouncement() visited
+*,+DBBoundary - saveAnnouncementDB() visited
+*,"DBBoundary - countLine() visited
 *,Announcement saved!
 *,User making announcement..
 *,enterpriseId : bb0000 ... 
+*,4AnnouncementBoundary - inputAnnouncement() visited
+*,5AnnouncementController - makeAnnouncement() visited
+*,+DBBoundary - saveAnnouncementDB() visited
+*,"DBBoundary - countLine() visited
 *,Announcement saved!
 *,User making announcement..
 *,enterpriseId : bb0000 ... 
+*,4AnnouncementBoundary - inputAnnouncement() visited
+*,5AnnouncementController - makeAnnouncement() visited
+*,+DBBoundary - saveAnnouncementDB() visited
+*,"DBBoundary - countLine() visited
 *,Announcement saved!
 *,User making announcement..
 *,enterpriseId : bb0001 ... 
+*,4AnnouncementBoundary - inputAnnouncement() visited
+*,5AnnouncementController - makeAnnouncement() visited
+*,+DBBoundary - saveAnnouncementDB() visited
+*,"DBBoundary - countLine() visited
 *,Announcement saved!
 *,User making announcement..
 *,enterpriseId : bb0001 ... 
+*,3AnnouncementController - deadlinePassed() visited
 *,3Today = 23/1/1 Announcement's deadline : 22/12/31
+*,7AnnouncementController - deleteAnnouncement() visited
 *,
 *,Delete announcement Id : 1
+*- DBBoundary - clearDB() visited
+*- DBBoundary - clearDB() visited
+*- DBBoundary - clearDB() visited
+*-4AnnouncementBoundary - inputAnnouncement() visited
+*-5AnnouncementController - makeAnnouncement() visited
+*-+DBBoundary - saveAnnouncementDB() visited
+*-"DBBoundary - countLine() visited
 *-Announcement saved!
 *-User making announcement..
 *-enterpriseId : bb0000 ... 
+*-4AnnouncementBoundary - inputAnnouncement() visited
+*-5AnnouncementController - makeAnnouncement() visited
+*-+DBBoundary - saveAnnouncementDB() visited
+*-"DBBoundary - countLine() visited
 *-Announcement saved!
 *-User making announcement..
 *-enterpriseId : bb0000 ... 
+*-4AnnouncementBoundary - inputAnnouncement() visited
+*-5AnnouncementController - makeAnnouncement() visited
+*-+DBBoundary - saveAnnouncementDB() visited
+*-"DBBoundary - countLine() visited
 *-Announcement saved!
 *-User making announcement..
 *-enterpriseId : bb0001 ... 
+*-4AnnouncementBoundary - inputAnnouncement() visited
+*-5AnnouncementController - makeAnnouncement() visited
+*-+DBBoundary - saveAnnouncementDB() visited
+*-"DBBoundary - countLine() visited
 *-Announcement saved!
 *-User making announcement..
 *-enterpriseId : bb0001 ... 
+*-8AnnouncementController - getAnnouncementList() visited
+*-+DBBoundary - readAnnouncementDB() visited
+*-3AnnouncementBoundary - showAnnouncement() visited
 *-
 *------Announcement List-----
 *-`ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
@@ -1166,28 +1972,44 @@ Age : 88
 *-`ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
 *-_ID : 4	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 9000	Working days per week : 4
 *-
+*-9AnnouncementController - readAnnouncementById() visited
+*-+DBBoundary - readAnnouncementDB() visited
 *-
 *-!Announcement filtered by ID : 1
+*-3AnnouncementBoundary - showAnnouncement() visited
 *-
 *------Announcement List-----
 *-`ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
 *-
+*-;AnnouncementController - readAnnouncementByWage() visited
+*-8AnnouncementController - getAnnouncementList() visited
+*-+DBBoundary - readAnnouncementDB() visited
 *-
 *-'Announcement filtered by wage : 10000
+*-1AnnouncementController - validateList() visited
+*-3AnnouncementBoundary - showAnnouncement() visited
 *-
 *------Announcement List-----
 *-`ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
 *-`ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working days per week : 4
 *-`ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
 *-
+*-;AnnouncementController - readAnnouncementByName() visited
+*-+DBBoundary - readAnnouncementDB() visited
 *-
 *-3Announcement filtered by enterprise name : bb0000
+*-1AnnouncementController - validateList() visited
+*-3AnnouncementBoundary - showAnnouncement() visited
 *-
 *------Announcement List-----
 *-`ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
 *-`ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working days per week : 4
 *-
+*-;AnnouncementController - readAnnouncementByDays() visited
+*-+DBBoundary - readAnnouncementDB() visited
 *-+Announcement filtered by working days : 5
+*-1AnnouncementController - validateList() visited
+*-3AnnouncementBoundary - showAnnouncement() visited
 *-
 *------Announcement List-----
 *-`ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
@@ -1195,47 +2017,92 @@ Age : 88
 *-`ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
 *-_ID : 4	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 9000	Working days per week : 4
 *-
+*-<AnnouncementController - readAnnouncementByHours() visited
+*-8AnnouncementController - getAnnouncementList() visited
+*-+DBBoundary - readAnnouncementDB() visited
 *-
 *-%Announcement filtered by hours : 48
+*-1AnnouncementController - validateList() visited
+*-3AnnouncementBoundary - showAnnouncement() visited
 *-
 *------Announcement List-----
 *-`ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working days per week : 4
 *-`ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
 *-_ID : 4	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 9000	Working days per week : 4
 *-
+*-6AnnouncementBoundary - scrapAnnouncementId() visited
 *-scrapAnnouncementId() 
 *-scrapping announcement...
+*-6AnnouncementController - scrapAnnouncement() visited
 *-scrap announcement : 1
+*-$DBBoundary - saveScrapDB() visited
+*-9AnnouncementBoundary - inputApplyToEnterprise() visited
 *-
 *->Individual User (aa0000) making apply to enterprise (bb0000)
+*-3ApplyController - makeApplytoEnterprise() visited
+*-$DBBoundary - saveApplyDB() visited
 *-apply saved!
+*-1AnnouncementBoundary - inputPassOrNot() visited
 *-
 *-%Enterprise user make result to apply
 *-Applying announcement id : 1 
 *-result : true
+*-'ApplyController - passOrNot() visited
+*-$DBBoundary - readApplyDB() visited
+*- DBBoundary - clearDB() visited
+*-$DBBoundary - saveApplyDB() visited
 *-apply saved!
 *-	Passed!
+*-*DBBoundary - saveWorkHistoryDB() visited
+*-7AnnouncementController - deleteAnnouncement() visited
 *-
 *-Delete announcement Id : 1
+*. DBBoundary - clearDB() visited
+*. DBBoundary - clearDB() visited
+*. DBBoundary - clearDB() visited
+*.4AnnouncementBoundary - inputAnnouncement() visited
+*.5AnnouncementController - makeAnnouncement() visited
+*.+DBBoundary - saveAnnouncementDB() visited
+*."DBBoundary - countLine() visited
 *.Announcement saved!
 *.User making announcement..
 *.enterpriseId : bb0000 ... 
+*.4AnnouncementBoundary - inputAnnouncement() visited
+*.5AnnouncementController - makeAnnouncement() visited
+*.+DBBoundary - saveAnnouncementDB() visited
+*."DBBoundary - countLine() visited
 *.Announcement saved!
 *.User making announcement..
 *.enterpriseId : bb0000 ... 
+*.4AnnouncementBoundary - inputAnnouncement() visited
+*.5AnnouncementController - makeAnnouncement() visited
+*.+DBBoundary - saveAnnouncementDB() visited
+*."DBBoundary - countLine() visited
 *.Announcement saved!
 *.User making announcement..
 *.enterpriseId : bb0001 ... 
+*.4AnnouncementBoundary - inputAnnouncement() visited
+*.5AnnouncementController - makeAnnouncement() visited
+*.+DBBoundary - saveAnnouncementDB() visited
+*."DBBoundary - countLine() visited
 *.Announcement saved!
 *.User making announcement..
 *.enterpriseId : bb0001 ... 
+*.9AnnouncementBoundary - inputApplyToEnterprise() visited
 *.
 *.>Individual User (aa0000) making apply to enterprise (bb0000)
+*.3ApplyController - makeApplytoEnterprise() visited
+*.$DBBoundary - saveApplyDB() visited
 *.apply saved!
+*.1AnnouncementBoundary - inputPassOrNot() visited
 *.
 *.%Enterprise user make result to apply
 *.Applying announcement id : 1 
 *.result : false
+*.'ApplyController - passOrNot() visited
+*.$DBBoundary - readApplyDB() visited
+*. DBBoundary - clearDB() visited
+*.$DBBoundary - saveApplyDB() visited
 *.apply saved!
 *.
 Failed..

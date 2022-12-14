@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="FAQTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-12-14T12:20:52" hostname="DESKTOP-29CPMJ4" time="0.007">
+<testsuite name="FAQTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-12-14T13:03:50" hostname="DESKTOP-29CPMJ4" time="0.007">
   <properties/>
   <testcase name="UC9-FAQ 없음 조회 실패" classname="FAQTest" time="0.002"/>
   <testcase name="UC9-FAQ 등록 정상" classname="FAQTest" time="0.001"/>
   <testcase name="UC9-FAQ 조회 정상" classname="FAQTest" time="0.002"/>
-  <system-out><![CDATA[FAQ search 실패: FAQ가 없음
+  <system-out><![CDATA[DBBoundary - clearDB() visited
+FAQController - getFAQList() visited
+DBBoundary - readFAQDB() visited
+FAQ search 실패: FAQ가 없음
+QuestionBoundary - makeAFAQ() visited
+FAQController - addToFAQ() visited
+DBBoundary - saveFAQDB() visited
 FAQ 등록 성공
+QuestionBoundary - makeAFAQ() visited
+FAQController - addToFAQ() visited
+DBBoundary - saveFAQDB() visited
 FAQ 등록 성공
+QuestionBoundary - makeAFAQ() visited
+FAQController - addToFAQ() visited
+DBBoundary - saveFAQDB() visited
 FAQ 등록 성공
+QuestionBoundary - makeAFAQ() visited
+FAQController - addToFAQ() visited
+DBBoundary - saveFAQDB() visited
 FAQ 등록 성공
+FAQController - getFAQList() visited
+DBBoundary - readFAQDB() visited
 FAQ search 성공
 1번 Q: i_can't_find_my_id/ A: we_don't_know
 2번 Q: where-are-you/ A: behind-you

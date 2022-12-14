@@ -1,22 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ApplyTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-12-14T12:20:52" hostname="DESKTOP-29CPMJ4" time="0.015">
+<testsuite name="ApplyTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-12-14T13:03:50" hostname="DESKTOP-29CPMJ4" time="0.015">
   <properties/>
-  <testcase name="UC5-개인이 거절" classname="ApplyTest" time="0.004"/>
+  <testcase name="UC5-개인이 거절" classname="ApplyTest" time="0.005"/>
   <testcase name="UC5-정상" classname="ApplyTest" time="0.003"/>
   <testcase name="UC5-개인이 수락" classname="ApplyTest" time="0.006"/>
-  <system-out><![CDATA[apply saved!
+  <system-out><![CDATA[DBBoundary - saveEnterDB() visited
+DBBoundary - saveEnterDB() visited
+DBBoundary - saveIndiDB() visited
+DBBoundary - saveIndiDB() visited
+DBBoundary - saveApplyDB() visited
 apply saved!
+DBBoundary - saveApplyDB() visited
+apply saved!
+ResumeBoundary - inputResult() visited
+ApplyController - sendResult() visited
+DBBoundary - readApplyDB() visited
 Apply is not accepted!
+DBBoundary - saveEnterDB() visited
+DBBoundary - saveEnterDB() visited
+DBBoundary - saveIndiDB() visited
+DBBoundary - saveIndiDB() visited
+DBBoundary - saveApplyDB() visited
 apply saved!
+DBBoundary - saveApplyDB() visited
 apply saved!
+ResumeBoundary - inputapply() visited
+ApplyController - makeApplytoIndividual() visited
+ApplyController - getApplyList() visited
+DBBoundary - readApplyDB() visited
+DBBoundary - saveApplyDB() visited
 apply saved!
 Apply success!
 Apply id :11
 Apply individualId :aa1234
 Apply enterpriseId :bb1234
+DBBoundary - saveEnterDB() visited
+DBBoundary - saveEnterDB() visited
+DBBoundary - saveIndiDB() visited
+DBBoundary - saveIndiDB() visited
+DBBoundary - saveApplyDB() visited
 apply saved!
+DBBoundary - saveApplyDB() visited
 apply saved!
+ResumeBoundary - inputResult() visited
+ApplyController - sendResult() visited
+DBBoundary - readApplyDB() visited
+DBBoundary - saveWorkHistoryDB() visited
 Apply is accepted!
+DBBoundary - readWorkHistoryDB() visited
 workhistory Individual: aa0000
 workhistory Enterprise: bb0000
 ]]></system-out>

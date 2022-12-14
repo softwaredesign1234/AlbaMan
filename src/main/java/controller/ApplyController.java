@@ -14,11 +14,13 @@ public class ApplyController extends DBBoundary {
     static ArrayList<Apply> applyList=new ArrayList<>();
 
     public static ArrayList<Apply> getApplyList() {
+        System.out.println("ApplyController - getApplyList() visited");
         applyList = readApplyDB();
         return applyList;
     }
     public static Apply makeApplytoIndividual(String individualId,String enterpriseId) throws Exception
     {
+        System.out.println("ApplyController - makeApplytoIndividual() visited");
         int id=getApplyList().size()+1;
 
         Apply apply=new Apply(id,individualId,enterpriseId,0,null);
@@ -39,6 +41,7 @@ public class ApplyController extends DBBoundary {
     //개인->기업 수락여부, 기업->개인 채용여부 return
     public void passOrNot(Apply apply, boolean result)
     {
+        System.out.println("ApplyController - passOrNot() visited");
         applyList.clear();
         applyList = readApplyDB();
         clearDB("Question");
@@ -68,6 +71,7 @@ public class ApplyController extends DBBoundary {
     //오퍼 수락여부 전달
     public static void sendResult(int applyId,Boolean accept)
     {
+        System.out.println("ApplyController - sendResult() visited");
         ArrayList<Apply> arr=readApplyDB();
         Apply apply=arr.stream()
                 .filter(apply1 -> applyId==apply1.getId())
@@ -92,6 +96,7 @@ public class ApplyController extends DBBoundary {
     }
 
     public Apply makeApplytoEnterprise(String individualId, String enterpriseId,int announcementId){
+        System.out.println("ApplyController - makeApplytoEnterprise() visited");
         Apply a = new Apply();
         a.setIndividualId(individualId);
         a.setEnterpriseId(enterpriseId);
@@ -100,13 +105,5 @@ public class ApplyController extends DBBoundary {
         return a;
     }
 
-    public static void main(String[] args) throws Exception{
 
-
-        makeApplytoIndividual("aa1111","bb1111");
-        makeApplytoIndividual("aa0000","bb0000");
-        makeApplytoIndividual("aa1234","bb1234");
-//        deleteApplyDB(2);
-        sendResult(1,true);
-    }
 }

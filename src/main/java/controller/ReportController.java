@@ -18,6 +18,8 @@ public class ReportController extends DBBoundary{
 
     //List<Report>
     public Report findReport(String reportedMemberId){
+        System.out.println("ReportController - findReport() visited");
+
         Report report = new Report();
         for (Report r : readReportDB())
         {
@@ -28,21 +30,28 @@ public class ReportController extends DBBoundary{
         return report;
     }
     public boolean deactivateMember(String reportedMemberId){
+        System.out.println("ReportController - deactivateMember() visited");
+
         System.out.println(reportedMemberId+" member has been blocked");
         return false;
     }
     public IndividualAccount findMemberInfo(IndividualAccount individual){
+        System.out.println("ReportController - findMemberInfo() visited");
+
         System.out.println("Reported Member's Info = ");
         System.out.println(individual.getId()+individual.getAge()+individual.getEmail()+individual.getPhoneNumber());
         return individual;
     }
 
     public void addReport(String memberId, String reportedMemberId,String reportContext){
+        System.out.println("ReportController - addReport() visited");
         Report report = new Report(memberId,reportedMemberId,reportContext);
         saveReportDB(report);
         return;
     }
     public void removeReport(int reportId){
+        System.out.println("ReportController - removeReport() visited");
+
         reportList.clear();
         reportList = readReportDB();
         clearDB("Report");
@@ -59,14 +68,6 @@ public class ReportController extends DBBoundary{
     }
 
 
-    public static void main(String args[]){
-        ReportController reportController = new ReportController();
-        DBBoundary dbBoundary = new DBBoundary();
-        dbBoundary.clearDB("Report");
-        reportController.addReport("1","2","illegal");
-        reportController.addReport("2","1","illegaltoo");
 
-        System.out.println(reportController.findReport("2").getReportContext());
-    }
 
 }

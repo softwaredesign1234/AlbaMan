@@ -11,6 +11,7 @@ public class ReviewBoundary extends DBBoundary {
     public static ReviewController reviewCon;
 
     public static void makeAReview(String individualId, String enterpriseId, String review) {
+        System.out.println("ReviewBoundary - makeAReview() visited");
 
         Boolean result = reviewCon.verifyWorkHistory(individualId, enterpriseId);
 
@@ -23,6 +24,7 @@ public class ReviewBoundary extends DBBoundary {
     }
 
     public static ArrayList<Review> searchAReview(String enterpriseId) {
+        System.out.println("ReviewBoundary - searchAReview() visited");
 
         ArrayList<Review> searchReviewList = reviewCon.readReviewById(enterpriseId);
         return searchReviewList;
