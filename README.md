@@ -8,6 +8,8 @@ Web Service for hiring & recruitment
 - Ubuntu 20.04.4 LTS
 - Gradle 7.4
 - JDK 18
+or
+- window
 
 
 ### Project Settings
@@ -28,6 +30,7 @@ cd AlbaMan
 ### Build
 Builds are run in "~/AlbaMan/" directory
 
+### < In Ubuntu >
 make Gradle Wrapper
 
 ```
@@ -46,8 +49,39 @@ BUILD SUCCESSFUL in 3s
 
 ```
 
+### < In window >
 
-## Test Code
+```
+gradlew
+```
+## How to build testcodes in command line
+
+### < In window >
+
+💡 Please refer to the attached Test Code Reference for class name and method name.
+
+```
+gradlew clean test --test <testcode class name>.<testcode method name> -i
+```
+
+For example,
+If you enter the following command,
+```
+gradlew clean test --tests AccountTest.IndividualSignupSuccess -i
+```
+
+You can see the result of testcode method.
+
+![성공샷](https://user-images.githubusercontent.com/86733856/207590530-61849435-d7d6-4a29-98d8-16c58e08e706.png)
+
+
+
+
+
+--- 
+
+## Test Code Reference
+    <testcode class name> - <testcode method name>
 
 ### AccountTest - IndividualModifyInfoSuccess()
 #### DisplayName : UC6-1. 개인 정상
