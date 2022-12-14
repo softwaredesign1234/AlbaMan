@@ -61,7 +61,7 @@ public class DBBoundary {
     public static void saveEnterDB(EnterpriseAccount enterpriseAccount) {
         ArrayList<String> accountInfo = new ArrayList<>();
         try {
-            File f = new File("src/main/java/Database/EnterpriseAccountDB.txt.txt");
+            File f = new File("src/main/java/Database/EnterpriseAccountDB.txt");
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(f, true));
             accountInfo.add(enterpriseAccount.getId() + " ");
             accountInfo.add(enterpriseAccount.getPassword() + " ");

@@ -97,6 +97,7 @@ public class AccountController extends DBBoundary{
                 .filter(account -> id.equals(account.getId())&&password.equals(account.getPassword()))
                 .findAny()
                 .orElse(null);
+        System.out.println("기업id는 : "+resultEnterprise.getId());
 
 
         return resultEnterprise;

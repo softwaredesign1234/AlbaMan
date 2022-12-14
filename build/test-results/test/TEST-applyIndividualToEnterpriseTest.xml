@@ -1,117 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="applyIndividualToEnterpriseTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-12-14T08:01:25" hostname="DESKTOP-29CPMJ4" time="0.036">
+<testsuite name="applyIndividualToEnterpriseTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-12-14T08:27:46" hostname="DESKTOP-29CPMJ4" time="0.039">
   <properties/>
-  <testcase name="UC11-공고 임금 계산기" classname="applyIndividualToEnterpriseTest" time="0.006"/>
-  <testcase name="UC4-검색결과 없음" classname="applyIndividualToEnterpriseTest" time="0.005"/>
-  <testcase name="UC4-공고기한 만료" classname="applyIndividualToEnterpriseTest" time="0.004"/>
-  <testcase name="UC4-정상" classname="applyIndividualToEnterpriseTest" time="0.011"/>
-  <testcase name="UC4-기업 지원 불합격" classname="applyIndividualToEnterpriseTest" time="0.007"/>
-  <system-out><![CDATA[User making announcement..
-enterpriseId : bb0000...
+  <testcase name="UC11-怨듦퀬 �엫湲� 怨꾩궛湲�" classname="applyIndividualToEnterpriseTest" time="0.007"/>
+  <testcase name="UC4-寃��깋寃곌낵 �뾾�쓬" classname="applyIndividualToEnterpriseTest" time="0.006"/>
+  <testcase name="UC4-怨듦퀬湲고븳 留뚮즺" classname="applyIndividualToEnterpriseTest" time="0.004"/>
+  <testcase name="UC4-�젙�긽" classname="applyIndividualToEnterpriseTest" time="0.011"/>
+  <testcase name="UC4-湲곗뾽 吏��썝 遺덊빀寃�" classname="applyIndividualToEnterpriseTest" time="0.007"/>
+  <system-out><![CDATA[Announcement saved!
 User making announcement..
-enterpriseId : bb0000...
+enterpriseId : bb0000 ... 
+Announcement saved!
 User making announcement..
-enterpriseId : bb0001...
+enterpriseId : bb0000 ... 
+Announcement saved!
 User making announcement..
-enterpriseId : bb0001...
-Announcement List ... 4
+enterpriseId : bb0001 ... 
+Announcement saved!
+User making announcement..
+enterpriseId : bb0001 ... 
+
+-----Announcement List-----
 ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
 ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working days per week : 4
 ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
 ID : 4	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 9000	Working days per week : 4
+
+
 Announcement filtered by ID : 1
-No result has been found
-Announcement List ... 1
+
+-----Announcement List-----
 ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
+
 wage = 2400000 WagePerHour = 12000 Working hours per week = 50
+Announcement saved!
 User making announcement..
-enterpriseId : bb0000...
+enterpriseId : bb0000 ... 
+Announcement saved!
 User making announcement..
-enterpriseId : bb0000...
+enterpriseId : bb0000 ... 
+Announcement saved!
 User making announcement..
-enterpriseId : bb0001...
+enterpriseId : bb0001 ... 
+Announcement saved!
 User making announcement..
-enterpriseId : bb0001...
-Announcement List ... 4
+enterpriseId : bb0001 ... 
+
+-----Announcement List-----
 ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
 ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working days per week : 4
 ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
 ID : 4	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 9000	Working days per week : 4
-Announcement filtered by ID : 5
-No result has been found
-Announcement List ... 1
-ID : 0	EnterpriseId : null	Deadline : null	WagePerHour : 0	Working days per week : 0
+
+
+Announcement filtered by wage : 20000
+No result has been found! Display all announcement
+
+-----Announcement List-----
+ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
+ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working days per week : 4
+ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
+ID : 4	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 9000	Working days per week : 4
+
+Announcement saved!
 User making announcement..
-enterpriseId : bb0000...
+enterpriseId : bb0000 ... 
+Announcement saved!
 User making announcement..
-enterpriseId : bb0000...
+enterpriseId : bb0000 ... 
+Announcement saved!
 User making announcement..
-enterpriseId : bb0001...
+enterpriseId : bb0001 ... 
+Announcement saved!
 User making announcement..
-enterpriseId : bb0001...
+enterpriseId : bb0001 ... 
 Today = 23/1/1 Announcement's deadline : 22/12/31
+
 Delete announcement Id : 1
+Announcement saved!
 User making announcement..
-enterpriseId : bb0000...
+enterpriseId : bb0000 ... 
+Announcement saved!
 User making announcement..
-enterpriseId : bb0000...
+enterpriseId : bb0000 ... 
+Announcement saved!
 User making announcement..
-enterpriseId : bb0001...
+enterpriseId : bb0001 ... 
+Announcement saved!
 User making announcement..
-enterpriseId : bb0001...
-Announcement List ... 4
+enterpriseId : bb0001 ... 
+
+-----Announcement List-----
 ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
 ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working days per week : 4
 ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
 ID : 4	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 9000	Working days per week : 4
+
+
 Announcement filtered by ID : 1
-No result has been found
-Announcement List ... 1
+
+-----Announcement List-----
 ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
-4
+
+
 Announcement filtered by wage : 10000
-Announcement List ... 3
+
+-----Announcement List-----
 ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
 ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working days per week : 4
 ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
+
+
 Announcement filtered by enterprise name : bb0000
-Announcement List ... 2
+
+-----Announcement List-----
 ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
 ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working days per week : 4
+
 Announcement filtered by working days : 5
-No result has been found
-Announcement List ... 4
+
+-----Announcement List-----
 ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
 ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working days per week : 4
 ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
 ID : 4	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 9000	Working days per week : 4
+
+
 Announcement filtered by hours : 48
-Announcement List ... 3
+
+-----Announcement List-----
 ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working days per week : 4
 ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
 ID : 4	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 9000	Working days per week : 4
+
+scrapAnnouncementId() 
 scrapping announcement...
 scrap announcement : 1
+
 Individual User (aa0000) making apply to enterprise (bb0000)
-Add apply to DB..
+apply saved!
+
 Enterprise user make result to apply
 Applying announcement id : 1 
 result : true
+apply saved!
 Passed!
+
 Delete announcement Id : 1
+Announcement saved!
 User making announcement..
-enterpriseId : bb0000...
+enterpriseId : bb0000 ... 
+Announcement saved!
 User making announcement..
-enterpriseId : bb0000...
+enterpriseId : bb0000 ... 
+Announcement saved!
 User making announcement..
-enterpriseId : bb0001...
+enterpriseId : bb0001 ... 
+Announcement saved!
 User making announcement..
-enterpriseId : bb0001...
+enterpriseId : bb0001 ... 
+
 Individual User (aa0000) making apply to enterprise (bb0000)
-Add apply to DB..
+apply saved!
+
 Enterprise user make result to apply
 Applying announcement id : 1 
 result : false
+apply saved!
 Failed..
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>

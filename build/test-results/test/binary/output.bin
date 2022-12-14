@@ -1,26 +1,26 @@
-권한 성공
-#개인회원 정보 수정 성공
-종료
-탈퇴 약관
-개인회원 탈퇴 성공
-권한 성공
-종료
-,이용약관에 대해 안내드립니다.
-권한 실패
-/인증정보를 정확히 입력해주세요.
-탈퇴 약관
-기업회원 탈퇴 성공
-권한 성공
-종료
-,이용약관에 대해 안내드립니다.
-권한 성공
+沅뚰븳 �꽦怨�
+>媛쒖씤�쉶�썝 �젙蹂� �닔�젙 �꽦怨�
+醫낅즺
+�깉�눜 �빟愿�
+1媛쒖씤�쉶�썝 �깉�눜 �꽦怨�
+沅뚰븳 �꽦怨�
+醫낅즺
+P�씠�슜�빟愿��뿉 ���빐 �븞�궡�뱶由쎈땲�떎.
+沅뚰븳 �떎�뙣
+S�씤利앹젙蹂대�� �젙�솗�엳 �엯�젰�빐二쇱꽭�슂.
+�깉�눜 �빟愿�
+1湲곗뾽�쉶�썝 �깉�눜 �꽦怨�
+沅뚰븳 �꽦怨�
+醫낅즺
+P�씠�슜�빟愿��뿉 ���빐 �븞�궡�뱶由쎈땲�떎.
+沅뚰븳 �꽦怨�
 Signup Success!
 your Id: individual
-비밀번호 불일치
-권한 실패
-종료
-,이용약관에 대해 안내드립니다.
-권한 성공
+$鍮꾨�踰덊샇 遺덉씪移�
+沅뚰븳 �떎�뙣
+醫낅즺
+P�씠�슜�빟愿��뿉 ���빐 �븞�궡�뱶由쎈땲�떎.
+沅뚰븳 �꽦怨�
 Signup Success!
 your Id: companyid
 	id : bb1111
@@ -72,13 +72,13 @@
 	name : blueswimming
 	Location : Daegu
 	%--------------modify---------------
-	권한 성공
-	#기업회원 정보 수정 성공
-	종료
+	沅뚰븳 �꽦怨�
+	>湲곗뾽�쉶�썝 �젙蹂� �닔�젙 �꽦怨�
+	醫낅즺
 	--------------------------------------------
-	권한 성공
-	#기업회원 정보 수정 성공
-	종료
+	沅뚰븳 �꽦怨�
+	>湲곗뾽�쉶�썝 �젙蹂� �닔�젙 �꽦怨�
+	醫낅즺
 	&--------------result----------------
 	id : bb1111
 	name : blueswimming
@@ -609,13 +609,13 @@
 	name : steakhouse
 	Location : Seoul
 
-,이용약관에 대해 안내드립니다.
+P�씠�슜�빟愿��뿉 ���빐 �븞�궡�뱶由쎈땲�떎.
 
-권한 실패
+沅뚰븳 �떎�뙣
 
-/인증정보를 정확히 입력해주세요.
-권한 성공
-개인 id는: aa1111
+S�씤利앹젙蹂대�� �젙�솗�엳 �엯�젰�빐二쇱꽭�슂.
+沅뚰븳 �꽦怨�
+媛쒖씤 id�뒗: aa1111
 id : aa0000
 name : janny
 
@@ -625,13 +625,13 @@ Age : 25
 
 Age : 21
 %--------------modify---------------
-권한 성공
-#개인회원 정보 수정 성공
-종료
+沅뚰븳 �꽦怨�
+>媛쒖씤�쉶�썝 �젙蹂� �닔�젙 �꽦怨�
+醫낅즺
 --------------------------------------------
-권한 성공
-#개인회원 정보 수정 성공
-종료
+沅뚰븳 �꽦怨�
+>媛쒖씤�쉶�썝 �젙蹂� �닔�젙 �꽦怨�
+醫낅즺
 &--------------result----------------
 id : aa0000
 name : different_Name
@@ -641,40 +641,48 @@ Age : 25
 name : Tom
 
 Age : 88
-권한 성공
-기업id는 : bb1111
-비밀번호 불일치
-권한 실패
-종료
-권한 실패
-!비밀번호가 틀렸습니다
-비밀번호 불일치
-권한 실패
-종료
-,이용약관에 대해 안내드립니다.
-권한 실패
-E타입은 Individual과 Enterprise 중 하나로 입력해주세요
-,이용약관에 대해 안내드립니다.
-권한 실패
-E타입은 Individual과 Enterprise 중 하나로 입력해주세요
+湲곗뾽id�뒗 : bb1111
+沅뚰븳 �꽦怨�
+湲곗뾽id�뒗 : bb1111
+$鍮꾨�踰덊샇 遺덉씪移�
+沅뚰븳 �떎�뙣
+醫낅즺
+沅뚰븳 �떎�뙣
+9鍮꾨�踰덊샇媛� ���졇�뒿�땲�떎
+$鍮꾨�踰덊샇 遺덉씪移�
+沅뚰븳 �떎�뙣
+醫낅즺
+P�씠�슜�빟愿��뿉 ���빐 �븞�궡�뱶由쎈땲�떎.
+沅뚰븳 �떎�뙣
+l���엯�� Individual怨� Enterprise 以� �븯�굹濡� �엯�젰�빐二쇱꽭�슂
+P�씠�슜�빟愿��뿉 ���빐 �븞�궡�뱶由쎈땲�떎.
+沅뚰븳 �떎�뙣
+l���엯�� Individual怨� Enterprise 以� �븯�굹濡� �엯�젰�빐二쇱꽭�슂
+apply saved!
+apply saved!
 Apply is not accepted!
+apply saved!
+apply saved!
+apply saved!
 Apply success!
 Apply id :11
 Apply individualId :aa1234
 Apply enterpriseId :bb1234
+apply saved!
+apply saved!
 Apply is accepted!
  workhistory Individual: aa0000
  workhistory Enterprise: bb0000
-"FAQ search 실패: FAQ가 없음
-FAQ 등록 성공
-FAQ 등록 성공
-FAQ 등록 성공
-FAQ 등록 성공
-FAQ search 성공
-.1번 Q: i_can't_find_my_id/ A: we_don't_know
-&2번 Q: where-are-you/ A: behind-you
-.3번 Q: i_can't_find_my_id/ A: we_don't_know
-&4번 Q: where-are-you/ A: behind-you
+1FAQ search �떎�뙣: FAQ媛� �뾾�쓬
+FAQ �벑濡� �꽦怨�
+FAQ �벑濡� �꽦怨�
+FAQ �벑濡� �꽦怨�
+FAQ �벑濡� �꽦怨�
+FAQ search �꽦怨�
+11踰� Q: i_can't_find_my_id/ A: we_don't_know
+)2踰� Q: where-are-you/ A: behind-you
+13踰� Q: i_can't_find_my_id/ A: we_don't_know
+)4踰� Q: where-are-you/ A: behind-you
 Contract Email : 01051111111
  Contract number : 11@naver.com
 Input your question
@@ -685,13 +693,14 @@ Age : 88
 *User Input Report Context = SpamContents
 ]reportID : 1 reportMemberID : aa0000 reportedMemberID : aa1111 ReportContext : SpamContents
 Judgement = true
+Remove report id : 1
  *User Input Report Context = SpamContents
  ]reportID : 1 reportMemberID : aa0000 reportedMemberID : aa1111 ReportContext : SpamContents
  Judgement = true
  Reported Member's Info = 
  'aa111123aa1111@naver.com010-1111-1111
   aa1111 member has been blocked
- #개인회원 정보 수정 성공
+ >媛쒖씤�쉶�썝 �젙蹂� �닔�젙 �꽦怨�
 "!Success find resume
 "!resumeId: 2
 "!'resumeSelfIntroduction: pleaseHireMe!
@@ -716,319 +725,445 @@ Age : 88
 "#!Resume selfIntroduction: hello!
 "#Resume workExperience: 5year
 "#Resume isOpen: true
-%$1workhistory 확인 완료: 리뷰 권한 성공
-%$리뷰 작성 성공
-%$1workhistory 확인 완료: 리뷰 권한 성공
-%$리뷰 작성 성공
-%$1workhistory 확인 완료: 리뷰 권한 성공
-%$리뷰 작성 성공
-%$1workhistory 확인 완료: 리뷰 권한 성공
-%$리뷰 작성 성공
+%$Hworkhistory �솗�씤 �셿猷�: 由щ럭 沅뚰븳 �꽦怨�
+%$$由щ럭 �옉�꽦 �꽦怨�
+%$Hworkhistory �솗�씤 �셿猷�: 由щ럭 沅뚰븳 �꽦怨�
+%$$由щ럭 �옉�꽦 �꽦怨�
+%$Hworkhistory �솗�씤 �셿猷�: 由щ럭 沅뚰븳 �꽦怨�
+%$$由щ럭 �옉�꽦 �꽦怨�
+%$Hworkhistory �솗�씤 �셿猷�: 由щ럭 沅뚰븳 �꽦怨�
+%$$由щ럭 �옉�꽦 �꽦怨�
 %$--------------------------
-%$리뷰 검색 성공
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
+%$$由щ럭 寃��깋 �꽦怨�
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
 %$--------------------------
-%$리뷰 검색 성공
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%$기업 id: bb0000
-%$리뷰 내용: 1234
-%&1workhistory 확인 실패: 리뷰 권한 실패
-%&%리뷰 작성 실패: 권한 없음
-%'1workhistory 확인 완료: 리뷰 권한 성공
-%'리뷰 작성 성공
-%'1workhistory 확인 완료: 리뷰 권한 성공
-%'리뷰 작성 성공
-%'1workhistory 확인 완료: 리뷰 권한 성공
-%'리뷰 작성 성공
-%'1workhistory 확인 완료: 리뷰 권한 성공
-%'리뷰 작성 성공
+%$$由щ럭 寃��깋 �꽦怨�
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%$湲곗뾽 id: bb0000
+%$由щ럭 �궡�슜: 1234
+%&Hworkhistory �솗�씤 �떎�뙣: 由щ럭 沅뚰븳 �떎�뙣
+%&<由щ럭 �옉�꽦 �떎�뙣: 沅뚰븳 �뾾�쓬
+%'Hworkhistory �솗�씤 �셿猷�: 由щ럭 沅뚰븳 �꽦怨�
+%'$由щ럭 �옉�꽦 �꽦怨�
+%'Hworkhistory �솗�씤 �셿猷�: 由щ럭 沅뚰븳 �꽦怨�
+%'$由щ럭 �옉�꽦 �꽦怨�
+%'Hworkhistory �솗�씤 �셿猷�: 由щ럭 沅뚰븳 �꽦怨�
+%'$由щ럭 �옉�꽦 �꽦怨�
+%'Hworkhistory �솗�씤 �셿猷�: 由щ럭 沅뚰븳 �꽦怨�
+%'$由щ럭 �옉�꽦 �꽦怨�
 %'--------------------------
-%'검색 결과 없음
-%(1workhistory 확인 완료: 리뷰 권한 성공
-%(리뷰 작성 성공
-%(1workhistory 확인 완료: 리뷰 권한 성공
-%(리뷰 작성 성공
-%(1workhistory 확인 완료: 리뷰 권한 성공
-%(리뷰 작성 성공
-%(1workhistory 확인 완료: 리뷰 권한 성공
-%(리뷰 작성 성공
+%'%寃��깋 寃곌낵 �뾾�쓬
+%(Hworkhistory �솗�씤 �셿猷�: 由щ럭 沅뚰븳 �꽦怨�
+%($由щ럭 �옉�꽦 �꽦怨�
+%(Hworkhistory �솗�씤 �셿猷�: 由щ럭 沅뚰븳 �꽦怨�
+%($由щ럭 �옉�꽦 �꽦怨�
+%(Hworkhistory �솗�씤 �셿猷�: 由щ럭 沅뚰븳 �꽦怨�
+%($由щ럭 �옉�꽦 �꽦怨�
+%(Hworkhistory �솗�씤 �셿猷�: 由щ럭 沅뚰븳 �꽦怨�
+%($由щ럭 �옉�꽦 �꽦怨�
+*)Announcement saved!
 *)User making announcement..
-*)enterpriseId : bb0000...
+*)enterpriseId : bb0000 ... 
+*)Announcement saved!
 *)User making announcement..
-*)enterpriseId : bb0000...
+*)enterpriseId : bb0000 ... 
+*)Announcement saved!
 *)User making announcement..
-*)enterpriseId : bb0001...
+*)enterpriseId : bb0001 ... 
+*)Announcement saved!
 *)User making announcement..
-*)enterpriseId : bb0001...
-*)Announcement List ... 4
+*)enterpriseId : bb0001 ... 
+*)
+*)-----Announcement List-----
 *)`ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
 *)`ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working days per week : 4
 *)`ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
 *)_ID : 4	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 9000	Working days per week : 4
+*)
+*)
 *)!Announcement filtered by ID : 1
-*)No result has been found
-*)Announcement List ... 1
+*)
+*)-----Announcement List-----
 *)`ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
+*)
 *)@wage = 2400000 WagePerHour = 12000 Working hours per week = 50
+*+Announcement saved!
 *+User making announcement..
-*+enterpriseId : bb0000...
+*+enterpriseId : bb0000 ... 
+*+Announcement saved!
 *+User making announcement..
-*+enterpriseId : bb0000...
+*+enterpriseId : bb0000 ... 
+*+Announcement saved!
 *+User making announcement..
-*+enterpriseId : bb0001...
+*+enterpriseId : bb0001 ... 
+*+Announcement saved!
 *+User making announcement..
-*+enterpriseId : bb0001...
-*+Announcement List ... 4
+*+enterpriseId : bb0001 ... 
+*+
+*+-----Announcement List-----
 *+`ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
 *+`ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working days per week : 4
 *+`ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
 *+_ID : 4	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 9000	Working days per week : 4
-*+!Announcement filtered by ID : 5
-*+No result has been found
-*+Announcement List ... 1
-*+VID : 0	EnterpriseId : null	Deadline : null	WagePerHour : 0	Working days per week : 0
+*+
+*+
+*+'Announcement filtered by wage : 20000
+*+4No result has been found! Display all announcement
+*+
+*+-----Announcement List-----
+*+`ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
+*+`ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working days per week : 4
+*+`ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
+*+_ID : 4	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 9000	Working days per week : 4
+*+
+*,Announcement saved!
 *,User making announcement..
-*,enterpriseId : bb0000...
+*,enterpriseId : bb0000 ... 
+*,Announcement saved!
 *,User making announcement..
-*,enterpriseId : bb0000...
+*,enterpriseId : bb0000 ... 
+*,Announcement saved!
 *,User making announcement..
-*,enterpriseId : bb0001...
+*,enterpriseId : bb0001 ... 
+*,Announcement saved!
 *,User making announcement..
-*,enterpriseId : bb0001...
+*,enterpriseId : bb0001 ... 
 *,3Today = 23/1/1 Announcement's deadline : 22/12/31
+*,
 *,Delete announcement Id : 1
+*-Announcement saved!
 *-User making announcement..
-*-enterpriseId : bb0000...
+*-enterpriseId : bb0000 ... 
+*-Announcement saved!
 *-User making announcement..
-*-enterpriseId : bb0000...
+*-enterpriseId : bb0000 ... 
+*-Announcement saved!
 *-User making announcement..
-*-enterpriseId : bb0001...
+*-enterpriseId : bb0001 ... 
+*-Announcement saved!
 *-User making announcement..
-*-enterpriseId : bb0001...
-*-Announcement List ... 4
+*-enterpriseId : bb0001 ... 
+*-
+*------Announcement List-----
 *-`ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
 *-`ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working days per week : 4
 *-`ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
 *-_ID : 4	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 9000	Working days per week : 4
+*-
+*-
 *-!Announcement filtered by ID : 1
-*-No result has been found
-*-Announcement List ... 1
+*-
+*------Announcement List-----
 *-`ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
-*-4
+*-
+*-
 *-'Announcement filtered by wage : 10000
-*-Announcement List ... 3
+*-
+*------Announcement List-----
 *-`ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
 *-`ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working days per week : 4
 *-`ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
+*-
+*-
 *-3Announcement filtered by enterprise name : bb0000
-*-Announcement List ... 2
+*-
+*------Announcement List-----
 *-`ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
 *-`ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working days per week : 4
+*-
 *-+Announcement filtered by working days : 5
-*-No result has been found
-*-Announcement List ... 4
+*-
+*------Announcement List-----
 *-`ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
 *-`ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working days per week : 4
 *-`ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
 *-_ID : 4	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 9000	Working days per week : 4
+*-
+*-
 *-%Announcement filtered by hours : 48
-*-Announcement List ... 3
+*-
+*------Announcement List-----
 *-`ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working days per week : 4
 *-`ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
 *-_ID : 4	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 9000	Working days per week : 4
+*-
+*-scrapAnnouncementId() 
 *-scrapping announcement...
 *-scrap announcement : 1
+*-
 *->Individual User (aa0000) making apply to enterprise (bb0000)
-*-Add apply to DB..
+*-apply saved!
+*-
 *-%Enterprise user make result to apply
 *-Applying announcement id : 1 
 *-result : true
+*-apply saved!
 *-	Passed!
+*-
 *-Delete announcement Id : 1
+*.Announcement saved!
 *.User making announcement..
-*.enterpriseId : bb0000...
+*.enterpriseId : bb0000 ... 
+*.Announcement saved!
 *.User making announcement..
-*.enterpriseId : bb0000...
+*.enterpriseId : bb0000 ... 
+*.Announcement saved!
 *.User making announcement..
-*.enterpriseId : bb0001...
+*.enterpriseId : bb0001 ... 
+*.Announcement saved!
 *.User making announcement..
-*.enterpriseId : bb0001...
+*.enterpriseId : bb0001 ... 
+*.
 *.>Individual User (aa0000) making apply to enterprise (bb0000)
-*.Add apply to DB..
+*.apply saved!
+*.
 *.%Enterprise user make result to apply
 *.Applying announcement id : 1 
 *.result : false
+*.apply saved!
 *.
 Failed..

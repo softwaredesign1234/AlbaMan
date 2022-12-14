@@ -1,0 +1,6 @@
+bb0000 0000 000-00-00000 053-222-2222 Daegu steakhouse true true Enterprise
+bb1111 1111 111-11-11111 053-333-3333 Daegu blueswimming true true Enterprise
+bb0000 0000 000-00-00000 053-222-2222 Daegu steakhouse true true Enterprise
+bb1111 1111 111-11-11111 053-333-3333 Daegu blueswimming true true Enterprise
+bb0000 0000 000-00-00000 053-222-2222 Daegu steakhouse true true Enterprise
+bb1111 1111 111-11-11111 053-333-3333 Daegu blueswimming true true Enterprise

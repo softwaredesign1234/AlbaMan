@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="FAQTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-12-14T08:01:25" hostname="DESKTOP-29CPMJ4" time="0.008">
+<testsuite name="FAQTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-12-14T08:27:46" hostname="DESKTOP-29CPMJ4" time="0.007">
   <properties/>
-  <testcase name="UC9-FAQ 없음 조회 실패" classname="FAQTest" time="0.003"/>
-  <testcase name="UC9-FAQ 등록 정상" classname="FAQTest" time="0.002"/>
-  <testcase name="UC9-FAQ 조회 정상" classname="FAQTest" time="0.002"/>
-  <system-out><![CDATA[FAQ search 실패: FAQ가 없음
-FAQ 등록 성공
-FAQ 등록 성공
-FAQ 등록 성공
-FAQ 등록 성공
-FAQ search 성공
-1번 Q: i_can't_find_my_id/ A: we_don't_know
-2번 Q: where-are-you/ A: behind-you
-3번 Q: i_can't_find_my_id/ A: we_don't_know
-4번 Q: where-are-you/ A: behind-you
+  <testcase name="UC9-FAQ �뾾�쓬 議고쉶 �떎�뙣" classname="FAQTest" time="0.002"/>
+  <testcase name="UC9-FAQ �벑濡� �젙�긽" classname="FAQTest" time="0.002"/>
+  <testcase name="UC9-FAQ 議고쉶 �젙�긽" classname="FAQTest" time="0.003"/>
+  <system-out><![CDATA[FAQ search �떎�뙣: FAQ媛� �뾾�쓬
+FAQ �벑濡� �꽦怨�
+FAQ �벑濡� �꽦怨�
+FAQ �벑濡� �꽦怨�
+FAQ �벑濡� �꽦怨�
+FAQ search �꽦怨�
+1踰� Q: i_can't_find_my_id/ A: we_don't_know
+2踰� Q: where-are-you/ A: behind-you
+3踰� Q: i_can't_find_my_id/ A: we_don't_know
+4踰� Q: where-are-you/ A: behind-you
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
