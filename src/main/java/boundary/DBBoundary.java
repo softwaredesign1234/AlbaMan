@@ -544,7 +544,7 @@ public class DBBoundary {
     }
 
     public ArrayList<Question> readQuestionDB() {
-
+        questionList.clear();
         try {
             File f = new File("src/main/java/Database/QuestionDB.txt");
             BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
@@ -569,7 +569,7 @@ public class DBBoundary {
     }
 
     public ArrayList<Report> readReportDB() {
-
+        reportList.clear();
         try {
             File f = new File("src/main/java/Database/ReportDB.txt");
             BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
@@ -594,7 +594,7 @@ public class DBBoundary {
     }
 
     public ArrayList<Announcement> readAnnouncementDB() {
-
+        announcementList.clear();
         try {
             File f = new File("src/main/java/Database/AnnouncementDB.txt");
             BufferedReader bufferedReader = new BufferedReader(new FileReader(f));
