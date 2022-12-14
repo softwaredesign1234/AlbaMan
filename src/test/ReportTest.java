@@ -24,17 +24,19 @@ public class ReportTest {
     ReportBoundary reportBoundary = new ReportBoundary();
 
     IndividualAccount a1 = new IndividualAccount("aa0000@naver.com","010-0000-0000",25,"F","aa0000","0000","janny",true,true,"Individual");
-    IndividualAccount a2 = new IndividualAccount("aa1111@naver.com","010-1111-1111",23,"M","1","1111","mo",true,true,"Individual");
+    IndividualAccount a2 = new IndividualAccount("aa1111@naver.com","010-1111-1111",23,"M","aa1111","1111","mo",true,true,"Individual");
     ArrayList<IndividualAccount> individualList = new ArrayList<>();
 
     @BeforeEach
     void setting(){
+
         dbBoundary.clearDB("Report");
+
     }
     @Test
     public void addReport() {
-
         String judgement = "";
+        boolean isActive;
         String reportContext = reportBoundary.inputReport();
         Report r = new Report(a1.getId(),a2.getId(),reportContext);
         r.setId(1);
@@ -46,7 +48,8 @@ public class ReportTest {
 
 
         individual = reportController.findMemberInfo(a2);
-        individual.setIsActive(reportController.deactivateMember(a2.getId()));
+        isActive = reportController.deactivateMember(individual.getId());
+        accountController.modifyIndividualAccountInfo(individual.getId(),9,"isActive");
 
     }
 

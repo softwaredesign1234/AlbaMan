@@ -19,6 +19,7 @@ public class ApplyController extends DBBoundary{
     }
     //개인->기업
     public Apply makeApplytoEnterprise(String individualId, String enterpriseId,int announcementId){
+        System.out.println("Add apply to DB..");
         Apply a = new Apply();
         a.setIndividualId(individualId);
         a.setEnterpriseId(enterpriseId);
@@ -29,13 +30,13 @@ public class ApplyController extends DBBoundary{
 
 
     //개인->기업 수락여부, 기업->개인 채용여부 return
-    public void passOrNot(int applyId, boolean result)
+    public void passOrNot(Apply apply, boolean result)
     {
         applyList.clear();
         applyList = readApplyDB();
         clearDB("Question");
         for (Apply a : applyList){
-            if (a.getId() == applyId) {
+            if (a.getId() == apply.getId()) {
                 apply = a;
                 a.setPassOrFail(result);
                 saveApplyDB(a);
@@ -45,8 +46,12 @@ public class ApplyController extends DBBoundary{
             }
         }
         if(result == true){
+            System.out.println("Passed!");
             Workhistory workhistory = new Workhistory(apply.getEnterpriseId(),apply.getIndividualId());
             saveWorkHistoryDB(workhistory);
+        }
+        else{
+            System.out.println("Failed..");
         }
         return;
     }
@@ -75,7 +80,6 @@ public class ApplyController extends DBBoundary{
             DBBoundary dbBoundary = new DBBoundary();
             dbBoundary.clearDB("Apply");
             applyController.makeApplytoIndividual("mo", "kakao", 1);
-            applyController.passOrNot(1,true);
 
 
         }catch(Exception e){

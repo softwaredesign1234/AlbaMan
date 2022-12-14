@@ -24,27 +24,26 @@ public class AnnouncementController extends DBBoundary {
         announcement.setWorkingDaysPerWeek(workingDaysPerWeek);
         announcement.setDeadline(deadline);
         saveAnnouncementDB(announcement);
-        return;
     }
 
     public void scrapAnnouncement(String individualId,Announcement announcement)
     {
+        System.out.println("scrap announcement : "+announcement.getId());
         saveScrapDB(individualId,announcement);
         return;
     }
 
-    public void deleteAnnouncement(int AnnouncementId){
+    public void deleteAnnouncement(int announcementId){
+        System.out.println("Delete announcement Id : "+ announcementId);
         return;
     }
-    public int CalculatedWage(int announcementId){
+    public int CalculatedWage(Announcement a){
         int wage = 0;
         announcementList.clear();
         announcementList = readAnnouncementDB();
-        for (Announcement a : announcementList){
-            if(a.getId() == announcementId) {
-                wage = a.getWagePerHour() * a.getWorkingHourPerWeek() * 4;
-            }
-        }
+
+        wage = a.getWagePerHour() * a.getWorkingHourPerWeek() * 4;
+        System.out.println("wage = "+wage+" WagePerHour = "+a.getWagePerHour()+" Working hours per week = "+a.getWorkingHourPerWeek());
         return wage;
     }
     public IndividualAccount getIndividual(String individualId)
@@ -57,68 +56,82 @@ public class AnnouncementController extends DBBoundary {
         return individualAccounts;
     }
     //공고 id로 조회하기 (원하는 하나의 공고 조회)
-    public Announcement readAnnouncementById(int announcementId)
+    public ArrayList<Announcement> readAnnouncementById(int announcementId)
     {
         Announcement announcement = new Announcement();
+        boolean find = false;
         announcementList.clear();
         announcementList = readAnnouncementDB();
         for (Announcement a : announcementList){
             if(a.getId() == announcementId) {
                 announcement = a;
+                find = true;
             }
         }
-        return announcement;
+        announcementList.clear();
+        announcementList.add(announcement);
+        System.out.println("Announcement filtered by ID : "+announcementId);
+        return validateList(announcementList);
     }
 
 
     //회사 이름으로 조회하기
     public ArrayList<Announcement> readAnnouncementByName(String enterpriseName)
     {
+        ArrayList<Announcement> a1 = new ArrayList<>();
         announcementList.clear();
         for (Announcement a : readAnnouncementDB()){
             if(a.getEnterpriseId().equals(enterpriseName)) {
-                announcementList.add(a);
+                a1.add(a);
             }
         }
-        return validateList(announcementList);
+        System.out.println("Announcement filtered by enterprise name : "+enterpriseName);
+        return a1;
     }
 
     //시급으로 조회하기
     public ArrayList<Announcement> readAnnouncementByWage(int wage)
     {
+        ArrayList<Announcement> a1 = new ArrayList<>();
         announcementList.clear();
         announcementList = getAnnouncementList();
+        System.out.println(announcementList.size());
         for (Announcement a : announcementList){
             if(a.getWagePerHour() >= wage) {
-                announcementList.add(a);
+                a1.add(a);
             }
         }
-        return validateList(announcementList);
+        System.out.println("Announcement filtered by wage : "+wage);
+        return a1;
     }
 
     //주시간으로 조회하기
     public ArrayList<Announcement> readAnnouncementByHours(int hours)
     {
+        ArrayList<Announcement> a1 = new ArrayList<>();
         announcementList.clear();
         announcementList = getAnnouncementList();
         for (Announcement a : announcementList){
             if(a.getWorkingHourPerWeek() <= hours) {
-                announcementList.add(a);
+                a1.add(a);
             }
         }
-        return validateList(announcementList);
+        System.out.println("Announcement filtered by hours : "+hours);
+        return a1;
     }
 
     //주 근무일수로 조회하기
     public ArrayList<Announcement> readAnnouncementByDays(int days)
     {
+        ArrayList<Announcement> a1 = new ArrayList<>();
         announcementList.clear();
         for (Announcement a : readAnnouncementDB()){
-            if(a.getWorkingHourPerWeek() <= days) {
-                announcementList.add(a);
+            if(a.getWorkingDaysPerWeek() <= days) {
+                a1.add(a);
             }
         }
-        return validateList(announcementList);
+        System.out.println("Announcement filtered by working days : "+days);
+        return validateList(a1);
     }
 
 
@@ -132,8 +145,11 @@ public class AnnouncementController extends DBBoundary {
     private ArrayList<Announcement> validateList(ArrayList<Announcement> a){
         if (a.size() == 0)
             return getAnnouncementList();
-        else
+        else{
+            System.out.println("No result has been found");
             return a;
+        }
+
     }
 
     public static void main(String args[]){
@@ -147,7 +163,6 @@ public class AnnouncementController extends DBBoundary {
             for(Announcement a1 : a.getAnnouncementList()){
                 System.out.println(a1.getEnterpriseId());
             }
-            System.out.println(a.CalculatedWage(1));
 
             for(Announcement a2 : a.readAnnouncementByName("kakao")){
                 System.out.println(a2.getEnterpriseId());
@@ -173,6 +188,8 @@ public class AnnouncementController extends DBBoundary {
         }
     }
     public boolean deadlinePassed(String today, Announcement a){
+        boolean timePassed = false;
+        System.out.println("Today = "+today+" Announcement's deadline : "+a.getDeadline());
         String target = a.getDeadline();
         String[] todayTime = today.split("/");
         String[] targetTime = target.split("/");
@@ -183,12 +200,16 @@ public class AnnouncementController extends DBBoundary {
             targetTimeInt[i] = Integer.parseInt(targetTime[i]);
         }
         if(todayTimeInt[0] > targetTimeInt[0])
-            return true;
+            timePassed = true;
         else if(todayTimeInt[1] > targetTimeInt[1])
-            return true;
+            timePassed = true;
         else if(todayTimeInt[2] > targetTimeInt[2])
-            return true;
+            timePassed = true;
         else
-            return false;
+            timePassed = false;
+        if(timePassed)
+            deleteAnnouncement(a.getId());
+
+        return timePassed;
     }
 }

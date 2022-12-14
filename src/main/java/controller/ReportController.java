@@ -28,9 +28,12 @@ public class ReportController extends DBBoundary{
         return report;
     }
     public boolean deactivateMember(String reportedMemberId){
+        System.out.println(reportedMemberId+" member has been blocked");
         return false;
     }
     public IndividualAccount findMemberInfo(IndividualAccount individual){
+        System.out.println("Reported Member's Info = ");
+        System.out.println(individual.getId()+individual.getAge()+individual.getEmail()+individual.getPhoneNumber());
         return individual;
     }
 
