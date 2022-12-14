@@ -57,7 +57,7 @@ gradlew
 ## How to build testcodes in command line
 
 
-💡 Please refer to the attached Test Code Reference for class name and method name under this section.
+💡 Please refer to the attached 'Test Code Reference' for class name and method name under this section.
 
 ### < In Ubuntu >
 
