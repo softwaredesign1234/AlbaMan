@@ -34,7 +34,7 @@ public class AnnouncementController extends DBBoundary {
     }
 
     public void deleteAnnouncement(int announcementId){
-        System.out.println("Delete announcement Id : "+ announcementId);
+        System.out.println("\nDelete announcement Id : "+ announcementId);
         return;
     }
     public int CalculatedWage(Announcement a){
@@ -70,8 +70,8 @@ public class AnnouncementController extends DBBoundary {
         }
         announcementList.clear();
         announcementList.add(announcement);
-        System.out.println("Announcement filtered by ID : "+announcementId);
-        return validateList(announcementList);
+        System.out.println("\nAnnouncement filtered by ID : "+announcementId);
+        return announcementList;
     }
 
 
@@ -85,8 +85,8 @@ public class AnnouncementController extends DBBoundary {
                 a1.add(a);
             }
         }
-        System.out.println("Announcement filtered by enterprise name : "+enterpriseName);
-        return a1;
+        System.out.println("\nAnnouncement filtered by enterprise name : "+enterpriseName);
+        return validateList(a1);
     }
 
     //시급으로 조회하기
@@ -95,14 +95,13 @@ public class AnnouncementController extends DBBoundary {
         ArrayList<Announcement> a1 = new ArrayList<>();
         announcementList.clear();
         announcementList = getAnnouncementList();
-        System.out.println(announcementList.size());
         for (Announcement a : announcementList){
             if(a.getWagePerHour() >= wage) {
                 a1.add(a);
             }
         }
-        System.out.println("Announcement filtered by wage : "+wage);
-        return a1;
+        System.out.println("\nAnnouncement filtered by wage : "+wage);
+        return validateList(a1);
     }
 
     //주시간으로 조회하기
@@ -116,8 +115,8 @@ public class AnnouncementController extends DBBoundary {
                 a1.add(a);
             }
         }
-        System.out.println("Announcement filtered by hours : "+hours);
-        return a1;
+        System.out.println("\nAnnouncement filtered by hours : "+hours);
+        return validateList(a1);
     }
 
     //주 근무일수로 조회하기
@@ -143,10 +142,11 @@ public class AnnouncementController extends DBBoundary {
     }
 
     private ArrayList<Announcement> validateList(ArrayList<Announcement> a){
-        if (a.size() == 0)
+        if (a.size() == 0){
+            System.out.println("No result has been found! Display all announcement");
             return getAnnouncementList();
+        }
         else{
-            System.out.println("No result has been found");
             return a;
         }
 

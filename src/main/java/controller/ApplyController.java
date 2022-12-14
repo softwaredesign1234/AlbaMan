@@ -91,7 +91,6 @@ public class ApplyController extends DBBoundary {
     }
 
     public Apply makeApplytoEnterprise(String individualId, String enterpriseId,int announcementId){
-        System.out.println("Add apply to DB..");
         Apply a = new Apply();
         a.setIndividualId(individualId);
         a.setEnterpriseId(enterpriseId);

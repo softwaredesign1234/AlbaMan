@@ -54,6 +54,7 @@ public class ReportController extends DBBoundary{
                 saveReportDB(r);
             }
         }
+        System.out.println("Remove report id : "+reportId);
         return;
     }
 

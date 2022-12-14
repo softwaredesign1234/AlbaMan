@@ -51,6 +51,7 @@ public class applyIndividualToEnterpriseTest {
             b.setId(2);
             c.setId(3);
             d.setId(4);
+
         }catch (Exception e){
 
         }
@@ -90,7 +91,7 @@ public class applyIndividualToEnterpriseTest {
             try {
                 Apply apply;
                 apply = announcementBoundary.inputApplyToEnterprise(a1.getId(), e1.getId(), a.getId());
-                announcementBoundary.inputPassOrFail(apply,true);
+                announcementBoundary.inputPassOrNot(apply,true);
             }catch (Exception e) {
 
             }
@@ -107,7 +108,7 @@ public class applyIndividualToEnterpriseTest {
         announcementBoundary.showAnnouncement(announcementList1);
 
         announcementList1.clear();
-        announcementList1 = announcementController.readAnnouncementById(5);
+        announcementList1 = announcementController.readAnnouncementByWage(20000);
         announcementBoundary.showAnnouncement(announcementList1);
     }
 
@@ -117,7 +118,7 @@ public class applyIndividualToEnterpriseTest {
         try {
             Apply apply;
             apply = announcementBoundary.inputApplyToEnterprise(a1.getId(), e1.getId(), a.getId());
-            announcementBoundary.inputPassOrFail(apply,false);
+            announcementBoundary.inputPassOrNot(apply,false);
         }catch (Exception e){
 
         }
