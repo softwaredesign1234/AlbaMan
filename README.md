@@ -31,7 +31,7 @@ cd AlbaMan
 ### Build
 - Builds are run in "~/AlbaMan/" directory
 
-### <In Ubuntu>
+### < In Ubuntu >
 make Gradle Wrapper
 
 ```
@@ -50,7 +50,7 @@ BUILD SUCCESSFUL in 3s
 
 ```
 
-### <In window>
+### < In window >
 
 ```
 gradlew
@@ -102,13 +102,15 @@ BUILD SUCCESSFUL in 3s
     
 ## How to build testcode in command line
 
-### <In window>
+### < In window >
+
+💡Please refer to the attached test code documentation for class name.
 
 ```
 gradlew clean test --test <testcode class name>.<testcode method name> -i
 ```
 
-💡Please refer to the attached test code documentation for class name.
+for example
 
 ```
 ex) gradlew clean test --tests AccountTest.IndividualSignupSuccess -i
