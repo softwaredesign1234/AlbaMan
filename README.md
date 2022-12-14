@@ -8,6 +8,7 @@ Web Service for hiring & recruitment
 - Ubuntu 20.04.4 LTS
 - Gradle 7.4
 - JDK 18
+
 or
 - window
 
