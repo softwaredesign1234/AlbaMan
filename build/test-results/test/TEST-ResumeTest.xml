@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ResumeTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-12-14T03:35:50" hostname="DESKTOP-29CPMJ4" time="0.063">
+  <properties/>
+  <testcase name="UC5-이력서 조회" classname="ResumeTest" time="0.018"/>
+  <testcase name="UC5-이력서 작성" classname="ResumeTest" time="0.043"/>
+  <system-out><![CDATA[기업계정 저장 성공
+기업계정 저장 성공
+개인계정 저장 성공
+개인계정 저장 성공
+Success find resume
+resumeId: 2
+resumeSelfIntroduction: pleaseHireMe!
+resumeWorkExperience: 0year
+resumeIsOpened: true
+resumeIndividualId: aa0000
+기업계정 저장 성공
+기업계정 저장 성공
+개인계정 저장 성공
+개인계정 저장 성공
+Resume Succefully saved!
+Resume Id: 1
+Resume Owner(Individual) Id: aa1111
+Resume selfIntroduction: mynameisaa
+Resume workExperience: 1-2years
+Resume isOpen: false
+Resume Succefully saved!
+Resume Id: 2
+Resume Owner(Individual) Id: aa0000
+Resume selfIntroduction: pleaseHireMe!
+Resume workExperience: 0year
+Resume isOpen: true
+Resume Succefully saved!
+Resume Id: 3
+Resume Owner(Individual) Id: aa1234
+Resume selfIntroduction: hello!
+Resume workExperience: 5year
+Resume isOpen: true
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

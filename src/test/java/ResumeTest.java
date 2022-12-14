@@ -35,7 +35,7 @@ public class ResumeTest extends DBBoundary {
     }
 
     @Test
-    @DisplayName("이력서 작성")
+    @DisplayName("UC5-이력서 작성")
     void saveResume() throws Exception {
 
         Resume resume=resumeBoundary.inputResume("aa1111","mynameisaa","1-2years",false);
@@ -48,7 +48,7 @@ public class ResumeTest extends DBBoundary {
     }
 
     @Test
-    @DisplayName("이력서 조회")
+    @DisplayName("UC5-이력서 조회")
     void readResume()
     {
         Resume resume=resumeBoundary.showResume(2);

@@ -20,7 +20,8 @@ public class AccountBoundary {
     }
 
 
-    public static String inputValidationInput(String type, String info) {
+    public static String inputValidationInput(String type, String info)
+    {
         //SEQ1: 회원가입 전 액터가 인증정보 입력 (Loop 첫단계)
 
         Boolean isvalid = false;
@@ -30,8 +31,11 @@ public class AccountBoundary {
             isvalid = accountController.isValidate(type, info);
         } else if (type.equals("Enterprise")) {
             isvalid = accountController.isValidate(type, info);
-        }else
+        }else{
+            System.out.println("타입은 Individual과 Enterprise 중 하나로 입력해주세요");
             return "타입은 Individual과 Enterprise 중 하나로 입력해주세요";
+        }
+
 
         if(isvalid == true)
             return permission(true);
@@ -99,6 +103,85 @@ public class AccountBoundary {
         }
 
     }
+    public static void modifyIndividualInfo(String id, String password, int infoType, String modifiedInfo) {
+
+        ArrayList<IndividualAccount> iAccounts = accountController.getIndividualAccounts();
+
+        Boolean result = AccountController.verifyPassword("Individual", id, password);
+        String message = permission(result);
+
+        if (result == true) {
+            System.out.println(message);
+            AccountController.modifyIndividualAccountInfo(id, infoType, modifiedInfo);
+            System.out.println(showResultMessage());
+        }
+        else {
+            System.out.println(message);
+            System.out.println(showResultMessage());
+        }
+
+    }
+
+    public static void modifyEnterpriseInfo(String id, String password, int infoType, String modifiedInfo) {
+
+        ArrayList<EnterpriseAccount> eAccounts = accountController.getEnterpriseAccounts();
+
+        Boolean result = accountController.verifyPassword("Enterprise", id, password);
+        String message = permission(result);
+
+        if (result == true) {
+            System.out.println(message);
+            accountController.modifyEnterpriseAccountInfo(id, infoType, modifiedInfo);
+            System.out.println(showResultMessage());
+        }
+        else {
+            System.out.println(message);
+            System.out.println(showResultMessage());
+        }
+    }
+
+    public static void withdrawAccount(String type, String id, String password) {
+
+        if (type.equals("Individual")) {
+            ArrayList<IndividualAccount> iAccounts = AccountController.getIndividualAccounts();
+
+            Boolean result = AccountController.verifyPassword("Individual", id, password);
+            String message = permission(result);
+
+            if (result == true) {
+                System.out.println(AccountController.showWithdrawalTerms());
+                AccountController.deleteAccount("Individual", id);
+                System.out.println(message);
+                System.out.println(showResultMessage());
+            }
+            else {
+                System.out.println(message);
+                System.out.println(showResultMessage());
+            }
+        }
+        else {
+            ArrayList<EnterpriseAccount> eAccounts = AccountController.getEnterpriseAccounts();
+
+            Boolean result = AccountController.verifyPassword("Enterprise", id, password);
+            String message = permission(result);
+
+            if (result == true) {
+                System.out.println(AccountController.showWithdrawalTerms());
+                AccountController.deleteAccount("Enterprise", id);
+                System.out.println(message);
+                System.out.println(showResultMessage());
+            }
+            else {
+                System.out.println(message);
+                System.out.println(showResultMessage());
+            }
+        }
+
+    }
+
+    public static String showResultMessage() {
+        return "종료";
+    }
 
     public static void main(String[] args) throws Exception {
 
@@ -117,6 +200,8 @@ public class AccountBoundary {
 
         Object result=signIn("Individual","individual","5645");
         System.out.println(result);
+
+        modifyIndividualInfo("individual","1234",1,"YUNJUPARK");
 
     }
 

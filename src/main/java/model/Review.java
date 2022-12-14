@@ -6,6 +6,8 @@ public class Review {
     private String individualId;
     private String review;
 
+    public Review() { }
+
     public Review(String enterpriseId, String individualId, String review) {
 
         this.enterpriseId = enterpriseId;

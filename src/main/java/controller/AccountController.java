@@ -8,6 +8,8 @@ import java.util.regex.Pattern;
 
 import boundary.DBBoundary;
 
+import static boundary.AccountBoundary.modifyIndividualInfo;
+
 
 public class AccountController extends DBBoundary{
 
@@ -123,7 +125,167 @@ public class AccountController extends DBBoundary{
 
     }
 
+    public static Boolean verifyPassword(String type, String id, String password) {
 
+        ArrayList<IndividualAccount> indiAccounts = getIndividualAccounts();
+        ArrayList<EnterpriseAccount> enterAccounts = getEnterpriseAccounts();
+
+        if (type.equals("Individual")) {
+            IndividualAccount iAccount = indiAccounts.stream()
+                    .filter(account -> id.equals(account.getId()) && password.equals(account.getPassword()))
+                    .findAny()
+                    .orElse(null);
+
+            if (iAccount == null)	{
+                System.out.println("비밀번호 불일치");
+                return false;
+            }
+            else 					return true;
+        }
+        else {
+            EnterpriseAccount eAccount = (EnterpriseAccount) enterAccounts.stream()
+                    .filter(e -> ((e.getId().equals(id)) && (e.getPassword().equals(password))))
+                    .findAny()
+                    .orElse(null);
+
+            if (eAccount == null)	{
+                System.out.println("비밀번호 불일치");
+                return false;
+            }
+            else 					return true;
+        }
+    }
+
+    public static void modifyIndividualAccountInfo(String individualId, int infoType, String modifiedInfo) {
+
+        // protected String name;      -> #1
+        // private String phoneNumber; -> #2
+        // private int age;            -> #3
+        // private String gender;      -> #4
+
+        individualAccounts = getIndividualAccounts();
+        IndividualAccount iAccount = (IndividualAccount) individualAccounts.stream()
+                .filter(i -> i.getId().equals(individualId))
+                .findAny()
+                .orElse(null);
+
+
+        if (iAccount == null) {
+            System.out.println("개인회원 정보 수정 실패");
+        }
+        else {
+            switch (infoType) {
+                case 1:
+                    iAccount.setName(modifiedInfo);
+                    break;
+                case 2:
+                    iAccount.setPhoneNumber(modifiedInfo);
+                    break;
+                case 3:
+                    try {
+                        iAccount.setAge(Integer.parseInt(modifiedInfo));
+                    }
+                    catch (NumberFormatException e) { System.out.println("modifying age -> Number format error"); }
+                    break;
+                case 4:
+                    iAccount.setGender(modifiedInfo);
+            }
+
+            individualAccounts.remove(iAccount);
+            individualAccounts.add(iAccount);
+            saveIndiDB(individualAccounts);
+
+
+            System.out.println("개인회원 정보 수정 성공");
+
+        }
+    }
+
+    public static void modifyEnterpriseAccountInfo(String enterpriseId, int infoType, String modifiedInfo) {
+
+        // protected String name;                  -> #1
+        // private String enterpriseNum;           -> #2
+        // private String category;                -> #3
+        // private String enterprisePhoneNumber;   -> #4
+        // private String enterpriseLocation;      -> #5
+
+        enterpriseAccounts = getEnterpriseAccounts();
+        EnterpriseAccount eAccount = (EnterpriseAccount) enterpriseAccounts.stream()
+                .filter(e -> e.getId().equals(enterpriseId))
+                .findAny()
+                .orElse(null);
+
+
+        if (eAccount == null) {
+            System.out.println("기업회원 정보 수정 실패");
+            return;
+        }
+        else {
+            switch (infoType) {
+                case 1:
+                    eAccount.setName(modifiedInfo);
+                    break;
+                case 2:
+                    eAccount.setEnterpriseNum(modifiedInfo);
+                    break;
+                case 3:
+                    eAccount.setCategory(modifiedInfo);
+                    break;
+                case 4:
+                    eAccount.setEnterprisePhoneNumber(modifiedInfo);
+                    break;
+                case 5:
+                    eAccount.setEnterpriseLocation(modifiedInfo);
+            }
+
+            enterpriseAccounts.remove(eAccount);
+            enterpriseAccounts.add(eAccount);
+            saveEnterDB(enterpriseAccounts);
+
+            System.out.println("기업회원 정보 수정 성공");
+        }
+    }
+
+    public static void deleteAccount(String type, String id) {
+
+        if (type.equals("Individual")) {
+            individualAccounts = getIndividualAccounts();
+            IndividualAccount iAccount = (IndividualAccount) individualAccounts.stream()
+                    .filter(i -> i.getId().equals(id))
+                    .findAny()
+                    .orElse(null);
+
+            individualAccounts.remove(iAccount);
+            saveIndiDB(individualAccounts);
+
+            System.out.println("개인회원 탈퇴 성공");
+        }
+        else {
+            enterpriseAccounts = getEnterpriseAccounts();
+            EnterpriseAccount eAccount = (EnterpriseAccount) enterpriseAccounts.stream()
+                    .filter(e -> e.getId().equals(id))
+                    .findAny()
+                    .orElse(null);
+
+            enterpriseAccounts.remove(eAccount);
+            saveEnterDB(enterpriseAccounts);
+
+            System.out.println("기업회원 탈퇴 성공");
+        }
+    }
+    public static ArrayList<IndividualAccount> getIndividualAccounts() {
+        ArrayList<IndividualAccount> indiAccounts = readIndiDB();
+        return indiAccounts;
+    }
+
+    public static ArrayList<EnterpriseAccount> getEnterpriseAccounts() {
+        ArrayList<EnterpriseAccount> enterAccounts = readEnterDB();
+        return enterAccounts;
+    }
+
+    public static String showWithdrawalTerms() {
+        return "탈퇴 약관";
+    }
 
 
 
@@ -143,5 +305,6 @@ public class AccountController extends DBBoundary{
         saveIndiDB(individual1);
         saveIndiDB(individual2);
 
+        modifyIndividualInfo("aa1234","aaaa",1,"namememe");
     }
 }

@@ -7,7 +7,6 @@ public class Apply {
     private int id;
     private Boolean passOrFail=false; //기업->개인, 개인-> 기업 다르므로
     private int announcementId;
-    private int resumeId;
 
     public Apply(int id,String individualId, String enterpriseId,int announcementId,Boolean isAccept)
     {
@@ -48,13 +47,7 @@ public class Apply {
         this.announcementId = announcementId;
     }
 
-    public int getResumeId() {
-        return resumeId;
-    }
 
-    public void setResumeId(int resumeId) {
-        this.resumeId = resumeId;
-    }
     public int getId() {
         return id;
     }

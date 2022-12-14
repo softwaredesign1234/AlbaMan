@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ReviewTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-12-14T03:35:50" hostname="DESKTOP-29CPMJ4" time="0.207">
+  <properties/>
+  <testcase name="리뷰 조회" classname="ReviewTest" time="0.074"/>
+  <testcase name="리뷰 작성 - workhistory 없어서 실패" classname="ReviewTest" time="0.033"/>
+  <testcase name="리뷰 조회 실패 - 기업 id 일치 항목 없음" classname="ReviewTest" time="0.045"/>
+  <testcase name="리뷰 작성" classname="ReviewTest" time="0.044"/>
+  <system-out><![CDATA[기업계정 저장 성공
+기업계정 저장 성공
+개인계정 저장 성공
+개인계정 저장 성공
+workhistory 확인 완료: 리뷰 권한 성공
+리뷰 작성 성공
+workhistory 확인 완료: 리뷰 권한 성공
+리뷰 작성 성공
+workhistory 확인 완료: 리뷰 권한 성공
+리뷰 작성 성공
+workhistory 확인 완료: 리뷰 권한 성공
+리뷰 작성 성공
+--------------------------
+리뷰 검색 성공
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+--------------------------
+리뷰 검색 성공
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업계정 저장 성공
+기업계정 저장 성공
+개인계정 저장 성공
+개인계정 저장 성공
+workhistory 확인 실패: 리뷰 권한 실패
+리뷰 작성 실패: 권한 없음
+기업계정 저장 성공
+기업계정 저장 성공
+개인계정 저장 성공
+개인계정 저장 성공
+workhistory 확인 완료: 리뷰 권한 성공
+리뷰 작성 성공
+workhistory 확인 완료: 리뷰 권한 성공
+리뷰 작성 성공
+workhistory 확인 완료: 리뷰 권한 성공
+리뷰 작성 성공
+workhistory 확인 완료: 리뷰 권한 성공
+리뷰 작성 성공
+--------------------------
+검색 결과 없음
+기업계정 저장 성공
+기업계정 저장 성공
+개인계정 저장 성공
+개인계정 저장 성공
+workhistory 확인 완료: 리뷰 권한 성공
+리뷰 작성 성공
+workhistory 확인 완료: 리뷰 권한 성공
+리뷰 작성 성공
+workhistory 확인 완료: 리뷰 권한 성공
+리뷰 작성 성공
+workhistory 확인 완료: 리뷰 권한 성공
+리뷰 작성 성공
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

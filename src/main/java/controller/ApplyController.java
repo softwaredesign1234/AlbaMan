@@ -14,9 +14,9 @@ public class ApplyController extends DBBoundary {
     static ArrayList<Apply> applyList=new ArrayList<>();
 
     public static ArrayList<Apply> getApplyList() {
+        applyList = readApplyDB();
         return applyList;
     }
-
     public static Apply makeApplytoIndividual(String individualId,String enterpriseId) throws Exception
     {
         int id=getApplyList().size()+1;
@@ -35,6 +35,32 @@ public class ApplyController extends DBBoundary {
 
     }
 
+    //개인->기업 수락여부, 기업->개인 채용여부 return
+    public void passOrNot(Apply apply, boolean result)
+    {
+        applyList.clear();
+        applyList = readApplyDB();
+        clearDB("Question");
+        for (Apply a : applyList){
+            if (a.getId() == apply.getId()) {
+                apply = a;
+                a.setPassOrFail(result);
+                saveApplyDB(a);
+            }
+            else{
+                saveApplyDB(a);
+            }
+        }
+        if(result == true){
+            System.out.println("Passed!");
+            Workhistory workhistory = new Workhistory(apply.getEnterpriseId(),apply.getIndividualId());
+            saveWorkHistoryDB(workhistory);
+        }
+        else{
+            System.out.println("Failed..");
+        }
+        return;
+    }
 
     //개인에게 기업오퍼 전달, 수락여부 return
     //db에서 한줄만 수정하는 동작
@@ -62,6 +88,16 @@ public class ApplyController extends DBBoundary {
         }
         else
             System.out.println("Apply is not accepted!");
+    }
+
+    public Apply makeApplytoEnterprise(String individualId, String enterpriseId,int announcementId){
+        System.out.println("Add apply to DB..");
+        Apply a = new Apply();
+        a.setIndividualId(individualId);
+        a.setEnterpriseId(enterpriseId);
+        a.setAnnouncementId(announcementId);
+        saveApplyDB(a);
+        return a;
     }
 
     public static void main(String[] args) throws Exception{

@@ -10,20 +10,6 @@ public class Resume {
     private String workExperience;
     private Boolean isOpened;
 
-    //개인 저장용
-    public Resume(int id,String selfIntroduction,
-                  String workExperience,Boolean isOpened)
-    {
-        this.id=id;
-        this.selfIntroduction=selfIntroduction;
-        this.workExperience=workExperience;
-        this.isOpened=isOpened;
-    }
-
-    public Resume(int id)
-    {
-        this.id=id;
-    }
 
 
     //공개용

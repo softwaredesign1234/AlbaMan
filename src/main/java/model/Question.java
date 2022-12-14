@@ -4,16 +4,18 @@ public class Question {
 
     public int id;
 
+    public String individualId;
     public String question;
     public String answer;
 
 
 
 
-    public Question(int id, String question) {
-        this.id = id;
+    public Question(String individualId, String question) {
+        this.individualId = individualId;
         this.question = question;
     }
+    public Question() {    }
 
     public int getId() {
         return id;
@@ -37,5 +39,12 @@ public class Question {
 
     public void setAnswer(String answer) {
         this.answer = answer;
+    }
+    public String getIndividualId() {
+        return individualId;
+    }
+
+    public void setIndividualId(String individualId) {
+        this.individualId = individualId;
     }
 }

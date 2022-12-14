@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="FAQTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2022-12-14T03:35:50" hostname="DESKTOP-29CPMJ4" time="0.023">
+  <properties/>
+  <testcase name="FAQ 조회 실패 - FAQ 없음" classname="FAQTest" time="0.007"/>
+  <testcase name="FAQ 등록" classname="FAQTest" time="0.006"/>
+  <testcase name="FAQ 조회" classname="FAQTest" time="0.006"/>
+  <system-out><![CDATA[FAQ search 실패: FAQ가 없음
+FAQ 등록 성공
+FAQ 등록 성공
+FAQ 등록 성공
+FAQ 등록 성공
+FAQ search 성공
+1번 Q: i_can't_find_my_id/ A: we_don't_know
+2번 Q: where-are-you/ A: behind-you
+3번 Q: i_can't_find_my_id/ A: we_don't_know
+4번 Q: where-are-you/ A: behind-you
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

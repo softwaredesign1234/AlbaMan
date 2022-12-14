@@ -41,23 +41,23 @@ public class ApplyTest extends DBBoundary {
     }
 
     @Test
-    @DisplayName("기업이 개인에게 지원")
+    @DisplayName("UC5-정상")
     void saveApplyToIndividual() throws Exception {
 
         Apply apply=resumeBoundary.inputapply("aa1234","bb1234");
         Apply apply1=resumeBoundary.inputapply("aa5678","bb5678");
-        assertEquals("aa1111",apply.getIndividualId());
-        assertEquals("bb1111",apply.getEnterpriseId());
-        assertEquals("aa0000",apply1.getIndividualId());
-        assertEquals("bb0000",apply1.getEnterpriseId());
+        assertEquals("aa1234",apply.getIndividualId());
+        assertEquals("bb1234",apply.getEnterpriseId());
+        assertEquals("aa5678",apply1.getIndividualId());
+        assertEquals("bb5678",apply1.getEnterpriseId());
 
     }
 
     @Test
-    @DisplayName("개인이 수락")
+    @DisplayName("UC5-개인이 수락")
     void individualAccept() throws Exception {
         resumeBoundary.inputResult(1,true);
-        ArrayList<Workhistory> arr=readworkHistoryDB();
+        ArrayList<Workhistory> arr=readWorkHistoryDB();
         Workhistory workhistory=arr.stream()
                 .filter(workhistory1 -> workhistory1.getIndividualId().equals(apply1.getIndividualId())&&workhistory1.getEnterpriseId().equals(apply1.getEnterpriseId()))
                 .findAny()
@@ -70,7 +70,7 @@ public class ApplyTest extends DBBoundary {
         System.out.println("workhistory Enterprise: "+workhistory.getEnterpriseId());
     }
     @Test
-    @DisplayName("개인이 거절")
+    @DisplayName("UC5-개인이 거절")
     void individualNotAccept() throws Exception {
         resumeBoundary.inputResult(1,false);
 

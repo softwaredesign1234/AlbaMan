@@ -1,12 +1,30 @@
 package boundary;
 
+import model.Report;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class ReportBoundary {
     //신고사유 존재시 + Report 모델 수정필요
-    public void inputReport(){
-        return;
+    Scanner sc = new Scanner(System.in);
+    public String inputReport(){
+        //        return sc.next();
+        String context = "SpamContents";
+        System.out.println("User Input Report Context = "+context);
+        return context;
     }
 
-    public void makeJudgement(){
+    public String makeJudgement(){
+        String judgement = "true";
+        System.out.println("Judgement = "+judgement);
+        return judgement;
+    }
+
+    public void showReport(Report r){
+        System.out.println("reportID : "+r.getId()+"" +
+                " reportMemberID : "+r.getMemberId()+" reportedMemberID : " + r.getReportedMemberId()+
+                " ReportContext : "+r.getReportContext());
         return;
     }
 }

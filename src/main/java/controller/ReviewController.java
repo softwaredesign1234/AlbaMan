@@ -1,45 +1,83 @@
 package controller;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 import boundary.DBBoundary;
 import model.IndividualAccount;
 import model.Review;
 import model.Workhistory;
 
-public class ReviewController {
+public class ReviewController extends DBBoundary {
+
     public ArrayList<Review> reviewList = new ArrayList<Review>();
-    public static DBBoundary dbManager;
 
-    public ArrayList<Review> readReviewById(String enterpriseId) {
-        return null;
-    }
+    public static ArrayList<Review> readReviewById(String enterpriseId) {
 
-    public ArrayList<Review> getReviewList() {
-        return null;
-    }
+        Boolean result = false;
 
-    public Boolean verifyWorkHistory(String individualId, String enterpriseId) {
-        return null;
-    }
+        ArrayList<Review> reviewList = DBBoundary.readReviewDB();
+        ArrayList<Review> searchReviewList = new ArrayList<>();
 
-    public void addToReviewList( String enterpriseId, String individualId, String review) {
-        return;
-    }
-    public Review writeReview(String enterpriseId, String individualId, String review) {
-        return null;
-    }
-    public void saveDB(Object o) {
-        return;
-    }
+        for (Review review : reviewList) {
+            if (review.getEnterpriseId().equals(enterpriseId)) {
+                searchReviewList.add(review);
+                result = true;
+            }
+        }
 
-    public ArrayList<Object> readDB(String tablename) {
-        return null;
+        if (result == false) {
+            System.out.println("검색 결과 없음");
+        }
+        else {
+            System.out.println("리뷰 검색 성공");
+        }
+
+        return searchReviewList;
     }
 
-    public Object readDb(String dbname)
-    {
-        return null;
+    public static Boolean verifyWorkHistory(String individualId, String enterpriseId) {
+
+        ArrayList<IndividualAccount> individualAccounts = DBBoundary.readIndiDB();
+        ArrayList<Workhistory> workHistoryDB = DBBoundary.readWorkHistoryDB();
+        ArrayList<Workhistory> workHistory = new ArrayList<>();
+
+        IndividualAccount iAccount = individualAccounts.stream()
+                .filter(i -> i.getId().equals(individualId))
+                .findAny()
+                .orElse(null);
+
+        if (iAccount == null)
+            return false;
+        else {
+            for (Workhistory w : workHistoryDB) {
+                if (w.getIndividualId().equals(iAccount.getId())) {
+                    workHistory.add(w);
+                }
+            }
+
+            Workhistory find = workHistory.stream()
+                    .filter(w -> w.getEnterpriseId().equals(enterpriseId))
+                    .findAny()
+                    .orElse(null);
+
+            if (find == null) {
+                System.out.println("workhistory 확인 실패: 리뷰 권한 실패");
+                return false;
+            }
+            else {
+                System.out.println("workhistory 확인 완료: 리뷰 권한 성공");
+                return true;
+            }
+        }
+    }
+
+    public static Review addToReviewList( String enterpriseId, String individualId, String review) {
+
+        Review newReview = new Review(enterpriseId, individualId, review);
+        DBBoundary.saveReviewDB(newReview);
+
+        return newReview;
     }
 
 }

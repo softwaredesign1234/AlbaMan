@@ -11,6 +11,8 @@ import static org.junit.Assert.*;
 
 import boundary.AccountBoundary;
 
+import java.util.ArrayList;
+
 public class AccountTest extends DBBoundary{
     @Mock
     private static IndividualAccount individual;
@@ -43,6 +45,8 @@ public class AccountTest extends DBBoundary{
     @BeforeEach
     void basicMember()
     {
+        clearDB("IndividualAccount");
+        clearDB("EnterpriseAccount");
         individual1=new IndividualAccount("aa0000@naver.com","010-0000-0000",25,"F","aa0000","0000","janny",true,true,"Individual");
         individual2=new IndividualAccount("aa1111@naver.com","010-1111-1111",21,"M","aa1111","1111","Tom",true,true,"Individual");
         enterprise1=new EnterpriseAccount("000-00-00000","Restaurant","053-222-2222","Daegu","bb0000","0000","steakhouse",true,true,"Enterprise");
@@ -55,7 +59,7 @@ public class AccountTest extends DBBoundary{
     }
 
     @Test
-    @DisplayName("개인회원가입")
+    @DisplayName("UC1-정상")
     void IndividualSignupSuccess() {
         accountBoundary.startSignup(); //이용약관: boundary->controller에 약관 요청-> 약관 return
         String message=accountBoundary.inputValidationInput("Individual", email); //valid 확인: boundary ->개인=이메일, 기업=사업자번호->controller 형식 확인 -> boundary에 권한 return
@@ -81,7 +85,7 @@ public class AccountTest extends DBBoundary{
 
     }
     @Test
-    @DisplayName("개인회원가입-이메일 형식 틀림")
+    @DisplayName("UC1-실패(이메일 형식 틀림)")
     void IndividualSignupFailwrongemail() {
         String wrongEmail="aa1234@naver";
 
@@ -89,11 +93,10 @@ public class AccountTest extends DBBoundary{
         String message=accountBoundary.inputValidationInput("Individual", wrongEmail); //valid 확인: boundary ->개인=이메일, 기업=사업자번호->controller 형식 확인 -> boundary에 권한 return
 
         assertEquals(message,"권한 실패");
-        System.out.println("인증정보를 형식에 맞게 입력해주세요");
     }
 
     @Test
-    @DisplayName("개인회원가입-타입 잘못 입력")
+    @DisplayName("UC1-실패(타입 잘못 입력)")
     void IndividualSignupFailwrongtype() {
         String wrongtype="hihi";
 
@@ -104,7 +107,7 @@ public class AccountTest extends DBBoundary{
     }
 
     @Test
-    @DisplayName("기업회원가입")
+    @DisplayName("UC2-정상")
     void EnterpriseSignupSuccess() {
         accountBoundary.startSignup(); //이용약관: boundary->controller에 약관 요청-> 약관 return
         String message=accountBoundary.inputValidationInput(entertype, companyNum); //valid 확인: boundary ->개인=이메일, 기업=사업자번호->controller 형식 확인 -> boundary에 권한 return
@@ -131,7 +134,7 @@ public class AccountTest extends DBBoundary{
     }
 
     @Test
-    @DisplayName("기업회원가입-사업자번호 형식 틀림")
+    @DisplayName("UC2-실패(사업자번호 형식 틀림)")
     void EnterpriseSignupFailwrongecompanyNum() {
         String wrongCompanynum="000-777-777";
 
@@ -142,7 +145,7 @@ public class AccountTest extends DBBoundary{
         System.out.println("인증정보를 형식에 맞게 입력해주세요");
     }
     @Test
-    @DisplayName("기업회원가입-타입 잘못 입력")
+    @DisplayName("UC2-실패(타입 잘못 입력)")
     void EnterpriseSignupFailwrongtype() {
 
         accountBoundary.startSignup(); //이용약관: boundary->controller에 약관 요청-> 약관 return
@@ -154,7 +157,7 @@ public class AccountTest extends DBBoundary{
     }
 
     @Test
-    @DisplayName("기업로그인")
+    @DisplayName("UC3-정상(기업로그인)")
     void EnterpriseSignin() {
 
         EnterpriseAccount enterpriseAccount= (EnterpriseAccount) accountBoundary.signIn("Enterprise","bb1111","1111");
@@ -166,7 +169,7 @@ public class AccountTest extends DBBoundary{
 
 
     @Test
-    @DisplayName("개인로그인")
+    @DisplayName("UC3-정상(개인로그인)")
     void IndividualSignin() {
 
         IndividualAccount individualAccount= (IndividualAccount) accountBoundary.signIn("Individual","aa1111","1111");
@@ -176,7 +179,7 @@ public class AccountTest extends DBBoundary{
     }
 
     @Test
-    @DisplayName("개인로그인-비밀번호 잘못 입력")
+    @DisplayName("UC3-실패(비밀번호 잘못 입력)")
     void IndividualSigninWrongpassword() {
 
         String wrongpassword="5654";
@@ -188,7 +191,90 @@ public class AccountTest extends DBBoundary{
     }
 
 
+    @Test
+    @DisplayName("개인회원 정보 수정")
+    void IndividualModifyInfoSuccess() {
 
+        String changedName = "different_Name";
+        String changedAge = "88";
+
+        ArrayList<IndividualAccount> iAccounts = readIndiDB();
+        for (IndividualAccount i : iAccounts) {
+            System.out.println("id : " + i.getId());
+            System.out.println("name : " + i.getName());
+            System.out.println("Age : " + i.getAge());
+        }
+        System.out.println("--------------modify---------------");
+
+        AccountBoundary.modifyIndividualInfo("aa0000", "0000", 1, changedName);
+        System.out.println("-------------------------------------------");
+        AccountBoundary.modifyIndividualInfo("aa1111", "1111", 3, changedAge);
+
+        System.out.println("--------------result----------------");
+        iAccounts = readIndiDB();
+        for (IndividualAccount i : iAccounts) {
+            System.out.println("id : " + i.getId());
+            System.out.println("name : " + i.getName());
+            System.out.println("Age : " + i.getAge());
+        }
+
+    }
+
+    @Test
+    @DisplayName("기업회원 정보 수정")
+    void EnterpriseModifyInfoSuccess() {
+
+        String changedName = "different_company_Name";
+        String changedLocation = "Seoul";
+
+        ArrayList<EnterpriseAccount> eAccounts = readEnterDB();
+        for (EnterpriseAccount e : eAccounts) {
+            System.out.println("id : " + e.getId());
+            System.out.println("name : " + e.getName());
+            System.out.println("Location : " + e.getEnterpriseLocation());
+        }
+        System.out.println("--------------modify---------------");
+
+        AccountBoundary.modifyEnterpriseInfo("bb0000", "0000", 1, changedName);
+        System.out.println("-------------------------------------------");
+        AccountBoundary.modifyEnterpriseInfo("bb0000", "0000", 5, changedLocation);
+
+        System.out.println("--------------result----------------");
+        eAccounts = readEnterDB();
+        for (EnterpriseAccount e : eAccounts) {
+            System.out.println("id : " + e.getId());
+            System.out.println("name : " + e.getName());
+            System.out.println("Location : " + e.getEnterpriseLocation());
+        }
+    }
+
+    @Test
+    @DisplayName("개인 회원 정보 수정 - 비밀번호 불일치 실패")
+    void IndividualModifyInfoFail() {
+        String changedName = "different name";
+
+        accountBoundary.modifyIndividualInfo("aa0000", "0000",1, changedName);
+    }
+
+    @Test
+    @DisplayName("기업 회원 정보 수정 - 비밀번호 불일치 실패")
+    void EnterpriseModifyInfoFail() {
+        String changedName = "different company Name";
+
+        AccountBoundary.modifyEnterpriseInfo("bb0000", "0001", 1, changedName);
+    }
+
+    @Test
+    @DisplayName("개인 회원 탈퇴")
+    void IndividualWithdraw() {
+        AccountBoundary.withdrawAccount("Individual", "aa0000", "0000");
+    }
+
+    @Test
+    @DisplayName("기업 회원 탈퇴 실패 - 비밀번호 불일치")
+    void EnterpriseWithdrawalFail() {
+        AccountBoundary.withdrawAccount("Enterprise", "bb0000", "1111");
+    }
 
 
 

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="applyIndividualToEnterpriseTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-12-14T03:35:50" hostname="DESKTOP-29CPMJ4" time="0.178">
+  <properties/>
+  <testcase name="calculateWage()" classname="applyIndividualToEnterpriseTest" time="0.032"/>
+  <testcase name="noResult()" classname="applyIndividualToEnterpriseTest" time="0.029"/>
+  <testcase name="deadlinePassed()" classname="applyIndividualToEnterpriseTest" time="0.026"/>
+  <testcase name="applyAnnouncements()" classname="applyIndividualToEnterpriseTest" time="0.047"/>
+  <testcase name="failedResult()" classname="applyIndividualToEnterpriseTest" time="0.034"/>
+  <system-out><![CDATA[User making announcement..
+enterpriseId : bb0000...
+User making announcement..
+enterpriseId : bb0000...
+User making announcement..
+enterpriseId : bb0001...
+User making announcement..
+enterpriseId : bb0001...
+Announcement List ... 4
+ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
+ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working days per week : 4
+ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
+ID : 4	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 9000	Working days per week : 4
+Announcement filtered by ID : 1
+No result has been found
+Announcement List ... 1
+ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
+wage = 2400000 WagePerHour = 12000 Working hours per week = 50
+User making announcement..
+enterpriseId : bb0000...
+User making announcement..
+enterpriseId : bb0000...
+User making announcement..
+enterpriseId : bb0001...
+User making announcement..
+enterpriseId : bb0001...
+Announcement List ... 4
+ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
+ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working days per week : 4
+ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
+ID : 4	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 9000	Working days per week : 4
+Announcement filtered by ID : 5
+No result has been found
+Announcement List ... 1
+ID : 0	EnterpriseId : null	Deadline : null	WagePerHour : 0	Working days per week : 0
+User making announcement..
+enterpriseId : bb0000...
+User making announcement..
+enterpriseId : bb0000...
+User making announcement..
+enterpriseId : bb0001...
+User making announcement..
+enterpriseId : bb0001...
+Today = 23/1/1 Announcement's deadline : 22/12/31
+Delete announcement Id : 1
+User making announcement..
+enterpriseId : bb0000...
+User making announcement..
+enterpriseId : bb0000...
+User making announcement..
+enterpriseId : bb0001...
+User making announcement..
+enterpriseId : bb0001...
+Announcement List ... 4
+ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
+ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working days per week : 4
+ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
+ID : 4	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 9000	Working days per week : 4
+Announcement filtered by ID : 1
+No result has been found
+Announcement List ... 1
+ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
+4
+Announcement filtered by wage : 10000
+Announcement List ... 3
+ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
+ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working days per week : 4
+ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
+Announcement filtered by enterprise name : bb0000
+Announcement List ... 2
+ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
+ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working days per week : 4
+Announcement filtered by working days : 5
+No result has been found
+Announcement List ... 4
+ID : 1	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 12000	Working days per week : 5
+ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working days per week : 4
+ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
+ID : 4	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 9000	Working days per week : 4
+Announcement filtered by hours : 48
+Announcement List ... 3
+ID : 2	EnterpriseId : bb0000	Deadline : 22/12/31	WagePerHour : 11000	Working days per week : 4
+ID : 3	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 10000	Working days per week : 5
+ID : 4	EnterpriseId : bb0001	Deadline : 22/12/31	WagePerHour : 9000	Working days per week : 4
+scrapping announcement...
+scrap announcement : 1
+Individual User (aa0000) making apply to enterprise (bb0000)
+Add apply to DB..
+Enterprise user make result to apply
+Applying announcement id : 1 
+result : true
+Passed!
+Delete announcement Id : 1
+User making announcement..
+enterpriseId : bb0000...
+User making announcement..
+enterpriseId : bb0000...
+User making announcement..
+enterpriseId : bb0001...
+User making announcement..
+enterpriseId : bb0001...
+Individual User (aa0000) making apply to enterprise (bb0000)
+Add apply to DB..
+Enterprise user make result to apply
+Applying announcement id : 1 
+result : false
+Failed..
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

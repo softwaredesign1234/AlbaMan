@@ -35,16 +35,6 @@ public class IndividualAccount extends Account implements Serializable {
     }
 
 
-    public void addResume(Resume resume)
-    {
-        this.resuemList.add(resume);
-    }
-
-    public void addWorkHistory(Workhistory workhistory)
-    {
-        this.workHistoryList.add(workhistory);
-    }
-
     public void scrapAnnouncement(Announcement announcement)
     {
         this.scrapList.add(announcement);

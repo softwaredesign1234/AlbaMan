@@ -17,8 +17,7 @@ public class ResumeController extends DBBoundary{
     public static Resume saveResume(String individualId, String selfIntroduction, String workExperience, Boolean isopen) throws Exception {
         int id=getResumeList().size()+1;
 
-        //개인 계정에 본인 이력서 추가 -> 개인이 작성한 여러 이력서 조회 가능
-        IndividualAccount individual=getIndividual(individualId);//Id 받아서
+
 
         Resume resume=new Resume(id,selfIntroduction,workExperience,isopen,individualId);
 
@@ -35,18 +34,7 @@ public class ResumeController extends DBBoundary{
 
     }
 
-    //ID로 개인계정 찾기
-    public static IndividualAccount getIndividual(String individualId)
-    {
-        ArrayList<IndividualAccount> arr=readIndiDB();
 
-        IndividualAccount result=arr.stream()
-                .filter(individualAccount -> individualId.equals(individualAccount.getId()))
-                .findAny()
-                .orElse(null);
-
-        return result;
-    }
 
 
     //이력서 조회

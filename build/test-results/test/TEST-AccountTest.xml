@@ -1,99 +1,664 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AccountTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2022-12-13T08:44:08" hostname="DESKTOP-29CPMJ4" time="0.032">
+<testsuite name="AccountTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2022-12-14T03:35:49" hostname="DESKTOP-29CPMJ4" time="0.544">
   <properties/>
-  <testcase name="개인로그인" classname="AccountTest" time="0.032">
-    <failure message="java.lang.NullPointerException" type="java.lang.NullPointerException">java.lang.NullPointerException
-	at AccountTest.IndividualSignin(AccountTest.java:178)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725)
-	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.util.ArrayList.forEach(ArrayList.java:1259)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at java.util.ArrayList.forEach(ArrayList.java:1259)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67)
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at com.sun.proxy.$Proxy2.stop(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
-	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</failure>
-  </testcase>
+  <testcase name="개인 회원 정보 수정 - 비밀번호 불일치 실패" classname="AccountTest" time="0.073"/>
+  <testcase name="개인 회원 탈퇴" classname="AccountTest" time="0.015"/>
+  <testcase name="UC2-실패(사업자번호 형식 틀림)" classname="AccountTest" time="0.012"/>
+  <testcase name="UC1-정상" classname="AccountTest" time="0.012"/>
+  <testcase name="기업 회원 탈퇴 실패 - 비밀번호 불일치" classname="AccountTest" time="0.013"/>
+  <testcase name="UC2-정상" classname="AccountTest" time="0.014"/>
+  <testcase name="기업회원 정보 수정" classname="AccountTest" time="0.169"/>
+  <testcase name="UC1-실패(이메일 형식 틀림)" classname="AccountTest" time="0.037"/>
+  <testcase name="UC3-정상(개인로그인)" classname="AccountTest" time="0.019"/>
+  <testcase name="개인회원 정보 수정" classname="AccountTest" time="0.045"/>
+  <testcase name="UC3-정상(기업로그인)" classname="AccountTest" time="0.017"/>
+  <testcase name="기업 회원 정보 수정 - 비밀번호 불일치 실패" classname="AccountTest" time="0.018"/>
+  <testcase name="UC3-실패(비밀번호 잘못 입력)" classname="AccountTest" time="0.017"/>
+  <testcase name="UC1-실패(타입 잘못 입력)" classname="AccountTest" time="0.015"/>
+  <testcase name="UC2-실패(타입 잘못 입력)" classname="AccountTest" time="0.016"/>
   <system-out><![CDATA[기업계정 저장 성공
 기업계정 저장 성공
 개인계정 저장 성공
 개인계정 저장 성공
+권한 성공
+개인계정 저장 성공
+개인계정 저장 성공
+개인회원 정보 수정 성공
+종료
+기업계정 저장 성공
+기업계정 저장 성공
+개인계정 저장 성공
+개인계정 저장 성공
+탈퇴 약관
+개인계정 저장 성공
+개인회원 탈퇴 성공
+권한 성공
+종료
+기업계정 저장 성공
+기업계정 저장 성공
+개인계정 저장 성공
+개인계정 저장 성공
+이용약관에 대해 안내드립니다.
+인증정보를 정확히 입력해주세요.
+인증정보를 형식에 맞게 입력해주세요
+기업계정 저장 성공
+기업계정 저장 성공
+개인계정 저장 성공
+개인계정 저장 성공
+이용약관에 대해 안내드립니다.
+개인계정 저장 성공
+Signup Success!
+개인회원 가입성공!
+id: individual
+password: 1234
+name: individual Name
+email: aa1234@naver.com
+phoneNumber: 010-7777-7777
+age: 55
+gender: F
+기업계정 저장 성공
+기업계정 저장 성공
+개인계정 저장 성공
+개인계정 저장 성공
+비밀번호 불일치
 권한 실패
+종료
+기업계정 저장 성공
+기업계정 저장 성공
+개인계정 저장 성공
+개인계정 저장 성공
+이용약관에 대해 안내드립니다.
+회사폰넘버: 053-333-3333
+기업계정 저장 성공
+Signup Success!
+기업회원 가입성공! id는: companyid
+companyphoneNumber053-333-3333
+id: companyid
+password: companypassword
+companyname: KakaoEnterprise
+companynum: 123-45-67890
+companyPhonenumber: 053-333-3333
+category: IT
+companylocation: Daegu
+기업계정 저장 성공
+기업계정 저장 성공
+개인계정 저장 성공
+개인계정 저장 성공
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+--------------modify---------------
+권한 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업회원 정보 수정 성공
+종료
+-------------------------------------------
+권한 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업계정 저장 성공
+기업회원 정보 수정 성공
+종료
+--------------result----------------
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : different_company_Name
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : different_company_Name
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : different_company_Name
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : different_company_Name
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Seoul
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : different_company_Name
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : different_company_Name
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : different_company_Name
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Daegu
+id : bb1111
+name : blueswimming
+Location : Daegu
+id : bb0000
+name : different_company_Name
+Location : Daegu
+id : bb0000
+name : steakhouse
+Location : Seoul
+기업계정 저장 성공
+기업계정 저장 성공
+개인계정 저장 성공
+개인계정 저장 성공
+이용약관에 대해 안내드립니다.
+인증정보를 정확히 입력해주세요.
+기업계정 저장 성공
+기업계정 저장 성공
+개인계정 저장 성공
+개인계정 저장 성공
+권한 성공
+id는: aa1111
+기업계정 저장 성공
+기업계정 저장 성공
+개인계정 저장 성공
+개인계정 저장 성공
+id : aa0000
+name : janny
+Age : 25
+id : aa1111
+name : Tom
+Age : 21
+--------------modify---------------
+권한 성공
+개인계정 저장 성공
+개인계정 저장 성공
+개인회원 정보 수정 성공
+종료
+-------------------------------------------
+권한 성공
+개인계정 저장 성공
+개인계정 저장 성공
+개인회원 정보 수정 성공
+종료
+--------------result----------------
+id : aa0000
+name : different_Name
+Age : 25
+id : aa1111
+name : Tom
+Age : 88
+기업계정 저장 성공
+기업계정 저장 성공
+개인계정 저장 성공
+개인계정 저장 성공
+권한 성공
+기업id는 : bb1111
+기업계정 저장 성공
+기업계정 저장 성공
+개인계정 저장 성공
+개인계정 저장 성공
+비밀번호 불일치
+권한 실패
+종료
+기업계정 저장 성공
+기업계정 저장 성공
+개인계정 저장 성공
+개인계정 저장 성공
+비밀번호가 틀렸습니다
+기업계정 저장 성공
+기업계정 저장 성공
+개인계정 저장 성공
+개인계정 저장 성공
+이용약관에 대해 안내드립니다.
+타입은 Individual과 Enterprise 중 하나로 입력해주세요
+기업계정 저장 성공
+기업계정 저장 성공
+개인계정 저장 성공
+개인계정 저장 성공
+이용약관에 대해 안내드립니다.
+타입은 Individual과 Enterprise 중 하나로 입력해주세요
+타입은 Individual과 Enterprise 중 하나로 입력해주세요
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
