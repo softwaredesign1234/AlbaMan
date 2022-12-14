@@ -56,21 +56,36 @@ gradlew
 ```
 ## How to build testcodes in command line
 
-### < In window >
 
-💡 Please refer to the attached Test Code Reference for class name and method name.
+💡 Please refer to the attached Test Code Reference for class name and method name under this section.
+
+### < In Ubuntu >
+
+```
+./gradlew clean test --test <testcode class name>.<testcode method name> -i
+```
+
+For example,
+If you enter the following command,
+
+```
+./gradlew clean test --tests AccountTest.IndividualSignupSuccess -i
+```
+You can see the result of testcode method.
+
+
+<img width="701" alt="우분투성공샷" src="https://user-images.githubusercontent.com/86733856/207606818-2cbb8156-5a63-4314-9699-1f03264cdf02.png">
+
+
+
+### < In window >
 
 ```
 gradlew clean test --test <testcode class name>.<testcode method name> -i
 ```
 
-For example,
-If you enter the following command,
-```
-gradlew clean test --tests AccountTest.IndividualSignupSuccess -i
-```
-
 You can see the result of testcode method.
+
 
 ![성공샷](https://user-images.githubusercontent.com/86733856/207590530-61849435-d7d6-4a29-98d8-16c58e08e706.png)
 
