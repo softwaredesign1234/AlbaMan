@@ -5,7 +5,6 @@ import controller.ApplyController;
 import model.Announcement;
 import model.Apply;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class AnnouncementBoundary {

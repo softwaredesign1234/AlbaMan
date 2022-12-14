@@ -1,10 +1,10 @@
 package controller;
 
-import java.util.*;
-
 import boundary.DBBoundary;
 import model.IndividualAccount;
 import model.Resume;
+
+import java.util.ArrayList;
 
 public class ResumeController extends DBBoundary{
 

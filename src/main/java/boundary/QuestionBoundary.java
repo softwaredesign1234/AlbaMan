@@ -1,7 +1,7 @@
 package boundary;
 
-import model.FAQ;
 import controller.FAQController;
+import model.FAQ;
 import model.Question;
 
 import java.util.ArrayList;

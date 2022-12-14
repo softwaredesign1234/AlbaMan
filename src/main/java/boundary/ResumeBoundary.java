@@ -3,7 +3,6 @@ package boundary;
 import controller.ApplyController;
 import controller.ResumeController;
 import model.Apply;
-import model.IndividualAccount;
 import model.Resume;
 
 

@@ -1,14 +1,11 @@
 package controller;
 
+import boundary.DBBoundary;
 import model.EnterpriseAccount;
 import model.IndividualAccount;
 
 import java.util.ArrayList;
 import java.util.regex.Pattern;
-
-import boundary.DBBoundary;
-
-import static boundary.AccountBoundary.modifyIndividualInfo;
 
 
 public class AccountController extends DBBoundary{

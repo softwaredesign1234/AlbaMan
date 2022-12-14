@@ -1,8 +1,6 @@
 package model;
 
 
-import model.IndividualAccount;
-
 public class Resume {
     private int id;
     private String individualId;

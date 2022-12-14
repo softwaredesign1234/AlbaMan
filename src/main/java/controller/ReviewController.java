@@ -1,12 +1,11 @@
 package controller;
 
-import java.util.ArrayList;
-import java.util.stream.Collectors;
-
 import boundary.DBBoundary;
 import model.IndividualAccount;
 import model.Review;
 import model.Workhistory;
+
+import java.util.ArrayList;
 
 public class ReviewController extends DBBoundary {
 

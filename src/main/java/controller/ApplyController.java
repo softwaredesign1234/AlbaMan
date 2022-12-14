@@ -2,13 +2,9 @@ package controller;
 
 import boundary.DBBoundary;
 import model.Apply;
-import model.EnterpriseAccount;
-import model.IndividualAccount;
 import model.Workhistory;
 
 import java.util.ArrayList;
-
-import static java.lang.System.exit;
 
 public class ApplyController extends DBBoundary {
     static ArrayList<Apply> applyList=new ArrayList<>();

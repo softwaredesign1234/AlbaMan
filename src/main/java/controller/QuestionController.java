@@ -3,11 +3,8 @@ package controller;
 
 import boundary.DBBoundary;
 import model.Question;
-import model.Report;
 
-import java.io.*;
 import java.util.ArrayList;
-import java.util.List;
 
 public class QuestionController extends DBBoundary{
 

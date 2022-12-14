@@ -1,9 +1,9 @@
 package controller;
 
-import java.util.ArrayList;
-
 import boundary.DBBoundary;
 import model.FAQ;
+
+import java.util.ArrayList;
 
 public class FAQController extends DBBoundary {
 

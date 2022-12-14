@@ -2,7 +2,6 @@ package boundary;
 
 import model.Report;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ReportBoundary {

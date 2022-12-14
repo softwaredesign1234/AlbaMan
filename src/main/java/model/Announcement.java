@@ -1,9 +1,5 @@
 package model;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.Date;
-
 public class Announcement {
     private int id; //공고번호
     private String enterpriseId; //회사의 id

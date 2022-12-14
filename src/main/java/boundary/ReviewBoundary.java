@@ -1,10 +1,9 @@
 package boundary;
 
-import java.util.ArrayList;
-
 import controller.ReviewController;
-import model.IndividualAccount;
 import model.Review;
+
+import java.util.ArrayList;
 
 public class ReviewBoundary extends DBBoundary {
 
