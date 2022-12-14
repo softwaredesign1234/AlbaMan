@@ -37,11 +37,12 @@ public class AnnouncementBoundary {
     }
 
     public void showAnnouncement(ArrayList<Announcement> list){
-        System.out.println("Announcement List ... "+list.size());
+        System.out.println("-----Announcement List------  list size = "+list.size());
         for(Announcement a : list){
             System.out.println("ID : "+a.getId()+"\tEnterpriseId : "+a.getEnterpriseId()+
                     "\tDeadline : "+a.getDeadline()+"\tWagePerHour : "+a.getWagePerHour()+"\tWorking days per week : "+a.getWorkingDaysPerWeek());
         }
+        System.out.println("\n\n");
 
     }
     public void scrapAnnouncementId(String individualId, Announcement announcement)

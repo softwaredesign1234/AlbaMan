@@ -51,6 +51,7 @@ public class ApplyToIndividualTest {
             b.setId(2);
             c.setId(3);
             d.setId(4);
+            System.out.println("Announcement saved!");
         }catch (Exception e){
 
         }
