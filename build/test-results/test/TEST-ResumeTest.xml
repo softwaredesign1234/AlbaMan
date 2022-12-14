@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ResumeTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-12-14T12:19:50" hostname="DESKTOP-29CPMJ4" time="0.008">
+<testsuite name="ResumeTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-12-14T12:20:52" hostname="DESKTOP-29CPMJ4" time="0.007">
   <properties/>
-  <testcase name="UC5-이력서 조회" classname="ResumeTest" time="0.004"/>
+  <testcase name="UC5-이력서 조회" classname="ResumeTest" time="0.003"/>
   <testcase name="UC5-이력서 작성" classname="ResumeTest" time="0.004"/>
   <system-out><![CDATA[Success find resume
 resumeId: 2

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ReviewTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-12-14T12:19:50" hostname="DESKTOP-29CPMJ4" time="0.045">
+<testsuite name="ReviewTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-12-14T12:20:52" hostname="DESKTOP-29CPMJ4" time="0.044">
   <properties/>
-  <testcase name="UC8-리뷰 조회 정상" classname="ReviewTest" time="0.016"/>
-  <testcase name="UC8-근무 이력 없음" classname="ReviewTest" time="0.005"/>
-  <testcase name="UC8-리뷰 조회 실패(기업 id 일치 항목 없음)" classname="ReviewTest" time="0.01"/>
-  <testcase name="UC8-리뷰 작성 정상" classname="ReviewTest" time="0.013"/>
+  <testcase name="UC8-리뷰 조회 정상" classname="ReviewTest" time="0.015"/>
+  <testcase name="UC8-근무 이력 없음" classname="ReviewTest" time="0.006"/>
+  <testcase name="UC8-리뷰 조회 실패(기업 id 일치 항목 없음)" classname="ReviewTest" time="0.011"/>
+  <testcase name="UC8-리뷰 작성 정상" classname="ReviewTest" time="0.01"/>
   <system-out><![CDATA[workhistory 확인 완료: 리뷰 권한 성공
 리뷰 작성 성공
 workhistory 확인 완료: 리뷰 권한 성공
@@ -163,8 +163,32 @@ workhistory 확인 완료: 리뷰 권한 성공
 리뷰 내용: 1234
 기업 id: bb0000
 리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
 --------------------------
 리뷰 검색 성공
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
+기업 id: bb0000
+리뷰 내용: 1234
 기업 id: bb0000
 리뷰 내용: 1234
 기업 id: bb0000

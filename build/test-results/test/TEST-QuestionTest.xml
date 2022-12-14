@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="QuestionTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-12-14T12:19:50" hostname="DESKTOP-29CPMJ4" time="0.008">
+<testsuite name="QuestionTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-12-14T12:20:52" hostname="DESKTOP-29CPMJ4" time="0.008">
   <properties/>
   <testcase name="UC9-관리자 직접연락 정보조회" classname="QuestionTest" time="0.002"/>
-  <testcase name="UC9-질문 등록 정상" classname="QuestionTest" time="0.006"/>
+  <testcase name="UC9-질문 등록 정상" classname="QuestionTest" time="0.005"/>
   <system-out><![CDATA[Contract Email : 01051111111
 Contract number : 11@naver.com
 Input your question

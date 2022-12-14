@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ReportTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-12-14T12:19:50" hostname="DESKTOP-29CPMJ4" time="0.011">
+<testsuite name="ReportTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-12-14T12:20:52" hostname="DESKTOP-29CPMJ4" time="0.008">
   <properties/>
-  <testcase name="UC10-신고 반려" classname="ReportTest" time="0.004"/>
-  <testcase name="UC10-신고 정상" classname="ReportTest" time="0.007"/>
+  <testcase name="UC10-신고 반려" classname="ReportTest" time="0.003"/>
+  <testcase name="UC10-신고 정상" classname="ReportTest" time="0.005"/>
   <system-out><![CDATA[User Input Report Context = SpamContents
 reportID : 1 reportMemberID : aa0000 reportedMemberID : aa1111 ReportContext : SpamContents
 Judgement = true

@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AccountTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2022-12-14T12:19:50" hostname="DESKTOP-29CPMJ4" time="0.186">
+<testsuite name="AccountTest" tests="17" skipped="0" failures="0" errors="0" timestamp="2022-12-14T12:20:51" hostname="DESKTOP-29CPMJ4" time="0.166">
   <properties/>
-  <testcase name="UC6.1-개인 회원 정보 수정 - 비밀번호 불일치 실패" classname="AccountTest" time="0.026"/>
-  <testcase name="UC7.1-개인 회원 탈퇴" classname="AccountTest" time="0.006"/>
+  <testcase name="UC6.1-개인 회원 정보 수정 - 비밀번호 불일치 실패" classname="AccountTest" time="0.022"/>
+  <testcase name="UC7.1-개인 회원 탈퇴" classname="AccountTest" time="0.007"/>
   <testcase name="UC2-실패(사업자번호 형식 틀림)" classname="AccountTest" time="0.005"/>
   <testcase name="UC7.2-기업 회원 탈퇴" classname="AccountTest" time="0.009"/>
   <testcase name="UC1-정상" classname="AccountTest" time="0.005"/>
-  <testcase name="UC7.2-기업 회원 탈퇴 실패 - 비밀번호 불일치" classname="AccountTest" time="0.005"/>
-  <testcase name="UC2-정상" classname="AccountTest" time="0.004"/>
-  <testcase name="UC6.2-기업회원정보 수정 정상" classname="AccountTest" time="0.059"/>
-  <testcase name="UC1-실패(이메일 형식 틀림)" classname="AccountTest" time="0.009"/>
+  <testcase name="UC7.2-기업 회원 탈퇴 실패 - 비밀번호 불일치" classname="AccountTest" time="0.004"/>
+  <testcase name="UC2-정상" classname="AccountTest" time="0.006"/>
+  <testcase name="UC6.2-기업회원정보 수정 정상" classname="AccountTest" time="0.06"/>
+  <testcase name="UC1-실패(이메일 형식 틀림)" classname="AccountTest" time="0.005"/>
   <testcase name="UC3-정상(개인로그인)" classname="AccountTest" time="0.004"/>
-  <testcase name="UC6.1-개인회원정보 수정 정상" classname="AccountTest" time="0.013"/>
-  <testcase name="UC3-정상(기업로그인)" classname="AccountTest" time="0.004"/>
-  <testcase name="UC6.2-기업 회원 정보 수정 - 비밀번호 불일치 실패" classname="AccountTest" time="0.004"/>
-  <testcase name="UC3-실패(비밀번호 잘못 입력)" classname="AccountTest" time="0.006"/>
-  <testcase name="UC7.1-개인 회원 탈퇴 실패 - 비밀번호 불일치" classname="AccountTest" time="0.005"/>
-  <testcase name="UC1-실패(타입 잘못 입력)" classname="AccountTest" time="0.004"/>
-  <testcase name="UC2-실패(타입 잘못 입력)" classname="AccountTest" time="0.004"/>
+  <testcase name="UC6.1-개인회원정보 수정 정상" classname="AccountTest" time="0.009"/>
+  <testcase name="UC3-정상(기업로그인)" classname="AccountTest" time="0.003"/>
+  <testcase name="UC6.2-기업 회원 정보 수정 - 비밀번호 불일치 실패" classname="AccountTest" time="0.003"/>
+  <testcase name="UC3-실패(비밀번호 잘못 입력)" classname="AccountTest" time="0.003"/>
+  <testcase name="UC7.1-개인 회원 탈퇴 실패 - 비밀번호 불일치" classname="AccountTest" time="0.004"/>
+  <testcase name="UC1-실패(타입 잘못 입력)" classname="AccountTest" time="0.003"/>
+  <testcase name="UC2-실패(타입 잘못 입력)" classname="AccountTest" time="0.002"/>
   <system-out><![CDATA[권한 성공
 개인회원 정보 수정 성공
 종료
